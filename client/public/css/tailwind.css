@@ -568,16 +568,18 @@ video {
   }
 }
 
-.bg-red-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 242 242 / var(--tw-bg-opacity));
+.flex {
+  display: flex;
 }
 
-.bg-\[\#\] {
-  background-color: #;
+.h-screen {
+  height: 100vh;
 }
 
-.bg-\[\#f00\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
