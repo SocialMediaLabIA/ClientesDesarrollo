@@ -5,7 +5,7 @@ export default function ProgressBar({ progress }) {
   // const [progress, setProgress] = useState([0,0])
 
   return (
-    <div className="w-full flex justify-center items-center border-4 text-white mt-10">
+    <div className="w-full flex justify-center items-center text-white mt-10">
       <p
         className={
           progress >= 1
