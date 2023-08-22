@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/smllogo.webp";
+import logo from "../../assets/smllogo.webp";
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
 
 export default function Login() {
@@ -91,7 +91,7 @@ export default function Login() {
     }
   };
   return (
-    <div>
+    <div className="flex justify-center items-center bg-black h-screen w-screen">
       {" "}
       <form className="w-6/12" onSubmit={handleSubmit}>
         <div className="flex flex-col px-20 mb-6">
