@@ -3,7 +3,7 @@ import logo from "../../assets/smllogo.webp";
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
 import { validatePassword, validateEmail } from "./validate";
 import { motion } from "framer-motion";
-//
+
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
