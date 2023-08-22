@@ -118,7 +118,7 @@ export default function Login() {
           className="w-[700px] h-[700px]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          transition={{ duration: 0.9, ease: "easeInOut" }}
         />
       </div>
     </div>
