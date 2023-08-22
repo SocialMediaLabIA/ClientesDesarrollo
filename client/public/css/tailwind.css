@@ -653,6 +653,10 @@ video {
   height: 0.75rem;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
 .w-0 {
   width: 0px;
 }
