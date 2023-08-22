@@ -6,7 +6,7 @@ export default function RoadMap() {
   let [progress, setProgress] = useState(1);
 
   const directionProgress = (direction) => {
-    if (direction === "next" && progress >= 1) setProgress(++progress);
+    if (direction === "next" && progress < 13) setProgress(++progress);
     if (direction === "prev" && progress > 1) setProgress(--progress);
   };
   console.log(progress);
