@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/smllogo.webp";
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
 import { validatePassword, validateEmail } from "./validate";
@@ -8,18 +8,19 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [showView, setShowView] = useState(false);
   const [errors, setErrors] = useState({
-    password: " ",
-    email: " ",
+    password: "Por favor, ingresa una contraseña",
+    email: "Por favor, ingresa un correo electrónico",
+    active: false,
   });
   const handleChangeEmail = (event) => {
     const newEmail = event.target.value;
     setEmail(newEmail);
-    const emailError = validateEmail(newEmail, setErrors, errors);
+    validateEmail(newEmail, setErrors, errors);
   };
   const handlePasswordChange = (event) => {
     const newPassword = event.target.value;
     setPassword(newPassword);
-    const passwordError = validatePassword(newPassword, setErrors, errors);
+    validatePassword(newPassword, setErrors, errors);
   };
   const handlePasswordView = () => {
     setShowView(!showView);
@@ -27,12 +28,12 @@ export default function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    console.log(errors);
+    setErrors({ ...errors, active: true });
     const emailError = validateEmail(email, setErrors, errors);
     const passError = validatePassword(password, setErrors, errors);
+    console.log(emailError, passError, errors.active);
 
-    if (!errors.email && !errors.password) {
+    if (!emailError && !passError) {
       console.log("login");
     } else {
       console.log("logout");
@@ -51,8 +52,8 @@ export default function Login() {
             onChange={handleChangeEmail}
             placeholder="example@example.com"
           />
-          <span className="text-red-400 text-[12px] text-center h-3">
-            {errors.email}
+          <span className="text-red-400 text-[12px] text-center h-5">
+            {errors.active ? errors.email : " "}
           </span>
         </div>
         <div className="flex flex-col px-20 mb-20">
@@ -77,8 +78,8 @@ export default function Login() {
               />
             )}
           </div>
-          <span className="text-red-400 text-[12px] text-center">
-            {errors.password}
+          <span className="text-red-400 text-[12px] text-center h-5">
+            {errors.active ? errors.password : " "}
           </span>
         </div>
         <div className="flex flex-col items-center gap-y-4 mt-4">
