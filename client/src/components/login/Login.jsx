@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../assets/smllogo.webp";
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
-import { validatePassword } from "./validate";
+import { validatePassword, validateEmail } from "./validate";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -14,7 +14,7 @@ export default function Login() {
   const handleChangeEmail = (event) => {
     const newEmail = event.target.value;
     setEmail(newEmail);
-    validateEmail(newEmail);
+    const emailError = validateEmail(newEmail, setErrors, errors);
   };
   const handlePasswordChange = (event) => {
     const newPassword = event.target.value;
@@ -25,31 +25,11 @@ export default function Login() {
     setShowView(!showView);
   };
 
-  const validateEmail = (email) => {
-    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-
-    if (!email || email === " ") {
-      setErrors({
-        ...errors,
-        email: "Por favor, ingresa un correo electrónico",
-      });
-      return "Por favor, ingresa un correo electrónico";
-    }
-    if (!emailRegex.test(email)) {
-      setErrors({
-        ...errors,
-        email: "Por favor, ingresa un correo electrónico válido",
-      });
-      return "Por favor, ingresa un correo electrónico válido";
-    }
-    setErrors({ ...errors, email: "" });
-    return "";
-  };
   const handleSubmit = (event) => {
     event.preventDefault();
 
     console.log(errors);
-    const emailError = validateEmail(email);
+    const emailError = validateEmail(email, setErrors, errors);
     const passError = validatePassword(password, setErrors, errors);
 
     if (!errors.email && !errors.password) {
