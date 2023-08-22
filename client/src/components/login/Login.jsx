@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../assets/smllogo.webp";
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
+import { validatePassword } from "./validate";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -18,7 +19,7 @@ export default function Login() {
   const handlePasswordChange = (event) => {
     const newPassword = event.target.value;
     setPassword(newPassword);
-    validatePassword(newPassword);
+    const passwordError = validatePassword(newPassword, setErrors, errors);
   };
   const handlePasswordView = () => {
     setShowView(!showView);
@@ -44,45 +45,12 @@ export default function Login() {
     setErrors({ ...errors, email: "" });
     return "";
   };
-  const validatePassword = (password) => {
-    const numberRegex = /[0-9]/;
-    if (!password || password === " ") {
-      setErrors({
-        ...errors,
-        password: "Por favor, ingresa una contraseña",
-      });
-      return "Por favor, ingresa una contraseña";
-    }
-    if (!numberRegex.test(password)) {
-      setErrors({
-        ...errors,
-        password: "La contraseña debe contener al menos un número",
-      });
-      return "La contraseña debe contener al menos  un número";
-    }
-    if (password.length < 8 || password.length > 16) {
-      setErrors({
-        ...errors,
-        password: "La contraseña debe tener entre 8 y 16 caracteres",
-      });
-      return "La contraseña debe tener entre 8 y 16 caracteres";
-    }
-    setErrors({
-      ...errors,
-      password: "",
-    });
-    return "";
-  };
-  const validateLogin = () => {
-    validateEmail(email);
-    validateEmail(password);
-  };
   const handleSubmit = (event) => {
     event.preventDefault();
 
     console.log(errors);
     const emailError = validateEmail(email);
-    const passError = validatePassword(password);
+    const passError = validatePassword(password, setErrors, errors);
 
     if (!errors.email && !errors.password) {
       console.log("login");
