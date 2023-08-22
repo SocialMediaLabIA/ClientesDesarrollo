@@ -1,11 +1,9 @@
-const server = require("./src/app.js");
-const { conn } = require("./src/db.js");
 require("dotenv").config();
 
-const { PORT } = process.env;
+const server = require("./src/app.js");
 
-conn.sync({ alter: false }).then(() => {
-  server.listen(PORT, () => {
-    console.log(`{%s listening at ${PORT}}`);
-  });
+const port = process.env.PORT || 3001;
+
+server.listen(3001, () => {
+  console.log(`Server listening at ${port}`);
 });
