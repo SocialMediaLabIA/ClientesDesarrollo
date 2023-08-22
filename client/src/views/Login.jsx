@@ -7,19 +7,93 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [showView, setShowView] = useState(false);
   const [errors, setErrors] = useState({
-    password: "",
-    email: "",
-    validate: false,
+    password: " ",
+    email: " ",
   });
   const handleChangeEmail = (event) => {
-    setEmail(event.target.value);
+    const newEmail = event.target.value;
+    setEmail(newEmail);
+    validateEmail(newEmail);
+  };
+  const handlePasswordChange = (event) => {
+    const newPassword = event.target.value;
+    setPassword(newPassword);
+    validatePassword(newPassword);
   };
   const handlePasswordView = () => {
     setShowView(!showView);
   };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+
+    if (!email || email === " ") {
+      setErrors({
+        ...errors,
+        email: "Por favor, ingresa un correo electrónico",
+      });
+      return "Por favor, ingresa un correo electrónico";
+    }
+    if (!emailRegex.test(email)) {
+      setErrors({
+        ...errors,
+        email: "Por favor, ingresa un correo electrónico válido",
+      });
+      return "Por favor, ingresa un correo electrónico válido";
+    }
+    setErrors({ ...errors, email: "" });
+    return "";
+  };
+  const validatePassword = (password) => {
+    const numberRegex = /[0-9]/;
+    if (!password || password === " ") {
+      setErrors({
+        ...errors,
+        password: "Por favor, ingresa una contraseña",
+      });
+      return "Por favor, ingresa una contraseña";
+    }
+    if (!numberRegex.test(password)) {
+      setErrors({
+        ...errors,
+        password: "La contraseña debe contener al menos un número",
+      });
+      return "La contraseña debe contener al menos  un número";
+    }
+    if (password.length < 8 || password.length > 16) {
+      setErrors({
+        ...errors,
+        password: "La contraseña debe tener entre 8 y 16 caracteres",
+      });
+      return "La contraseña debe tener entre 8 y 16 caracteres";
+    }
+    setErrors({
+      ...errors,
+      password: "",
+    });
+    return "";
+  };
+  const validateLogin = () => {
+    validateEmail(email);
+    validateEmail(password);
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    console.log(errors);
+    const emailError = validateEmail(email);
+    const passError = validatePassword(password);
+
+    if (!errors.email && !errors.password) {
+      console.log("login");
+    } else {
+      console.log("logout");
+    }
+  };
+
   return (
     <div className="flex justify-center items-center bg-black h-screen w-screen">
-      <form className="w-6/12">
+      <form className="w-6/12" onSubmit={handleSubmit}>
         <div className="flex flex-col px-20 mb-6">
           <label className="font-bold ml-2 text-white mb-2 ">Email:</label>
           <input
@@ -40,9 +114,7 @@ export default function Login() {
               className="rounded-md bg-[#D9D9D9] h-10 pl-5 w-full text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-0"
               type={showView === false ? "password" : "text"}
               value={password}
-              onChange={(event) => {
-                setPassword(event.target.value);
-              }}
+              onChange={handlePasswordChange}
               placeholder="Ingresar Contraseña"
             />
             {showView === false ? (
