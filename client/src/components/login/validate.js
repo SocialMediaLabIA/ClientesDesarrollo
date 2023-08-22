@@ -27,3 +27,24 @@ export const validatePassword = (password, setErrors, errors) => {
   });
   return "";
 };
+
+export const validateEmail = (email, setErrors, errors) => {
+  const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+
+  if (!email || email === " ") {
+    setErrors({
+      ...errors,
+      email: "Por favor, ingresa un correo electrónico",
+    });
+    return "Por favor, ingresa un correo electrónico";
+  }
+  if (!emailRegex.test(email)) {
+    setErrors({
+      ...errors,
+      email: "Por favor, ingresa un correo electrónico válido",
+    });
+    return "Por favor, ingresa un correo electrónico válido";
+  }
+  setErrors({ ...errors, email: "" });
+  return "";
+};
