@@ -39,7 +39,7 @@ export default function ProgressHeaders({ progress }) {
         { number: 13, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
       ];
   return (
-    <div className="border-2 flex justify-center items-center w-11/12 h-5/5 mt-12 text-white">
+    <div className="flex justify-center items-center w-11/12 h-5/5 mt-12 text-white">
     {/* <div > */}
       {pages[progress].video === true && (
         <iframe
@@ -69,10 +69,7 @@ export default function ProgressHeaders({ progress }) {
         >{pages[progress].resumeText}</p>
       )}
           {pages[progress].meet === true && (
-            <div>
-
             <img src={imageMeet} alt="imagen meet" className="w-full border-2 h-40 " />
-            </div>
           )}
       {pages[progress].number === 13 && (
           <p
