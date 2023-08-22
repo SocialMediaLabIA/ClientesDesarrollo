@@ -25,15 +25,15 @@ console.log(progress)
           width="560"
           height="315"
           src="https://www.youtube.com/embed/GUf81ofAZV0" // Cambia esta URL por la URL correcta del video embebido
-          frameborder="0"
-          allowfullscreen
+          frameBorder="0"  // Cambiado a frameBorder
+          allowFullScreen  // Cambiado a allowFullScreen
           className="mt-10 w-5/6"
         />
         <div className="flex justify-between items-center w-4/5 mt-8">
-          <button onClick={() => directionProgress("next")} class="bg-transparent  text-blue-700 font-semibold  py-2 px-4 border border-blue-500  rounded">
+          <button onClick={() => directionProgress("next")} className="bg-transparent  text-blue-700 font-semibold  py-2 px-4 border border-blue-500  rounded">
             Prev
           </button>
-          <button onClick={() => directionProgress("prev")} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <button onClick={() => directionProgress("prev")} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             Next
           </button>
         </div>
