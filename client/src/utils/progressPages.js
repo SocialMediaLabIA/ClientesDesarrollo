@@ -1,1 +1,15 @@
-let pages = [{ number: 1, video: "www.youtube.com" }, {}, {}];
+let pages = [
+    { number: 1, video: "www.youtube.com" },
+    { number: 2, video: "www.youtube.com" },
+    { number: 3, video: "www.youtube.com" },
+    { number: 4, video: "www.youtube.com" },
+    { number: 5, video: "www.youtube.com" },
+    { number: 6, video: "www.youtube.com" },
+    { number: 7, video: "www.youtube.com" },
+    { number: 8, video: "www.youtube.com" },
+    { number: 9, video: "www.youtube.com" },
+    { number: 10, video: "www.youtube.com" },
+    { number: 11, video: "www.youtube.com" },
+    { number: 12, video: "www.youtube.com" },
+    { number: 13, video: "www.youtube.com" },
+];
