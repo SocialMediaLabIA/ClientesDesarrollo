@@ -3,7 +3,7 @@ import imageMeet from "../../assets/fotomeet.png"
 
 export default function ProgressHeaders({ progress }) {
     let pages = [
-        {number: 0, video: true, videoSource: "https://www.youtube.com/embed/VensWNwjow",},
+        {number: 0, video: true, videoSource: "https://www.youtube.com/embed/4OvhrzXu4Yo",},
         {
           number: 1,
           video: true,
