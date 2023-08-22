@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import logo from "../../assets/smllogo.webp";
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
 import { validatePassword, validateEmail } from "./validate";
@@ -31,8 +31,6 @@ export default function Login() {
     setErrors({ ...errors, active: true });
     const emailError = validateEmail(email, setErrors, errors);
     const passError = validatePassword(password, setErrors, errors);
-    console.log(emailError, passError, errors.active);
-
     if (!emailError && !passError) {
       console.log("login");
     } else {
