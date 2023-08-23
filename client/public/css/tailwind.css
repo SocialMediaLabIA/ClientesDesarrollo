@@ -621,6 +621,10 @@ video {
   margin-top: 1rem;
 }
 
+.mt-24 {
+  margin-top: 6rem;
+}
+
 .flex {
   display: flex;
 }
@@ -952,6 +956,10 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
   .md\:block {
     display: block;
   }
