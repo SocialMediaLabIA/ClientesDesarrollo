@@ -4,7 +4,8 @@ import logo from "../assets/smllogo.webp";
 import ProgressBar from "../components/RoadMapItems/ProgressBar";
 import ProgressHeaders from "../components/RoadMapItems/ProgressHeaders";
 import pages from "../utils/progressPages"
-
+// import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
+import { HiChevronLeft, HiChevronRight, HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi2";
 export default function RoadMap() {
   let [progress, setProgress] = useState(0);
   
@@ -24,7 +25,7 @@ export default function RoadMap() {
         </div>
         {progress !== 0 && <ProgressBar progress={progress} />}
         {progress === 0 && <div className="w-full flex justify-center items-center text-white mt-20"></div>}
-      {progress !== 0 && pages[progress].meet &&
+      {/* {progress !== 0 && pages[progress].meet &&
         <>
               <button
             onClick={() => directionProgress("prev")}
@@ -33,22 +34,36 @@ export default function RoadMap() {
             .
           </button>
         </>
-      }
+      } */}
         <ProgressHeaders progress={progress} />
-        <div className="flex justify-center items-center w-4/5 bottom-14 absolute gap-32">
-          {progress !== 0 && !pages[progress].meet &&
+        <div className="flex justify-center items-center w-4/5 bottom-14 absolute gap-64">
+          {progress !== 0 &&
             <>
-              <button
+            <HiChevronLeft onClick={() => directionProgress("prev")}
+                className=" text-white font-bold text-xl w-8 h-8"/>
+              {/* <button
                 onClick={() => directionProgress("prev")}
                 className="bg-transparent  text-blue-700 font-semibold  py-2 px-4 border border-blue-500  rounded"
               >
                 Prev
-              </button>
-              <button
+              </button> */}
+              <HiChevronRight onClick={() => directionProgress("next")}
+                className=" text-white font-bold text-xl w-8 h-8"/>
+              {/* <button
                 onClick={() => directionProgress("next")}
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
               >
                 Next
+              </button> */}
+            </>
+          } 
+          {progress === 0 &&
+            <>
+              <button
+                onClick={() => directionProgress("next")}
+                className="bg-[#c905fa73] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl"
+                >
+                Empecemos!
               </button>
             </>
           }
@@ -57,21 +72,11 @@ export default function RoadMap() {
     
               <button
                 onClick={() => directionProgress("next")}
-                className="bg-transparent  text-blue-700 font-semibold  py-2 px-4 border border-blue-500  rounded"
+                className="bg-[#c905fa73]  text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
               >
-                {`Agendar con ${pages[progress].meet}`}
+                {`Agendar con ${pages[progress].meetName}`}
               </button>
 
-            </>
-          }
-          {progress === 0 &&
-            <>
-              <button
-                onClick={() => directionProgress("next")}
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              >
-                Continuar
-              </button>
             </>
           }
         </div>
