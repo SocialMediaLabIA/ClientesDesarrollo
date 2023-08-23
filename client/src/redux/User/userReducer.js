@@ -1,5 +1,5 @@
 import { GET_ALL_USER } from "./ActionUser/getAllUser";
-import { GET_USER_BY_EMAIL } from "./ActionUser/getUserByEmail";
+import { GET_USER_BY_LOGIN } from "./ActionUser/getUserByLogin";
 
 const initialState = {
   users: [],
@@ -13,7 +13,7 @@ const userReducer = (state = initialState, action) => {
         ...state,
         users: action.payload,
       };
-    case GET_USER_BY_EMAIL:
+    case GET_USER_BY_LOGIN:
       return {
         ...state,
         user: action.payload,
