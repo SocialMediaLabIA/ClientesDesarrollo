@@ -5,7 +5,7 @@ import { getAllUser } from "../../redux/User/ActionUser/getAllUser";
 export default function ListAdmin() {
   const dispatch = useDispatch();
 
-  const { admin } = useSelector((state) => state);
+  const { users } = useSelector((state) => state);
 
   useEffect(() => {
     dispatch(getAllUser());
@@ -13,8 +13,8 @@ export default function ListAdmin() {
 
   return (
     <div>
-      {admin &&
-        admin.map((item) => (
+      {users &&
+        users.map((item) => (
           <div key={item.id}>
             <p>Name: {item.name}</p>
             <p>Email: {item.email}</p>
