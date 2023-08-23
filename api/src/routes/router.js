@@ -1,7 +1,7 @@
 const { Router } = require("express");
+const UsersRouter = require("./usersRouter");
 const router = Router();
-const CLevelRouter = require("./CLevelRouter");
 
-router.use("/clevel", CLevelRouter);
+router.use("/users", UsersRouter);
 
 module.exports = router;
