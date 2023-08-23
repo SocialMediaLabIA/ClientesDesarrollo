@@ -3,6 +3,7 @@ import { HiOutlineUserCircle } from "react-icons/hi";
 import logo from "../assets/smllogo.webp";
 import ProgressBar from "../components/RoadMapItems/ProgressBar";
 import ProgressHeaders from "../components/RoadMapItems/ProgressHeaders";
+import pages from "../utils/progressPages"
 
 export default function RoadMap() {
   let [progress, setProgress] = useState(0);
@@ -14,12 +15,12 @@ export default function RoadMap() {
   console.log(progress);
 
   return (
-    <div className="flex flex-col justify-start items-center h-screen w-screen bg-black relative">
+    <div className="font-poppins flex flex-col justify-start items-center h-screen w-screen bg-black relative">
       <div className="flex flex-col justify-center items-center  w-screen bg-black mt-10">
         <div className="flex justify-between items-center w-4/5">
-          <img src={logo} alt="Logo" className="w-12 h-12" />
-          <h1 className="text-base text-white">Social Media Lab</h1>
-          <HiOutlineUserCircle className="w-12 h-12 text-white" />
+          <img src={logo} alt="Logo" className="w-14 h-14" />
+          <h1 className="text-base text-white">{pages[progress].title}</h1>
+          <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin  text-white" />
         </div>
         {progress !== 0 && <ProgressBar progress={progress} />}
         <ProgressHeaders progress={progress} />
