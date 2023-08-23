@@ -6,7 +6,7 @@ const {
 
 const UsersRouter = Router();
 
-UsersRouter.get("/", getUserByEmailHandler);
+UsersRouter.get("/email", getUserByEmailHandler);
 UsersRouter.post("/", postUsersHandler);
 
 module.exports = UsersRouter;
