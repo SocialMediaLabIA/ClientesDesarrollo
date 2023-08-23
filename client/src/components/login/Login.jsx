@@ -6,6 +6,7 @@ import { validatePassword, validateEmail } from "./validate";
 import { motion } from "framer-motion";
 import { getUserByLogin } from "../../redux/User/ActionUser/getUserByLogin";
 import { setAccessUser } from "../../redux/User/ActionUser/setAccessUser";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -19,11 +20,13 @@ export default function Login() {
     email: "Por favor, ingresa un correo electrónico",
     active: false,
   });
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (formSubmited && user !== null) {
       console.log("login");
       dispatch(setAccessUser(email, password));
+      navigate(`/roadmap?id=${user._id}`);
     } else if (formSubmited) {
       console.log("incorrecto");
     }
