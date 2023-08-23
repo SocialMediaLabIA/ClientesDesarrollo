@@ -37,6 +37,13 @@ export default function ProgressHeaders({ progress }) {
         { number: 11, video: false, resume: true, resumeText: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!", meet: false, },
         { number: 12, video: false, meet: true, meetImage: imageMeet},
         { number: 13, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
+        { number: 14, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
+        { number: 15, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
+        { number: 16, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
+        { number: 17, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
+        { number: 18, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
+        { number: 19, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
+        { number: 20, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
       ];
   return (
     <div className="flex justify-center items-center w-11/12 h-5/5 mt-12 text-white">
