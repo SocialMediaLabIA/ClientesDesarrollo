@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllAdmin } from "../../redux/Admin/ActionAdmin/getAllAdmin";
+import { getAllUser } from "../../redux/User/ActionUser/getAllUser";
 
 export default function ListAdmin() {
   const dispatch = useDispatch();
@@ -8,7 +8,7 @@ export default function ListAdmin() {
   const { admin } = useSelector((state) => state);
 
   useEffect(() => {
-    dispatch(getAllAdmin());
+    dispatch(getAllUser());
   }, [dispatch]);
 
   return (
