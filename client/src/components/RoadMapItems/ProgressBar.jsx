@@ -25,30 +25,31 @@ export default function ProgressBar({ progress }) {
       <div
         className={
           progress >= 2
-          ? "border-2 border-green-500 w-1 ml-0.5"
-          : "border-2 w-1 ml-0.5"
+            ? "border-2 border-green-500 w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
         }
-        ></div>
+      ></div>
       <div
         className={
-          progress >= 2
-          ? "border-2 border-green-500 w-1 ml-0.5"
-          : "border-2 w-1 ml-0.5"
+          progress >= 3
+            ? "border-2 border-green-500 w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
         }
-        ></div>
+      ></div>
 
-    
-        {/* Fin intermedio 1 */}
+      {/* Fin intermedio 1 */}
       <div
         className={
-          progress >= 3 ? "border-2 border-green-500 w-1 ml-0.5" : "border-2 w-1 ml-0.5"
+          progress >= 4
+            ? "border-2 border-green-500 w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
         }
       ></div>
 
       {/* Seccion 2 */}
       <p
         className={
-          progress >= 4
+          progress >= 5
             ? "border-4 border-green-500 rounded-full w-10 h-10 flex justify-center items-center"
             : "border-4 rounded-full w-10 h-10 flex justify-center items-center"
         }
@@ -57,58 +58,59 @@ export default function ProgressBar({ progress }) {
       </p>
       <div
         className={
-          progress >= 4 ? "border-2 border-green-500 w-1" : "border-2 w-1"
+          progress >= 5 ? "border-2 border-green-500 w-1" : "border-2 w-1"
         }
       ></div>
-           {/* intermedio 2 */}
-           <div
-        className={
-          progress >= 2
-          ? "border-2 border-green-500 w-1 ml-0.5"
-          : "border-2 w-1 ml-0.5"
-        }
-        ></div>
+      {/* intermedio 2 */}
       <div
         className={
-          progress >= 2
-          ? "border-2 border-green-500 w-1 ml-0.5"
-          : "border-2 w-1 ml-0.5"
+          progress >= 6
+            ? "border-2 border-green-500 w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
         }
-        ></div>
+      ></div>
       <div
         className={
-          progress >= 2
-          ? "border-2 border-green-500 w-1 ml-0.5"
-          : "border-2 w-1 ml-0.5"
+          progress >= 7
+            ? "border-2 border-green-500 w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
         }
-        ></div>
+      ></div>
       <div
         className={
-          progress >= 2
-          ? "border-2 border-green-500 w-1 ml-0.5"
-          : "border-2 w-1 ml-0.5"
+          progress >= 8
+            ? "border-2 border-green-500 w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
         }
-        ></div>
+      ></div>
       <div
         className={
-          progress >= 2
-          ? "border-2 border-green-500 w-1 ml-0.5"
-          : "border-2 w-1 ml-0.5"
+          progress >= 9
+            ? "border-2 border-green-500 w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
         }
-        ></div>
+      ></div>
+      <div
+        className={
+          progress >= 10
+            ? "border-2 border-green-500 w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
+        }
+      ></div>
 
-    
-        {/* Fin intermedio 2 */}
-        <div
+      {/* Fin intermedio 2 */}
+      <div
         className={
-          progress >= 3 ? "border-2 border-green-500 w-1 ml-0.5" : "border-2 w-1 ml-0.5"
+          progress >= 11
+            ? "border-2 border-green-500 w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
         }
       ></div>
 
       {/* Seccion 3 */}
       <p
         className={
-          progress >= 7
+          progress >= 12
             ? "border-4 border-green-500 rounded-full w-10 h-10 flex justify-center items-center"
             : "border-4 rounded-full w-10 h-10 flex justify-center items-center"
         }
@@ -117,26 +119,45 @@ export default function ProgressBar({ progress }) {
       </p>
       <div
         className={
-          progress >= 7 ? "border-2 border-green-500 w-1" : "border-2 w-1"
+          progress >= 12 ? "border-2 border-green-500 w-1" : "border-2 w-1"
+        }
+      ></div>
+      {/* intermedio 3 */}
+      <div
+        className={
+          progress >= 13
+            ? "border-2 border-green-500 w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
         }
       ></div>
       <div
         className={
-          progress >= 8
-            ? "border-2 border-green-500 w-1 m-1"
-            : "border-2 w-1  m-1"
+          progress >= 14
+            ? "border-2 border-green-500 w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
         }
       ></div>
       <div
         className={
-          progress >= 9 ? "border-2 border-green-500 w-1" : "border-2 w-1"
+          progress >= 15
+            ? "border-2 border-green-500 w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
         }
       ></div>
 
-          {/* Seccion 4 */}
+      {/* Fin intermedio 3 */}
+      <div
+        className={
+          progress >= 16
+            ? "border-2 border-green-500 w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
+        }
+      ></div>
+
+      {/* Seccion 4 */}
       <p
         className={
-          progress >= 10
+          progress >= 17
             ? "border-4 border-green-500 rounded-full w-10 h-10 flex justify-center items-center"
             : "border-4 rounded-full w-10 h-10 flex justify-center items-center"
         }
@@ -145,34 +166,37 @@ export default function ProgressBar({ progress }) {
       </p>
       <div
         className={
-          progress >= 10 ? "border-2 border-green-500 w-1" : "border-2 w-1"
+          progress >= 17 ? "border-2 border-green-500 w-1" : "border-2 w-1"
         }
       ></div>
+      {/* intermedio 4 */}
       <div
         className={
-          progress >= 11
-            ? "border-2 border-green-500 w-1 m-1"
-            : "border-2 w-1  m-1"
+          progress >= 18
+            ? "border-2 border-green-500 w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
         }
       ></div>
+
+      {/* Fin intermedio 4 */}
       <div
         className={
-          progress >= 12 ? "border-2 border-green-500 w-1" : "border-2 w-1"
+          progress >= 19
+            ? "border-2 border-green-500 w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
         }
       ></div>
 
       {/* Seccion 5 */}
       <p
         className={
-          progress >= 13
+          progress >= 20
             ? "border-4 border-green-500 rounded-full w-10 h-10 flex justify-center items-center"
             : "border-4 rounded-full w-10 h-10 flex justify-center items-center"
         }
       >
         5
       </p>
-
-     
     </div>
   );
 }
