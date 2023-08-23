@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import logo from "../../assets/smllogo.webp";
+import { useDispatch } from "react-redux";
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
 import { validatePassword, validateEmail } from "./validate";
 import { motion } from "framer-motion";
+import { getUserByEmail } from "../../redux/User/ActionUser/getUserByEmail";
 
 export default function Login() {
+  const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showView, setShowView] = useState(false);
@@ -13,6 +16,7 @@ export default function Login() {
     email: "Por favor, ingresa un correo electrónico",
     active: false,
   });
+
   const handleChangeEmail = (event) => {
     const newEmail = event.target.value;
     setEmail(newEmail);
@@ -34,6 +38,7 @@ export default function Login() {
     const passError = validatePassword(password, setErrors, errors);
     if (!emailError && !passError) {
       console.log("login");
+      dispatch(getUserByEmail());
     } else {
       console.log("logout");
     }
