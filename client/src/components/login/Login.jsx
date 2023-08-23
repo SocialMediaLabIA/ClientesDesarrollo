@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/smllogo.webp";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
 import { validatePassword, validateEmail } from "./validate";
 import { motion } from "framer-motion";
-import { getUserByEmail } from "../../redux/User/ActionUser/getUserByEmail";
+import { getUserByLogin } from "../../redux/User/ActionUser/getUserByLogin";
 
 export default function Login() {
   const dispatch = useDispatch();
+  const { user } = useSelector((state) => state);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showView, setShowView] = useState(false);
@@ -16,6 +17,10 @@ export default function Login() {
     email: "Por favor, ingresa un correo electrónico",
     active: false,
   });
+
+  useEffect(() => {
+    console.log(user);
+  }, [user]);
 
   const handleChangeEmail = (event) => {
     const newEmail = event.target.value;
@@ -37,8 +42,12 @@ export default function Login() {
     const emailError = validateEmail(email, setErrors, errors);
     const passError = validatePassword(password, setErrors, errors);
     if (!emailError && !passError) {
-      console.log("login");
-      dispatch(getUserByEmail());
+      dispatch(getUserByLogin(email, password));
+      if (user) {
+        console.log("login");
+      } else {
+        console.log("incorrecto");
+      }
     } else {
       console.log("logout");
     }
