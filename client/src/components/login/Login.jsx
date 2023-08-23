@@ -5,6 +5,7 @@ import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
 import { validatePassword, validateEmail } from "./validate";
 import { motion } from "framer-motion";
 import { getUserByLogin } from "../../redux/User/ActionUser/getUserByLogin";
+import { setAccessUser } from "../../redux/User/ActionUser/setAccessUser";
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ export default function Login() {
   useEffect(() => {
     if (formSubmited && user !== null) {
       console.log("login");
+      dispatch(setAccessUser(email, password));
     } else if (formSubmited) {
       console.log("incorrecto");
     }
@@ -49,8 +51,6 @@ export default function Login() {
     if (!emailError && !passError) {
       dispatch(getUserByLogin(email, password));
       setFormSubmited(true);
-    } else {
-      console.log("logout");
     }
   };
   return (
