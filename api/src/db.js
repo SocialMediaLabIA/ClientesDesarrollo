@@ -14,7 +14,6 @@ mongoose
   })
   .then(() => {
     console.log("********* CONEXIÓN CORRECTA *******");
-    console.log(DB_URI);
   })
   .catch((err) => {
     console.log("********* ERROR DE CONEXIÓN *******");
