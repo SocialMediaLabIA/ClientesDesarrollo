@@ -984,6 +984,10 @@ video {
     flex-direction: column;
   }
 
+  .md\:justify-center {
+    justify-content: center;
+  }
+
   .md\:opacity-100 {
     opacity: 1;
   }
