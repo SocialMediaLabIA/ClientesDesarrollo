@@ -18,9 +18,9 @@ export default function Login() {
     active: false,
   });
 
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
+  // useEffect(() => {
+  //   console.log(user);
+  // }, [user]);
 
   const handleChangeEmail = (event) => {
     const newEmail = event.target.value;
@@ -36,13 +36,15 @@ export default function Login() {
     setShowView(!showView);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     setErrors({ ...errors, active: true });
     const emailError = validateEmail(email, setErrors, errors);
     const passError = validatePassword(password, setErrors, errors);
     if (!emailError && !passError) {
       dispatch(getUserByLogin(email, password));
+      console.log(user);
+
       if (user) {
         console.log("login");
       } else {
