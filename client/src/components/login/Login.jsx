@@ -39,7 +39,7 @@ export default function Login() {
     }
   };
   return (
-    <div className="flex flex-col-reverse md:flex-row md:justify-center justify-start items-center bg-black h-screen w-screen">
+    <div className="flex flex-col-reverse md:flex-row md:justify-center justify-end md:items-center items-start bg-black h-screen w-screen">
       {" "}
       <form className="md:w-6/12 w-full" onSubmit={handleSubmit}>
         <motion.div
@@ -111,7 +111,7 @@ export default function Login() {
         animate={{ height: "93%" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       />
-      <div className="flex w-6/12 h-full items-center justify-center">
+      <div className="flex md:w-6/12 w-full md:h-full  items-center justify-center">
         <motion.img
           src={logo}
           alt="logo"
