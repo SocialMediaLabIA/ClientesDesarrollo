@@ -41,7 +41,7 @@ export default function Login() {
   return (
     <div className="flex flex-col-reverse md:flex-row md:justify-center justify-end md:items-center items-start bg-black h-screen w-screen">
       {" "}
-      <form className="md:w-6/12 w-full" onSubmit={handleSubmit}>
+      <form className="md:w-6/12 w-full mt-14 md:mt-0" onSubmit={handleSubmit}>
         <motion.div
           className="flex flex-col px-20 mb-6"
           initial={{ x: -100, opacity: 0 }}
