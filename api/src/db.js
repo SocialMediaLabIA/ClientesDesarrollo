@@ -5,8 +5,6 @@ const mongoose = require("mongoose");
 const { URI } = process.env;
 const DB_URI = URI;
 
-console.log(DB_URI);
-
 mongoose
   .connect(DB_URI, {
     useNewUrlParser: true,
