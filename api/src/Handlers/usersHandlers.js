@@ -1,6 +1,6 @@
-const getAllUser = require("../controllers/users/getAllUsers");
-const getUserByEmail = require("../controllers/users/getUserByEmail");
+const getUserByLogin = require("../controllers/users/getUserByLogin");
 const postUsers = require("../controllers/users/postUsers");
+const setAccessUser = require("../controllers/users/setAccessUser");
 
 const postUsersHandler = async (req, res) => {
   const body = req.body;
@@ -12,19 +12,19 @@ const postUsersHandler = async (req, res) => {
   }
 };
 
-const getAllUserHandler = async (req, res) => {
+const getUserByLoginHandler = async (req, res) => {
+  const { email, password } = req.query;
   try {
-    const Users = await getAllUser();
-    res.status(200).json(Users);
+    const User = await getUserByLogin(email, password);
+    res.status(200).json(User);
   } catch (error) {
     res.status(404).json({ error: error.message });
   }
 };
-
-const getUserByEmailHandler = async (req, res) => {
-  const { email } = req.query;
+const setAccessUserHandler = async (req, res) => {
+  const { email, password } = req.query;
   try {
-    const User = await getUserByEmail(email);
+    const User = await setAccessUser(email, password);
     res.status(200).json(User);
   } catch (error) {
     res.status(404).json({ error: error.message });
@@ -33,6 +33,6 @@ const getUserByEmailHandler = async (req, res) => {
 
 module.exports = {
   postUsersHandler,
-  getAllUserHandler,
-  getUserByEmailHandler,
+  getUserByLoginHandler,
+  setAccessUserHandler,
 };

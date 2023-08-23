@@ -1,18 +1,37 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/smllogo.webp";
+import { useDispatch, useSelector } from "react-redux";
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
 import { validatePassword, validateEmail } from "./validate";
 import { motion } from "framer-motion";
+import { getUserByLogin } from "../../redux/User/ActionUser/getUserByLogin";
+import { setAccessUser } from "../../redux/User/ActionUser/setAccessUser";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showView, setShowView] = useState(false);
+  const [formSubmited, setFormSubmited] = useState(false);
   const [errors, setErrors] = useState({
     password: "Por favor, ingresa una contraseña",
     email: "Por favor, ingresa un correo electrónico",
     active: false,
   });
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (formSubmited && user !== null) {
+      console.log("login");
+      dispatch(setAccessUser(email, password));
+      navigate(`/roadmap?id=${user._id}`);
+    } else if (formSubmited) {
+      console.log("incorrecto");
+    }
+  }, [user]);
+
   const handleChangeEmail = (event) => {
     const newEmail = event.target.value;
     setEmail(newEmail);
@@ -27,15 +46,14 @@ export default function Login() {
     setShowView(!showView);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     setErrors({ ...errors, active: true });
     const emailError = validateEmail(email, setErrors, errors);
     const passError = validatePassword(password, setErrors, errors);
     if (!emailError && !passError) {
-      console.log("login");
-    } else {
-      console.log("logout");
+      dispatch(getUserByLogin(email, password));
+      setFormSubmited(true);
     }
   };
   return (
