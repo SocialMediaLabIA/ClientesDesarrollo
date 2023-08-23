@@ -44,10 +44,6 @@ const UsersSchema = new mongoose.Schema(
       required: true,
       default: 0,
     },
-    content_references: {
-      type: Array,
-      default: [],
-    },
   },
   { timestamps: true }
 );
