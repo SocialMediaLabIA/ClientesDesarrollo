@@ -17,9 +17,10 @@ const ContentsSchema = new mongoose.Schema(
       required: true,
       default: "",
     },
-    section_id: {
-      type: mongoose.Types.ObjectId,
-      
+    section: {
+      type: String,
+      required: true,
+      default: "",
     },
   },
   { timestamps: true }
