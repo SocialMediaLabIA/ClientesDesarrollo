@@ -12,15 +12,20 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showView, setShowView] = useState(false);
+  const [formSubmited, setFormSubmited] = useState(false);
   const [errors, setErrors] = useState({
     password: "Por favor, ingresa una contraseña",
     email: "Por favor, ingresa un correo electrónico",
     active: false,
   });
 
-  // useEffect(() => {
-  //   console.log(user);
-  // }, [user]);
+  useEffect(() => {
+    if (formSubmited && user !== null) {
+      console.log("login");
+    } else if (formSubmited) {
+      console.log("incorrecto");
+    }
+  }, [user]);
 
   const handleChangeEmail = (event) => {
     const newEmail = event.target.value;
@@ -43,13 +48,7 @@ export default function Login() {
     const passError = validatePassword(password, setErrors, errors);
     if (!emailError && !passError) {
       dispatch(getUserByLogin(email, password));
-      console.log(user);
-
-      if (user) {
-        console.log("login");
-      } else {
-        console.log("incorrecto");
-      }
+      setFormSubmited(true);
     } else {
       console.log("logout");
     }
