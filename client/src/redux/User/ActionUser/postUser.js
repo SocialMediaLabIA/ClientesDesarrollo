@@ -1,10 +1,10 @@
 import axios from "axios";
-export const POST_ADMIN = "GET_ALL_ADMIN";
+export const POST_USER = "POST_USER";
 
-export const postAdmin = () => {
+export const postUser = (body) => {
   return async (dispatch) => {
-    const response = await axios.get("/get-admin");
-    const admin = response.data;
-    dispatch({ type: POST_ADMIN, payload: admin });
+    const response = await axios.post("/user", body);
+    const user = response.data;
+    dispatch({ type: POST_USER, payload: user });
   };
 };
