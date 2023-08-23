@@ -116,7 +116,7 @@ export default function Login() {
           transition={{ duration: 1.8, ease: "easeInOut" }}
         >
           <button
-            className="bg-[#07a1f8] rounded-2xl py-2 px-5 text-white font-bold"
+            className="bg-[#c905faad] rounded-2xl py-2 px-5 text-white font-bold"
             type="submit"
           >
             Ingresar
