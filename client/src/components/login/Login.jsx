@@ -48,7 +48,7 @@ export default function Login() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
         >
-          <label className="font-bold ml-2 text-white mb-2 ">Email:</label>
+          <label className="font-bold ml-2 text-white mb-2 ">Emailllllllllllllllll:</label>
           <input
             className="rounded-md bg-[#D9D9D9] h-10 pl-5 text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25 "
             type="email"
