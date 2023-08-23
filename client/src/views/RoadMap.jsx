@@ -61,7 +61,7 @@ export default function RoadMap() {
             <>
               <button
                 onClick={() => directionProgress("next")}
-                className="bg-[#c905fa73] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl"
+                className="bg-[#c905faad] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl"
                 >
                 Empecemos!
               </button>
@@ -72,7 +72,7 @@ export default function RoadMap() {
     
               <button
                 onClick={() => directionProgress("next")}
-                className="bg-[#c905fa73]  text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
+                className="bg-[#c905faad] text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
               >
                 {`Agendar con ${pages[progress].meetName}`}
               </button>
