@@ -34,6 +34,11 @@ const UsersSchema = new mongoose.Schema(
       required: true,
       default: true,
     },
+    access: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
     progress: {
       type: Number,
       required: true,
