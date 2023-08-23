@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import logo from "../../assets/smllogo.webp";
+import { useDispatch } from "react-redux";
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
 import { validatePassword, validateEmail } from "./validate";
 import { motion } from "framer-motion";
 
 export default function Login() {
+  const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showView, setShowView] = useState(false);
@@ -13,6 +15,7 @@ export default function Login() {
     email: "Por favor, ingresa un correo electrónico",
     active: false,
   });
+
   const handleChangeEmail = (event) => {
     const newEmail = event.target.value;
     setEmail(newEmail);
