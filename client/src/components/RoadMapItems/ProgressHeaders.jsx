@@ -1,62 +1,21 @@
 import React from "react";
 import imageMeet from "../../assets/fotomeet.png" 
+import pages from "../../utils/progressPages";
 
 export default function ProgressHeaders({ progress }) {
-    let pages = [
-        {number: 0, video: true, videoSource: "https://www.youtube.com/embed/4OvhrzXu4Yo",},
-        {
-          number: 1,
-          video: true,
-          videoSource: "https://www.youtube.com/embed/CEb99v79yRM",
-          meet: false,
-        },
-        { number: 2, video: false, resume: true, resumeText: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!", meet: false, },
-        { number: 3, video: false, meet: true, meetImage: imageMeet },
-        {
-          number: 4,
-          video: true,
-          videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
-          meet: false,
-        },
-        { number: 5, video: false, resume: true, resumeText: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!", meet: false, },
-        { number: 6, video: false, meet: true, meetImage: imageMeet},
-        {
-          number: 7,
-          video: true,
-          videoSource: "https://www.youtube.com/embed/4OvhrzXu4Yo",
-          meet: false,
-        },
-        { number: 8, video: false, resume: true, resumeText: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!", meet: false,},
-        { number: 9, video: false, meet: true, meetImage: imageMeet},
-        {
-          number: 10,
-          video: true,
-          videoSource: "https://www.youtube.com/embed/yywL2rc-QZM",
-          meet: false,
-        },
-        { number: 11, video: false, resume: true, resumeText: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!", meet: false, },
-        { number: 12, video: false, meet: true, meetImage: imageMeet},
-        { number: 13, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
-        { number: 14, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
-        { number: 15, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
-        { number: 16, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
-        { number: 17, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
-        { number: 18, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
-        { number: 19, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
-        { number: 20, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
-      ];
+
+console.log(pages[progress].video)
   return (
-    <div className="flex justify-center items-center w-11/12 h-5/5 mt-12 text-white">
-    {/* <div > */}
+    <div className="flex justify-center items-center w-full h-5/5 mt-12 text-white">
       {pages[progress].video === true && (
         <iframe
           title="YouTube Video"
-          width="560"
-          height="315"
+          width="580"
+          height="330"
           src={pages[progress].videoSource} // Cambia esta URL por la URL correcta del video embebido
           frameBorder="0" // Cambiado a frameBorder
           allowFullScreen // Cambiado a allowFullScreen
-          className="mt-10 w-5/6"
+          className="mt-5 w-5/6"
         />
       )}
       {pages[progress].meet === true && (
