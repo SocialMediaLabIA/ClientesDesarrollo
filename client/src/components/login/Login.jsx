@@ -39,9 +39,9 @@ export default function Login() {
     }
   };
   return (
-    <div className="flex justify-center items-center bg-black h-screen w-screen">
+    <div className="flex flex-col-reverse md:flex-row md:justify-center justify-end md:items-center items-start bg-black h-screen w-screen">
       {" "}
-      <form className="w-6/12" onSubmit={handleSubmit}>
+      <form className="md:w-6/12 w-full mt-14 md:mt-0" onSubmit={handleSubmit}>
         <motion.div
           className="flex flex-col px-20 mb-6"
           initial={{ x: -100, opacity: 0 }}
@@ -106,16 +106,16 @@ export default function Login() {
         </motion.div>
       </form>
       <motion.hr
-        className="border-4 border-[#8F00FF] w-0 mx-4 rounded-2xl h-5/"
+        className="border-4 border-[#8F00FF]  mx-4 rounded-2xl md:h-5/6 opacity-0 md:opacity-100 h-0 hidden md:block"
         initial={{ height: 0 }}
         animate={{ height: "93%" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       />
-      <div className="flex w-6/12 h-full items-center justify-center">
+      <div className="flex md:w-6/12 w-full md:h-full items-center justify-center mt-24 md:mt-0">
         <motion.img
           src={logo}
           alt="logo"
-          className="w-[700px] h-[700px]"
+          className="md:w-[80%] w-[200px] "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.9, ease: "easeInOut" }}
