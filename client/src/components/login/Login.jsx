@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
 import { validatePassword, validateEmail } from "./validate";
 import { motion } from "framer-motion";
+import { getUserByEmail } from "../../redux/User/ActionUser/getUserByEmail";
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -37,6 +38,7 @@ export default function Login() {
     const passError = validatePassword(password, setErrors, errors);
     if (!emailError && !passError) {
       console.log("login");
+      dispatch(getUserByEmail());
     } else {
       console.log("logout");
     }
