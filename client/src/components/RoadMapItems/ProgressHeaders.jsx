@@ -34,7 +34,7 @@ export default function ProgressHeaders({ progress }) {
           videoSource: "https://www.youtube.com/embed/yywL2rc-QZM",
           meet: false,
         },
-        { number: 11, video: false, resume: true, resumeText: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!", meet: false, meet: false, },
+        { number: 11, video: false, resume: true, resumeText: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!", meet: false, },
         { number: 12, video: false, meet: true, meetImage: imageMeet},
         { number: 13, video: false, resumeText: "Tutorial Finalizado!", meet: false, },
       ];
