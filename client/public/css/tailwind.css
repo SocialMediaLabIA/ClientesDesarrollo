@@ -733,12 +733,20 @@ video {
   flex-direction: column-reverse;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
 }
 
 .justify-start {
   justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -964,6 +972,10 @@ video {
     height: 80%;
   }
 
+  .md\:h-full {
+    height: 100%;
+  }
+
   .md\:w-6\/12 {
     width: 50%;
   }
@@ -982,6 +994,10 @@ video {
 
   .md\:flex-col {
     flex-direction: column;
+  }
+
+  .md\:items-center {
+    align-items: center;
   }
 
   .md\:justify-center {
