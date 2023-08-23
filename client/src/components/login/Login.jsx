@@ -39,7 +39,7 @@ export default function Login() {
     }
   };
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-center items-center bg-black h-screen w-screen">
+    <div className="flex flex-col-reverse md:flex-row md:justify-center justify-start items-center bg-black h-screen w-screen">
       {" "}
       <form className="md:w-6/12 w-full" onSubmit={handleSubmit}>
         <motion.div
