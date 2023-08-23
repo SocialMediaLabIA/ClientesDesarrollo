@@ -1,12 +1,12 @@
 const { Router } = require("express");
 const {
   postUsersHandler,
-  getUserByEmailHandler,
+  getUserByLoginHandler,
 } = require("../Handlers/usersHandlers");
 
 const UsersRouter = Router();
 
-UsersRouter.get("/email", getUserByEmailHandler);
+UsersRouter.get("/email", getUserByLoginHandler);
 UsersRouter.post("/", postUsersHandler);
 
 module.exports = UsersRouter;
