@@ -7,13 +7,13 @@ import pages from "../utils/progressPages"
 
 export default function RoadMap() {
   let [progress, setProgress] = useState(0);
-
+  
   const directionProgress = (direction) => {
     if (direction === "next" && progress < 20) setProgress(++progress);
     if (direction === "prev" && progress > 0) setProgress(--progress);
   };
   console.log(progress);
-
+  
   return (
     <div className="font-poppins flex flex-col justify-start items-center h-screen w-screen bg-black relative">
       <div className="flex flex-col justify-center items-center  w-screen bg-black mt-10">
@@ -23,9 +23,20 @@ export default function RoadMap() {
           <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin  text-white" />
         </div>
         {progress !== 0 && <ProgressBar progress={progress} />}
+        {progress === 0 && <div className="w-full flex justify-center items-center text-white mt-20"></div>}
+      {progress !== 0 && pages[progress].meet &&
+        <>
+              <button
+            onClick={() => directionProgress("prev")}
+            className="bg-transparent  text-blue-700 font-semibold      rounded absolute bottom-0"
+          >
+            .
+          </button>
+        </>
+      }
         <ProgressHeaders progress={progress} />
-        <div className="flex justify-center items-center w-4/5 bottom-32 absolute gap-32">
-          {progress !== 0 &&
+        <div className="flex justify-center items-center w-4/5 bottom-14 absolute gap-32">
+          {progress !== 0 && !pages[progress].meet &&
             <>
               <button
                 onClick={() => directionProgress("prev")}
@@ -39,6 +50,18 @@ export default function RoadMap() {
               >
                 Next
               </button>
+            </>
+          }
+          {progress !== 0 && pages[progress].meet &&
+            <>
+    
+              <button
+                onClick={() => directionProgress("next")}
+                className="bg-transparent  text-blue-700 font-semibold  py-2 px-4 border border-blue-500  rounded"
+              >
+                {`Agendar con ${pages[progress].meet}`}
+              </button>
+
             </>
           }
           {progress === 0 &&
