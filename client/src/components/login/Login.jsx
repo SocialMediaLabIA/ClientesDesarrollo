@@ -111,7 +111,7 @@ export default function Login() {
         animate={{ height: "93%" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       />
-      <div className="flex md:w-6/12 w-full md:h-full  items-center justify-center">
+      <div className="flex md:w-6/12 w-full md:h-full items-center justify-center mt-24 md:mt-0">
         <motion.img
           src={logo}
           alt="logo"
