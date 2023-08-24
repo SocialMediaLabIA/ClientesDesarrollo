@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import logo from "../assets/smllogo.webp";
 import ProgressBar from "../components/RoadMapItems/ProgressBar";
@@ -6,12 +7,21 @@ import ProgressHeaders from "../components/RoadMapItems/ProgressHeaders";
 import pages from "../utils/progressPages"
 // import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { HiChevronLeft, HiChevronRight, HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi2";
+
 export default function RoadMap() {
   let [progress, setProgress] = useState(0);
-  
-  const directionProgress = (direction) => {
-    if (direction === "next" && progress < 20) setProgress(++progress);
-    if (direction === "prev" && progress > 0) setProgress(--progress);
+  const {search} = useLocation();
+  const idParams = search.slice(4)
+  console.log(idParams)
+
+  const directionProgress = async (direction) => {
+    if (direction === "next" && progress < 20){
+      setProgress(++progress);
+      await axios.put(`/lead/${lead._id}`)
+    } 
+    if (direction === "prev" && progress > 0){
+      setProgress(--progress);
+    } 
   };
   console.log(progress);
   
