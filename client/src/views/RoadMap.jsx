@@ -106,7 +106,7 @@ console.log(progressNumber)
         )}
         <ProgressHeaders progressNumber={progressNumber} />
         <div className="flex justify-center items-center w-4/5 bottom-14 absolute gap-64">
-          {progressNumber !== 0 && (
+          {progressNumber !== 0 && progressNumber !== 27 && (
             <>
               <HiChevronLeft
                 onClick={() => directionProgress("prev")}
@@ -137,6 +137,16 @@ console.log(progressNumber)
                 className="bg-[#c905faad] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl"
               >
                 Empecemos!
+              </button>
+            </>
+          )}
+          {progressNumber === 27 && (
+            <>
+              <button
+                onClick={() => directionProgress("")}
+                className="bg-[#c905faad] text-white font-bold py-2 px-4 rounded-xl"
+              >
+                Repetir proceso
               </button>
             </>
           )}
