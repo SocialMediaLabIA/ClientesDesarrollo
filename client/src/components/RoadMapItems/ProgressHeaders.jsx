@@ -16,7 +16,7 @@ export default function ProgressHeaders({ progressNumber }) {
           className="mt-5 w-5/6"
         />
       )}
-      {pages[progressNumber] && pages[progressNumber].resume === true && pages[progressNumber] && pages[progressNumber].number !== 20 && (
+      {pages[progressNumber] && pages[progressNumber].resume === true && pages[progressNumber] && pages[progressNumber].number !== 27 && (
         <p className="mt-10 w-5/6 text-justify items-center">{pages[progressNumber] && pages[progressNumber].resumeText}</p>
       )}
       {pages[progressNumber] && pages[progressNumber].meet === true && (
@@ -28,7 +28,7 @@ export default function ProgressHeaders({ progressNumber }) {
           />
         </div>
       )}
-      {pages[progressNumber] && pages[progressNumber].number === 20 && (
+      {pages[progressNumber] && pages[progressNumber].number === 27 && (
         <p className="mt-10 w-5/6 text-center">{pages[progressNumber] && pages[progressNumber].resumeText}</p>
       )}
     </div>
