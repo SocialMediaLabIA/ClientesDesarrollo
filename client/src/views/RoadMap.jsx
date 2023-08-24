@@ -29,7 +29,7 @@ export default function RoadMap() {
             src={logo}
             alt="logo"
             className="w-14  md:w-20 "
-            initial={{ x: -100 }} // Posición inicial (fuera de la pantalla hacia la izquierda)
+            initial={{ x: -100 }}
             animate={{ x: 0 }} // Posición final (centrada en la pantalla)
             transition={{ duration: 0.5 }} // Duración de la animación
           />
