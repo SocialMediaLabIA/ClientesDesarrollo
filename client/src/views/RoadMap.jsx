@@ -33,10 +33,21 @@ export default function RoadMap() {
             animate={{ x: 0 }} // Posición final (centrada en la pantalla)
             transition={{ duration: 0.5 }} // Duración de la animación
           />
-          <h1 className="text-base text-white md:text-[24px]">
+          <motion.h1
+            className="text-base text-white md:text-[24px]"
+            initial={{ y: -100 }} // Posición inicial (fuera de la pantalla hacia arriba y opacidad 0)
+            animate={{ y: 0 }} // Posición final (posición normal y opacidad 1)
+            transition={{ duration: 0.5 }} // Duración de la animación
+          >
             {pages[progress].title}
-          </h1>
-          <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin  text-white md:w-16 md:h-16" />
+          </motion.h1>
+          <motion.div
+            initial={{ x: 100 }} // Posición inicial (fuera de la pantalla hacia la derecha y opacidad 0)
+            animate={{ x: 0 }} // Posición final (posición normal y opacidad 1)
+            transition={{ duration: 0.5 }} // Duración de la animación
+          >
+            <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin text-white md:w-16 md:h-16" />
+          </motion.div>
         </div>
         {progress !== 0 && <ProgressBar progress={progress} />}
         {progress === 0 && (
