@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import pages from "../../utils/progressPages";
 import { motion } from "framer-motion";
 
-export default function ProgressHeaders({ progress }) {
-  console.log(pages[progress].video);
+export default function ProgressHeaders({ progressNumber }) {
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -20,8 +20,8 @@ export default function ProgressHeaders({ progress }) {
 
   const selectedImage =
     windowWidth >= 768
-      ? pages[progress].meetImageLarge
-      : pages[progress].meetImage;
+      ? pages[progressNumber] && pages[progressNumber].meetImageLarge
+      : pages[progressNumber] && pages[progressNumber].meetImage;
   return (
     <motion.div
       initial={{ opacity: 0 }}
