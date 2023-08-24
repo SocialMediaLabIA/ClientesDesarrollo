@@ -5,13 +5,7 @@ import ProgressBar from "../components/RoadMapItems/ProgressBar";
 import ProgressHeaders from "../components/RoadMapItems/ProgressHeaders";
 import pages from "../utils/progressPages";
 import { motion } from "framer-motion";
-// import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
-import {
-  HiChevronLeft,
-  HiChevronRight,
-  HiChevronDoubleLeft,
-  HiChevronDoubleRight,
-} from "react-icons/hi2";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 export default function RoadMap() {
   let [progress, setProgress] = useState(0);
 
