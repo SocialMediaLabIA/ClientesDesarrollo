@@ -1,49 +1,37 @@
-import { Link } from "react-router-dom";
 import logo from "../../../assets/smllogo.png";
-import {
-  //   IoStatsChart,
-  //   IoSettingsSharp,
-  //   IoGrid,
-  IoPeople,
-  //   IoExitOutline,
-} from "react-icons/io5";
+import { IoPeople } from "react-icons/io5";
 import { motion } from "framer-motion";
 
-function SideBar() {
+function SideBar({ handleSidebar }) {
   return (
-    <div className="bg-[#282828] flex flex-col h-full w-[190px]">
+    <div className="bg-[#282828] flex flex-col h-full px-5 rounded-lg w-[190px]">
       <div className="flex flex-col items-center justify-between h-full mt-4">
         <div className="flex flex-col items-center mt-5 justify-center">
-          <Link to={"/protected"}>
-            <img className="opacity-80 w-44" src={logo} alt="Logo" />
-          </Link>
+          <img
+            className="opacity-80 w-44"
+            src={logo}
+            alt="Logo"
+            onClick={() => handleSidebar("admin")}
+          />
           <div className="flex w-fit mt-20">
             <ul className="flex flex-col gap-2">
-              <li className="flex gap-2 items-center text-[18px]">
+              <li
+                className="flex gap-2 items-center text-[18px]"
+                onClick={() => handleSidebar("usuario")}
+              >
                 <div className="text-lg">
                   <IoPeople className="text-[#e0dddd]" />
                 </div>
-                <div>
-                  <Link
-                    to="/clevel"
-                    className="text-[#e0dddd] hover:text-white"
-                  >
-                    Usuarios
-                  </Link>
-                </div>
+                <div>Usuarios</div>
               </li>
-              <li className="flex gap-2 items-center text-[18px]">
+              <li
+                className="flex gap-2 items-center text-[18px]"
+                onClick={() => handleSidebar("crearUsuario")}
+              >
                 <div className="text-lg">
                   <IoPeople className="text-[#e0dddd]" />
                 </div>
-                <div>
-                  <Link
-                    to="/clevel"
-                    className="text-[#e0dddd] hover:text-white"
-                  >
-                    Crear Usuarios
-                  </Link>
-                </div>
+                <div>Crear Usuarios</div>
               </li>
             </ul>
           </div>
