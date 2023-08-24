@@ -27,8 +27,8 @@ export default function RoadMap() {
         <div className="flex justify-between items-center w-4/5 md:w-full md:px-20">
           <motion.img
             src={logo}
-            alt="imagen meet"
-            className="w-60 "
+            alt="logo"
+            className="w-14  md:w-20 "
             initial={{ x: -100 }} // Posición inicial (fuera de la pantalla hacia la izquierda)
             animate={{ x: 0 }} // Posición final (centrada en la pantalla)
             transition={{ duration: 0.5 }} // Duración de la animación
