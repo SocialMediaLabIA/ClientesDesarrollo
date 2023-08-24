@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export default function ProgressBar({ progress }) {
-  console.log(progress);
   // const [progress, setProgress] = useState([0,0])
 
   return (
