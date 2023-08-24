@@ -43,7 +43,7 @@ export default function RoadMap() {
           </motion.h1>
           <motion.div
             initial={{ x: 50 }}
-            animate={{ x: 0 }} // Posición final (posición normal y opacidad 1)
+            animate={{ x: 0 }}
             transition={{ duration: 0.5 }} // Duración de la animación
           >
             <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin text-white md:w-16 md:h-16" />
