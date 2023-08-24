@@ -1,6 +1,9 @@
 import meetBelen from "../assets/meetBelen.png";
 import meetNicole from "../assets/meetNicole.png";
 import meetNicolas from "../assets/meetNicolas.png";
+import meetBelenLarge from "../assets/meetBelenLarge.png";
+import meetNicoleLarge from "../assets/meetNicoleLarge.png";
+import meetNicolasLarge from "../assets/meetNicolasLarge.png";
 
 let pages = [
   //Seccion inicial
@@ -23,6 +26,7 @@ let pages = [
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetBelen,
+    meetImageLarge: meetBelenLarge,
     meetName: "Belén",
   },
   {
@@ -35,6 +39,7 @@ let pages = [
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetBelen,
+    meetImageLarge: meetBelenLarge,
     meetName: "Belén",
   },
   {
@@ -47,6 +52,7 @@ let pages = [
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetBelen,
+    meetImageLarge: meetBelenLarge,
     meetName: "Belén",
   },
   {
@@ -59,6 +65,7 @@ let pages = [
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetBelen,
+    meetImageLarge: meetBelenLarge,
     meetName: "Belén",
   },
 
@@ -73,6 +80,7 @@ let pages = [
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetNicole,
+    meetImageLarge: meetNicoleLarge,
     meetName: "Nicole",
   },
   {
@@ -85,6 +93,7 @@ let pages = [
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetNicole,
+    meetImageLarge: meetNicoleLarge,
     meetName: "Nicole",
   },
   {
@@ -97,6 +106,7 @@ let pages = [
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetNicole,
+    meetImageLarge: meetNicoleLarge,
     meetName: "Nicole",
   },
   {
