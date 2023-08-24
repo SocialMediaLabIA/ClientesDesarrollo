@@ -31,7 +31,7 @@ export default function RoadMap() {
             className="w-14  md:w-20 "
             initial={{ x: -100 }}
             animate={{ x: 0 }}
-            transition={{ duration: 0.5 }} // Duración de la animación
+            transition={{ duration: 0.5 }}
           />
           <motion.h1
             className="text-base text-white md:text-[24px]"
