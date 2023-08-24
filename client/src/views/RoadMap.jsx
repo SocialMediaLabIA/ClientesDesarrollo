@@ -29,7 +29,7 @@ export default function RoadMap() {
   };
 
   // loaderFuncion(true)
-
+console.log(progressNumber)
 
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export default function RoadMap() {
   }, [dispatch]);
 
   const directionProgress = async (direction) => {
-    if (direction === "next" && progressNumber < 20) {
+    if (direction === "next" && progressNumber < 27) {
       loaderFuncion(true)
       setProgress(++progress);
       dispatch(setProgressUser(idParams, "next")).then(() => {
