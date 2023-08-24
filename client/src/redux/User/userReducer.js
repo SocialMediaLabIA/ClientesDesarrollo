@@ -1,6 +1,6 @@
 import { GET_ALL_USER } from "./ActionUser/getAllUser";
 import { GET_USER_BY_LOGIN } from "./ActionUser/getUserByLogin";
-import {GET_PROGRESS_NUMBER} from "./ActionUser/setProgressUser"
+import {GET_PROGRESS_NUMBER} from "./ActionUser/getProgressUser"
 
 const initialState = {
   users: [],
