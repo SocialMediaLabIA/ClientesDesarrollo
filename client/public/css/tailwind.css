@@ -592,6 +592,14 @@ video {
   top: 0px;
 }
 
+.z-50 {
+  z-index: 50;
+}
+
+.m-1 {
+  margin: 0.25rem;
+}
+
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -662,6 +670,10 @@ video {
   margin-top: 1.25rem;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .flex {
   display: flex;
 }
@@ -708,6 +720,15 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-7 {
+  height: 1.75rem;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .w-1 {
@@ -787,6 +808,22 @@ video {
   width: 100vw;
 }
 
+.w-7 {
+  width: 1.75rem;
+}
+
+.w-\[0\.5px\] {
+  width: 0.5px;
+}
+
+.w-\[30rem\] {
+  width: 30rem;
+}
+
+.w-\[380px\] {
+  width: 380px;
+}
+
 .min-w-\[224px\] {
   min-width: 224px;
 }
@@ -853,6 +890,10 @@ video {
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-64 {
+  gap: 16rem;
 }
 
 .gap-x-64 {
@@ -977,6 +1018,10 @@ video {
   padding: 1.25rem;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -1013,6 +1058,10 @@ video {
 
 .pr-2 {
   padding-right: 0.5rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 
 .text-center {
@@ -1070,6 +1119,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1112,6 +1166,10 @@ video {
 
 .opacity-80 {
   opacity: 0.8;
+}
+
+.opacity-95 {
+  opacity: 0.95;
 }
 
 .transition {
