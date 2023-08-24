@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import logo from "../assets/smllogo.webp";
+import { motion } from "framer-motion";
 import ProgressBar from "../components/RoadMapItems/ProgressBar";
 import ProgressHeaders from "../components/RoadMapItems/ProgressHeaders";
 import pages from "../utils/progressPages";
@@ -24,7 +25,14 @@ export default function RoadMap() {
     <div className="font-poppins flex flex-col justify-start items-center h-screen w-screen bg-black relative">
       <div className="flex flex-col justify-center items-center  w-screen bg-black mt-10">
         <div className="flex justify-between items-center w-4/5 md:w-full md:px-20">
-          <img src={logo} alt="Logo" className="w-14  md:w-20" />
+          <motion.img
+            src={selectedImage}
+            alt="imagen meet"
+            className="w-60 "
+            initial={{ x: -100 }} // Posición inicial (fuera de la pantalla hacia la izquierda)
+            animate={{ x: 0 }} // Posición final (centrada en la pantalla)
+            transition={{ duration: 0.5 }} // Duración de la animación
+          />
           <h1 className="text-base text-white md:text-[24px]">
             {pages[progress].title}
           </h1>
