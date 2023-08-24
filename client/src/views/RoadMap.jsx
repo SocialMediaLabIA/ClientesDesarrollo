@@ -91,12 +91,15 @@ export default function RoadMap() {
           )}
           {progress === 0 && (
             <>
-              <button
+              <motion.button
                 onClick={() => directionProgress("next")}
                 className="bg-[#c905faad] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 3 }}
               >
                 Empecemos!
-              </button>
+              </motion.button>
             </>
           )}
           {progress !== 0 && pages[progress].meet && (
