@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { HiOutlineUserCircle } from "react-icons/hi";
-import logo from "../assets/smllogo.webp";
 import { motion } from "framer-motion";
 import ProgressBar from "../components/RoadMapItems/ProgressBar";
 import ProgressHeaders from "../components/RoadMapItems/ProgressHeaders";
