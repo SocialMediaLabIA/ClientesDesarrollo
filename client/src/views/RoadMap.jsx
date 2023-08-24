@@ -4,6 +4,7 @@ import logo from "../assets/smllogo.webp";
 import ProgressBar from "../components/RoadMapItems/ProgressBar";
 import ProgressHeaders from "../components/RoadMapItems/ProgressHeaders";
 import pages from "../utils/progressPages";
+import { motion } from "framer-motion";
 // import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import {
   HiChevronLeft,
