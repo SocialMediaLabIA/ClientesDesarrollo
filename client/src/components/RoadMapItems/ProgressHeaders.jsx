@@ -28,8 +28,8 @@ export default function ProgressHeaders({ progress }) {
         <iframe
           title="YouTube Video"
           src={pages[progress].videoSource} // Cambia esta URL por la URL correcta del video embebido
-          frameBorder="0" // Cambiado a frameBorder
-          allowFullScreen // Cambiado a allowFullScreen
+          frameBorder="0"
+          allowFullScreen
           className="mt-5 w-5/6  md:w-3/6 h-[400px] md:h-[600px] md:mt-0 "
         />
       )}
