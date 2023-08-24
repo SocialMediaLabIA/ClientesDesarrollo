@@ -42,7 +42,7 @@ export default function RoadMap() {
             {pages[progress].title}
           </motion.h1>
           <motion.div
-            initial={{ x: 100 }} // Posición inicial (fuera de la pantalla hacia la derecha y opacidad 0)
+            initial={{ x: 50 }}
             animate={{ x: 0 }} // Posición final (posición normal y opacidad 1)
             transition={{ duration: 0.5 }} // Duración de la animación
           >
