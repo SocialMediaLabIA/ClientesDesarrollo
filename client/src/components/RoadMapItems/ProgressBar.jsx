@@ -196,6 +196,99 @@ export default function ProgressBar({ progressNumber }) {
       >
         5
       </p>
+      <div
+        className={
+          progressNumber >= 17 ? "border-2 border-[#00DFFD] w-1" : "border-2 w-1"
+        }
+      ></div>
+      {/* intermedio 5 */}
+      <div
+        className={
+          progressNumber >= 18
+            ? "border-2 border-[#00DFFD] w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
+        }
+      ></div>
+
+      {/* Fin intermedio 5 */}
+      <div
+        className={
+          progressNumber >= 19
+            ? "border-2 border-[#00DFFD] w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
+        }
+      ></div>
+            <p
+        className={
+          progressNumber >= 20
+            ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-10 h-10 flex justify-center items-center"
+            : "border-4 rounded-full w-10 h-10 flex justify-center items-center"
+        }
+      >
+        6
+      </p>
+      <div
+        className={
+          progressNumber >= 17 ? "border-2 border-[#00DFFD] w-1" : "border-2 w-1"
+        }
+      ></div>
+      {/* intermedio 6 */}
+      <div
+        className={
+          progressNumber >= 18
+            ? "border-2 border-[#00DFFD] w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
+        }
+      ></div>
+
+      {/* Fin intermedio 6 */}
+      <div
+        className={
+          progressNumber >= 19
+            ? "border-2 border-[#00DFFD] w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
+        }
+      ></div>
+            <p
+        className={
+          progressNumber >= 20
+            ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-10 h-10 flex justify-center items-center"
+            : "border-4 rounded-full w-10 h-10 flex justify-center items-center"
+        }
+      >
+        7
+      </p>
+      <div
+        className={
+          progressNumber >= 17 ? "border-2 border-[#00DFFD] w-1" : "border-2 w-1"
+        }
+      ></div>
+      {/* intermedio 7 */}
+      <div
+        className={
+          progressNumber >= 18
+            ? "border-2 border-[#00DFFD] w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
+        }
+      ></div>
+
+      {/* Fin intermedio 7 */}
+      <div
+        className={
+          progressNumber >= 19
+            ? "border-2 border-[#00DFFD] w-1 ml-0.5"
+            : "border-2 w-1 ml-0.5"
+        }
+      ></div>
+            <p
+        className={
+          progressNumber >= 20
+            ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-10 h-10 flex justify-center items-center"
+            : "border-4 rounded-full w-10 h-10 flex justify-center items-center"
+        }
+      >
+        8
+      </p>
     </div>
   );
 }
