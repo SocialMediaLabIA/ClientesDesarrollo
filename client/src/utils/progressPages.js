@@ -1,4 +1,3 @@
-import imageMeet from "../assets/fotomeet.png";
 import meetBelen from "../assets/meetBelen.png";
 import meetNicole from "../assets/meetNicole.png";
 import meetNicolas from "../assets/meetNicolas.png";
