@@ -9,10 +9,10 @@ const {
 const UsersRouter = Router();
 
 // UsersRouter.get("/", getAllUserHandler);
+UsersRouter.put("/progress", setProgressUserHandler);
 UsersRouter.get("/email", getUserByLoginHandler);
 UsersRouter.put("/access", setAccessUserHandler);
-console.log("ROUTESSSSSS")
-UsersRouter.put("/progress", setProgressUserHandler);
+
 UsersRouter.post("/", postUsersHandler);
 
 module.exports = UsersRouter;
