@@ -61,11 +61,10 @@ export default function RoadMap() {
   };
 
   return (
-    <div className="font-poppins flex flex-col justify-start items-center h-screen w-screen bg-black relative">
+    <div className=" font-poppins flex flex-col justify-start items-center h-screen w-full bg-black relative">
       {loader ? (
-        <div className="absolute z-50 h-screen w-screen bg-black opacity-95 pb-10 flex justify-center items-center">
-              <h1>dcdd</h1>
-          <div className="flex flex-col gap-5 items-center justify-center w-[30rem] p-5 h-fit rounded-xl">
+        <div className="absolute z-50 h-screen w-screen bg-black opacity-95 pb-10 flex justify-center items-center ">
+          <div className="flex flex-col gap-5 items-center justify-center w-[30rem] p-5 h-fit rounded-xl ">
             {/* <h2 className="text-white text-[2rem]">Enviando Leads!</h2> */}
 
             <div className="flex flex-col gap-2 p-2">
@@ -91,7 +90,7 @@ export default function RoadMap() {
           </div>
         </div>
       ) : null}
-      <div className="flex flex-col justify-center items-center  w-screen bg-black mt-10">
+      <div className="flex flex-col justify-center items-center  w-full bg-black mt-10 ">
         <div className="flex justify-between items-center w-4/5">
           <img src={logo} alt="Logo" className="w-14 h-14" />
           <h1 className="text-base text-white">
