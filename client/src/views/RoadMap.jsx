@@ -36,7 +36,7 @@ export default function RoadMap() {
           <motion.h1
             className="text-base text-white md:text-[24px]"
             initial={{ y: -100 }}
-            animate={{ y: 0 }} // Posición final (posición normal y opacidad 1)
+            animate={{ y: 0 }}
             transition={{ duration: 0.5 }} // Duración de la animación
           >
             {pages[progress].title}
