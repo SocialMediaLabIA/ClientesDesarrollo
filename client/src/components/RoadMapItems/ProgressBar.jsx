@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
-export default function ProgressBar({ progress }) {
-  // const [progress, setProgress] = useState([0,0])
+export default function ProgressBar({ progressNumber }) {
+  // const [progressNumber, setProgress] = useState([0,0])
 
   return (
     <div className="w-full flex justify-center items-center text-white mt-10">
       {/* Seccion 1 */}
       <p
         className={
-          progress >= 1
+          progressNumber >= 1
             ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-10 h-10 flex justify-center items-center"
             : "border-4 rounded-full w-10 h-10 flex justify-center items-center"
         }
@@ -17,20 +17,20 @@ export default function ProgressBar({ progress }) {
       </p>
       <div
         className={
-          progress >= 1 ? "border-2 border-[#00DFFD] w-1" : "border-2 w-1 "
+          progressNumber >= 1 ? "border-2 border-[#00DFFD] w-1" : "border-2 w-1 "
         }
       ></div>
       {/* intermedio 1 */}
       <div
         className={
-          progress >= 2
+          progressNumber >= 2
             ? "border-2 border-[#00DFFD] w-1 ml-0.5"
             : "border-2 w-1 ml-0.5"
         }
       ></div>
       <div
         className={
-          progress >= 3
+          progressNumber >= 3
             ? "border-2 border-[#00DFFD] w-1 ml-0.5"
             : "border-2 w-1 ml-0.5"
         }
@@ -39,7 +39,7 @@ export default function ProgressBar({ progress }) {
       {/* Fin intermedio 1 */}
       <div
         className={
-          progress >= 4
+          progressNumber >= 4
             ? "border-2 border-[#00DFFD] w-1 ml-0.5"
             : "border-2 w-1 ml-0.5"
         }
@@ -48,7 +48,7 @@ export default function ProgressBar({ progress }) {
       {/* Seccion 2 */}
       <p
         className={
-          progress >= 5
+          progressNumber >= 5
             ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-10 h-10 flex justify-center items-center"
             : "border-4 rounded-full w-10 h-10 flex justify-center items-center"
         }
@@ -57,41 +57,41 @@ export default function ProgressBar({ progress }) {
       </p>
       <div
         className={
-          progress >= 5 ? "border-2 border-[#00DFFD] w-1" : "border-2 w-1"
+          progressNumber >= 5 ? "border-2 border-[#00DFFD] w-1" : "border-2 w-1"
         }
       ></div>
       {/* intermedio 2 */}
       <div
         className={
-          progress >= 6
+          progressNumber >= 6
             ? "border-2 border-[#00DFFD] w-1 ml-0.5"
             : "border-2 w-1 ml-0.5"
         }
       ></div>
       <div
         className={
-          progress >= 7
+          progressNumber >= 7
             ? "border-2 border-[#00DFFD] w-1 ml-0.5"
             : "border-2 w-1 ml-0.5"
         }
       ></div>
       <div
         className={
-          progress >= 8
+          progressNumber >= 8
             ? "border-2 border-[#00DFFD] w-1 ml-0.5"
             : "border-2 w-1 ml-0.5"
         }
       ></div>
       <div
         className={
-          progress >= 9
+          progressNumber >= 9
             ? "border-2 border-[#00DFFD] w-1 ml-0.5"
             : "border-2 w-1 ml-0.5"
         }
       ></div>
       <div
         className={
-          progress >= 10
+          progressNumber >= 10
             ? "border-2 border-[#00DFFD] w-1 ml-0.5"
             : "border-2 w-1 ml-0.5"
         }
@@ -100,7 +100,7 @@ export default function ProgressBar({ progress }) {
       {/* Fin intermedio 2 */}
       <div
         className={
-          progress >= 11
+          progressNumber >= 11
             ? "border-2 border-[#00DFFD] w-1 ml-0.5"
             : "border-2 w-1 ml-0.5"
         }
@@ -109,7 +109,7 @@ export default function ProgressBar({ progress }) {
       {/* Seccion 3 */}
       <p
         className={
-          progress >= 12
+          progressNumber >= 12
             ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-10 h-10 flex justify-center items-center"
             : "border-4 rounded-full w-10 h-10 flex justify-center items-center"
         }
@@ -118,27 +118,27 @@ export default function ProgressBar({ progress }) {
       </p>
       <div
         className={
-          progress >= 12 ? "border-2 border-[#00DFFD] w-1" : "border-2 w-1"
+          progressNumber >= 12 ? "border-2 border-[#00DFFD] w-1" : "border-2 w-1"
         }
       ></div>
       {/* intermedio 3 */}
       <div
         className={
-          progress >= 13
+          progressNumber >= 13
             ? "border-2 border-[#00DFFD] w-1 ml-0.5"
             : "border-2 w-1 ml-0.5"
         }
       ></div>
       <div
         className={
-          progress >= 14
+          progressNumber >= 14
             ? "border-2 border-[#00DFFD] w-1 ml-0.5"
             : "border-2 w-1 ml-0.5"
         }
       ></div>
       <div
         className={
-          progress >= 15
+          progressNumber >= 15
             ? "border-2 border-[#00DFFD] w-1 ml-0.5"
             : "border-2 w-1 ml-0.5"
         }
@@ -147,7 +147,7 @@ export default function ProgressBar({ progress }) {
       {/* Fin intermedio 3 */}
       <div
         className={
-          progress >= 16
+          progressNumber >= 16
             ? "border-2 border-[#00DFFD] w-1 ml-0.5"
             : "border-2 w-1 ml-0.5"
         }
@@ -156,7 +156,7 @@ export default function ProgressBar({ progress }) {
       {/* Seccion 4 */}
       <p
         className={
-          progress >= 17
+          progressNumber >= 17
             ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-10 h-10 flex justify-center items-center"
             : "border-4 rounded-full w-10 h-10 flex justify-center items-center"
         }
@@ -165,13 +165,13 @@ export default function ProgressBar({ progress }) {
       </p>
       <div
         className={
-          progress >= 17 ? "border-2 border-[#00DFFD] w-1" : "border-2 w-1"
+          progressNumber >= 17 ? "border-2 border-[#00DFFD] w-1" : "border-2 w-1"
         }
       ></div>
       {/* intermedio 4 */}
       <div
         className={
-          progress >= 18
+          progressNumber >= 18
             ? "border-2 border-[#00DFFD] w-1 ml-0.5"
             : "border-2 w-1 ml-0.5"
         }
@@ -180,7 +180,7 @@ export default function ProgressBar({ progress }) {
       {/* Fin intermedio 4 */}
       <div
         className={
-          progress >= 19
+          progressNumber >= 19
             ? "border-2 border-[#00DFFD] w-1 ml-0.5"
             : "border-2 w-1 ml-0.5"
         }
@@ -189,7 +189,7 @@ export default function ProgressBar({ progress }) {
       {/* Seccion 5 */}
       <p
         className={
-          progress >= 20
+          progressNumber >= 20
             ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-10 h-10 flex justify-center items-center"
             : "border-4 rounded-full w-10 h-10 flex justify-center items-center"
         }
