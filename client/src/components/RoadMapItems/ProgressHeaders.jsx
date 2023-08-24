@@ -29,7 +29,12 @@ export default function ProgressHeaders({ progressNumber }) {
         </div>
       )}
       {pages[progressNumber] && pages[progressNumber].number === 27 && (
-        <p className="mt-10 w-5/6 text-center">{pages[progressNumber] && pages[progressNumber].resumeText}</p>
+   
+        <img
+            src={pages[progressNumber] && pages[progressNumber].meetImage}
+            alt="imagen meet"
+            className="w-[380px] mt-16"
+          />
       )}
     </div>
   );
