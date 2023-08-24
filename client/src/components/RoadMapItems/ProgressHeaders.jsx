@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import pages from "../../utils/progressPages";
 
 export default function ProgressHeaders({ progress }) {
   console.log(pages[progress].video);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const selectedImage =
+    windowWidth >= 768
+      ? pages[progress].meetImageLarge
+      : pages[progress].meetImage;
   return (
     <div className="flex justify-center items-center w-full h-5/5 mt-12 text-white">
       {pages[progress].video === true && (
@@ -22,9 +40,9 @@ export default function ProgressHeaders({ progress }) {
       {pages[progress].meet === true && (
         <div className="flex justify-center items-center h-full w-full ">
           <img
-            src={pages[progress].meetImage}
+            src={selectedImage}
             alt="imagen meet"
-            className="w-60"
+            className="w-60 md:w-4/6  xl:w-3/6 "
           />
         </div>
       )}
