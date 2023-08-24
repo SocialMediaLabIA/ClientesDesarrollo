@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import pages from "../../utils/progressPages";
+import { motion } from "framer-motion";
 
 export default function ProgressHeaders({ progress }) {
   console.log(pages[progress].video);
