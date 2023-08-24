@@ -1,6 +1,16 @@
+const getAllUser = require("../controllers/users/getAllUsers");
 const getUserByLogin = require("../controllers/users/getUserByLogin");
 const postUsers = require("../controllers/users/postUsers");
 const setAccessUser = require("../controllers/users/setAccessUser");
+
+const getAllUserHandler = async (req, res) => {
+  try {
+    const Users = await getAllUser();
+    res.status(200).json(Users);
+  } catch (error) {
+    res.status(404).json({ error: error.message });
+  }
+};
 
 const postUsersHandler = async (req, res) => {
   const body = req.body;
@@ -32,6 +42,7 @@ const setAccessUserHandler = async (req, res) => {
 };
 
 module.exports = {
+  getAllUserHandler,
   postUsersHandler,
   getUserByLoginHandler,
   setAccessUserHandler,
