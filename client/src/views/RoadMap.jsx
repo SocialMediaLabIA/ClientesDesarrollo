@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { HiOutlineUserCircle } from "react-icons/hi";
@@ -11,12 +11,15 @@ import { HiChevronLeft, HiChevronRight, HiChevronDoubleLeft, HiChevronDoubleRigh
 import { setProgressUser } from "../redux/User/ActionUser/setProgressUser";
 
 export default function RoadMap() {
-  const { progressNumber } = useSelector((state) => state);
-  let [progress, setProgress] = useState(progressNumber);
   const dispatch = useDispatch();
   const {search} = useLocation();
   const idParams = search.slice(4)
+  const { progressNumber } = useSelector((state) => state.progressNumber);
+  let [progress, setProgress] = useState(progressNumber);
 
+  useEffect(()=>{
+
+  }, [])
 
   const directionProgress = async (direction) => {
     if (direction === "next" && progressNumber < 20){
