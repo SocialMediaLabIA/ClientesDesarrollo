@@ -28,7 +28,6 @@ export default function ProgressHeaders({ progress }) {
         <iframe
           title="YouTube Video"
           src={pages[progress].videoSource}
-          frameBorder="0"
           allowFullScreen
           className="mt-5 w-5/6  md:w-3/6 h-[400px] md:h-[600px] md:mt-0 "
         />
