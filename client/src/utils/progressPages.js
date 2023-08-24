@@ -278,6 +278,7 @@ let pages = [
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText: "Tutorial Finalizado",
     meetImage: meetBelen,
+    meetImageLarge: meetBelenLarge,
     meetName: "Nicolás",
   },
 ];
