@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import logo from "../assets/smllogo.webp";
 import ProgressBar from "../components/RoadMapItems/ProgressBar";
@@ -7,34 +8,37 @@ import ProgressHeaders from "../components/RoadMapItems/ProgressHeaders";
 import pages from "../utils/progressPages"
 // import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { HiChevronLeft, HiChevronRight, HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi2";
+import { setProgressUser } from "../redux/User/ActionUser/setProgressUser";
 
 export default function RoadMap() {
-  let [progress, setProgress] = useState(0);
+  const { progressNumber } = useSelector((state) => state);
+  let [progress, setProgress] = useState(progressNumber);
+  const dispatch = useDispatch();
   const {search} = useLocation();
   const idParams = search.slice(4)
-  console.log(idParams)
+
 
   const directionProgress = async (direction) => {
-    if (direction === "next" && progress < 20){
+    if (direction === "next" && progressNumber < 20){
       setProgress(++progress);
-      await axios.put(`/lead/${lead._id}`)
+      dispatch(setProgressUser(idParams))
     } 
-    if (direction === "prev" && progress > 0){
+    if (direction === "prev" && progressNumber > 0){
       setProgress(--progress);
     } 
   };
-  console.log(progress);
+  console.log(progressNumber);
   
   return (
     <div className="font-poppins flex flex-col justify-start items-center h-screen w-screen bg-black relative">
       <div className="flex flex-col justify-center items-center  w-screen bg-black mt-10">
         <div className="flex justify-between items-center w-4/5">
           <img src={logo} alt="Logo" className="w-14 h-14" />
-          <h1 className="text-base text-white">{pages[progress].title}</h1>
+          <h1 className="text-base text-white">{pages[progressNumber].title}</h1>
           <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin  text-white" />
         </div>
-        {progress !== 0 && <ProgressBar progress={progress} />}
-        {progress === 0 && <div className="w-full flex justify-center items-center text-white mt-20"></div>}
+        {progressNumber !== 0 && <ProgressBar progress={progressNumber} />}
+        {progressNumber === 0 && <div className="w-full flex justify-center items-center text-white mt-20"></div>}
       {/* {progress !== 0 && pages[progress].meet &&
         <>
               <button
@@ -45,9 +49,9 @@ export default function RoadMap() {
           </button>
         </>
       } */}
-        <ProgressHeaders progress={progress} />
+        <ProgressHeaders progress={progressNumber} />
         <div className="flex justify-center items-center w-4/5 bottom-14 absolute gap-64">
-          {progress !== 0 &&
+          {progressNumber !== 0 &&
             <>
             <HiChevronLeft onClick={() => directionProgress("prev")}
                 className=" text-white font-bold text-xl w-8 h-8"/>
@@ -67,7 +71,7 @@ export default function RoadMap() {
               </button> */}
             </>
           } 
-          {progress === 0 &&
+          {progressNumber === 0 &&
             <>
               <button
                 onClick={() => directionProgress("next")}
@@ -77,14 +81,14 @@ export default function RoadMap() {
               </button>
             </>
           }
-          {progress !== 0 && pages[progress].meet &&
+          {progressNumber !== 0 && pages[progressNumber].meet &&
             <>
     
               <button
-                onClick={() => directionProgress("next")}
+                onClick={() => directionProgress("")}
                 className="bg-[#c905faad] text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
               >
-                {`Agendar con ${pages[progress].meetName}`}
+                {`Agendar con ${pages[progressNumber].meetName}`}
               </button>
 
             </>
