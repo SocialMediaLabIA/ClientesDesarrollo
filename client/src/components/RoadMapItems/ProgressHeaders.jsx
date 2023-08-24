@@ -23,7 +23,12 @@ export default function ProgressHeaders({ progress }) {
       ? pages[progress].meetImageLarge
       : pages[progress].meetImage;
   return (
-    <div className="flex justify-center items-center w-full h-5/5 mt-12 text-white">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="flex justify-center items-center w-full h-5/5 mt-12 text-white"
+    >
       {pages[progress].video === true && (
         <iframe
           title="YouTube Video"
@@ -49,6 +54,6 @@ export default function ProgressHeaders({ progress }) {
       {pages[progress].number === 20 && (
         <p className="mt-10 w-5/6 text-center">{pages[progress].resumeText}</p>
       )}
-    </div>
+    </motion.div>
   );
 }
