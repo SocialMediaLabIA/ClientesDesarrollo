@@ -31,8 +31,8 @@ const setAccessUserHandler = async (req, res) => {
     res.status(404).json({ error: error.message });
   }
 };
+
 const setProgressUserHandler = async (req, res) => {
-  console.log("HANDLEEEEEERS")
   const { id } = req.query;
   try {
     const User = await setProgressUser(id);
