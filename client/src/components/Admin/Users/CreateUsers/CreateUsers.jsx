@@ -1,4 +1,4 @@
-import CreateUserForm from "./MUI/CreateUserForm";
+import CreateUserForm from "./CreateUserForm";
 
 export default function CreateUsers() {
   return (
