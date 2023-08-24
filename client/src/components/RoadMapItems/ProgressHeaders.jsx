@@ -29,30 +29,37 @@ export default function ProgressHeaders({ progress }) {
       transition={{ duration: 0.5 }}
       className="flex justify-center items-center w-full h-5/5 mt-12 text-white"
     >
-      {pages[progress].video === true && (
+{pages[progressNumber] && pages[progressNumber].video === true && (
         <iframe
           title="YouTube Video"
-          src={pages[progress].videoSource}
-          allowFullScreen
-          className="mt-5 w-5/6  md:w-3/6 h-[400px] md:h-[600px] md:mt-0 "
+          width="580"
+          height="330"
+          src={pages[progressNumber] && pages[progressNumber].videoSource} // Cambia esta URL por la URL correcta del video embebido
+          frameBorder="0" // Cambiado a frameBorder
+          allowFullScreen // Cambiado a allowFullScreen
+          className="mt-5 w-5/6"
         />
       )}
-      {pages[progress].resume === true && pages[progress].number !== 20 && (
-        <p className="mt-10 w-5/6 text-justify items-center">
-          {pages[progress].resumeText}
-        </p>
+      {pages[progressNumber] && pages[progressNumber].resume === true && pages[progressNumber] && pages[progressNumber].number !== 27 && (
+        <p className="mt-10 w-5/6 text-justify items-center">{pages[progressNumber] && pages[progressNumber].resumeText}</p>
       )}
-      {pages[progress].meet === true && (
+      {pages[progressNumber] && pages[progressNumber].meet === true && (
         <div className="flex justify-center items-center h-full w-full ">
           <img
             src={selectedImage}
+            // src={pages[progressNumber] && pages[progressNumber].meetImage}
             alt="imagen meet"
             className="w-60 md:w-4/6  xl:w-3/6 "
           />
         </div>
       )}
-      {pages[progress].number === 20 && (
-        <p className="mt-10 w-5/6 text-center">{pages[progress].resumeText}</p>
+      {pages[progressNumber] && pages[progressNumber].number === 27 && (
+   
+        <img
+            src={pages[progressNumber] && pages[progressNumber].meetImage}
+            alt="imagen meet"
+            className="w-[380px] mt-16"
+          />
       )}
     </motion.div>
   );
