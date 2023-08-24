@@ -4,6 +4,7 @@ import meetNicolas from "../assets/meetNicolas.png";
 import meetBelenLarge from "../assets/meetBelenLarge.png";
 import meetNicoleLarge from "../assets/meetNicoleLarge.png";
 import meetNicolasLarge from "../assets/meetNicolasLarge.png";
+import celebration from "../assets/celebration.png";
 
 let pages = [
   //Seccion inicial
@@ -229,36 +230,89 @@ let pages = [
     meetName: "Nicolás",
   },
 
+
   //Seccion 4
   {
     number: 17,
-    title: "Social Media Lab",
+    title: "Edición",
     video: false,
     resume: true,
     meet: false,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
-    meetImage: meetBelen,
-    meetImageLarge: meetBelenLarge,
+    meetImage: meetNicolas,
+    meetImageLarge: meetNicolasLarge,
     meetName: "Nicolás",
   },
+
+  //Seccion 5
   {
     number: 18,
-    title: "Social Media Lab",
-    video: false,
-    resume: true,
+    title: "Pre - Publicación",
+    video: true,
+    resume: false,
     meet: false,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
-    meetImage: meetBelen,
-    meetImageLarge: meetBelenLarge,
+    meetImage: meetNicolas,
+    meetImageLarge: meetNicolasLarge,
     meetName: "Nicolás",
   },
   {
     number: 19,
-    title: "Social Media Lab",
+    title: "Pre - Publicación",
+    video: false,
+    resume: true,
+    meet: false,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+    meetImage: meetNicolas,
+    meetName: "Nicolás",
+  },
+  {
+    number: 20,
+    title: "Pre - Publicación",
+    video: false,
+    resume: false,
+    meet: true,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+    meetImage: meetNicole,
+    meetName: "Nicole",
+  },
+  {
+    number: 21,
+    title: "Pre - Publicación",
+    video: false,
+    resume: true,
+    meet: false,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+    meetImage: meetNicolas,
+    meetName: "Nicolás",
+  },
+  {
+    number: 22,
+    title: "Pre - Publicación",
+    video: false,
+    resume: false,
+    meet: true,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+    meetImage: meetBelen,
+    meetName: "Belén",
+  },
+
+  //seccion 6
+  {
+    number: 23,
+    title: "Publicación",
     video: false,
     resume: true,
     meet: false,
@@ -267,19 +321,58 @@ let pages = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetBelen,
     meetImageLarge: meetBelenLarge,
-    meetName: "Nicolás",
+    meetName: "Belén",
+  },
+
+  //Seccion 7
+  {
+    number: 24,
+    title: "Análisis y optimización",
+    video: true,
+    resume: false,
+    meet: false,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+    meetImage: meetBelen,
+    meetName: "Belén",
   },
   {
-    number: 20,
-    title: "Social Media Lab",
+    number: 25,
+    title: "Análisis y optimización",
     video: false,
     resume: true,
     meet: false,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
-    resumeText: "Tutorial Finalizado",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetBelen,
     meetImageLarge: meetBelenLarge,
-    meetName: "Nicolás",
+    meetName: "Belén",
+  },
+  {
+    number: 26,
+    title: "Análisis y optimización",
+    video: false,
+    resume: false,
+    meet: true,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+    meetImage: meetBelen,
+    meetName: "Belén",
+  },
+  {
+    number: 27,
+    title: "¡Terminaste tu recorrido!",
+    video: false,
+    resume: false,
+    meet: false,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+    meetImage: celebration,
+    meetName: "Belén",
   },
 ];
 
