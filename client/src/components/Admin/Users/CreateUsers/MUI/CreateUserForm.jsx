@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import createUser from "../../../../../redux/User/ActionUser/createUser";
+import {
+  validateEmail,
+  validateLastname,
+  validateName,
+  validatePassword,
+  validateRole,
+} from "./validate";
 
 export default function CreateUserForm() {
   const dispatch = useDispatch();
@@ -16,16 +23,75 @@ export default function CreateUserForm() {
     progress: 0,
   });
 
+  const [errors, setErrors] = useState({
+    role: "",
+    name: "",
+    lastname: "",
+    email: "",
+    password: "",
+  });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser((prevUser) => ({
       ...prevUser,
       [name]: value,
     }));
+
+    if (name === "role") {
+      validateRole(user.role, errors, setErrors);
+    } else if (name === "name") {
+      validateName(user.name, errors, setErrors);
+    } else if (name === "lastname") {
+      validateLastname(user.lastname, errors, setErrors);
+    } else if (name === "email") {
+      validateEmail(user.email, errors, setErrors);
+    } else if (name === "password") {
+      validatePassword(user.password, errors, setErrors);
+    }
   };
 
-  const crearUsuario = () => {
+  const handleSubmit = () => {
+    const roleError = validateRole(user.role);
+    const nameError = validateName(user.name);
+    const lastnameError = validateLastname(user.lastname);
+    const emailError = validateEmail(user.email);
+    const passwordError = validatePassword(user.password);
+
+    console.log(roleError);
+    console.log(nameError);
+    console.log(lastnameError);
+    console.log(emailError);
+    console.log(passwordError);
+    if (
+      roleError ||
+      nameError ||
+      lastnameError ||
+      emailError ||
+      passwordError
+    ) {
+      setErrors({
+        role: roleError,
+        name: nameError,
+        lastname: lastnameError,
+        email: emailError,
+        password: passwordError,
+      });
+      return;
+    }
+
     dispatch(createUser(user));
+
+    setUser({
+      role: "",
+      name: "",
+      lastname: "",
+      email: "",
+      password: "",
+      isActive: true,
+      access: false,
+      progress: 0,
+    });
   };
 
   return (
@@ -48,6 +114,9 @@ export default function CreateUserForm() {
             Administrador
           </option>
         </select>
+        <span className="text-red-400 text-[12px] mt-1">
+          {errors.role && <>{errors.role}</>}
+        </span>
       </div>
       <div className="flex flex-col items-start justify-center gap-1">
         <label className="font-bold ml-2 text-white">Nombre:</label>
@@ -59,6 +128,9 @@ export default function CreateUserForm() {
           onChange={handleChange}
           placeholder="Ingrese el nombre..."
         />
+        <span className="text-red-400 text-[12px] mt-1">
+          {errors.name && <>{errors.name}</>}
+        </span>
       </div>
       <div className="flex flex-col items-start justify-center gap-1">
         <label className="font-bold ml-2 text-white">Apellido:</label>
@@ -70,6 +142,9 @@ export default function CreateUserForm() {
           onChange={handleChange}
           placeholder="Ingrese el apellido..."
         />
+        <span className="text-red-400 text-[12px] mt-1">
+          {errors.lastname && <>{errors.lastname}</>}
+        </span>
       </div>
       <div className="flex flex-col items-start justify-center gap-1">
         <label className="font-bold ml-2 text-white">Email:</label>
@@ -81,6 +156,9 @@ export default function CreateUserForm() {
           onChange={handleChange}
           placeholder="Ingrese el email..."
         />
+        <span className="text-red-400 text-[12px] mt-1">
+          {errors.email && <>{errors.email}</>}
+        </span>
       </div>
       <div className="flex flex-col items-start justify-center gap-1">
         <label className="font-bold ml-2 text-white">Contraseña:</label>
@@ -92,10 +170,22 @@ export default function CreateUserForm() {
           onChange={handleChange}
           placeholder="Ingrese el password..."
         />
+        <span className="text-red-400 text-[12px] mt-1">
+          {errors.password && <>{errors.password}</>}
+        </span>
       </div>
       <button
-        className="bg-[#07a1f8] rounded-2xl py-2 px-5 text-white font-bold"
-        onClick={() => crearUsuario()}
+        className="bg-[#6610A9] rounded-2xl py-2 px-10 text-white font-bold"
+        onClick={() => {
+          setErrors({
+            role: "",
+            name: "",
+            lastname: "",
+            email: "",
+            password: "",
+          });
+          handleSubmit();
+        }}
       >
         Crear Usuario
       </button>
