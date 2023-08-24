@@ -12,7 +12,7 @@ export default function Users() {
   };
 
   return (
-    <div className="flex w-full h-full  ">
+    <div className="flex w-full h-full font-poppins">
       <SideBar handleSidebar={handleSidebar} />
       <div className="flex w-full h-full  flex-col gap-5 p-10">
         <div className=" text-[1.5rem] font-semibold bg-[#282828] p-5 rounded-lg">
