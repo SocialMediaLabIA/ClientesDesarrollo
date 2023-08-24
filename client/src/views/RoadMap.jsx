@@ -45,7 +45,7 @@ export default function RoadMap() {
         </>
       } */}
         <ProgressHeaders progress={progress} />
-        <div className="flex justify-center items-center w-4/5 bottom-14 absolute gap-64">
+        <div className="flex justify-center items-center w-4/5 bottom-14 absolute gap-x-64 md:w-full md:px-20">
           {progress !== 0 && (
             <>
               <HiChevronLeft
