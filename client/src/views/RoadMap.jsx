@@ -24,9 +24,11 @@ export default function RoadMap() {
     <div className="font-poppins flex flex-col justify-start items-center h-screen w-screen bg-black relative">
       <div className="flex flex-col justify-center items-center  w-screen bg-black mt-10">
         <div className="flex justify-between items-center w-4/5 md:w-full md:px-20">
-          <img src={logo} alt="Logo" className="w-14 h-14" />
-          <h1 className="text-base text-white">{pages[progress].title}</h1>
-          <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin  text-white" />
+          <img src={logo} alt="Logo" className="w-14  md:w-20" />
+          <h1 className="text-base text-white md:text-[24px]">
+            {pages[progress].title}
+          </h1>
+          <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin  text-white md:w-16 md:h-16" />
         </div>
         {progress !== 0 && <ProgressBar progress={progress} />}
         {progress === 0 && (
