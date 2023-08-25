@@ -63,6 +63,7 @@ const setProgressUserHandler = async (req, res) => {
     res.status(404).json({ error: error.message });
   }
 };
+
 const editUserByIdHandler = async (req, res) => {
   const { id } = req.query;
   const body = req.body;
