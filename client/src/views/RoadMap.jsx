@@ -40,7 +40,7 @@ export default function RoadMap() {
   }, [dispatch]);
 
   const directionProgress = async (direction) => {
-    if (direction === "next" && progressNumber < 34) {
+    if (direction === "next" && progressNumber < 38) {
       loaderFuncion(true);
       setProgress(++progress);
       dispatch(setProgressUser(idParams, "next"))
@@ -105,7 +105,7 @@ export default function RoadMap() {
             transition={{ duration: 0.5 }}
           />
 
-          <div className="border-2 flex justify-center items-center w-4/6 md:w-full md:px-20">
+          <div className="flex justify-center items-center w-4/6 md:w-full md:px-20">
             <motion.h1
               className="text-base text-center text-white md:text-[24px]"
               initial={{ y: -100 }}
@@ -120,7 +120,7 @@ export default function RoadMap() {
             initial={{ x: 50 }}
             animate={{ x: 0 }}
             transition={{ duration: 0.5 }}
-          >
+          >flex
             <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin text-white md:w-16 md:h-16" />
           </motion.div> */}
         </div>
@@ -132,7 +132,7 @@ export default function RoadMap() {
         )}
         <ProgressHeaders progressNumber={progressNumber} />
         <div className="flex justify-center items-center w-4/5 bottom-14 absolute gap-64">
-          {progressNumber !== 0 && progressNumber !== 34 && (
+          {progressNumber !== 0 && progressNumber !== 38 && (
             <>
               <HiChevronLeft
                 onClick={() => directionProgress("prev")}
@@ -169,7 +169,7 @@ export default function RoadMap() {
               </motion.button>
             </>
           )}
-          {progressNumber === 34 && (
+          {progressNumber === 38 && (
             <>
               <button
                 onClick={() => directionProgress("prev")}
