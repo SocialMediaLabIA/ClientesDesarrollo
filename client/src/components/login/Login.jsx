@@ -115,7 +115,7 @@ export default function Login() {
           className="flex flex-col items-center gap-y-4 mt-4"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1.8, ease: "easeInOut" }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
         >
           <button
             className="bg-[#c905faad] rounded-2xl py-2 px-5 text-white font-bold"
