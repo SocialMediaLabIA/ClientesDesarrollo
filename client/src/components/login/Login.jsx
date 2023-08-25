@@ -27,10 +27,13 @@ export default function Login() {
   useEffect(() => {
     if (formSubmited && user !== null) {
       console.log("login");
-      dispatch(setAccessUser(email, password));
-      user && user.role === "admin"
-        ? navigate(`/admin?id=${user._id}`)
-        : navigate(`/roadmap?id=${user._id}`);
+      dispatch(setAccessUser(email, password)).then(() => {
+        user && user.role === "admin"
+          ? navigate(`/admin?id=${user._id}`)
+          : user &&
+            user.role === "client" &&
+            navigate(`/roadmap?id=${user._id}`);
+      });
     } else if (formSubmited) {
       setFormSubmited(false);
       LoginError();
