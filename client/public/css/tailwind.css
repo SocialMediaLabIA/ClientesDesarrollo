@@ -580,6 +580,10 @@ video {
   bottom: 3.5rem;
 }
 
+.bottom-2 {
+  bottom: 0.5rem;
+}
+
 .right-1 {
   right: 0.25rem;
 }
@@ -590,10 +594,6 @@ video {
 
 .z-50 {
   z-index: 50;
-}
-
-.z-\[99999\] {
-  z-index: 99999;
 }
 
 .m-1 {
@@ -1140,6 +1140,10 @@ video {
 
 .text-\[12px\] {
   font-size: 12px;
+}
+
+.text-\[15px\] {
+  font-size: 15px;
 }
 
 .text-\[18px\] {
