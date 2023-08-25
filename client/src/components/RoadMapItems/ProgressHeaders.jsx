@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import pages from "../../utils/progressPages";
-import { GrDocumentText } from "react-icons/gr";
+// import { GrDocumentText } from "react-icons/gr";
+import { AiOutlineFileText } from "react-icons/ai";
+
 import { motion } from "framer-motion";
 
 export default function ProgressHeaders({ progressNumber }) {
@@ -61,23 +63,23 @@ export default function ProgressHeaders({ progressNumber }) {
             </p>
             {console.log(pages[progressNumber].documentArray)}
             <div className=" w-fit  max-w-[250px] flex flex-col justify-start items-start">
-            {pages[progressNumber].documentArray.map((item) => {
-              {
-                console.log(item);
-              }
-              return (
-
-                <a
-                  href={item.link}
-                  // target="_blank" // Abre el enlace en una nueva pestaña/tab
-                  rel="noopener noreferrer" // Recomendado al abrir enlaces externos
-                  className="flex px-3 justify-start items-center h-12 w-full mt-5 border-2 rounded-sm cursor-pointer"
+              {pages[progressNumber].documentArray.map((item, index) => {
+                {
+                  console.log(item);
+                }
+                return (
+                  <a
+                    href={item.link}
+                    key={index}
+                    // target="_blank" // Abre el enlace en una nueva pestaña/tab
+                    rel="noopener noreferrer" // Recomendado al abrir enlaces externos
+                    className="flex px-3 justify-start items-center h-12 w-full mt-5 border-2 rounded-sm cursor-pointer"
                   >
-                  <GrDocumentText className="h-6 w-6 mr-2" />
-                  <p className="text-[10px]">{item.name}</p>
-                </a>
-              );
-            })}
+                    <AiOutlineFileText className="h-6 w-6 mr-2" />
+                    <p className="text-[10px]">{item.name}</p>
+                  </a>
+                );
+              })}
             </div>
           </div>
         )}
