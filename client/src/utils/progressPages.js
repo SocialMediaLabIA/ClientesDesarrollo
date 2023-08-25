@@ -106,14 +106,14 @@ let pages = [
     video: false,
     resume: true,
     meet: false,
-    document: false,
+    document: true,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetBelen,
     meetImageLarge: meetBelenLarge,
     meetName: "Belén",
-    documentName:"",
+    documentName:"Documento 1",
   },
   {
     number: 7,
