@@ -26,8 +26,9 @@ export default function Login() {
     if (formSubmited && user !== null) {
       console.log("login");
       dispatch(setAccessUser(email, password));
-      user && user.role === "admin" ?navigate(`/admin?id=${user._id}`); : navigate(`/roadmap?id=${user._id}`);
-      
+      user && user.role === "admin"
+        ? navigate(`/admin?id=${user._id}`)
+        : navigate(`/roadmap?id=${user._id}`);
     } else if (formSubmited) {
       console.log("incorrecto");
     }
