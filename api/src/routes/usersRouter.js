@@ -7,6 +7,7 @@ const {
   getProgressUserHandler,
   getAllUserHandler,
   editUserByIdHandler,
+  getUserByIdHandler,
 } = require("../Handlers/usersHandlers");
 
 const UsersRouter = Router();
@@ -14,6 +15,7 @@ const UsersRouter = Router();
 UsersRouter.get("/", getAllUserHandler);
 UsersRouter.get("/progress", getProgressUserHandler);
 UsersRouter.get("/email", getUserByLoginHandler);
+UsersRouter.get("/userid", getUserByIdHandler);
 
 //PUT
 UsersRouter.put("/progress", setProgressUserHandler);
