@@ -31,6 +31,7 @@ export default function Login() {
         ? navigate(`/admin?id=${user._id}`)
         : navigate(`/roadmap?id=${user._id}`);
     } else if (formSubmited) {
+      LoginError();
       console.log("incorrecto");
     }
   }, [user]);
@@ -61,7 +62,7 @@ export default function Login() {
   };
 
   const LoginError = () => {
-    toast.success(`Email y/o Password Incorrecta `, {
+    toast.error(`Email y/o Password Incorrecta `, {
       position: "top-center",
       autoClose: 3000,
       hideProgressBar: false,
