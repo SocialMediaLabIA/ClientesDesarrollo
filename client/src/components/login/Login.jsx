@@ -61,7 +61,7 @@ export default function Login() {
   };
 
   const LoginError = () => {
-    toast.success(`✔ LEAD ACTUALIZADO! `, {
+    toast.success(`Email y/o Password Incorrecta `, {
       position: "top-center",
       autoClose: 3000,
       hideProgressBar: false,
