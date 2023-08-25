@@ -32,12 +32,11 @@ export default function Login() {
         ? navigate(`/admin?id=${user._id}`)
         : navigate(`/roadmap?id=${user._id}`);
     } else if (formSubmited) {
+      setFormSubmited(false);
       LoginError();
-
       console.log("incorrecto");
     }
-    setFormSubmited(false);
-  }, [user]);
+  }, [user, formSubmited]);
 
   const handleChangeEmail = (event) => {
     const newEmail = event.target.value;
