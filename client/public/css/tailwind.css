@@ -662,6 +662,10 @@ video {
   margin-top: 1.25rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -713,6 +717,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-6 {
+  height: 1.5rem;
 }
 
 .w-10 {
@@ -802,6 +810,14 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-4\/6 {
+  width: 66.666667%;
+}
+
+.w-48 {
+  width: 12rem;
 }
 
 .min-w-\[224px\] {
@@ -902,6 +918,10 @@ video {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
 }
 
 .border {
@@ -1097,6 +1117,11 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .font-bold {
