@@ -576,10 +576,6 @@ video {
   position: relative;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
 .bottom-14 {
   bottom: 3.5rem;
 }
@@ -622,14 +618,6 @@ video {
   margin-bottom: 1.5rem;
 }
 
-.ml-0 {
-  margin-left: 0px;
-}
-
-.ml-0\.5 {
-  margin-left: 0.125rem;
-}
-
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -650,6 +638,10 @@ video {
   margin-top: 3.5rem;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -668,10 +660,6 @@ video {
 
 .mt-5 {
   margin-top: 1.25rem;
-}
-
-.mt-16 {
-  margin-top: 4rem;
 }
 
 .flex {
@@ -706,12 +694,17 @@ video {
   height: 1.25rem;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
 .h-8 {
   height: 2rem;
 }
 
-.h-\[400px\] {
-  height: 400px;
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .h-full {
@@ -720,19 +713,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-7 {
-  height: 1.75rem;
-}
-
-.h-fit {
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.w-1 {
-  width: 0.25rem;
 }
 
 .w-10 {
@@ -771,12 +751,20 @@ video {
   width: 15rem;
 }
 
+.w-7 {
+  width: 1.75rem;
+}
+
 .w-8 {
   width: 2rem;
 }
 
 .w-80 {
   width: 20rem;
+}
+
+.w-\[0\.5px\] {
+  width: 0.5px;
 }
 
 .w-\[190px\] {
@@ -789,6 +777,14 @@ video {
 
 .w-\[20rem\] {
   width: 20rem;
+}
+
+.w-\[30rem\] {
+  width: 30rem;
+}
+
+.w-\[380px\] {
+  width: 380px;
 }
 
 .w-\[95\%\] {
@@ -806,22 +802,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-7 {
-  width: 1.75rem;
-}
-
-.w-\[0\.5px\] {
-  width: 0.5px;
-}
-
-.w-\[30rem\] {
-  width: 30rem;
-}
-
-.w-\[380px\] {
-  width: 380px;
 }
 
 .min-w-\[224px\] {
@@ -894,11 +874,6 @@ video {
 
 .gap-64 {
   gap: 16rem;
-}
-
-.gap-x-64 {
-  -moz-column-gap: 16rem;
-       column-gap: 16rem;
 }
 
 .gap-y-4 {
@@ -1014,12 +989,12 @@ video {
   padding: 2.5rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .px-10 {
@@ -1052,16 +1027,16 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .pl-5 {
   padding-left: 1.25rem;
 }
 
 .pr-2 {
   padding-right: 0.5rem;
-}
-
-.pb-10 {
-  padding-bottom: 2.5rem;
 }
 
 .text-center {
@@ -1220,10 +1195,6 @@ video {
     height: 83.333333%;
   }
 
-  .md\:h-\[600px\] {
-    height: 600px;
-  }
-
   .md\:h-full {
     height: 100%;
   }
@@ -1234,10 +1205,6 @@ video {
 
   .md\:w-20 {
     width: 5rem;
-  }
-
-  .md\:w-3\/6 {
-    width: 50%;
   }
 
   .md\:w-4\/6 {
