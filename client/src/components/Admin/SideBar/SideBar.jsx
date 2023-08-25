@@ -1,5 +1,5 @@
 import logo from "../../../assets/smllogo.png";
-import { IoPeople } from "react-icons/io5";
+import { IoPeople, IoBanSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
 
 function SideBar({ handleSidebar }) {
@@ -23,6 +23,15 @@ function SideBar({ handleSidebar }) {
                   <IoPeople className="text-[#e0dddd]" />
                 </div>
                 <div>Usuarios</div>
+              </li>
+              <li
+                className="flex gap-2 items-center text-[18px]"
+                onClick={() => handleSidebar("usuarioBanned")}
+              >
+                <div className="text-lg">
+                  <IoBanSharp className="text-[#e0dddd]" />
+                </div>
+                <div>Baneados</div>
               </li>
               <li
                 className="flex gap-2 items-center text-[18px]"
