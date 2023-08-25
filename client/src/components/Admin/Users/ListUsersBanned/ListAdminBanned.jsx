@@ -18,14 +18,14 @@ export default function ListAdminBanned() {
 
   const deleteUser = (id) => {
     const body = {
-      isActive: false,
+      isActive: true,
     };
     dispatch(editUserById(id, body)).then(() => {
       dispatch(getAllUser());
     });
   };
 
-  const filteredUsers = users.filter((user) => user.isActive);
+  const filteredUsers = users.filter((user) => !user.isActive);
 
   return (
     <div className="flex flex-col gap-2 items-center justify-start w-full h-full bg-[#282828] rounded-lg">
