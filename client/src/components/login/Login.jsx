@@ -59,7 +59,7 @@ export default function Login() {
     }
   };
   return (
-    <div className="flex flex-col-reverse md:flex-row md:justify-center justify-end md:items-center items-start bg-black h-screen w-screen">
+    <div className="flex flex-col-reverse md:flex-row md:justify-center justify-end md:items-center items-start bg-black h-screen w-screen font-poppins">
       {" "}
       <form className="md:w-6/12 w-full mt-14 md:mt-0" onSubmit={handleSubmit}>
         <motion.div
