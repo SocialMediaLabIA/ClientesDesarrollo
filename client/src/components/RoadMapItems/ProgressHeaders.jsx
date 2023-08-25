@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import pages from "../../utils/progressPages";
-import { GrDocumentText } from "react-icons/gr";
+// import { GrDocumentText } from "react-icons/gr";
+import { AiOutlineFileText } from "react-icons/ai";
+
 import { motion } from "framer-motion";
 
 export default function ProgressHeaders({ progressNumber }) {
@@ -54,24 +56,35 @@ export default function ProgressHeaders({ progressNumber }) {
       {pages[progressNumber] &&
         pages[progressNumber].document === true &&
         pages[progressNumber].resume === true &&
-        pages[progressNumber].number !== 34 && (
+        pages[progressNumber].number !== 38 && (
           <div className="flex flex-col justify-center items-center h-full w-full mt-10">
-            <p className="mt-10 w-5/6 text-justify items-center text-sm">
+            <p className=" w-5/6 text-justify items-center text-sm mb-5">
               {pages[progressNumber] && pages[progressNumber].resumeText}
             </p>
-            <a
-              href="https://calendly.com/belengiorda/meetings"
-              target="_blank" // Abre el enlace en una nueva pestaña/tab
-              rel="noopener noreferrer" // Recomendado al abrir enlaces externos
-              className="flex  justify-center items-center h-12 w-48 mt-10 border-2 rounded-sm cursor-pointer"
-            >
-              <GrDocumentText className="h-6 w- mr-2" />
-              <p>{pages[progressNumber].documentName}</p>
-            </a>
+            {console.log(pages[progressNumber].documentArray)}
+            <div className=" w-fit  max-w-[250px] flex flex-col justify-start items-start">
+              {pages[progressNumber].documentArray.map((item, index) => {
+                {
+                  console.log(item);
+                }
+                return (
+                  <a
+                    href={item.link}
+                    key={index}
+                    // target="_blank" // Abre el enlace en una nueva pestaña/tab
+                    rel="noopener noreferrer" // Recomendado al abrir enlaces externos
+                    className="flex px-3 justify-start items-center h-12 w-full mt-5 border-2 rounded-sm cursor-pointer"
+                  >
+                    <AiOutlineFileText className="h-6 w-6 mr-2" />
+                    <p className="text-[10px]">{item.name}</p>
+                  </a>
+                );
+              })}
+            </div>
           </div>
         )}
 
-      {pages[progressNumber] && pages[progressNumber].number === 34 && (
+      {pages[progressNumber] && pages[progressNumber].number === 38 && (
         <img
           src={pages[progressNumber] && pages[progressNumber].meetImage}
           alt="imagen meet"
