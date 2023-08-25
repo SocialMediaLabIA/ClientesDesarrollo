@@ -5,6 +5,7 @@ const setAccessUser = require("../controllers/users/setAccessUser");
 const setProgressUser = require("../controllers/users/setProgressUser");
 const getProgressUser = require("../controllers/users/getProgressUser");
 const editUserById = require("../controllers/users/editUserById");
+const getUserById = require("../controllers/users/getUserById");
 
 const getAllUserHandler = async (req, res) => {
   try {
@@ -53,6 +54,16 @@ const getProgressUserHandler = async (req, res) => {
     res.status(404).json({ error: error.message });
   }
 };
+
+const getUserByIdHandler = async (req, res) => {
+  const { id } = req.query;
+  try {
+    const User = await getUserById(id);
+    res.status(200).json(User);
+  } catch (error) {
+    res.status(404).json({ error: error.message });
+  }
+};
 const setProgressUserHandler = async (req, res) => {
   const { id } = req.query;
   const { direction } = req.body;
@@ -82,5 +93,5 @@ module.exports = {
   setAccessUserHandler,
   setProgressUserHandler,
   getProgressUserHandler,
-  editUserByIdHandler,
+  editUserByIdHandler,getUserByIdHandler
 };
