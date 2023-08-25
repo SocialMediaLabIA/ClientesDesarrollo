@@ -3,6 +3,7 @@ import SideBar from "../SideBar/SideBar";
 import ListAdmin from "./ListUsers/ListAdmin";
 import CreateUsers from "./CreateUsers/CreateUsers";
 import Panel from "./Panel/Panel";
+import ListAdminBanned from "./ListUsersBanned/ListAdminBanned";
 
 export default function Users() {
   const [sidebar, setSidebar] = useState("admin");
@@ -20,6 +21,7 @@ export default function Users() {
         </div>
         {sidebar === "admin" && <Panel />}
         {sidebar === "usuario" && <ListAdmin />}
+        {sidebar === "usuarioBanned" && <ListAdminBanned />}
         {sidebar === "crearUsuario" && <CreateUsers />}
       </div>
     </div>
