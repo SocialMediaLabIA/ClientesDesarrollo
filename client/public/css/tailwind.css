@@ -666,6 +666,10 @@ video {
   margin-top: 2rem;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .flex {
   display: flex;
 }
@@ -840,6 +844,26 @@ video {
   width: 220px;
 }
 
+.w-\[190px\] {
+  width: 190px;
+}
+
+.w-\[1rem\] {
+  width: 1rem;
+}
+
+.w-\[11\.5rem\] {
+  width: 11.5rem;
+}
+
+.w-\[11rem\] {
+  width: 11rem;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
 .min-w-\[224px\] {
   min-width: 224px;
 }
@@ -854,6 +878,10 @@ video {
 
 .min-w-\[80px\] {
   min-width: 80px;
+}
+
+.max-w-\[250px\] {
+  max-width: 250px;
 }
 
 .cursor-pointer {
@@ -1100,6 +1128,31 @@ video {
   padding-right: 2rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-\[1rem\] {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-\[\.8rem\] {
+  padding-left: .8rem;
+  padding-right: .8rem;
+}
+
+.px-\[\.7rem\] {
+  padding-left: .7rem;
+  padding-right: .7rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1195,6 +1248,10 @@ video {
 
 .text-\[1rem\] {
   font-size: 1rem;
+}
+
+.text-\[10px\] {
+  font-size: 10px;
 }
 
 .font-bold {
