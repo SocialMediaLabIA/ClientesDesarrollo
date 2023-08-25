@@ -8,6 +8,7 @@ import { getUserByLogin } from "../../redux/User/ActionUser/getUserByLogin";
 import { setAccessUser } from "../../redux/User/ActionUser/setAccessUser";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -30,14 +31,14 @@ export default function Login() {
       user && user.role === "admin"
         ? navigate(`/admin?id=${user._id}`)
         : navigate(`/roadmap?id=${user._id}`);
-    } else if (user === null) {
-      setFormSubmited(false);
+    } else if (formSubmited) {
+      LoginError();
 
       console.log("incorrecto");
     }
-  }, [dispatch, user]);
+    setFormSubmited(false);
+  }, [user]);
 
-  console.log(formSubmited, user);
   const handleChangeEmail = (event) => {
     const newEmail = event.target.value;
     setEmail(newEmail);
@@ -61,13 +62,10 @@ export default function Login() {
       dispatch(getUserByLogin(email, password));
       setFormSubmited(true);
     }
-    LoginError();
   };
-
   const LoginError = () => {
-    console.log("a");
-    toast.success(`Email y/o Password Incorrecta `, {
-      position: "top-center",
+    toast.error(`Email y/o Password Incorrecta `, {
+      position: "top-left",
       autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
