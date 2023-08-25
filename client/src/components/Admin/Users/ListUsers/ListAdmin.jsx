@@ -16,14 +16,14 @@ export default function ListAdmin() {
 
   const deleteUser = (id) => {
     const body = {
-      deleted: true,
+      isActive: true,
     };
     dispatch(editUserById(id, body)).then(() => {
       dispatch(getAllUser());
     });
   };
 
-  const filteredUsers = users.filter((user) => !user.deleted);
+  const filteredUsers = users.filter((user) => !user.isActive);
 
   return (
     <div className="flex flex-col gap-2 items-center justify-start w-full h-full bg-[#282828] rounded-lg">
@@ -73,7 +73,7 @@ export default function ListAdmin() {
             </div>
             <div className="w-[20rem] min-w-[80px]">
               <p className="flex text-center items-center justify-center">
-                {(item.progress / 25) * 100}%
+                {(item.progress / 34) * 100}%
               </p>
             </div>
             <div className="w-[20rem] min-w-[80px]">
