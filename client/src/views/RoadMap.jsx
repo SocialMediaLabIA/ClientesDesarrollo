@@ -231,6 +231,7 @@ export default function RoadMap() {
               </>
             )}
         </div>
+        <p className="absolute bottom-2 text-[15px] text-white">sección: 0.0.0</p>
       </div>
     </div>
   );
