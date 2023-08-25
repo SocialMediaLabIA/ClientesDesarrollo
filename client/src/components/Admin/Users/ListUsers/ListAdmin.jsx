@@ -12,18 +12,19 @@ export default function ListAdmin() {
 
   useEffect(() => {
     dispatch(getAllUser());
+    dispatch(getAllUser());
   }, [dispatch]);
 
   const deleteUser = (id) => {
     const body = {
-      isActive: true,
+      isActive: false,
     };
     dispatch(editUserById(id, body)).then(() => {
       dispatch(getAllUser());
     });
   };
 
-  const filteredUsers = users.filter((user) => !user.isActive);
+  const filteredUsers = users.filter((user) => user.isActive);
 
   return (
     <div className="flex flex-col gap-2 items-center justify-start w-full h-full bg-[#282828] rounded-lg">
@@ -60,7 +61,7 @@ export default function ListAdmin() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 4 }}
             className="flex gap-2 py-2 w-[95%] text-center justify-center items-center bg-[#222222] rounded-lg  text-[1.2rem]"
             key={index}
           >
