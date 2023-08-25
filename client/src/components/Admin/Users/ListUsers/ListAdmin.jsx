@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllUser } from "../../../../redux/User/ActionUser/getAllUser";
 
 import { BsTrash, BsPencilSquare } from "react-icons/bs";
+import { editUserById } from "../../../../redux/User/ActionUser/editUserById";
 
 export default function ListAdmin() {
   const dispatch = useDispatch();
@@ -12,6 +13,17 @@ export default function ListAdmin() {
   useEffect(() => {
     dispatch(getAllUser());
   }, [dispatch]);
+
+  const deleteUser = (id) => {
+    const body = {
+      deleted: true,
+    };
+    dispatch(editUserById(id, body)).then(() => {
+      dispatch(getAllUser());
+    });
+  };
+
+  const filteredUsers = users.filter((user) => !user.deleted);
 
   return (
     <div className="flex flex-col gap-2 items-center justify-start w-full h-full bg-[#282828] rounded-lg">
@@ -38,8 +50,8 @@ export default function ListAdmin() {
           <p className="flex text-center items-center justify-center"></p>
         </div>
       </div>
-      {users &&
-        users.map((item, index) => (
+      {filteredUsers &&
+        filteredUsers.map((item, index) => (
           <div
             className="flex gap-2 py-2 w-[95%] text-center justify-center items-center bg-[#222222] rounded-lg  text-[1.2rem]"
             key={index}
@@ -66,7 +78,10 @@ export default function ListAdmin() {
             </div>
             <div className="w-[20rem] min-w-[80px]">
               <div className=" flex gap-5 items-center justify-center">
-                <BsTrash className="w-10 h-10" />
+                <BsTrash
+                  className="w-10 h-10"
+                  onClick={() => deleteUser(item._id)}
+                />
                 <BsPencilSquare className="w-10 h-10" />
               </div>
             </div>
