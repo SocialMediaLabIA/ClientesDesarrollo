@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { getUserByLogin } from "../../redux/User/ActionUser/getUserByLogin";
 import { setAccessUser } from "../../redux/User/ActionUser/setAccessUser";
 import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -60,7 +61,7 @@ export default function Login() {
   };
   return (
     <div className="flex flex-col-reverse md:flex-row md:justify-center justify-end md:items-center items-start bg-black h-screen w-screen font-poppins">
-      {" "}
+      <ToastContainer />{" "}
       <form className="md:w-6/12 w-full mt-14 md:mt-0" onSubmit={handleSubmit}>
         <motion.div
           className="flex flex-col px-20 mb-6"
