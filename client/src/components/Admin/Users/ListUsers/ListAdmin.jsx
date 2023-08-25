@@ -24,7 +24,9 @@ export default function ListAdmin() {
     });
   };
 
-  const filteredUsers = users.filter((user) => user.isActive);
+  const filteredUsers = users.filter(
+    (user) => user.isActive && user.role === "client"
+  );
 
   return (
     <div className="flex flex-col gap-2 items-center justify-start w-full h-full bg-[#282828] rounded-lg">
@@ -82,7 +84,7 @@ export default function ListAdmin() {
             </div>
             <div className="w-[20rem] min-w-[80px]">
               <p className="flex text-center items-center justify-center">
-                {(item.progress / 34) * 100}%
+                {Math.floor((item.progress / 38) * 100)}%
               </p>
             </div>
             <div className="w-[20rem] min-w-[80px]">
