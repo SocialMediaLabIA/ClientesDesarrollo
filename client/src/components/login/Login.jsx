@@ -60,7 +60,7 @@ export default function Login() {
     }
   };
 
-  const FixedLeadAlert = () => {
+  const LoginError = () => {
     toast.success(`✔ LEAD ACTUALIZADO! `, {
       position: "top-center",
       autoClose: 3000,
