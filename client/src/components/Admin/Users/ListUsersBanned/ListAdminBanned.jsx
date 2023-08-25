@@ -83,7 +83,7 @@ export default function ListAdminBanned() {
             </div>
             <div className="w-[20rem] min-w-[80px]">
               <p className="flex text-center items-center justify-center">
-                {(item.progress / 34) * 100}%
+                {Math.floor((item.progress / 38) * 100)}%
               </p>
             </div>
             <div className="w-[20rem] min-w-[80px]">
