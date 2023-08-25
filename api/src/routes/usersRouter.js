@@ -4,13 +4,13 @@ const {
   getUserByLoginHandler,
   setAccessUserHandler,
   setProgressUserHandler,
-  getProgressUserHandler
-  // getAllUserHandler,
+  getProgressUserHandler,
+  getAllUserHandler,
 } = require("../Handlers/usersHandlers");
 
 const UsersRouter = Router();
 
-// UsersRouter.get("/", getAllUserHandler);
+UsersRouter.get("/", getAllUserHandler);
 UsersRouter.get("/progress", getProgressUserHandler);
 UsersRouter.get("/email", getUserByLoginHandler);
 UsersRouter.put("/progress", setProgressUserHandler);
