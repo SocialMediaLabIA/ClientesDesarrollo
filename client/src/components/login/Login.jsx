@@ -59,6 +59,19 @@ export default function Login() {
       setFormSubmited(true);
     }
   };
+
+  const FixedLeadAlert = () => {
+    toast.success(`✔ LEAD ACTUALIZADO! `, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  };
   return (
     <div className="flex flex-col-reverse md:flex-row md:justify-center justify-end md:items-center items-start bg-black h-screen w-screen font-poppins">
       <ToastContainer />{" "}
