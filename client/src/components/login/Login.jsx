@@ -129,7 +129,7 @@ export default function Login() {
         className="border-4 border-[#8F00FF]  mx-4 rounded-2xl md:h-5/6 opacity-0 md:opacity-100 h-0 hidden md:block"
         initial={{ height: 0 }}
         animate={{ height: "93%" }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
       />
       <div className="flex md:w-6/12 w-full md:h-full items-center justify-center mt-24 md:mt-0">
         <motion.img
