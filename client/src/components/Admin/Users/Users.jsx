@@ -27,18 +27,20 @@ export default function Users() {
     dispatch(getUserById(idParams));
   }, [dispatch, idParams]);
 
-  console.log(userById);
-
   return (
     <>
       {role === "admin" && access === true && isActive === true ? (
         <div className="flex w-full h-full font-poppins">
-          <SideBar handleSidebar={handleSidebar} />
+          <SideBar
+            handleSidebar={handleSidebar}
+            idParams={idParams}
+            userById={userById}
+          />
           <div className="flex w-full h-full  flex-col gap-5 p-10">
             <div className=" text-[1.5rem] font-semibold bg-[#282828] p-5 rounded-lg">
               <p>Panel de administrador</p>
             </div>
-            {sidebar === "admin" && <Panel />}
+            {sidebar === "admin" && <Panel userById={userById} />}
             {sidebar === "usuario" && <ListAdmin />}
             {sidebar === "usuarioBanned" && <ListAdminBanned />}
             {sidebar === "crearUsuario" && <CreateUsers />}
