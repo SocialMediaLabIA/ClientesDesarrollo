@@ -4,6 +4,7 @@ const postUsers = require("../controllers/users/postUsers");
 const setAccessUser = require("../controllers/users/setAccessUser");
 const setProgressUser = require("../controllers/users/setProgressUser");
 const getProgressUser = require("../controllers/users/getProgressUser");
+const editUserById = require("../controllers/users/editUserById");
 
 const getAllUserHandler = async (req, res) => {
   try {
@@ -54,9 +55,19 @@ const getProgressUserHandler = async (req, res) => {
 };
 const setProgressUserHandler = async (req, res) => {
   const { id } = req.query;
-  const {direction} = req.body;
+  const { direction } = req.body;
   try {
     const User = await setProgressUser(id, direction);
+    res.status(200).json(User);
+  } catch (error) {
+    res.status(404).json({ error: error.message });
+  }
+};
+const editUserByIdHandler = async (req, res) => {
+  const { id } = req.query;
+  const body = req.body;
+  try {
+    const User = await editUserById(id, body);
     res.status(200).json(User);
   } catch (error) {
     res.status(404).json({ error: error.message });
@@ -69,5 +80,6 @@ module.exports = {
   getUserByLoginHandler,
   setAccessUserHandler,
   setProgressUserHandler,
-  getProgressUserHandler
+  getProgressUserHandler,
+  editUserByIdHandler,
 };
