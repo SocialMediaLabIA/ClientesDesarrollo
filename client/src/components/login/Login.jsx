@@ -84,7 +84,7 @@ export default function Login() {
           className="flex flex-col px-20 mb-6"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
+          transition={{ duration: 1.9, ease: "easeInOut" }}
         >
           <label className="font-bold ml-2 text-white">Contraseña:</label>
           <div className="relative rounded-md bg-[#D9D9D9] h-10 justify-between items-center text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25">
