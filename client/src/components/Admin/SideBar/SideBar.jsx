@@ -38,7 +38,7 @@ function SideBar({ handleSidebar, userById, idParams }) {
           <div className="flex w-fit">
             <ul className="flex items-center justify-center flex-col gap-5">
               <li
-                className="flex gap-2 text-[18px] cursor-pointer w-[12rem] h-10 rounded-lg items-center justify-center bg-[#383838] hover:bg-[#484848]"
+                className="flex gap-2 text-[18px] cursor-pointer w-[11rem] h-10 rounded-lg items-center justify-center bg-[#383838] hover:bg-[#484848]"
                 onClick={() => handleSidebar("usuario")}
               >
                 <div className="text-lg">
@@ -47,7 +47,7 @@ function SideBar({ handleSidebar, userById, idParams }) {
                 <div>Usuarios</div>
               </li>
               <li
-                className="flex gap-2 text-[18px] cursor-pointer  w-[12rem] h-10 rounded-lg items-center justify-center bg-[#383838] hover:bg-[#484848]"
+                className="flex gap-2 text-[18px] cursor-pointer  w-[11rem] h-10 rounded-lg items-center justify-center bg-[#383838] hover:bg-[#484848]"
                 onClick={() => handleSidebar("usuarioBanned")}
               >
                 <div className="text-lg">
@@ -56,7 +56,7 @@ function SideBar({ handleSidebar, userById, idParams }) {
                 <div>Baneados</div>
               </li>
               <li
-                className="flex gap-2 text-[18px] cursor-pointer  w-[12rem] h-10 rounded-lg items-center justify-center bg-[#383838] hover:bg-[#484848]"
+                className="flex gap-2 text-[18px] cursor-pointer  w-[11rem] h-10 rounded-lg items-center justify-center bg-[#383838] hover:bg-[#484848]"
                 onClick={() => handleSidebar("crearUsuario")}
               >
                 <div className="text-lg">
@@ -69,7 +69,7 @@ function SideBar({ handleSidebar, userById, idParams }) {
         </div>
         <div className="flex flex-col justify-center w-full items-center mb-2">
           <div className="flex flex-col gap-5 items-center justify-center ">
-            <div className="flex flex-col justify-center items-center bg-[#383838] py-5 px-6 rounded-lg">
+            <div className="flex flex-col justify-center items-center bg-[#383838] py-5 px-[.7rem] rounded-lg">
               <div className="w-16 h-16">
                 <img className="rounded-full" src={logo} alt="avatar" />
               </div>
