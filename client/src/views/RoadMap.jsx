@@ -30,34 +30,37 @@ export default function RoadMap() {
   };
 
   // loaderFuncion(true)
-console.log(progressNumber)
-
+  console.log(progressNumber);
 
   useEffect(() => {
-    loaderFuncion(true)
+    loaderFuncion(true);
     dispatch(getProgressUser(idParams)).then(() => {
-      loaderFuncion(false)
+      loaderFuncion(false);
     });
   }, [dispatch]);
 
   const directionProgress = async (direction) => {
     if (direction === "next" && progressNumber < 34) {
-      loaderFuncion(true)
+      loaderFuncion(true);
       setProgress(++progress);
-      dispatch(setProgressUser(idParams, "next")).then(() => {
-        dispatch(getProgressUser(idParams))
-      }).then(() => {
-        loaderFuncion(false)
-      });;
+      dispatch(setProgressUser(idParams, "next"))
+        .then(() => {
+          dispatch(getProgressUser(idParams));
+        })
+        .then(() => {
+          loaderFuncion(false);
+        });
     }
     if (direction === "prev" && progressNumber > 0) {
-      loaderFuncion(true)
+      loaderFuncion(true);
       setProgress(--progress);
-      dispatch(setProgressUser(idParams, "prev")).then(() => {
-        dispatch(getProgressUser(idParams))
-      }).then(() => {
-        loaderFuncion(false)
-      });
+      dispatch(setProgressUser(idParams, "prev"))
+        .then(() => {
+          dispatch(getProgressUser(idParams));
+        })
+        .then(() => {
+          loaderFuncion(false);
+        });
     }
   };
 
@@ -92,8 +95,8 @@ console.log(progressNumber)
         </div>
       ) : null}
       <div className="flex flex-col justify-center items-center  w-full bg-black mt-10 ">
-      <div className="flex justify-between items-center w-4/5 md:w-full md:px-20">
-        <motion.img
+        <div className="flex justify-start items-center w-4/5 md:w-full md:px-20">
+          <motion.img
             src={logo}
             alt="logo"
             className="w-14  md:w-20 "
@@ -101,22 +104,25 @@ console.log(progressNumber)
             animate={{ x: 0 }}
             transition={{ duration: 0.5 }}
           />
-                    <motion.h1
-            className="text-base text-white md:text-[24px]"
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            {pages[progressNumber] ? pages[progressNumber].title : ""}
-          </motion.h1>
 
-          <motion.div
+          <div className="border-2 flex justify-center items-center w-4/6 md:w-full md:px-20">
+            <motion.h1
+              className="text-base text-center text-white md:text-[24px]"
+              initial={{ y: -100 }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              {pages[progressNumber] ? pages[progressNumber].title : ""}
+            </motion.h1>
+          </div>
+
+          {/* <motion.div
             initial={{ x: 50 }}
             animate={{ x: 0 }}
             transition={{ duration: 0.5 }}
           >
             <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin text-white md:w-16 md:h-16" />
-          </motion.div>
+          </motion.div> */}
         </div>
         {progressNumber !== 0 && (
           <ProgressBar progressNumber={progressNumber} />
@@ -166,7 +172,7 @@ console.log(progressNumber)
           {progressNumber === 34 && (
             <>
               <button
-                onClick={() => directionProgress("")}
+                onClick={() => directionProgress("prev")}
                 className="bg-[#c905faad] text-white font-bold py-2 px-4 rounded-xl"
               >
                 Repetir proceso
