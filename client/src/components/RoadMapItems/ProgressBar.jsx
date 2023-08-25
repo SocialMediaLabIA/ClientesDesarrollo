@@ -35,11 +35,32 @@ export default function ProgressBar({ progressNumber }) {
             : "border-2 w-[0.5px] "
         }
       ></div>
+      <div
+        className={
+          progressNumber >= 4
+            ? "border-2 border-[#00DFFD] w-[0.5px] "
+            : "border-2 w-[0.5px] "
+        }
+      ></div>
+      <div
+        className={
+          progressNumber >= 5
+            ? "border-2 border-[#00DFFD] w-[0.5px] "
+            : "border-2 w-[0.5px] "
+        }
+      ></div>
+      <div
+        className={
+          progressNumber >= 6
+            ? "border-2 border-[#00DFFD] w-[0.5px] "
+            : "border-2 w-[0.5px] "
+        }
+      ></div>
 
       {/* Fin intermedio 1 */}
       <div
         className={
-          progressNumber >= 4
+          progressNumber >= 7
             ? "border-2 border-[#00DFFD] w-[0.5px] "
             : "border-2 w-[0.5px] "
         }
@@ -48,7 +69,7 @@ export default function ProgressBar({ progressNumber }) {
       {/* Seccion 2 */}
       <p
         className={
-          progressNumber >= 5
+          progressNumber >= 8
             ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-7 h-7 flex justify-center items-center"
             : "border-4 rounded-full w-7 h-7 flex justify-center items-center"
         }
@@ -57,31 +78,10 @@ export default function ProgressBar({ progressNumber }) {
       </p>
       <div
         className={
-          progressNumber >= 5 ? "border-2 border-[#00DFFD] w-[0.5px]" : "border-2 w-[0.5px]"
+          progressNumber >= 8 ? "border-2 border-[#00DFFD] w-[0.5px]" : "border-2 w-[0.5px]"
         }
       ></div>
       {/* intermedio 2 */}
-      <div
-        className={
-          progressNumber >= 6
-            ? "border-2 border-[#00DFFD] w-[0.5px] "
-            : "border-2 w-[0.5px] "
-        }
-      ></div>
-      <div
-        className={
-          progressNumber >= 7
-            ? "border-2 border-[#00DFFD] w-[0.5px] "
-            : "border-2 w-[0.5px] "
-        }
-      ></div>
-      <div
-        className={
-          progressNumber >= 8
-            ? "border-2 border-[#00DFFD] w-[0.5px] "
-            : "border-2 w-[0.5px] "
-        }
-      ></div>
       <div
         className={
           progressNumber >= 9
@@ -96,8 +96,6 @@ export default function ProgressBar({ progressNumber }) {
             : "border-2 w-[0.5px] "
         }
       ></div>
-
-      {/* Fin intermedio 2 */}
       <div
         className={
           progressNumber >= 11
@@ -105,23 +103,13 @@ export default function ProgressBar({ progressNumber }) {
             : "border-2 w-[0.5px] "
         }
       ></div>
-
-      {/* Seccion 3 */}
-      <p
-        className={
-          progressNumber >= 12
-            ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-7 h-7 flex justify-center items-center"
-            : "border-4 rounded-full w-7 h-7 flex justify-center items-center"
-        }
-      >
-        3
-      </p>
       <div
         className={
-          progressNumber >= 12 ? "border-2 border-[#00DFFD] w-[0.5px]" : "border-2 w-[0.5px]"
+          progressNumber >= 12
+            ? "border-2 border-[#00DFFD] w-[0.5px] "
+            : "border-2 w-[0.5px] "
         }
       ></div>
-      {/* intermedio 3 */}
       <div
         className={
           progressNumber >= 13
@@ -143,7 +131,8 @@ export default function ProgressBar({ progressNumber }) {
             : "border-2 w-[0.5px] "
         }
       ></div>
-      {/* Fin intermedio 3 */}
+
+      {/* Fin intermedio 2 */}
       <div
         className={
           progressNumber >= 16
@@ -152,7 +141,7 @@ export default function ProgressBar({ progressNumber }) {
         }
       ></div>
 
-      {/* Seccion 4 */}
+      {/* Seccion 3 */}
       <p
         className={
           progressNumber >= 17
@@ -160,34 +149,21 @@ export default function ProgressBar({ progressNumber }) {
             : "border-4 rounded-full w-7 h-7 flex justify-center items-center"
         }
       >
-        4
+        3
       </p>
       <div
         className={
           progressNumber >= 17 ? "border-2 border-[#00DFFD] w-[0.5px]" : "border-2 w-[0.5px]"
         }
       ></div>
-      {/* intermedio 4 */}
-  
-      {/* Fin intermedio 4 */}
-
-
-      {/* Seccion 5 */}
-      <p
-        className={
-          progressNumber >= 18
-            ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-7 h-7 flex justify-center items-center"
-            : "border-4 rounded-full w-7 h-7 flex justify-center items-center"
-        }
-      >
-        5
-      </p>
+      {/* intermedio 3 */}
       <div
         className={
-          progressNumber >= 18 ? "border-2 border-[#00DFFD] w-[0.5px]" : "border-2 w-[0.5px]"
+          progressNumber >= 18
+            ? "border-2 border-[#00DFFD] w-[0.5px] "
+            : "border-2 w-[0.5px] "
         }
       ></div>
-      {/* intermedio 5 */}
       <div
         className={
           progressNumber >= 19
@@ -209,8 +185,6 @@ export default function ProgressBar({ progressNumber }) {
             : "border-2 w-[0.5px] "
         }
       ></div>
-
-      {/* Fin intermedio 5 */}
       <div
         className={
           progressNumber >= 22
@@ -218,9 +192,84 @@ export default function ProgressBar({ progressNumber }) {
             : "border-2 w-[0.5px] "
         }
       ></div>
-            <p
+      {/* Fin intermedio 3 */}
+      <div
         className={
           progressNumber >= 23
+            ? "border-2 border-[#00DFFD] w-[0.5px] "
+            : "border-2 w-[0.5px] "
+        }
+      ></div>
+
+      {/* Seccion 4 */}
+      <p
+        className={
+          progressNumber >= 24
+            ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-7 h-7 flex justify-center items-center"
+            : "border-4 rounded-full w-7 h-7 flex justify-center items-center"
+        }
+      >
+        4
+      </p>
+      <div
+        className={
+          progressNumber >= 24 ? "border-2 border-[#00DFFD] w-[0.5px]" : "border-2 w-[0.5px]"
+        }
+      ></div>
+      {/* intermedio 4 */}
+  
+      {/* Fin intermedio 4 */}
+
+
+      {/* Seccion 5 */}
+      <p
+        className={
+          progressNumber >= 25
+            ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-7 h-7 flex justify-center items-center"
+            : "border-4 rounded-full w-7 h-7 flex justify-center items-center"
+        }
+      >
+        5
+      </p>
+      <div
+        className={
+          progressNumber >= 25 ? "border-2 border-[#00DFFD] w-[0.5px]" : "border-2 w-[0.5px]"
+        }
+      ></div>
+      {/* intermedio 5 */}
+      <div
+        className={
+          progressNumber >= 26
+            ? "border-2 border-[#00DFFD] w-[0.5px] "
+            : "border-2 w-[0.5px] "
+        }
+      ></div>
+      <div
+        className={
+          progressNumber >= 27
+            ? "border-2 border-[#00DFFD] w-[0.5px] "
+            : "border-2 w-[0.5px] "
+        }
+      ></div>
+      <div
+        className={
+          progressNumber >= 28
+            ? "border-2 border-[#00DFFD] w-[0.5px] "
+            : "border-2 w-[0.5px] "
+        }
+      ></div>
+
+      {/* Fin intermedio 5 */}
+      <div
+        className={
+          progressNumber >= 29
+            ? "border-2 border-[#00DFFD] w-[0.5px] "
+            : "border-2 w-[0.5px] "
+        }
+      ></div>
+            <p
+        className={
+          progressNumber >= 30
             ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-7 h-7 flex justify-center items-center"
             : "border-4 rounded-full w-7 h-7 flex justify-center items-center"
         }
@@ -229,7 +278,7 @@ export default function ProgressBar({ progressNumber }) {
       </p>
       <div
         className={
-          progressNumber >= 23 ? "border-2 border-[#00DFFD] w-[0.5px]" : "border-2 w-[0.5px]"
+          progressNumber >= 30 ? "border-2 border-[#00DFFD] w-[0.5px]" : "border-2 w-[0.5px]"
         }
       ></div>
       {/* intermedio 6 */}
@@ -238,7 +287,7 @@ export default function ProgressBar({ progressNumber }) {
 
             <p
         className={
-          progressNumber >= 24
+          progressNumber >= 31
             ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-7 h-7 flex justify-center items-center"
             : "border-4 rounded-full w-7 h-7 flex justify-center items-center"
         }
@@ -247,13 +296,13 @@ export default function ProgressBar({ progressNumber }) {
       </p>
       <div
         className={
-          progressNumber >= 24 ? "border-2 border-[#00DFFD] w-[0.5px]" : "border-2 w-[0.5px]"
+          progressNumber >= 31 ? "border-2 border-[#00DFFD] w-[0.5px]" : "border-2 w-[0.5px]"
         }
       ></div>
       {/* intermedio 7 */}
       <div
         className={
-          progressNumber >= 25
+          progressNumber >= 32
             ? "border-2 border-[#00DFFD] w-[0.5px] "
             : "border-2 w-[0.5px] "
         }
@@ -262,14 +311,14 @@ export default function ProgressBar({ progressNumber }) {
       {/* Fin intermedio 7 */}
       <div
         className={
-          progressNumber >= 26
+          progressNumber >= 33
             ? "border-2 border-[#00DFFD] w-[0.5px] "
             : "border-2 w-[0.5px] "
         }
       ></div>
             <p
         className={
-          progressNumber >= 27
+          progressNumber >= 34
             ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-7 h-7 flex justify-center items-center"
             : "border-4 rounded-full w-7 h-7 flex justify-center items-center"
         }
