@@ -41,7 +41,7 @@ console.log(progressNumber)
   }, [dispatch]);
 
   const directionProgress = async (direction) => {
-    if (direction === "next" && progressNumber < 27) {
+    if (direction === "next" && progressNumber < 34) {
       loaderFuncion(true)
       setProgress(++progress);
       dispatch(setProgressUser(idParams, "next")).then(() => {
@@ -126,7 +126,7 @@ console.log(progressNumber)
         )}
         <ProgressHeaders progressNumber={progressNumber} />
         <div className="flex justify-center items-center w-4/5 bottom-14 absolute gap-64">
-          {progressNumber !== 0 && progressNumber !== 27 && (
+          {progressNumber !== 0 && progressNumber !== 34 && (
             <>
               <HiChevronLeft
                 onClick={() => directionProgress("prev")}
@@ -163,7 +163,7 @@ console.log(progressNumber)
               </motion.button>
             </>
           )}
-          {progressNumber === 27 && (
+          {progressNumber === 34 && (
             <>
               <button
                 onClick={() => directionProgress("")}
