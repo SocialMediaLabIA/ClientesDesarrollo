@@ -51,22 +51,25 @@ export default function ProgressHeaders({ progressNumber }) {
         </div>
       )}
 
-      <div className="flex flex-col justify-center items-center h-full w-full">
-        {pages[progressNumber] &&
-          pages[progressNumber].resume === true &&
-          pages[progressNumber] &&
-          pages[progressNumber].number !== 34 && (
+      {pages[progressNumber] &&
+        pages[progressNumber].document === true &&
+        pages[progressNumber].resume === true &&
+        pages[progressNumber].number !== 34 && (
+          <div className="flex flex-col justify-center items-center h-full w-full mt-10">
             <p className="mt-10 w-5/6 text-justify items-center text-sm">
               {pages[progressNumber] && pages[progressNumber].resumeText}
             </p>
-          )}
-        {pages[progressNumber] && pages[progressNumber].document === true && (
-          <div className="flex justify-center items-center h-full w-full mt-10">
-            <GrDocumentText className="h-6 w- mr-2"/>
-            <p>{pages[progressNumber].documentName}</p>
+            <a
+              href="https://calendly.com/belengiorda/meetings"
+              target="_blank" // Abre el enlace en una nueva pestaña/tab
+              rel="noopener noreferrer" // Recomendado al abrir enlaces externos
+              className="flex  justify-center items-center h-12 w-48 mt-10 border-2 rounded-sm cursor-pointer"
+            >
+              <GrDocumentText className="h-6 w- mr-2" />
+              <p>{pages[progressNumber].documentName}</p>
+            </a>
           </div>
         )}
-      </div>
 
       {pages[progressNumber] && pages[progressNumber].number === 34 && (
         <img
