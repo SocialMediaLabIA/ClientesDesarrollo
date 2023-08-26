@@ -34,7 +34,7 @@ export default function ListAdmin() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2 }}
-        className="flex gap-2 w-[95%] my-2 py-5 text-[1.5rem] bg-[#222222] text-center rounded-lg"
+        className="flex justify-center items-center gap-2 w-[95%] my-2 py-5 text-[1.5rem] bg-[#222222] text-center rounded-lg"
       >
         <div className="w-[20rem] min-w-[80px]">
           <p className="flex text-center items-center justify-center">
