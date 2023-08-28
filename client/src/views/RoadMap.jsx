@@ -94,8 +94,8 @@ export default function RoadMap() {
           </div>
         </div>
       ) : null}
-      <div className="flex flex-col justify-center items-center  w-full bg-black mt-10 ">
-        <div className="flex justify-start items-center w-4/5 md:w-full md:px-20">
+      <div className="flex flex-col justify-center items-center  w-full bg-black mt-10 md:mt-5 ">
+        <div className="flex justify-center items-center w-4/5 md:w-full md:px-20">
           <motion.img
             src={logo}
             alt="logo"
@@ -116,13 +116,13 @@ export default function RoadMap() {
             </motion.h1>
           </div>
 
-          {/* <motion.div
+          <motion.div
             initial={{ x: 50 }}
             animate={{ x: 0 }}
             transition={{ duration: 0.5 }}
-          >flex
-            <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin text-white md:w-16 md:h-16" />
-          </motion.div> */}
+          >
+            <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin text-black md:w-16 md:h-16" />
+          </motion.div>
         </div>
         {progressNumber !== 0 && (
           <ProgressBar progressNumber={progressNumber} />
