@@ -29,7 +29,7 @@ export default function ProgressHeaders({ progressNumber }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex justify-start items-center w-full h-5/5 mt-12 text-white"
+      className="flex justify-center items-center w-full h-5/5 mt-12 md:mt-1 xl:mt-5 text-white"
     >
       {/* VIDEOS */}
       {pages[progressNumber] && pages[progressNumber].video === true && (
