@@ -4,7 +4,7 @@ export default function ProgressBar({ progressNumber }) {
   // const [progressNumber, setProgress] = useState([0,0])
 
   return (
-    <div className=" w-full flex justify-center items-center text-white text-xs mt-10">
+    <div className=" w-full flex justify-center items-center text-white text-xs mt-10 md:mt-1">
       {/* Seccion 1 */}
       <p
         className={
