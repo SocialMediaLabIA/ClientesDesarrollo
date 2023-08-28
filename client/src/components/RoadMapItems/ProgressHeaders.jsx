@@ -29,8 +29,9 @@ export default function ProgressHeaders({ progressNumber }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex justify-center items-center w-full h-5/5 mt-12 text-white"
+      className="flex justify-start items-center w-full h-5/5 mt-12 text-white"
     >
+      {/* VIDEOS */}
       {pages[progressNumber] && pages[progressNumber].video === true && (
         <iframe
           title="YouTube Video"
@@ -39,25 +40,26 @@ export default function ProgressHeaders({ progressNumber }) {
           src={pages[progressNumber] && pages[progressNumber].videoSource} // Cambia esta URL por la URL correcta del video embebido
           frameBorder="0" // Cambiado a frameBorder
           allowFullScreen // Cambiado a allowFullScreen
-          className="mt-5 w-5/6"
+          className="mt-5 w-5/6 md:w-4/12 xl:w-5/12"
         />
       )}
+      {/* MEETS */}
       {pages[progressNumber] && pages[progressNumber].meet === true && (
         <div className="flex justify-center items-center h-full w-full ">
           <img
             src={selectedImage}
             // src={pages[progressNumber] && pages[progressNumber].meetImage}
             alt="imagen meet"
-            className="w-60 md:w-4/6  xl:w-3/6 "
+            className="w-60 md:w-5/12  xl:w-4/12 "
           />
         </div>
       )}
-
+      {/* DOCUMENTS */}
       {pages[progressNumber] &&
         pages[progressNumber].document === true &&
         pages[progressNumber].resume === true &&
         pages[progressNumber].number !== 38 && (
-          <div className="flex flex-col justify-center items-center h-full w-full mt-10">
+          <div className="flex flex-col justify-center items-center h-full w-full max-w-[800px] mt-10">
             <p className=" w-5/6 text-justify items-center text-sm mb-5">
               {pages[progressNumber] && pages[progressNumber].resumeText}
             </p>
@@ -83,7 +85,7 @@ export default function ProgressHeaders({ progressNumber }) {
             </div>
           </div>
         )}
-
+      {/* ULTIMA SECCION */}
       {pages[progressNumber] && pages[progressNumber].number === 38 && (
         <img
           src={pages[progressNumber] && pages[progressNumber].meetImage}
