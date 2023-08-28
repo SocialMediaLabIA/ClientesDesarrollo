@@ -16,7 +16,7 @@ let pages = [
     resume: false,
     document: false,
     videoSource:
-      "https://drive.google.com/file/d/1ZsMNYKzOjWENfHiz5dgRMfmqLKFtJ6kc/preview",
+      "https://www.youtube.com/embed/DGm127uh4Bs",
     meetName: "Belén",
     documentArray: "",
   },
@@ -47,7 +47,7 @@ let pages = [
     resume: false,
     document: false,
     videoSource:
-      "https://drive.google.com/file/d/1Q74ksr2nsby53BU6nR-P-6tHM0YteWQ2/preview",
+      "https://www.youtube.com/embed/XSqOdcoaqns",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetBelen,
@@ -64,7 +64,7 @@ let pages = [
     resume: false,
     document: false,
     videoSource:
-      "https://drive.google.com/file/d/14FytcgOc9mqQM-qCXftYjAQlKFyCSoYZ/preview",
+      "https://www.youtube.com/embed/XY2ciaq438M",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetBelen,
@@ -81,7 +81,7 @@ let pages = [
     resume: false,
     document: false,
     videoSource:
-      "https://drive.google.com/file/d/18ciQfSi8oqdUSRcgPDk51c8i2mkjQXEU/preview",
+      "https://www.youtube.com/embed/nscboaFvK8Q",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetBelen,
@@ -98,7 +98,7 @@ let pages = [
     resume: false,
     document: false,
     videoSource:
-      "https://drive.google.com/file/d/1voKfCgfCyCkNdT_Zv9XnKCdscIdFGXzh/preview",
+      "https://www.youtube.com/embed/ThHCZv5bRj8",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetBelen,
@@ -115,7 +115,7 @@ let pages = [
     resume: false,
     document: false,
     videoSource:
-      "https://drive.google.com/file/d/1Uye_Mjq-csh7CPrku4E8-atAFNcsX1su/preview",
+      "https://www.youtube.com/embed/_P_8Eeh-CQE",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetBelen,
@@ -132,7 +132,7 @@ let pages = [
     resume: false,
     document: false,
     videoSource:
-      "https://drive.google.com/file/d/1vIn73ii822OV3qBrWdtM7QvcsMECXAKX/preview",
+      "https://www.youtube.com/embed/DeYM3Ha99So",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetBelen,
@@ -149,7 +149,7 @@ let pages = [
     resume: false,
     document: false,
     videoSource:
-      "https://drive.google.com/file/d/123RPHQyB440kXP47mWKE-wAcehmr3r1X/preview",
+      "https://www.youtube.com/embed/ds1xI7ZsPCc",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetBelen,
@@ -261,7 +261,7 @@ let pages = [
     meet: false,
     document: false,
     videoSource:
-      "https://drive.google.com/file/d/1czycg2HhCkG1M_A04adOea0eab506eJX/preview",
+      "https://www.youtube.com/embed/LOiGQHwfWcQ",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetNicole,
@@ -278,7 +278,7 @@ let pages = [
     meet: false,
     document: false,
     videoSource:
-      "https://drive.google.com/file/d/1XMW-Tf1mb8mQIV1LhINe-WQxhVjXwvkv/preview",
+      "https://www.youtube.com/embed/6s-u_AspypE",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetNicole,
@@ -295,7 +295,7 @@ let pages = [
     meet: false,
     document: false,
     videoSource:
-      "https://drive.google.com/file/d/1IKwBTy1l2seVYv6mBbDvYvkyxb_kiY0p/preview",
+      "https://www.youtube.com/embed/x2HTAJQrhUU",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetNicole,
@@ -312,7 +312,7 @@ let pages = [
     meet: false,
     document: false,
     videoSource:
-      "https://drive.google.com/file/d/19-wIR3FGW82SmGP8_4-b_DvhH2z9RzMZ/preview",
+      "https://www.youtube.com/embed/Mo2I3q8mjq4",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetNicole,
@@ -378,7 +378,7 @@ let pages = [
     meet: false,
     document: false,
     videoSource:
-      "https://drive.google.com/file/d/1ksI9Pninqdbqp-UCX1aU419bNJ45p3Lj/preview",
+      "https://www.youtube.com/embed/Q6Hwku9lRRI",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetNicolas,
@@ -395,7 +395,7 @@ let pages = [
     meet: false,
     document: false,
     videoSource:
-      "https://drive.google.com/file/d/1UDNJ-A1Ja2L1cSl_lhhjrFDruzGzoeW3/preview",
+      "https://www.youtube.com/embed/8LXmcQhwmys",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetNicolas,
@@ -412,7 +412,7 @@ let pages = [
     meet: false,
     document: false,
     videoSource:
-      "https://drive.google.com/file/d/1FPCmFaef7Q8xvjPMIZ12XS5t5nJ6qepq/preview",
+      "https://www.youtube.com/embed/pQCL2oB4-cQ",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
     meetImage: meetNicolas,
@@ -575,6 +575,7 @@ let pages = [
   },
 
   //Seccion 7
+  //Video 16
   {
     number: 35,
     title: "Análisis y optimización",
