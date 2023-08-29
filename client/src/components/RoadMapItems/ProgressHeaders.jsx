@@ -29,7 +29,7 @@ export default function ProgressHeaders({ progressNumber }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex justify-center items-center w-full h-5/5 mt-12 md:mt-1 xl:mt-5 text-white"
+      className="flex justify-center items-center w-full h-[450px] md:mt-1 xl:mt-5 text-white"
     >
       {/* VIDEOS */}
       {pages[progressNumber] && pages[progressNumber].video === true && (
@@ -40,7 +40,7 @@ export default function ProgressHeaders({ progressNumber }) {
           src={pages[progressNumber] && pages[progressNumber].videoSource} // Cambia esta URL por la URL correcta del video embebido
           frameBorder="0" // Cambiado a frameBorder
           allowFullScreen // Cambiado a allowFullScreen
-          className="mt-5 w-5/6 md:w-4/12 xl:w-5/12"
+          className="mt-5 w-[270px] md:w-[500px] xl:w-[500px]"
         />
       )}
       {/* MEETS */}
@@ -50,7 +50,7 @@ export default function ProgressHeaders({ progressNumber }) {
             src={selectedImage}
             // src={pages[progressNumber] && pages[progressNumber].meetImage}
             alt="imagen meet"
-            className="w-60 md:w-5/12  xl:w-4/12 "
+            className="mt-5 w-[300px] h-[300px]  md:w-[200px] xl:w-[300px]  md:h-[200px] xl:h-[300px]"
           />
         </div>
       )}
@@ -59,7 +59,7 @@ export default function ProgressHeaders({ progressNumber }) {
         pages[progressNumber].document === true &&
         pages[progressNumber].resume === true &&
         pages[progressNumber].number !== 38 && (
-          <div className="flex flex-col justify-center items-center h-full w-full max-w-[800px] mt-10">
+          <div className="flex flex-col justify-center items-center h-full w-full max-w-[230px] md:max-w-[800px] mt-10">
             <p className=" w-5/6 text-justify items-center text-sm mb-5">
               {pages[progressNumber] && pages[progressNumber].resumeText}
             </p>
