@@ -51,7 +51,7 @@ export default function ListAdmin() {
         </div>
         <div className="w-[16rem] min-w-[70px]">
           <p className="flex text-center items-center justify-center">
-            Fase Proyecto
+            Sección
           </p>
         </div>
         <div className="w-[16rem] min-w-[80px]">
