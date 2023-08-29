@@ -65,7 +65,7 @@ export default function RoadMap() {
   };
 
   return (
-    <div className=" font-poppins flex flex-col justify-start items-center h-screen w-full bg-black relative">
+    <div className=" font-poppins flex flex-col justify-between items-center h-screen w-full bg-black relative z-10">
       {loader ? (
         <div className="absolute z-50 h-screen w-screen bg-black opacity-95 pb-10 flex justify-center items-center ">
           <div className="flex flex-col gap-5 items-center justify-center w-[30rem] p-5 h-fit rounded-xl ">
@@ -73,13 +73,13 @@ export default function RoadMap() {
 
             <div className="flex flex-col gap-2 p-2">
               {/* {promisesNames &&
-                promisesNames.map((item) => {
-                  return (
-                    <h2 key={item._id} className="text-white m-1">
-                      {item}
-                    </h2>
-                  );
-                })} */}
+              promisesNames.map((item) => {
+                return (
+                  <h2 key={item._id} className="text-white m-1">
+                    {item}
+                  </h2>
+                );
+              })} */}
             </div>
             <div className="lds-roller">
               <div></div>
@@ -94,145 +94,157 @@ export default function RoadMap() {
           </div>
         </div>
       ) : null}
-      <div className="flex flex-col justify-center items-center  w-full bg-black mt-10 md:mt-5 ">
-        <div className="flex justify-center items-center w-4/5 md:w-full md:px-20">
-          <motion.img
-            src={logo}
-            alt="logo"
-            className="w-14  md:w-20 "
-            initial={{ x: -100 }}
-            animate={{ x: 0 }}
-            transition={{ duration: 0.5 }}
-          />
 
-          <div className="flex justify-center items-center w-4/6 md:w-full md:px-20">
-            <motion.h1
-              className="text-base text-center text-white md:text-[24px]"
-              initial={{ y: -100 }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              {pages[progressNumber] ? pages[progressNumber].title : ""}
-            </motion.h1>
-          </div>
-
-          <motion.div
-            initial={{ x: 50 }}
-            animate={{ x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin text-black md:w-16 md:h-16" />
-          </motion.div>
-        </div>
+      <div className="flex justify-start items-center w-fit left-0 h-screen absolute z-0">
         {progressNumber !== 0 && (
           <ProgressBar progressNumber={progressNumber} />
         )}
         {progressNumber === 0 && (
           <div className="w-full flex justify-center items-center text-white mt-20"></div>
         )}
-        <ProgressHeaders progressNumber={progressNumber} />
-        <div className="flex justify-center items-center w-4/5 bottom-14 absolute gap-64">
-          {progressNumber !== 0 && progressNumber !== 38 && (
-            <>
-              <HiChevronLeft
-                onClick={() => directionProgress("prev")}
-                className=" text-white font-bold text-xl w-8 h-8"
-              />
-              {/* <button
-                onClick={() => directionProgress("prev")}
-                className="bg-transparent  text-blue-700 font-semibold  py-2 px-4 border border-blue-500  rounded"
+      </div>
+
+      <div className="flex justify-around items-center  w-full bg-black mt-10 md:mt-5 ">
+        <motion.img
+          src={logo}
+          alt="logo"
+          className="w-14  md:w-20 "
+          initial={{ x: -100 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.5 }}
+        />
+        <motion.h1
+          className="text-base text-center text-white md:text-[24px]"
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {pages[progressNumber] ? pages[progressNumber].title : ""}
+        </motion.h1>
+        <motion.div
+          initial={{ x: 50 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin text-white md:w-16 md:h-16" />
+        </motion.div>
+      </div>
+
+      <ProgressHeaders progressNumber={progressNumber} />
+
+
+
+
+      
+      {/* </div> */}
+
+      <div className="flex justify-center md:w-full md:justify-between md:absolute md:bottom-2/4 items-center gap-64 md:gap-96 mb-20 ">
+        {progressNumber !== 0 && progressNumber !== 38 && (
+          <>
+            <HiChevronLeft
+              onClick={() => directionProgress("prev")}
+              className=" text-black font-bold text-xl w-8 h-8 bg-white rounded-full p-5"
+            />
+
+
+
+
+
+            <HiChevronRight
+              onClick={() => directionProgress("next")}
+              className=" text-white font-bold text-xl w-8 h-8"
+            />
+          </>
+        )}
+        {progressNumber === 0 && (
+        <>
+          <motion.button
+            onClick={() => directionProgress("next")}
+            className="bg-[#c905faad] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 3 }}
+          >
+            Empecemos!
+          </motion.button>
+        </>
+      )}
+      {progressNumber === 38 && (
+        <>
+          <button
+            onClick={() => directionProgress("prev")}
+            className="bg-[#c905faad] text-white font-bold py-2 px-4 rounded-xl"
+          >
+            Repetir proceso
+          </button>
+        </>
+      )}
+      {progressNumber !== 0 &&
+        pages[progressNumber] &&
+        pages[progressNumber].meet && (
+          <>
+            {pages[progressNumber].meetName === "Belén" && (
+              <a
+                href="https://calendly.com/belengiorda/meetings"
+                target="_blank" // Abre el enlace en una nueva pestaña/tab
+                rel="noopener noreferrer" // Recomendado al abrir enlaces externos
+                onClick={() => directionProgress("")}
+                className="bg-[#c905faad] text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
               >
-                Prev
-              </button> */}
-              <HiChevronRight
-                onClick={() => directionProgress("next")}
-                className=" text-white font-bold text-xl w-8 h-8"
-              />
-              {/* <button
-                onClick={() => directionProgress("next")}
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              >
-                Next
-              </button> */}
-            </>
-          )}
-          {progressNumber === 0 && (
-            <>
-              <motion.button
-                onClick={() => directionProgress("next")}
-                className="bg-[#c905faad] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 3 }}
-              >
-                Empecemos!
-              </motion.button>
-            </>
-          )}
-          {progressNumber === 38 && (
-            <>
-              <button
-                onClick={() => directionProgress("prev")}
-                className="bg-[#c905faad] text-white font-bold py-2 px-4 rounded-xl"
-              >
-                Repetir proceso
-              </button>
-            </>
-          )}
-          {progressNumber !== 0 &&
-            pages[progressNumber] &&
-            pages[progressNumber].meet && (
-              <>
-                {pages[progressNumber].meetName === "Belén" && (
-                  <a
-                    href="https://calendly.com/belengiorda/meetings"
-                    target="_blank" // Abre el enlace en una nueva pestaña/tab
-                    rel="noopener noreferrer" // Recomendado al abrir enlaces externos
-                    onClick={() => directionProgress("")}
-                    className="bg-[#c905faad] text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
-                  >
-                    {`Agendar con ${
-                      pages[progressNumber]
-                        ? pages[progressNumber].meetName
-                        : ""
-                    }`}
-                  </a>
-                )}
-                {pages[progressNumber].meetName === "Nicole" && (
-                  <a
-                    href="https://calendly.com/nicole-laszuk/60min"
-                    target="_blank" // Abre el enlace en una nueva pestaña/tab
-                    rel="noopener noreferrer" // Recomendado al abrir enlaces externos
-                    onClick={() => directionProgress("")}
-                    className="bg-[#c905faad] text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
-                  >
-                    {`Agendar con ${
-                      pages[progressNumber]
-                        ? pages[progressNumber].meetName
-                        : ""
-                    }`}
-                  </a>
-                )}
-                {pages[progressNumber].meetName === "Nicolás" && (
-                  <a
-                    href="http://calendly.com/nicolas-sml"
-                    target="_blank" // Abre el enlace en una nueva pestaña/tab
-                    rel="noopener noreferrer" // Recomendado al abrir enlaces externos
-                    onClick={() => directionProgress("")}
-                    className="bg-[#c905faad] text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
-                  >
-                    {`Agendar con ${
-                      pages[progressNumber]
-                        ? pages[progressNumber].meetName
-                        : ""
-                    }`}
-                  </a>
-                )}
-              </>
+                {`Agendar con ${
+                  pages[progressNumber] ? pages[progressNumber].meetName : ""
+                }`}
+              </a>
             )}
-        </div>
-        <p className="absolute bottom-2 text-[15px] text-white">sección: 0.0.0</p>
+            {pages[progressNumber].meetName === "Nicole" && (
+              <a
+                href="https://calendly.com/nicole-laszuk/60min"
+                target="_blank" // Abre el enlace en una nueva pestaña/tab
+                rel="noopener noreferrer" // Recomendado al abrir enlaces externos
+                onClick={() => directionProgress("")}
+                className="bg-[#c905faad] text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
+              >
+                {`Agendar con ${
+                  pages[progressNumber] ? pages[progressNumber].meetName : ""
+                }`}
+              </a>
+            )}
+            {pages[progressNumber].meetName === "Nicolás" && (
+              <a
+                href="http://calendly.com/nicolas-sml"
+                target="_blank" // Abre el enlace en una nueva pestaña/tab
+                rel="noopener noreferrer" // Recomendado al abrir enlaces externos
+                onClick={() => directionProgress("")}
+                className="bg-[#c905faad] text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
+              >
+                {`Agendar con ${
+                  pages[progressNumber] ? pages[progressNumber].meetName : ""
+                }`}
+              </a>
+            )}
+          </>
+        )}
+        {/* </div> */}
       </div>
     </div>
   );
 }
+
+//         <div className="flex justify-center items-center w-4/6 md:w-full md:px-20">
+
+//         </div>
+//         <div>
+//           <motion.div
+//             initial={{ x: 50 }}
+//             animate={{ x: 0 }}
+//             transition={{ duration: 0.5 }}
+//           >
+//             <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin text-black md:w-16 md:h-16" />
+//           </motion.div>
+//         </div>
+
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// );
