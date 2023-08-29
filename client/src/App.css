@@ -88,3 +88,12 @@ body {
     transform: rotate(360deg);
   }
 }
+
+
+.scrollHidden {
+
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Oculta las barras de desplazamiento en navegadores webkit (Chrome, Safari, etc.) */
+}
