@@ -36,25 +36,30 @@ export default function ListAdmin() {
         transition={{ duration: 2 }}
         className="flex justify-center items-center gap-2 w-[95%] my-2 py-5 text-[1.5rem] bg-[#222222] text-center rounded-lg"
       >
-        <div className="w-[20rem] min-w-[80px]">
+        <div className="w-[16rem] min-w-[80px]">
           <p className="flex text-center items-center justify-center">
             Nombre de Usuario
           </p>
         </div>
-        <div className=" w-[20rem] min-w-[224px]">
+        <div className=" w-[16rem] min-w-[224px]">
           <p className="flex text-center items-center justify-center">Email</p>
         </div>
-        <div className="w-[20rem] min-w-[70px]">
+        <div className=" w-[16rem] min-w-[224px]">
           <p className="flex text-center items-center justify-center">
-            Fase Proyecto
+            Contraseña
           </p>
         </div>
-        <div className="w-[20rem] min-w-[80px]">
+        <div className="w-[16rem] min-w-[70px]">
+          <p className="flex text-center items-center justify-center">
+            Sección
+          </p>
+        </div>
+        <div className="w-[16rem] min-w-[80px]">
           <p className="flex text-center items-center justify-center">
             % completado
           </p>
         </div>
-        <div className="w-[20rem] min-w-[50px]">
+        <div className="w-[16rem] min-w-[50px]">
           <p className="flex text-center items-center justify-center"></p>
         </div>
       </motion.div>
@@ -67,27 +72,32 @@ export default function ListAdmin() {
             className="flex gap-2 py-2 w-[95%] text-center justify-center items-center bg-[#222222] rounded-lg  text-[1.2rem]"
             key={index}
           >
-            <div className=" text-center w-[20rem] min-w-[80px]">
+            <div className=" text-center w-[16rem] min-w-[80px]">
               <p className="flex text-center items-center justify-center">
                 {item.name} {item.lastname}
               </p>
             </div>
-            <div className="w-[20rem] min-w-[224px]">
+            <div className="w-[16rem] min-w-[224px]">
               <p className="flex text-center items-center justify-center">
                 {item.email}
               </p>
             </div>
-            <div className="w-[20rem] min-w-[80px]">
+            <div className="w-[16rem] min-w-[224px]">
+              <p className="flex text-center items-center justify-center">
+                {item.password}
+              </p>
+            </div>
+            <div className="w-[16rem] min-w-[80px]">
               <p className="flex text-center items-center justify-center">
                 {item.progress}
               </p>
             </div>
-            <div className="w-[20rem] min-w-[80px]">
+            <div className="w-[16rem] min-w-[80px]">
               <p className="flex text-center items-center justify-center">
                 {Math.floor((item.progress / 38) * 100)}%
               </p>
             </div>
-            <div className="w-[20rem] min-w-[80px]">
+            <div className="w-[16rem] min-w-[80px]">
               <div className=" flex gap-5 items-center justify-center">
                 <BsTrash
                   className="w-10 h-10"
