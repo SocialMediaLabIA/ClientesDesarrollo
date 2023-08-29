@@ -138,12 +138,13 @@ export default function RoadMap() {
       
       {/* </div> */}
 
-      <div className="flex justify-center md:w-full md:justify-between md:absolute md:bottom-2/4 items-center gap-64 md:gap-96 mb-20 ">
+      <div className="flex justify-center md:w-full md:justify-between md:absolute md:bottom-2/4 items-center gap-56 md:gap-96 mb-20 ">
         {progressNumber !== 0 && progressNumber !== 38 && (
           <>
             <HiChevronLeft
               onClick={() => directionProgress("prev")}
-              className=" text-black font-bold text-xl w-8 h-8 bg-white rounded-full p-5"
+              // className=" text-black font-bold text-xl w-8 h-8 bg-white rounded-full p-5"
+              className="text-white bg-[#c905faad] font-bold text-xl w-10 h-10 p-2 rounded-full"
             />
 
 
@@ -152,7 +153,7 @@ export default function RoadMap() {
 
             <HiChevronRight
               onClick={() => directionProgress("next")}
-              className=" text-white font-bold text-xl w-8 h-8"
+              className=" text-white bg-[#c905faad] font-bold text-xl w-10 h-10 p-2 rounded-full"
             />
           </>
         )}
@@ -215,7 +216,7 @@ export default function RoadMap() {
                 target="_blank" // Abre el enlace en una nueva pestaña/tab
                 rel="noopener noreferrer" // Recomendado al abrir enlaces externos
                 onClick={() => directionProgress("")}
-                className="bg-[#c905faad] text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
+                className="bg-[#c905faad] text-white font-semibold  py-2 px-4 rounded-xl absolute cursor-pointer"
               >
                 {`Agendar con ${
                   pages[progressNumber] ? pages[progressNumber].meetName : ""
