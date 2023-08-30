@@ -50,7 +50,7 @@ export default function ProgressHeaders({ progressNumber }) {
             src={selectedImage}
             // src={pages[progressNumber] && pages[progressNumber].meetImage}
             alt="imagen meet"
-            className="mt-5 w-[270px] h-[270px]  md:w-[200px] xl:w-[300px]  md:h-[200px] xl:h-[300px]"
+            className="mt-5 w-[270px] h-[270px]  md:w-[200px] xl:w-[300px]  md:h-[200px] xl:h-[300px] rounded-lg"
           />
         </div>
       )}
