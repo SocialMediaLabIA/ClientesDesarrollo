@@ -143,7 +143,7 @@ export default function CreateUserForm() {
           name="instagram"
           value={user.instagram}
           onChange={handleChange}
-          placeholder="Ingrese el email..."
+          placeholder="Ingrese instagram..."
         />
         <span className="text-red-400 text-[12px] mt-1">
           {errors.email && <>{errors.email}</>}
