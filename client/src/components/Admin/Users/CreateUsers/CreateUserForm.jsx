@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import createUser from "../../../../redux/User/ActionUser/createUser";
 import {
   validateEmail,
+  validateInstagram,
   validateLastname,
   validateName,
   validatePassword,
@@ -16,6 +17,7 @@ export default function CreateUserForm() {
     role: "",
     name: "",
     lastname: "",
+    instagram: "",
     email: "",
     password: "",
     isActive: true,
@@ -27,6 +29,7 @@ export default function CreateUserForm() {
     role: "",
     name: "",
     lastname: "",
+    instagram: "",
     email: "",
     password: "",
   });
@@ -44,6 +47,8 @@ export default function CreateUserForm() {
       validateName(value, errors, setErrors);
     } else if (name === "lastname") {
       validateLastname(value, errors, setErrors);
+    } else if (name === "instagram") {
+      validateInstagram(value, errors, setErrors);
     } else if (name === "email") {
       validateEmail(value, errors, setErrors);
     } else if (name === "password") {
@@ -55,6 +60,7 @@ export default function CreateUserForm() {
     const roleError = validateRole(user.role, errors, setErrors);
     const nameError = validateName(user.name, errors, setErrors);
     const lastnameError = validateLastname(user.lastname, errors, setErrors);
+    const instagramError = validateInstagram(user.instagram, errors, setErrors);
     const emailError = validateEmail(user.email, errors, setErrors);
     const passwordError = validatePassword(user.password, errors, setErrors);
 
@@ -62,6 +68,7 @@ export default function CreateUserForm() {
       roleError ||
       nameError ||
       lastnameError ||
+      instagramError ||
       emailError ||
       passwordError
     ) {
@@ -74,6 +81,7 @@ export default function CreateUserForm() {
       role: "",
       name: "",
       lastname: "",
+      instagram: "",
       email: "",
       password: "",
       isActive: true,
@@ -132,6 +140,20 @@ export default function CreateUserForm() {
         />
         <span className="text-red-400 text-[12px] mt-1">
           {errors.lastname && <>{errors.lastname}</>}
+        </span>
+      </div>
+      <div className="flex flex-col items-start justify-center gap-1">
+        <label className="font-bold ml-2 text-white">Instagram:</label>
+        <input
+          className="rounded-md bg-[#D9D9D9] h-10 w-80 pl-5 text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25"
+          type="text"
+          name="instagram"
+          value={user.instagram}
+          onChange={handleChange}
+          placeholder="Ingrese instagram..."
+        />
+        <span className="text-red-400 text-[12px] mt-1">
+          {errors.instagram && <>{errors.instagram}</>}
         </span>
       </div>
       <div className="flex flex-col items-start justify-center gap-1">
