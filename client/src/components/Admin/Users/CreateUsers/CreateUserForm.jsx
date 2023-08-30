@@ -60,6 +60,7 @@ export default function CreateUserForm() {
     const roleError = validateRole(user.role, errors, setErrors);
     const nameError = validateName(user.name, errors, setErrors);
     const lastnameError = validateLastname(user.lastname, errors, setErrors);
+    const instagramError = validateInstagram(user.instagram, errors, setErrors);
     const emailError = validateEmail(user.email, errors, setErrors);
     const passwordError = validatePassword(user.password, errors, setErrors);
 
@@ -67,6 +68,7 @@ export default function CreateUserForm() {
       roleError ||
       nameError ||
       lastnameError ||
+      instagramError ||
       emailError ||
       passwordError
     ) {
@@ -79,6 +81,7 @@ export default function CreateUserForm() {
       role: "",
       name: "",
       lastname: "",
+      instagram: "",
       email: "",
       password: "",
       isActive: true,
