@@ -129,8 +129,10 @@ export default function RoadMap() {
           <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin text-white md:w-16 md:h-16" />
         </motion.div>
       </div>
+          <div className={progressNumber === 0 ? "" :"ml-10"}>
 
       <ProgressHeaders progressNumber={progressNumber} />
+          </div>
 
 
 
