@@ -28,6 +28,7 @@ export default function CreateUserForm() {
     role: "",
     name: "",
     lastname: "",
+    instagram: "",
     email: "",
     password: "",
   });
@@ -45,6 +46,8 @@ export default function CreateUserForm() {
       validateName(value, errors, setErrors);
     } else if (name === "lastname") {
       validateLastname(value, errors, setErrors);
+    } else if (name === "instagram") {
+      validateEmail(value, errors, setErrors);
     } else if (name === "email") {
       validateEmail(value, errors, setErrors);
     } else if (name === "password") {
