@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import createUser from "../../../../redux/User/ActionUser/createUser";
 import {
   validateEmail,
+  validateInstagram,
   validateLastname,
   validateName,
   validatePassword,
@@ -47,7 +48,7 @@ export default function CreateUserForm() {
     } else if (name === "lastname") {
       validateLastname(value, errors, setErrors);
     } else if (name === "instagram") {
-      validateEmail(value, errors, setErrors);
+      validateInstagram(value, errors, setErrors);
     } else if (name === "email") {
       validateEmail(value, errors, setErrors);
     } else if (name === "password") {
