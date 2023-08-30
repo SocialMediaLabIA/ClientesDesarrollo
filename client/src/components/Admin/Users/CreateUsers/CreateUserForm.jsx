@@ -141,7 +141,7 @@ export default function CreateUserForm() {
           className="rounded-md bg-[#D9D9D9] h-10 w-80 pl-5 text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25"
           type="text"
           name="instagram"
-          value={user.email}
+          value={user.instagram}
           onChange={handleChange}
           placeholder="Ingrese el email..."
         />
