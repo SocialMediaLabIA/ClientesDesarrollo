@@ -26,6 +26,26 @@ export const validateLastname = (lastname, errors, setErrors) => {
   return "";
 };
 
+export const validateInstagramPage = (instagram, errors, setErrors) => {
+  const urlRegex =
+    /^(?:https?:\/\/)?(?:www\.)?instagram\.com\/[a-zA-Z0-9_\.]+\/?$/;
+
+  if (!instagram || instagram.trim() === "") {
+    setErrors({
+      instagram: "Por favor, ingrese la URL de la página de Instagram",
+    });
+    return "Por favor, ingrese la URL de la página de Instagram";
+  }
+  if (!urlRegex.test(instagram)) {
+    setErrors({
+      instagram: "Por favor, ingrese una URL válida de la página de Instagram",
+    });
+    return "Por favor, ingrese una URL válida de la página de Instagram";
+  }
+  setErrors({ instagram: "" });
+  return "";
+};
+
 export const validateEmail = (email, errors, setErrors) => {
   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
