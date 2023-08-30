@@ -153,7 +153,7 @@ export default function CreateUserForm() {
           placeholder="Ingrese instagram..."
         />
         <span className="text-red-400 text-[12px] mt-1">
-          {errors.email && <>{errors.email}</>}
+          {errors.instagram && <>{errors.instagram}</>}
         </span>
       </div>
       <div className="flex flex-col items-start justify-center gap-1">
