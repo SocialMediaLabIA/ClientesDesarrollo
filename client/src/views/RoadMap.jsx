@@ -114,12 +114,12 @@ export default function RoadMap() {
           transition={{ duration: 0.5 }}
         />
         <motion.h1
-          className="text-base text-center text-white md:text-[24px]"
+          className="text-base text-center text-white font-bold text-[18px] md:text-[26px]"
           initial={{ y: -100 }}
           animate={{ y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {pages[progressNumber] ? pages[progressNumber].title : ""}
+          {pages[progressNumber] ? pages[progressNumber].title.toLocaleUpperCase() : ""}
         </motion.h1>
         <motion.div
           initial={{ x: 50 }}
