@@ -19,6 +19,11 @@ const UsersSchema = new mongoose.Schema(
       required: true,
       default: "",
     },
+    instagram: {
+      type: String,
+      required: true,
+      default: "",
+    },
     email: {
       type: String,
       required: true,
