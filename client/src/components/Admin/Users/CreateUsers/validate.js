@@ -26,7 +26,7 @@ export const validateLastname = (lastname, errors, setErrors) => {
   return "";
 };
 
-export const validateInstagramPage = (instagram, errors, setErrors) => {
+export const validateInstagram = (instagram, errors, setErrors) => {
   const urlRegex =
     /^(?:https?:\/\/)?(?:www\.)?instagram\.com\/[a-zA-Z0-9_\.]+\/?$/;
 
