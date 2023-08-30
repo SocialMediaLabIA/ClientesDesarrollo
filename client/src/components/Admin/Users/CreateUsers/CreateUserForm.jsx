@@ -16,6 +16,7 @@ export default function CreateUserForm() {
     role: "",
     name: "",
     lastname: "",
+    instagram: "",
     email: "",
     password: "",
     isActive: true,
@@ -132,6 +133,20 @@ export default function CreateUserForm() {
         />
         <span className="text-red-400 text-[12px] mt-1">
           {errors.lastname && <>{errors.lastname}</>}
+        </span>
+      </div>
+      <div className="flex flex-col items-start justify-center gap-1">
+        <label className="font-bold ml-2 text-white">Instagram:</label>
+        <input
+          className="rounded-md bg-[#D9D9D9] h-10 w-80 pl-5 text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25"
+          type="text"
+          name="instagram"
+          value={user.email}
+          onChange={handleChange}
+          placeholder="Ingrese el email..."
+        />
+        <span className="text-red-400 text-[12px] mt-1">
+          {errors.email && <>{errors.email}</>}
         </span>
       </div>
       <div className="flex flex-col items-start justify-center gap-1">
