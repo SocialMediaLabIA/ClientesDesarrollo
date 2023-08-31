@@ -10,6 +10,7 @@ let pages = [
   //Seccion inicial
   {
     number: 0,
+    section: true,
     title: "Social Media Lab",
     video: true,
     meet: false,
@@ -23,7 +24,8 @@ let pages = [
   //Seccion 1/////////////////////////////////////////////////////////////
   {
     number: 1,
-    title: "Cimientos de marca",
+    section: false,
+    title: "Agendar llamada 1 a Belén",
     video: false,
     meet: true,
     resume: false,
@@ -53,7 +55,8 @@ let pages = [
   //video2
   {
     number: 2,
-    title: "Cimientos de marca",
+    section: false,
+    title: "Video Fase 1. Cimientos de marca",
     video: true,
     meet: false,
     resume: false,
@@ -69,7 +72,8 @@ let pages = [
   //video3
   {
     number: 3,
-    title: "Referentes",
+    section: false,
+    title: "Video Doc 1. Referentes",
     video: true,
     meet: false,
     resume: false,
@@ -85,7 +89,8 @@ let pages = [
   //video4
   {
     number: 4,
-    title: "Mi marca personal",
+    section: false,
+    title: "Video Doc 2. Mi marca personal",
     video: true,
     meet: false,
     resume: false,
@@ -101,7 +106,8 @@ let pages = [
   //video5
   {
     number: 5,
-    title: "Cimientos de marca",
+    section: false,
+    title: "Video Doc 3. Cimientos de la marca",
     video: true,
     meet: false,
     resume: false,
@@ -117,7 +123,8 @@ let pages = [
   //video6
   {
     number: 6,
-    title: "Cimientos de marca",
+    section: false,
+    title: "Doc 1. Referentes y fuentes de contenido",
     video: true,
     meet: false,
     resume: false,
@@ -133,7 +140,8 @@ let pages = [
   //video7
   {
     number: 7,
-    title: "Cimientos de marca",
+    section: false,
+    title: "Doc 2. Mi marca personal",
     video: true,
     meet: false,
     resume: false,
@@ -149,7 +157,8 @@ let pages = [
   //video8
   {
     number: 8,
-    title: "Cimientos de marca",
+    section: false,
+    title: "Doc 3. Cimientos de la marca",
     video: true,
     meet: false,
     resume: false,
@@ -166,7 +175,8 @@ let pages = [
 
   {
     number: 9,
-    title: "Cimientos de marca",
+    section: false,
+    title: "Llamada 2 a Belén",
     video: false,
     resume: true,
     meet: false,
@@ -194,7 +204,8 @@ let pages = [
   },
   {
     number: 10,
-    title: "Cimientos de marca",
+    section: false,
+    title: "Llamada 2 a Belén",
     video: false,
     resume: false,
     meet: true,
@@ -211,6 +222,7 @@ let pages = [
   //Seccion 2
   {
     number: 11,
+    section: true,
     title: "Guiones",
     video: true,
     resume: false,
@@ -227,6 +239,7 @@ let pages = [
   },
   {
     number: 12,
+    section: false,
     title: "Guiones",
     video: false,
     resume: true,
@@ -247,6 +260,7 @@ let pages = [
   },
   {
     number: 13,
+    section: false,
     title: "Guiones",
     video: false,
     resume: false,
@@ -262,6 +276,7 @@ let pages = [
   },
   {
     number: 14,
+    section: false,
     title: "Guiones",
     video: false,
     resume: true,
@@ -288,6 +303,7 @@ let pages = [
   //video9
   {
     number: 15,
+    section: false,
     title: "Guiones",
     video: true,
     resume: false,
@@ -304,6 +320,7 @@ let pages = [
   //video10
   {
     number: 16,
+    section: false,
     title: "Guiones",
     video: true,
     resume: false,
@@ -320,6 +337,7 @@ let pages = [
   //video11
   {
     number: 17,
+    section: false,
     title: "Guiones",
     video: true,
     resume: false,
@@ -336,6 +354,7 @@ let pages = [
   //video12
   {
     number: 18,
+    section: false,
     title: "Guiones",
     video: true,
     resume: false,
@@ -352,6 +371,7 @@ let pages = [
   //----------------- fin
   {
     number: 19,
+    section: false,
     title: "Guiones",
     video: false,
     resume: true,
@@ -366,6 +386,7 @@ let pages = [
   },
   {
     number: 20,
+    section: false,
     title: "Guiones",
     video: false,
     resume: false,
@@ -383,6 +404,7 @@ let pages = [
   //Seccion 3
   {
     number: 21,
+    section: true,
     title: "Grabación de videos",
     video: false,
     resume: false,
@@ -400,6 +422,7 @@ let pages = [
   //video13
   {
     number: 22,
+    section: false,
     title: "Grabación de videos",
     video: true,
     resume: false,
@@ -416,6 +439,7 @@ let pages = [
   //video14
   {
     number: 23,
+    section: false,
     title: "Grabación de videos",
     video: true,
     resume: false,
@@ -432,6 +456,7 @@ let pages = [
   //video15
   {
     number: 24,
+    section: false,
     title: "Grabación de videos",
     video: true,
     resume: false,
@@ -448,6 +473,7 @@ let pages = [
   //----------------- fin
   {
     number: 25,
+    section: false,
     title: "Grabación de videos",
     video: false,
     resume: true,
@@ -462,6 +488,7 @@ let pages = [
   },
   {
     number: 26,
+    section: false,
     title: "Grabación de videos",
     video: false,
     resume: false,
@@ -477,6 +504,7 @@ let pages = [
   },
   {
     number: 27,
+    section: false,
     title: "Grabación de videos",
     video: false,
     resume: true,
@@ -493,6 +521,7 @@ let pages = [
   //Seccion 4
   {
     number: 28,
+    section: true,
     title: "Edición",
     video: false,
     resume: true,
@@ -509,6 +538,7 @@ let pages = [
   //Seccion 5
   {
     number: 29,
+    section: true,
     title: "Pre - Publicación",
     video: true,
     resume: false,
@@ -525,6 +555,7 @@ let pages = [
   },
   {
     number: 30,
+    section: false,
     title: "Pre - Publicación",
     video: false,
     resume: true,
@@ -544,6 +575,7 @@ let pages = [
   },
   {
     number: 31,
+    section: false,
     title: "Pre - Publicación",
     video: false,
     resume: false,
@@ -558,6 +590,7 @@ let pages = [
   },
   {
     number: 32,
+    section: false,
     title: "Pre - Publicación",
     video: false,
     resume: true,
@@ -577,6 +610,7 @@ let pages = [
   },
   {
     number: 33,
+    section: false,
     title: "Pre - Publicación",
     video: false,
     resume: false,
@@ -593,6 +627,7 @@ let pages = [
   //seccion 6
   {
     number: 34,
+    section: true,
     title: "Publicación",
     video: false,
     resume: true,
@@ -610,6 +645,7 @@ let pages = [
   //Video 16
   {
     number: 35,
+    section: true,
     title: "Análisis y optimización",
     video: true,
     resume: false,
@@ -625,6 +661,7 @@ let pages = [
   },
   {
     number: 36,
+    section: false,
     title: "Análisis y optimización",
     video: false,
     resume: true,
@@ -645,6 +682,7 @@ let pages = [
   },
   {
     number: 37,
+    section: false,
     title: "Análisis y optimización",
     video: false,
     resume: false,
@@ -660,6 +698,7 @@ let pages = [
   //Seccion 8
   {
     number: 38,
+    section: true,
     title: "¡Terminaste tu recorrido!",
     video: false,
     resume: false,

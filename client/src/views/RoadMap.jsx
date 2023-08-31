@@ -63,7 +63,7 @@ export default function RoadMap() {
         });
     }
   };
-
+  // "text-[#00DFFD] " : "text-[#fafafa]"
   return (
     <div className=" font-poppins flex flex-col justify-between items-center h-screen w-full bg-black relative z-10">
       {loader ? (
@@ -104,7 +104,7 @@ export default function RoadMap() {
         )}
       </div>
 
-      <div className="flex justify-around items-center  w-full bg-black mt-10 md:mt-5 ">
+      <div className="flex justify-around items-center rounded-xl w-2/4 bg-[#3b393b67] mt-10 md:mt-5">
         <motion.img
           src={logo}
           alt="logo"
@@ -115,9 +115,9 @@ export default function RoadMap() {
         />
         <motion.h1
           className="text-base text-center text-white font-bold text-[18px] md:text-[26px]"
-          initial={{ y: -100 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 0.5 }}
+          initial={{ y: -30, opacity:0 }}
+          animate={{ y: 0, opacity:1 }}
+          transition={{ duration: 1 }}
         >
           {pages[progressNumber] ? pages[progressNumber].title.toLocaleUpperCase() : ""}
         </motion.h1>
@@ -129,8 +129,10 @@ export default function RoadMap() {
           <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin text-white md:w-16 md:h-16" />
         </motion.div>
       </div>
+          <div className={progressNumber === 0 ? "" :"ml-10 md:ml-0"}>
 
       <ProgressHeaders progressNumber={progressNumber} />
+          </div>
 
 
 
@@ -138,13 +140,13 @@ export default function RoadMap() {
       
       {/* </div> */}
 
-      <div className="flex justify-center md:w-full md:justify-between md:absolute md:bottom-2/4 items-center gap-56 md:gap-96 mb-20 ">
+      <div className="flex justify-center md:w-full md:justify-around   items-center gap-56  mb-20 ">
         {progressNumber !== 0 && progressNumber !== 38 && (
           <>
             <HiChevronLeft
               onClick={() => directionProgress("prev")}
               // className=" text-black font-bold text-xl w-8 h-8 bg-white rounded-full p-5"
-              className="text-white bg-[#c905faad] font-bold text-xl w-10 h-10 p-2 rounded-full"
+              className="text-white bg-[#c905faad] font-bold text-xl w-10 h-10 p-2 rounded-full z-50"
             />
 
 
@@ -153,7 +155,7 @@ export default function RoadMap() {
 
             <HiChevronRight
               onClick={() => directionProgress("next")}
-              className=" text-white bg-[#c905faad] font-bold text-xl w-10 h-10 p-2 rounded-full"
+              className=" text-white bg-[#c905faad] font-bold text-xl w-10 h-10 p-2 rounded-full z-50"
             />
           </>
         )}
