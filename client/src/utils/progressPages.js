@@ -23,7 +23,7 @@ let pages = [
   //Seccion 1/////////////////////////////////////////////////////////////
   {
     number: 1,
-    title: "Cimientos de marca",
+    title: "Agendar llamada 1 a Belén",
     video: false,
     meet: true,
     resume: false,
@@ -53,7 +53,7 @@ let pages = [
   //video2
   {
     number: 2,
-    title: "Cimientos de marca",
+    title: "Video Fase 1. Cimientos de marca",
     video: true,
     meet: false,
     resume: false,
@@ -69,7 +69,7 @@ let pages = [
   //video3
   {
     number: 3,
-    title: "Referentes",
+    title: "Video Doc 1. Referentes",
     video: true,
     meet: false,
     resume: false,
@@ -85,7 +85,7 @@ let pages = [
   //video4
   {
     number: 4,
-    title: "Mi marca personal",
+    title: "Video Doc 2. Mi marca personal",
     video: true,
     meet: false,
     resume: false,
@@ -101,7 +101,7 @@ let pages = [
   //video5
   {
     number: 5,
-    title: "Cimientos de marca",
+    title: "Video Doc 3. Cimientos de la marca",
     video: true,
     meet: false,
     resume: false,
@@ -117,7 +117,7 @@ let pages = [
   //video6
   {
     number: 6,
-    title: "Cimientos de marca",
+    title: "Doc 1. Referentes y fuentes de contenido",
     video: true,
     meet: false,
     resume: false,
@@ -133,7 +133,7 @@ let pages = [
   //video7
   {
     number: 7,
-    title: "Cimientos de marca",
+    title: "Doc 2. Mi marca personal",
     video: true,
     meet: false,
     resume: false,
@@ -149,7 +149,7 @@ let pages = [
   //video8
   {
     number: 8,
-    title: "Cimientos de marca",
+    title: "Doc 3. Cimientos de la marca",
     video: true,
     meet: false,
     resume: false,
@@ -166,7 +166,7 @@ let pages = [
 
   {
     number: 9,
-    title: "Cimientos de marca",
+    title: "Llamada 2 a Belén",
     video: false,
     resume: true,
     meet: false,
@@ -194,7 +194,7 @@ let pages = [
   },
   {
     number: 10,
-    title: "Cimientos de marca",
+    title: "Llamada 2 a Belén",
     video: false,
     resume: false,
     meet: true,
