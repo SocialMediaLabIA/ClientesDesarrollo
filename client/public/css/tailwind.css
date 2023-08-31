@@ -609,6 +609,11 @@ video {
   margin-right: 1rem;
 }
 
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -634,8 +639,16 @@ video {
   margin-left: 0.25rem;
 }
 
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
 }
 
 .ml-5 {
@@ -674,10 +687,6 @@ video {
   margin-top: 6rem;
 }
 
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -688,10 +697,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.ml-10 {
-  margin-left: 2.5rem;
 }
 
 .flex {
@@ -759,6 +764,10 @@ video {
   max-height: 400px;
 }
 
+.max-h-\[500px\] {
+  max-height: 500px;
+}
+
 .w-1 {
   width: 0.25rem;
 }
@@ -777,6 +786,10 @@ video {
 
 .w-16 {
   width: 4rem;
+}
+
+.w-2\/4 {
+  width: 50%;
 }
 
 .w-4\/6 {
@@ -1036,9 +1049,8 @@ video {
   border-color: rgb(143 0 255 / var(--tw-border-opacity));
 }
 
-.border-\[\#beb8b8\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(190 184 184 / var(--tw-border-opacity));
+.border-\[\#beb8b827\] {
+  border-color: #beb8b827;
 }
 
 .bg-\[\#00dffd5d\] {
@@ -1058,6 +1070,10 @@ video {
 .bg-\[\#383838\] {
   --tw-bg-opacity: 1;
   background-color: rgb(56 56 56 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#3b393b67\] {
+  background-color: #3b393b67;
 }
 
 .bg-\[\#6610A9\] {
@@ -1365,20 +1381,12 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:absolute {
-    position: absolute;
-  }
-
-  .md\:bottom-2\/4 {
-    bottom: 50%;
+  .md\:ml-0 {
+    margin-left: 0px;
   }
 
   .md\:mt-0 {
     margin-top: 0px;
-  }
-
-  .md\:mt-1 {
-    margin-top: 0.25rem;
   }
 
   .md\:mt-5 {
@@ -1405,6 +1413,10 @@ video {
     height: 100%;
   }
 
+  .md\:max-h-\[100\%\] {
+    max-height: 100%;
+  }
+
   .md\:w-16 {
     width: 4rem;
   }
@@ -1421,8 +1433,8 @@ video {
     width: 200px;
   }
 
-  .md\:w-\[500px\] {
-    width: 500px;
+  .md\:w-\[700px\] {
+    width: 700px;
   }
 
   .md\:w-\[80\%\] {
@@ -1449,12 +1461,8 @@ video {
     justify-content: center;
   }
 
-  .md\:justify-between {
-    justify-content: space-between;
-  }
-
-  .md\:gap-96 {
-    gap: 24rem;
+  .md\:justify-around {
+    justify-content: space-around;
   }
 
   .md\:px-20 {
@@ -1472,10 +1480,6 @@ video {
 }
 
 @media (min-width: 1280px) {
-  .xl\:mt-5 {
-    margin-top: 1.25rem;
-  }
-
   .xl\:h-\[300px\] {
     height: 300px;
   }
@@ -1484,7 +1488,7 @@ video {
     width: 300px;
   }
 
-  .xl\:w-\[500px\] {
-    width: 500px;
+  .xl\:w-\[700px\] {
+    width: 700px;
   }
 }
