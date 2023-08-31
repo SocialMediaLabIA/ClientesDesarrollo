@@ -1142,6 +1142,23 @@ video {
   background-color: #ffef13c5;
 }
 
+.bg-\[\#fafafa\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#0000002c\] {
+  background-color: #0000002c;
+}
+
+.bg-\[\#ffffff77\] {
+  background-color: #ffffff77;
+}
+
+.bg-\[\#ffffff42\] {
+  background-color: #ffffff42;
+}
+
 .bg-opacity-0 {
   --tw-bg-opacity: 0;
 }
@@ -1405,6 +1422,10 @@ video {
 
 .placeholder\:text-opacity-75::placeholder {
   --tw-text-opacity: 0.75;
+}
+
+.hover\:border-\[\#beb8b84f\]:hover {
+  border-color: #beb8b84f;
 }
 
 .hover\:bg-\[\#484848\]:hover {
