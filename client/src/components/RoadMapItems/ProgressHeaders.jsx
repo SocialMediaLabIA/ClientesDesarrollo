@@ -29,7 +29,7 @@ export default function ProgressHeaders({ progressNumber }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex justify-center items-center w-full h-[450px] md:mt-1 xl:mt-5 text-white"
+      className="flex justify-center items-center w-full h-[450px] text-white"
     >
       {/* VIDEOS */}
       {pages[progressNumber] && pages[progressNumber].video === true && (
@@ -40,7 +40,7 @@ export default function ProgressHeaders({ progressNumber }) {
           src={pages[progressNumber] && pages[progressNumber].videoSource} // Cambia esta URL por la URL correcta del video embebido
           frameBorder="0" // Cambiado a frameBorder
           allowFullScreen // Cambiado a allowFullScreen
-          className="mt-5 w-[270px] md:w-[500px] xl:w-[500px]"
+          className="mt-5 w-[270px] md:w-[700px] xl:w-[700px]"
         />
       )}
       {/* MEETS */}
