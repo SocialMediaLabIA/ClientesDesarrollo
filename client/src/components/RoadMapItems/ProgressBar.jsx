@@ -29,7 +29,7 @@ export default function ProgressBar({ progressNumber }) {
           <div className=" my-2 ml-3 flex justify-center items-center w-fit">
             <PiFlagPennantFill
               className={
-                progressNumber >= 1 ? "my-2 text-[#00DFFD] " : "text-[#fafafa]"
+                progressNumber >= 1 ? " text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
              <div
