@@ -146,7 +146,7 @@ export default function RoadMap() {
             <HiChevronLeft
               onClick={() => directionProgress("prev")}
               // className=" text-black font-bold text-xl w-8 h-8 bg-white rounded-full p-5"
-              className="text-white bg-[#c905faad] font-bold text-xl w-10 h-10 p-2 rounded-full"
+              className="text-white bg-[#c905faad] font-bold text-xl w-10 h-10 p-2 rounded-full z-50"
             />
 
 
@@ -155,7 +155,7 @@ export default function RoadMap() {
 
             <HiChevronRight
               onClick={() => directionProgress("next")}
-              className=" text-white bg-[#c905faad] font-bold text-xl w-10 h-10 p-2 rounded-full"
+              className=" text-white bg-[#c905faad] font-bold text-xl w-10 h-10 p-2 rounded-full z-50"
             />
           </>
         )}
