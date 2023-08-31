@@ -3,7 +3,6 @@ import {
   HiChevronLeft,
   HiChevronRight,
   HiChevronDoubleLeft,
-  HiChevronDoubleRight,
 } from "react-icons/hi2";
 import { PiFlagPennantFill } from "react-icons/pi";
 import pages from "../../utils/progressPages";
@@ -49,10 +48,22 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 1 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-            <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[1].title}</h1> : <h1 className="h-5"></h1>}</div>
-          </div>
 
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[1].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
+          </div>
 
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -67,10 +78,22 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 2 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[2].title}</h1> : <h1 className="h-5"></h1>}</div>
-          </div>
 
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[2].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
+          </div>
 
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -85,10 +108,22 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 3 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[3].title}</h1> : <h1 className="h-5"></h1>}</div>
-          </div>
 
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[3].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
+          </div>
 
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -103,10 +138,22 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 4 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-            <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[4].title}</h1> : <h1 className="h-5"></h1>}</div>
-          </div>
 
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[4].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
+          </div>
 
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -121,10 +168,22 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 5 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[5].title}</h1> : <h1 className="h-5"></h1>}</div>
-          </div>
 
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[5].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
+          </div>
 
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -139,10 +198,22 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 6 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[6].title}</h1> : <h1 className="h-5"></h1>}</div>
-          </div>
 
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[6].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
+          </div>
 
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -157,10 +228,22 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 7 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[7].title}</h1> : <h1 className="h-5"></h1>}</div>
-          </div>
 
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[7].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
+          </div>
 
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -175,10 +258,22 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 8 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[8].title}</h1> : <h1 className="h-5"></h1>}</div>
-          </div>
 
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[8].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
+          </div>
 
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -193,10 +288,22 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 9 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[9].title}</h1> : <h1 className="h-5"></h1>}</div>
-          </div>
 
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[9].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
+          </div>
 
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -211,16 +318,22 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 10 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[10].title}</h1> : <h1 className="h-5"></h1>}</div>
+
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[10].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
-
-
-        
-
-
-
-          
 
           {/* Seccion 2 */}
           <p
@@ -232,9 +345,6 @@ export default function ProgressBar({ progressNumber }) {
           >
             2
           </p>
-
-
-
 
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -249,8 +359,21 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 11 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[11].title}</h1> : <h1 className="h-5"></h1>}</div>
+
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[11].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
 
           <div
@@ -266,8 +389,21 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 12 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[12].title}</h1> : <h1 className="h-5"></h1>}</div>
+
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[12].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
 
           <div
@@ -283,8 +419,21 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 13 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[13].title}</h1> : <h1 className="h-5"></h1>}</div>
+
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[13].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
 
           <div
@@ -300,8 +449,21 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 14 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[14].title}</h1> : <h1 className="h-5"></h1>}</div>
+
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[14].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
 
           <div
@@ -317,8 +479,21 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 15 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[15].title}</h1> : <h1 className="h-5"></h1>}</div>
+
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[15].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
 
           <div
@@ -334,8 +509,21 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 16 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[16].title}</h1> : <h1 className="h-5"></h1>}</div>
+
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[16].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
 
           <div
@@ -351,8 +539,21 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 17 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[17].title}</h1> : <h1 className="h-5"></h1>}</div>
+
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[17].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
 
           <div
@@ -368,8 +569,21 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 18 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[18].title}</h1> : <h1 className="h-5"></h1>}</div>
+
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[18].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
 
           <div
@@ -385,8 +599,21 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 19 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[19].title}</h1> : <h1 className="h-5"></h1>}</div>
+
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[19].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
 
           <div
@@ -402,11 +629,22 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 20 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[20].title}</h1> : <h1 className="h-5"></h1>}</div>
+
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[20].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
-
-
 
           {/* Seccion 3 */}
           <p
@@ -418,7 +656,6 @@ export default function ProgressBar({ progressNumber }) {
           >
             3
           </p>
-
 
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -433,10 +670,22 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 21 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[21].title}</h1> : <h1 className="h-5"></h1>}</div>
-          </div>
 
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[21].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
+          </div>
 
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -451,11 +700,23 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 22 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[22].title}</h1> : <h1 className="h-5"></h1>}</div>
+
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[22].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
 
-          
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
             // className={
@@ -469,11 +730,22 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 23 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[23].title}</h1> : <h1 className="h-5"></h1>}</div>
+
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[23].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
-
-
 
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -488,11 +760,22 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 24 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[24].title}</h1> : <h1 className="h-5"></h1>}</div>
+
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[24].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
-
-
 
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -507,11 +790,22 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 25 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[25].title}</h1> : <h1 className="h-5"></h1>}</div>
+
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[25].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
-
-
 
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -526,11 +820,22 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 26 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-            
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[26].title}</h1> : <h1 className="h-5"></h1>}</div>
+
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[26].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
-
-
 
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -545,10 +850,21 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 27 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[27].title}</h1> : <h1 className="h-5"></h1>}</div>
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[27].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
-
-
 
           {/* Seccion 4 */}
           <p
@@ -574,10 +890,21 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 28 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[28].title}</h1> : <h1 className="h-5"></h1>}</div>
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[28].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
-
-
 
           {/* Seccion 5 */}
           <p
@@ -589,7 +916,6 @@ export default function ProgressBar({ progressNumber }) {
           >
             5
           </p>
-
 
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -604,7 +930,20 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 29 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[29].title}</h1> : <h1 className="h-5"></h1>}</div>
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[29].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
 
           <div
@@ -620,7 +959,20 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 30 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[30].title}</h1> : <h1 className="h-5"></h1>}</div>
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[30].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
 
           <div
@@ -636,7 +988,20 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 31 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[31].title}</h1> : <h1 className="h-5"></h1>}</div>
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[31].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
 
           <div
@@ -652,7 +1017,20 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 32 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[32].title}</h1> : <h1 className="h-5"></h1>}</div>
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[32].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
 
           <div
@@ -668,10 +1046,21 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 33 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[33].title}</h1> : <h1 className="h-5"></h1>}</div>
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[33].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
-
-
 
           {/* //Seccion 6 */}
           <p
@@ -697,11 +1086,21 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 34 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[34].title}</h1> : <h1 className="h-5"></h1>}</div>
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[34].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
-
-
-
 
           {/* //Seccion 7 */}
 
@@ -728,7 +1127,20 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 35 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[35].title}</h1> : <h1 className="h-5"></h1>}</div>
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[35].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -743,7 +1155,20 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 36 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[36].title}</h1> : <h1 className="h-5"></h1>}</div>
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[36].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
           <div
             className="mt-2 ml-2 flex justify-center items-center w-fit"
@@ -758,11 +1183,21 @@ export default function ProgressBar({ progressNumber }) {
                 progressNumber >= 37 ? "text-[#00DFFD] " : "text-[#fafafa]"
               }
             />
-               <div className={openBar ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5" : "h-5 ml-5 flex justify-start items-center w-[300px]"}> {openBar ? <h1 className="h-5">{pages[37].title}</h1> : <h1 className="h-5"></h1>}</div>
+            <div
+              className={
+                openBar
+                  ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b8] w-[300px] h-5"
+                  : "h-5 ml-5 flex justify-start items-center w-[300px]"
+              }
+            >
+              {" "}
+              {openBar ? (
+                <h1 className="h-5">{pages[37].title}</h1>
+              ) : (
+                <h1 className="h-5"></h1>
+              )}
+            </div>
           </div>
-
-
-        
 
           {/* //Seccion 8 */}
           <p
@@ -774,9 +1209,7 @@ export default function ProgressBar({ progressNumber }) {
           >
             8
           </p>
-         
         </div>
-        
       </div>
       <div
         className={
