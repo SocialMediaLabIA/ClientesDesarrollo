@@ -7,6 +7,7 @@ import {
 } from "react-icons/hi2";
 import { PiFlagPennantFill } from "react-icons/pi";
 import pages from "../../utils/progressPages";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function ProgressBar({ progressNumber }) {
   const [openBar, setOpenBar] = useState(false);
@@ -30,12 +31,20 @@ export default function ProgressBar({ progressNumber }) {
           {pages.map((item, index) => {
             if (item.section === true) {
               return (
-                <div className="my-2 ml-3 flex justify-center items-center w-fit">
-                  <PiFlagPennantFill
-                    className={
-                      progressNumber >= 1 ? "text-[#00DFFD]" : "text-[#fafafa]"
-                    }
-                  />
+                <div
+                  key={index}
+                  className="my-2 ml-3 flex justify-center items-center w-fit"
+                >
+                  {item.number < progressNumber && (
+                    <PiFlagPennantFill className="text-[#00DFFD]" />
+                  )}
+                  {item.number > progressNumber && (
+                    <PiFlagPennantFill className="text-[#fafafa]" />
+                  )}
+                  {item.number === progressNumber && (
+                    <PiFlagPennantFill className="text-[#00DFFD]" />
+                  )}
+
                   <div
                     className={
                       openBar
@@ -53,14 +62,25 @@ export default function ProgressBar({ progressNumber }) {
               );
             } else {
               return (
-                <div className=" ml-2 flex justify-center items-center w-fit">
-                  <p
-                    className={
-                      progressNumber >= 1
-                        ? "my-1 border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-6 h-6 p-2  flex justify-center items-center"
-                        : "my-1 border-4 rounded-full w-6 h-6 flex justify-center items-center p-2"
-                    }
-                  ></p>
+                <div
+                  key={index}
+                  className=" ml-2 flex justify-center items-center w-fit"
+                >
+                  {item.number === progressNumber && (
+                    <p
+                      className={
+                        item.number === progressNumber
+                          ? "my-1 border-4 border-[#4de75a] bg-[#1bff1352] rounded-full w-6 h-6 p-2  flex justify-center items-center"
+                          : "my-1 border-4 rounded-full w-6 h-6 flex justify-center items-center p-2"
+                      }
+                    ></p>
+                  )}
+                  {item.number < progressNumber && (
+                    <p className="my-1 border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-6 h-6 p-2  flex justify-center items-center"></p>
+                  )}
+                  {item.number > progressNumber && (
+                    <p className="my-1 border-4 rounded-full w-6 h-6 flex justify-center items-center p-2"></p>
+                  )}
 
                   <div
                     className={
@@ -524,21 +544,3 @@ export default function ProgressBar({ progressNumber }) {
 //     </div>
 //   </div>
 // );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
