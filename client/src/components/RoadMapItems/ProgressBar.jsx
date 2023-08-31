@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import {
-  HiChevronLeft,
-  HiChevronRight,
-  HiChevronDoubleLeft,
-} from "react-icons/hi2";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { PiFlagPennantFill } from "react-icons/pi";
 import pages from "../../utils/progressPages";
 
