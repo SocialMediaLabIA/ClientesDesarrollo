@@ -32,11 +32,10 @@ export default function RoadMap() {
 
   // loaderFuncion(true)
 
-
   useEffect(() => {
     loaderFuncion(true);
     dispatch(getProgressUser(idParams)).then(() => {
-      setProgress(progress)
+      setProgress(progress);
       loaderFuncion(false);
     });
   }, [dispatch]);
@@ -48,10 +47,12 @@ export default function RoadMap() {
       dispatch(setProgressUser(idParams, "next"))
         .then(() => {
           dispatch(getProgressUser(idParams));
+          loaderFuncion(true);
         })
-        .then(() => {
+        setTimeout(() => {
           loaderFuncion(false);
-        });
+        }, 3000);
+      loaderFuncion(true);
     }
     if (direction === "prev" && progress > 0) {
       loaderFuncion(true);
@@ -59,17 +60,19 @@ export default function RoadMap() {
       dispatch(setProgressUser(idParams, "prev"))
         .then(() => {
           dispatch(getProgressUser(idParams));
+          loaderFuncion(true);
         })
-        .then(() => {
+        setTimeout(() => {
           loaderFuncion(false);
-        });
+        }, 3000);
+      loaderFuncion(true);
     }
   };
   // "text-[#00DFFD] " : "text-[#fafafa]"
   return (
     <div className=" font-poppins flex flex-col justify-between items-center h-screen w-full bg-black relative">
       {loader ? (
-        <div className="absolute  h-screen w-screen bg-black opacity-80 pb-10 flex justify-center items-center  z-50">
+        <div className="absolute  h-screen w-screen bg-black opacity-95 pb-10 flex justify-center items-center  z-50">
           <div className="flex flex-col gap-5 items-center justify-center w-[30rem] p-5 h-fit rounded-xl ">
             {/* <h2 className="text-white text-[2rem]">Enviando Leads!</h2> */}
 
@@ -104,7 +107,11 @@ export default function RoadMap() {
         className="flex justify-start items-center w-fit left-0 h-screen absolute "
       >
         {progress !== 0 && (
-          <ProgressBar progress={progress} setProgress={setProgress} setLoader={setLoader}/>
+          <ProgressBar
+            progress={progress}
+            setProgress={setProgress}
+            loaderFuncion={loaderFuncion}
+          />
         )}
         {progress === 0 && (
           <div className="w-full flex justify-center items-center text-white mt-20"></div>
@@ -127,13 +134,11 @@ export default function RoadMap() {
         />
         <motion.h1
           className="text-base text-center text-white font-thin text-[18px] md:text-[20px]"
-          initial={{  }}
-          animate={{  }}
+          initial={{}}
+          animate={{}}
           transition={{ duration: 1 }}
         >
-          {pages[progress]
-            ? pages[progress].title
-            : ""}
+          {pages[progress] ? pages[progress].title : ""}
         </motion.h1>
         <motion.div
           initial={{ x: 50 }}
@@ -209,51 +214,49 @@ export default function RoadMap() {
             </button>
           </>
         )}
-        {progress !== 0 &&
-          pages[progress] &&
-          pages[progress].meet && (
-            <>
-              {pages[progress].meetName === "Belén" && (
-                <a
-                  href="https://calendly.com/belengiorda/meetings"
-                  target="_blank" // Abre el enlace en una nueva pestaña/tab
-                  rel="noopener noreferrer" // Recomendado al abrir enlaces externos
-                  onClick={() => directionProgress("")}
-                  className="bg-[#c905faad] hover:bg-[#e505fac7] text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
-                >
-                  {`Agendar con ${
-                    pages[progress] ? pages[progress].meetName : ""
-                  }`}
-                </a>
-              )}
-              {pages[progress].meetName === "Nicole" && (
-                <a
-                  href="https://calendly.com/nicole-laszuk/60min"
-                  target="_blank" // Abre el enlace en una nueva pestaña/tab
-                  rel="noopener noreferrer" // Recomendado al abrir enlaces externos
-                  onClick={() => directionProgress("")}
-                  className="bg-[#c905faad] text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
-                >
-                  {`Agendar con ${
-                    pages[progress] ? pages[progress].meetName : ""
-                  }`}
-                </a>
-              )}
-              {pages[progress].meetName === "Nicolás" && (
-                <a
-                  href="http://calendly.com/nicolas-sml"
-                  target="_blank" // Abre el enlace en una nueva pestaña/tab
-                  rel="noopener noreferrer" // Recomendado al abrir enlaces externos
-                  onClick={() => directionProgress("")}
-                  className="bg-[#c905faad] text-white font-semibold  py-2 px-4 rounded-xl absolute cursor-pointer"
-                >
-                  {`Agendar con ${
-                    pages[progress] ? pages[progress].meetName : ""
-                  }`}
-                </a>
-              )}
-            </>
-          )}
+        {progress !== 0 && pages[progress] && pages[progress].meet && (
+          <>
+            {pages[progress].meetName === "Belén" && (
+              <a
+                href="https://calendly.com/belengiorda/meetings"
+                target="_blank" // Abre el enlace en una nueva pestaña/tab
+                rel="noopener noreferrer" // Recomendado al abrir enlaces externos
+                onClick={() => directionProgress("")}
+                className="bg-[#c905faad] hover:bg-[#e505fac7] text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
+              >
+                {`Agendar con ${
+                  pages[progress] ? pages[progress].meetName : ""
+                }`}
+              </a>
+            )}
+            {pages[progress].meetName === "Nicole" && (
+              <a
+                href="https://calendly.com/nicole-laszuk/60min"
+                target="_blank" // Abre el enlace en una nueva pestaña/tab
+                rel="noopener noreferrer" // Recomendado al abrir enlaces externos
+                onClick={() => directionProgress("")}
+                className="bg-[#c905faad] text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
+              >
+                {`Agendar con ${
+                  pages[progress] ? pages[progress].meetName : ""
+                }`}
+              </a>
+            )}
+            {pages[progress].meetName === "Nicolás" && (
+              <a
+                href="http://calendly.com/nicolas-sml"
+                target="_blank" // Abre el enlace en una nueva pestaña/tab
+                rel="noopener noreferrer" // Recomendado al abrir enlaces externos
+                onClick={() => directionProgress("")}
+                className="bg-[#c905faad] text-white font-semibold  py-2 px-4 rounded-xl absolute cursor-pointer"
+              >
+                {`Agendar con ${
+                  pages[progress] ? pages[progress].meetName : ""
+                }`}
+              </a>
+            )}
+          </>
+        )}
         {/* </div> */}
       </motion.div>
     </div>
