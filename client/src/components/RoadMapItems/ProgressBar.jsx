@@ -2,18 +2,24 @@ import React, { useState } from "react";
 import {
   HiChevronLeft,
   HiChevronRight,
-  HiChevronDoubleLeft,
-  HiChevronDoubleRight,
 } from "react-icons/hi2";
 import { PiFlagPennantFill } from "react-icons/pi";
 import pages from "../../utils/progressPages";
 import { useDispatch, useSelector } from "react-redux";
 
-export default function ProgressBar({ progressNumber }) {
+export default function ProgressBar({ progress, setProgress, loaderFuncion }) {
   const [openBar, setOpenBar] = useState(false);
 
   const setOpenBarHandler = () => {
     setOpenBar(!openBar);
+  };
+
+  const pressProgressHandler = (number) => {
+    loaderFuncion(true);
+    setTimeout(() => {
+      loaderFuncion(false);
+    }, 3000);
+    setProgress(number);
   };
 
   return (
@@ -33,27 +39,47 @@ export default function ProgressBar({ progressNumber }) {
               return (
                 <div
                   key={index}
-                  className="my-2 ml-3 flex justify-center items-center w-fit"
+                  className="my-2 ml-3 flex justify-center items-center"
                 >
-                  {item.number < progressNumber && (
-                    <PiFlagPennantFill className="text-[#00DFFD]" />
+                  {item.number < progress && (
+                    <PiFlagPennantFill
+                      onClick={() => {
+                        pressProgressHandler(item.number);
+                      }}
+                      className="text-[#00DFFD]"
+                    />
                   )}
-                  {item.number > progressNumber && (
-                    <PiFlagPennantFill className="text-[#fafafa]" />
+                  {item.number > progress && (
+                    <PiFlagPennantFill
+                      onClick={() => {
+                        pressProgressHandler(item.number);
+                      }}
+                      className="text-[#fafafa]"
+                    />
                   )}
-                  {item.number === progressNumber && (
-                    <PiFlagPennantFill className="text-[#00DFFD]" />
+                  {item.number === progress && (
+                    <PiFlagPennantFill
+                      onClick={() => {
+                        pressProgressHandler(item.number);
+                      }}
+                      className="text-[#00DFFD]"
+                    />
                   )}
-
+                  {/* TITULOS BANDERAS */}
                   <div
                     className={
                       openBar
-                        ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b827] hover:border-[#beb8b84f] w-[300px] h-5 cursor-pointer"
-                        : "h-5 ml-5 flex justify-start items-center w-[300px] hover:border-[#beb8b84f] cursor-pointer"
+                        ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b827] hover:border-[#beb8b84f] w-[280px] h-5 cursor-pointer "
+                        : "h-5 ml-5 flex justify-start items-center w-fit border-b-2 hover:border-[#beb8ba4f] cursor-pointer"
                     }
+                    onClick={() => {
+                      pressProgressHandler(item.number);
+                    }}
                   >
                     {openBar ? (
-                      <h1 className="h-5 p-1">{item.title.toUpperCase()}</h1>
+                      <h1 className="h-5 p-1 hover:mb-1">
+                        {item.title.toUpperCase()}
+                      </h1>
                     ) : (
                       <h1 className="h-5"></h1>
                     )}
@@ -62,487 +88,81 @@ export default function ProgressBar({ progressNumber }) {
               );
             } else {
               return (
-                <>
+                <React.Fragment key={`fragment-${index}`}>
                   {
                     <div
-                      key={index}
                       className={
-                        item.number === progressNumber && openBar
-                          ? "ml-2 flex justify-center items-center w-fit bg-[#ffffff42] hover:bg-[#b8b3b342] p-1 rounded-md cursor-pointer"
-                          : "ml-2 flex justify-center items-center w-fit cursor-pointer hover:bg-[#b8b3b342]"
+                        item.number === progress && openBar
+                          ? "ml-2 flex justify-center items-center w-fit  bg-[#ffffff42] hover:bg-[#b8b3b342] p-1 rounded-md  cursor-pointer"
+                          : "ml-2 flex justify-center items-center w-fit cursor-pointer "
                       }
                     >
-                      {item.number === progressNumber && (
-                        <p className="my-1 border-4 border-[#4de75a] bg-[#1bff1352] rounded-full w-6 h-6 p-2  flex justify-center items-center"></p>
+                      {item.number === progress && (
+                        <p
+                          onClick={() => {
+                            pressProgressHandler(item.number);
+                          }}
+                          className=" my-1 border-4 border-[#4de75a] bg-[#1bff1352] rounded-full w-6 h-6 p-2  flex justify-center items-center hover:scale-110 cursor-pointer"
+                        ></p>
                       )}
-                      {item.number < progressNumber && (
-                        <p className="my-1 border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-6 h-6 p-2  flex justify-center items-center"></p>
+                      {item.number < progress && (
+                        <p
+                          onClick={() => {
+                            pressProgressHandler(item.number);
+                          }}
+                          className="my-1 border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-6 h-6 p-2  flex justify-center items-center hover:scale-110"
+                        ></p>
                       )}
-                      {item.number > progressNumber && (
-                        <p className="my-1 border-4 rounded-full w-6 h-6 flex justify-center items-center p-2"></p>
+                      {item.number > progress && (
+                        <p
+                          onClick={() => {
+                            pressProgressHandler(item.number);
+                          }}
+                          className="my-1 border-4 rounded-full w-6 h-6 flex justify-center items-center p-2 hover:scale-110"
+                        ></p>
                       )}
 
+                      {/* TITULOS */}
                       <div
                         className={
                           openBar
-                            ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b827] w-[300px] h-5"
-                            : "h-5 ml-5 flex justify-start items-center w-[300px]"
+                            ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b827] w-[280px] h-5 hover:mb-1 cursor-pointer"
+                            : "h-5 ml-5 flex justify-start items-center   cursor-pointer "
                         }
+                        onClick={() => {
+                          pressProgressHandler(item.number);
+                        }}
                       >
                         {" "}
                         {openBar ? (
-                          <h1 className="h-5">{item.title}</h1>
+                          <h1 className="h-5 w-[300px]">{item.title}</h1>
                         ) : (
                           <h1 className="h-5"></h1>
                         )}
                       </div>
                     </div>
                   }
-                </>
+                </React.Fragment>
               );
             }
           })}
         </div>
       </div>
+      {/* BARRA APERTURA */}
       <div
         className={
           openBar
-            ? "absolute flex items-center justify-end h-fit  text-white w-[370px] transition-transform transform translate-x-0 duration-500 ease-in-out delay-150"
-            : "absolute flex items-center justify-end h-fit  text-white w-[60px] transition-transform transform translate-x-0 duration-500 ease-in-out delay-150"
+            ? "absolute right-0 cursor-pointer  flex items-center justify-end h-[500px] md:h-screen  text-white hover:bg-[#a048b6bd] rounded-r-xl"
+            : "absolute right-0 cursor-pointer  flex items-center justify-end h-[500px]  md:h-screen text-white hover:bg-[#a048b6b4] rounded-r-xl"
         }
         onClick={setOpenBarHandler}
       >
         {openBar ? (
-          <HiChevronLeft className="w-5 h-5  bg-[#6b277c] rounded-full" />
+          <HiChevronLeft className="w-5 h-5   rounded-full " />
         ) : (
-          <HiChevronRight className="w-5 h-5  bg-[#6b277c] rounded-full" />
+          <HiChevronRight className="w-5 h-5   rounded-full" />
         )}
       </div>
     </div>
   );
 }
-
-// return (
-//   <div
-//     className={
-//       openBar
-//         ? " left-0 flex justify-start items-center w-96 text-white text-sm md:  pr-4 bg-[#6b277c] rounded-r-lg    max-h-[400px] transition-transform transform translate-x-0 duration-500 ease-in-out delay-150"
-//         : " left-0 flex justify-start items-center w-[60px] text-white text-sm md:   bg-[#6b277c] rounded-r-lg   max-h-[400px] transition-transform transform translate-x-0 duration-500 ease-in-out delay-150"
-//     }
-//   >
-//     <div className="w-full flex flex-col justify-start items-start  max-h-[400px] transition-transform transform translate-x-0 duration-500 ease-in-out delay-150">
-//       <div className=" w-12 my-2 flex flex-col justify-start items-center overflow-scroll no-scrollbar max-h-[400px] transition-transform transform translate-x-0 duration-500 ease-in-out delay-150">
-//         {/* Seccion 1 */}
-//         <p
-//           className={
-//             progressNumber >= 1
-//               ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-8 h-8 p-2 flex justify-center items-center"
-//               : "border-4 rounded-full w-8 h-8 flex justify-center items-center p-2"
-//           }
-//         >
-//           1
-//         </p>
-//         <div
-//           className={
-//             progressNumber >= 1
-//               ? "border-2 border-[#00DFFD] w-1"
-//               : "border-2 w-1"
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 2
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 3
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 4
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 5
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 6
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 7
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 8
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 9
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 10
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-
-//         {/* Seccion 2 */}
-//         <p
-//           className={
-//             progressNumber >= 11
-//               ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-8 h-8 flex justify-center items-center p-2 p-2 "
-//               : "border-4 rounded-full w-8 h-8 flex justify-center items-center p-2"
-//           }
-//         >
-//           2
-//         </p>
-//         <div
-//           className={
-//             progressNumber >= 11
-//               ? "border-2 border-[#00DFFD] w-1"
-//               : "border-2 w-1"
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 12
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 13
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 14
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 15
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 16
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 17
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 18
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 19
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 20
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-
-//         {/* Seccion 3 */}
-//         <p
-//           className={
-//             progressNumber >= 21
-//               ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-8 h-8 flex justify-center items-center p-2  "
-//               : "border-4 rounded-full w-8 h-8 flex justify-center items-center p-2"
-//           }
-//         >
-//           3
-//         </p>
-//         <div
-//           className={
-//             progressNumber >= 21
-//               ? "border-2 border-[#00DFFD] w-1"
-//               : "border-2 w-1"
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 22
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 23
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 24
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 25
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 26
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 27
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-
-//         {/* Seccion 4 */}
-//         <p
-//           className={
-//             progressNumber >= 28
-//               ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-8 h-8 flex justify-center items-center p-2"
-//               : "border-4 rounded-full w-8 h-8 flex justify-center items-center p-2"
-//           }
-//         >
-//           4
-//         </p>
-//         <div
-//           className={
-//             progressNumber >= 28
-//               ? "border-2 border-[#00DFFD] w-1"
-//               : "border-2 w-1"
-//           }
-//         ></div>
-
-//         {/* Seccion 5 */}
-//         <p
-//           className={
-//             progressNumber >= 29
-//               ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-8 h-8 flex justify-center items-center p-2"
-//               : "border-4 rounded-full w-8 h-8 flex justify-center items-center p-2"
-//           }
-//         >
-//           5
-//         </p>
-//         <div
-//           className={
-//             progressNumber >= 29
-//               ? "border-2 border-[#00DFFD] w-1"
-//               : "border-2 w-1"
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 30
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 31
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 32
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 33
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         {/* //Seccion 6 */}
-//         <p
-//           className={
-//             progressNumber >= 34
-//               ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-8 h-8 flex justify-center items-center p-2"
-//               : "border-4 rounded-full w-8 h-8 flex justify-center items-center p-2"
-//           }
-//         >
-//           6
-//         </p>
-//         <div
-//           className={
-//             progressNumber >= 34
-//               ? "border-2 border-[#00DFFD] w-1"
-//               : "border-2 w-1"
-//           }
-//         ></div>
-
-//         {/* //Seccion 7 */}
-
-//         <p
-//           className={
-//             progressNumber >= 35
-//               ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-8 h-8 flex justify-center items-center p-2"
-//               : "border-4 rounded-full w-8 h-8 flex justify-center items-center p-2"
-//           }
-//         >
-//           7
-//         </p>
-//         <div
-//           className={
-//             progressNumber >= 35
-//               ? "border-2 border-[#00DFFD] w-1"
-//               : "border-2 w-1"
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 36
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-//         <div
-//           className={
-//             progressNumber >= 37
-//               ? "border-2 border-[#00DFFD] w-1 "
-//               : "border-2 w-1 "
-//           }
-//         ></div>
-
-//         {/* //Seccion 8 */}
-//         <p
-//           className={
-//             progressNumber >= 38
-//               ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-8 h-8 flex justify-center items-center p-2"
-//               : "border-4 rounded-full w-8 h-8 flex justify-center items-center p-2"
-//           }
-//         >
-//           8
-//         </p>
-//         <p
-//           className={
-//             progressNumber >= 38
-//               ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-8 h-8 flex justify-center items-center p-2"
-//               : "border-4 rounded-full w-8 h-8 flex justify-center items-center p-2"
-//           }
-//         >
-//           8
-//         </p>
-//         <p
-//           className={
-//             progressNumber >= 38
-//               ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-8 h-8 flex justify-center items-center p-2"
-//               : "border-4 rounded-full w-8 h-8 flex justify-center items-center p-2"
-//           }
-//         >
-//           8
-//         </p>
-//         <p
-//           className={
-//             progressNumber >= 38
-//               ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-8 h-8 flex justify-center items-center p-2"
-//               : "border-4 rounded-full w-8 h-8 flex justify-center items-center p-2"
-//           }
-//         >
-//           8
-//         </p>
-//         <p
-//           className={
-//             progressNumber >= 38
-//               ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-8 h-8 flex justify-center items-center p-2"
-//               : "border-4 rounded-full w-8 h-8 flex justify-center items-center p-2"
-//           }
-//         >
-//           8
-//         </p>
-//         <p
-//           className={
-//             progressNumber >= 38
-//               ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-8 h-8 flex justify-center items-center p-2"
-//               : "border-4 rounded-full w-8 h-8 flex justify-center items-center p-2"
-//           }
-//         >
-//           8
-//         </p>
-//         <p
-//           className={
-//             progressNumber >= 38
-//               ? "border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-8 h-8 flex justify-center items-center p-2"
-//               : "border-4 rounded-full w-8 h-8 flex justify-center items-center p-2"
-//           }
-//         >
-//           8
-//         </p>
-//       </div>
-//     </div>
-//     <div
-//       className={openBar ? "absolute flex items-center justify-end h-fit  text-white w-[370px] transition-transform transform translate-x-0 duration-500 ease-in-out delay-150" :"absolute flex items-center justify-end h-fit  text-white w-[60px] transition-transform transform translate-x-0 duration-500 ease-in-out delay-150"}
-//       onClick={setOpenBarHandler}
-//     >
-//       {openBar ? (
-//         <HiChevronLeft className="w-5 h-5  bg-[#6b277c] rounded-full" />
-//       ) : (
-//         <HiChevronRight className="w-5 h-5  bg-[#6b277c] rounded-full" />
-//       )}
-//     </div>
-//   </div>
-// );

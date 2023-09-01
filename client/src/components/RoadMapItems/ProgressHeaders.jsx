@@ -5,7 +5,7 @@ import { AiOutlineFileText } from "react-icons/ai";
 
 import { motion } from "framer-motion";
 
-export default function ProgressHeaders({ progressNumber }) {
+export default function ProgressHeaders({ progress }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -22,50 +22,50 @@ export default function ProgressHeaders({ progressNumber }) {
 
   const selectedImage =
     windowWidth >= 768
-      ? pages[progressNumber] && pages[progressNumber].meetImageLarge
-      : pages[progressNumber] && pages[progressNumber].meetImage;
+      ? pages[progress] && pages[progress].meetImageLarge
+      : pages[progress] && pages[progress].meetImage;
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex justify-center items-center w-full h-[450px] text-white"
+      className="flex justify-center items-center w-full h-[450px] text-white z-0"
     >
       {/* VIDEOS */}
-      {pages[progressNumber] && pages[progressNumber].video === true && (
+      {pages[progress] && pages[progress].video === true && (
         <iframe
           title="YouTube Video"
           width="580"
           height="330"
-          src={pages[progressNumber] && pages[progressNumber].videoSource} // Cambia esta URL por la URL correcta del video embebido
+          src={pages[progress] && pages[progress].videoSource} // Cambia esta URL por la URL correcta del video embebido
           frameBorder="0" // Cambiado a frameBorder
           allowFullScreen // Cambiado a allowFullScreen
-          className="mt-5 w-[270px] md:w-[700px] xl:w-[700px]"
+          className="mt-5 w-[270px] md:w-[600px] xl:w-[600px]"
         />
       )}
       {/* MEETS */}
-      {pages[progressNumber] && pages[progressNumber].meet === true && (
+      {pages[progress] && pages[progress].meet === true && (
         <div className="flex justify-center items-center h-full w-full">
           <img
             src={selectedImage}
-            // src={pages[progressNumber] && pages[progressNumber].meetImage}
+            // src={pages[progress] && pages[progress].meetImage}
             alt="imagen meet"
             className="mt-5 w-[270px] h-[270px]  md:w-[200px] xl:w-[300px]  md:h-[200px] xl:h-[300px] rounded-lg"
           />
         </div>
       )}
       {/* DOCUMENTS */}
-      {pages[progressNumber] &&
-        pages[progressNumber].document === true &&
-        pages[progressNumber].resume === true &&
-        pages[progressNumber].number !== 38 && (
+      {pages[progress] &&
+        pages[progress].document === true &&
+        pages[progress].resume === true &&
+        pages[progress].number !== 38 && (
           <div className="flex flex-col justify-center items-center h-full w-full max-w-[230px] md:max-w-[800px] mt-10">
             <p className=" w-5/6 text-justify items-center text-sm mb-5">
-              {pages[progressNumber] && pages[progressNumber].resumeText}
+              {pages[progress] && pages[progress].resumeText}
             </p>
-            {console.log(pages[progressNumber].documentArray)}
+            {console.log(pages[progress].documentArray)}
             <div className=" w-fit  max-w-[250px] flex flex-col justify-start items-start">
-              {pages[progressNumber].documentArray.map((item, index) => {
+              {pages[progress].documentArray.map((item, index) => {
                 {
                   console.log(item);
                 }
@@ -86,9 +86,9 @@ export default function ProgressHeaders({ progressNumber }) {
           </div>
         )}
       {/* ULTIMA SECCION */}
-      {pages[progressNumber] && pages[progressNumber].number === 38 && (
+      {pages[progress] && pages[progress].number === 38 && (
         <img
-          src={pages[progressNumber] && pages[progressNumber].meetImage}
+          src={pages[progress] && pages[progress].meetImage}
           alt="imagen meet"
           className="w-[380px] mt-16"
         />
