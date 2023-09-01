@@ -22,7 +22,7 @@ export default function RoadMap() {
   const { search } = useLocation();
   const idParams = search.slice(4);
   const { progressNumber } = useSelector((state) => state);
-  console.log(progressNumber)
+
   let [progress, setProgress] = useState(progressNumber);
 
   const [loader, setLoader] = useState(true);
@@ -31,17 +31,18 @@ export default function RoadMap() {
   };
 
   // loaderFuncion(true)
-  console.log(progressNumber);
+
 
   useEffect(() => {
     loaderFuncion(true);
     dispatch(getProgressUser(idParams)).then(() => {
+      setProgress(progress)
       loaderFuncion(false);
     });
   }, [dispatch]);
 
   const directionProgress = async (direction) => {
-    if (direction === "next" && progressNumber < 38) {
+    if (direction === "next" && progress < 38) {
       loaderFuncion(true);
       setProgress(++progress);
       dispatch(setProgressUser(idParams, "next"))
@@ -52,7 +53,7 @@ export default function RoadMap() {
           loaderFuncion(false);
         });
     }
-    if (direction === "prev" && progressNumber > 0) {
+    if (direction === "prev" && progress > 0) {
       loaderFuncion(true);
       setProgress(--progress);
       dispatch(setProgressUser(idParams, "prev"))
@@ -68,7 +69,7 @@ export default function RoadMap() {
   return (
     <div className=" font-poppins flex flex-col justify-between items-center h-screen w-full bg-black relative">
       {loader ? (
-        <div className="absolute  h-screen w-screen bg-black opacity-95 pb-10 flex justify-center items-center ">
+        <div className="absolute  h-screen w-screen bg-black opacity-80 pb-10 flex justify-center items-center  z-50">
           <div className="flex flex-col gap-5 items-center justify-center w-[30rem] p-5 h-fit rounded-xl ">
             {/* <h2 className="text-white text-[2rem]">Enviando Leads!</h2> */}
 
@@ -100,12 +101,12 @@ export default function RoadMap() {
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        className="flex justify-start items-center w-fit left-0 h-screen absolute z-0"
+        className="flex justify-start items-center w-fit left-0 h-screen absolute "
       >
-        {progressNumber !== 0 && (
-          <ProgressBar progressNumber={progressNumber} />
+        {progress !== 0 && (
+          <ProgressBar progress={progress} setProgress={setProgress} setLoader={setLoader}/>
         )}
-        {progressNumber === 0 && (
+        {progress === 0 && (
           <div className="w-full flex justify-center items-center text-white mt-20"></div>
         )}
       </motion.div>
@@ -130,8 +131,8 @@ export default function RoadMap() {
           animate={{  }}
           transition={{ duration: 1 }}
         >
-          {pages[progressNumber]
-            ? pages[progressNumber].title
+          {pages[progress]
+            ? pages[progress].title
             : ""}
         </motion.h1>
         <motion.div
@@ -147,9 +148,9 @@ export default function RoadMap() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2.5 }}
-        className={progressNumber === 0 ? "" : "ml-10 md:ml-0"}
+        className={progress === 0 ? "" : "ml-10 md:ml-0"}
       >
-        <ProgressHeaders progressNumber={progressNumber} />
+        <ProgressHeaders progress={progress} />
       </motion.div>
 
       {/* </div> */}
@@ -160,7 +161,7 @@ export default function RoadMap() {
         transition={{ duration: 2 }}
         className="flex justify-center md:w-full md:gap-64  items-center gap-56  mb-20 "
       >
-        {progressNumber !== 0 && progressNumber !== 38 && (
+        {progress !== 0 && progress !== 38 && (
           <>
             <motion.div
               initial={{ x: -50 }}
@@ -170,7 +171,7 @@ export default function RoadMap() {
               <HiChevronLeft
                 onClick={() => directionProgress("prev")}
                 // className=" text-black font-bold text-xl w-8 h-8 bg-white rounded-full p-5"
-                className="text-white bg-[#c905faad] hover:bg-[#e505fac7] font-bold text-xl w-10 h-10 p-2 rounded-full z-50 cursor-pointer"
+                className="text-white bg-[#c905faad] hover:bg-[#e505fac7] font-bold text-xl w-10 h-10 p-2 rounded-full  cursor-pointer"
               />
             </motion.div>
             <motion.div
@@ -183,12 +184,12 @@ export default function RoadMap() {
                 animate={{ x: 0 }}
                 transition={{ duration: 2 }}
                 onClick={() => directionProgress("next")}
-                className=" text-white bg-[#c905faad] hover:bg-[#e505fac7] font-bold text-xl w-10 h-10 p-2 rounded-full z-50 cursor-pointer"
+                className=" text-white bg-[#c905faad] hover:bg-[#e505fac7] font-bold text-xl w-10 h-10 p-2 rounded-full  cursor-pointer"
               />
             </motion.div>
           </>
         )}
-        {progressNumber === 0 && (
+        {progress === 0 && (
           <>
             <button
               onClick={() => directionProgress("next")}
@@ -198,7 +199,7 @@ export default function RoadMap() {
             </button>
           </>
         )}
-        {progressNumber === 38 && (
+        {progress === 38 && (
           <>
             <button
               onClick={() => directionProgress("prev")}
@@ -208,11 +209,11 @@ export default function RoadMap() {
             </button>
           </>
         )}
-        {progressNumber !== 0 &&
-          pages[progressNumber] &&
-          pages[progressNumber].meet && (
+        {progress !== 0 &&
+          pages[progress] &&
+          pages[progress].meet && (
             <>
-              {pages[progressNumber].meetName === "Belén" && (
+              {pages[progress].meetName === "Belén" && (
                 <a
                   href="https://calendly.com/belengiorda/meetings"
                   target="_blank" // Abre el enlace en una nueva pestaña/tab
@@ -221,11 +222,11 @@ export default function RoadMap() {
                   className="bg-[#c905faad] hover:bg-[#e505fac7] text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
                 >
                   {`Agendar con ${
-                    pages[progressNumber] ? pages[progressNumber].meetName : ""
+                    pages[progress] ? pages[progress].meetName : ""
                   }`}
                 </a>
               )}
-              {pages[progressNumber].meetName === "Nicole" && (
+              {pages[progress].meetName === "Nicole" && (
                 <a
                   href="https://calendly.com/nicole-laszuk/60min"
                   target="_blank" // Abre el enlace en una nueva pestaña/tab
@@ -234,11 +235,11 @@ export default function RoadMap() {
                   className="bg-[#c905faad] text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
                 >
                   {`Agendar con ${
-                    pages[progressNumber] ? pages[progressNumber].meetName : ""
+                    pages[progress] ? pages[progress].meetName : ""
                   }`}
                 </a>
               )}
-              {pages[progressNumber].meetName === "Nicolás" && (
+              {pages[progress].meetName === "Nicolás" && (
                 <a
                   href="http://calendly.com/nicolas-sml"
                   target="_blank" // Abre el enlace en una nueva pestaña/tab
@@ -247,7 +248,7 @@ export default function RoadMap() {
                   className="bg-[#c905faad] text-white font-semibold  py-2 px-4 rounded-xl absolute cursor-pointer"
                 >
                   {`Agendar con ${
-                    pages[progressNumber] ? pages[progressNumber].meetName : ""
+                    pages[progress] ? pages[progress].meetName : ""
                   }`}
                 </a>
               )}
