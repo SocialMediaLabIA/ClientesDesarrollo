@@ -7,6 +7,7 @@ import {
 } from "react-icons/hi2";
 import { PiFlagPennantFill } from "react-icons/pi";
 import pages from "../../utils/progressPages";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function ProgressBar({ progressNumber }) {
   const [openBar, setOpenBar] = useState(false);
@@ -30,17 +31,25 @@ export default function ProgressBar({ progressNumber }) {
           {pages.map((item, index) => {
             if (item.section === true) {
               return (
-                <div className="my-2 ml-3 flex justify-center items-center w-fit">
-                  <PiFlagPennantFill
-                    className={
-                      progressNumber >= 1 ? "text-[#00DFFD]" : "text-[#fafafa]"
-                    }
-                  />
+                <div
+                  key={index}
+                  className="my-2 ml-3 flex justify-center items-center w-fit"
+                >
+                  {item.number < progressNumber && (
+                    <PiFlagPennantFill className="text-[#00DFFD]" />
+                  )}
+                  {item.number > progressNumber && (
+                    <PiFlagPennantFill className="text-[#fafafa]" />
+                  )}
+                  {item.number === progressNumber && (
+                    <PiFlagPennantFill className="text-[#00DFFD]" />
+                  )}
+
                   <div
                     className={
                       openBar
-                        ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b827] w-[300px] h-5"
-                        : "h-5 ml-5 flex justify-start items-center w-[300px]"
+                        ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b827] hover:border-[#beb8b84f] w-[300px] h-5 cursor-pointer"
+                        : "h-5 ml-5 flex justify-start items-center w-[300px] hover:border-[#beb8b84f] cursor-pointer"
                     }
                   >
                     {openBar ? (
@@ -53,30 +62,43 @@ export default function ProgressBar({ progressNumber }) {
               );
             } else {
               return (
-                <div className=" ml-2 flex justify-center items-center w-fit">
-                  <p
-                    className={
-                      progressNumber >= 1
-                        ? "my-1 border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-6 h-6 p-2  flex justify-center items-center"
-                        : "my-1 border-4 rounded-full w-6 h-6 flex justify-center items-center p-2"
-                    }
-                  ></p>
+                <>
+                  {
+                    <div
+                      key={index}
+                      className={
+                        item.number === progressNumber && openBar
+                          ? "ml-2 flex justify-center items-center w-fit bg-[#ffffff42] hover:bg-[#b8b3b342] p-1 rounded-md cursor-pointer"
+                          : "ml-2 flex justify-center items-center w-fit cursor-pointer hover:bg-[#b8b3b342]"
+                      }
+                    >
+                      {item.number === progressNumber && (
+                        <p className="my-1 border-4 border-[#4de75a] bg-[#1bff1352] rounded-full w-6 h-6 p-2  flex justify-center items-center"></p>
+                      )}
+                      {item.number < progressNumber && (
+                        <p className="my-1 border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-6 h-6 p-2  flex justify-center items-center"></p>
+                      )}
+                      {item.number > progressNumber && (
+                        <p className="my-1 border-4 rounded-full w-6 h-6 flex justify-center items-center p-2"></p>
+                      )}
 
-                  <div
-                    className={
-                      openBar
-                        ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b827] w-[300px] h-5"
-                        : "h-5 ml-5 flex justify-start items-center w-[300px]"
-                    }
-                  >
-                    {" "}
-                    {openBar ? (
-                      <h1 className="h-5">{item.title}</h1>
-                    ) : (
-                      <h1 className="h-5"></h1>
-                    )}
-                  </div>
-                </div>
+                      <div
+                        className={
+                          openBar
+                            ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b827] w-[300px] h-5"
+                            : "h-5 ml-5 flex justify-start items-center w-[300px]"
+                        }
+                      >
+                        {" "}
+                        {openBar ? (
+                          <h1 className="h-5">{item.title}</h1>
+                        ) : (
+                          <h1 className="h-5"></h1>
+                        )}
+                      </div>
+                    </div>
+                  }
+                </>
               );
             }
           })}
@@ -524,21 +546,3 @@ export default function ProgressBar({ progressNumber }) {
 //     </div>
 //   </div>
 // );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

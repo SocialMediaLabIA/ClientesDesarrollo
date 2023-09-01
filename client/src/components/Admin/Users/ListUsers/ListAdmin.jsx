@@ -8,13 +8,7 @@ import { motion } from "framer-motion";
 export default function ListAdmin() {
   const dispatch = useDispatch();
   const [editStates, setEditStates] = useState({});
-  const [user, editUser] = useState({
-    name: "",
-    lastname: "",
-    instagram: "",
-    email: "",
-    password: "",
-  });
+  const [user, setUser] = useState([]);
 
   const { users } = useSelector((state) => state);
 
@@ -22,6 +16,29 @@ export default function ListAdmin() {
     dispatch(getAllUser());
     dispatch(getAllUser());
   }, [dispatch]);
+
+  // useEffect(() => {
+  //   let usuarios = [];
+  //   let i = 0;
+
+  //   if (users && users.length > 0) {
+  //     for (let i = 0; i < users.length; i++) {
+  //       if (users[i] && users[i]._id) {
+  //         usuarios.push({
+  //           _id: users[i]._id,
+  //           role: users[i].role,
+  //           name: users[i].name,
+  //           lastname: users[i].lastname,
+  //           instagram: users[i].instagram,
+  //           email: users[i].email,
+  //           password: users[i].password,
+  //         });
+  //       }
+  //     }
+  //   }
+
+  //   setUser(usuarios);
+  // }, [users]);
 
   const deleteUser = (id) => {
     const body = {
@@ -46,13 +63,48 @@ export default function ListAdmin() {
   }
 
   const toggleEdit = (userId) => {
+    setEditStates({});
+    setUser({});
+
+    const selectedUser = users.find((user) => user._id === userId);
+
+    setUser({
+      ...user,
+      [userId]: {
+        ...user[userId],
+        name: selectedUser.name,
+        lastname: selectedUser.lastname,
+        instagram: selectedUser.instagram,
+        email: selectedUser.email,
+        password: selectedUser.password,
+      },
+    });
+
     setEditStates((prevState) => ({
       ...prevState,
       [userId]: !prevState[userId],
     }));
   };
 
-  const handleChange = () => {};
+  const handleChange = (event, userId) => {
+    const { name, value } = event.target;
+    setUser((prevEditUser) => ({
+      ...prevEditUser,
+      [userId]: {
+        ...prevEditUser[userId],
+        [name]: value,
+      },
+    }));
+  };
+
+  console.log(user);
+  const handleSubmitUser = (userId) => {
+    dispatch(editUserById(userId, user)).then(() => {
+      setEditStates({});
+      setUser({});
+      dispatch(getAllUser());
+    });
+  };
 
   return (
     <div className="flex flex-col gap-2 items-center justify-start w-full h-full bg-[#282828] rounded-lg">
@@ -111,40 +163,40 @@ export default function ListAdmin() {
                     className="rounded-md bg-[#D9D9D9] h-10 w-44 pl-5 text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25"
                     type="text"
                     name="name"
-                    value={item.name}
-                    onChange={() => handleChange()}
+                    value={user[item._id]?.name || ""}
+                    onChange={(event) => handleChange(event, item._id)}
                     placeholder="Ingrese el nombre..."
                   />
                   <input
                     className="rounded-md bg-[#D9D9D9] h-10 w-44 pl-5 text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25"
                     type="text"
                     name="lastname"
-                    value={item.lastname}
-                    onChange={() => handleChange()}
+                    value={user[item._id]?.lastname || ""}
+                    onChange={(event) => handleChange(event, item._id)}
                     placeholder="Ingrese el apellido..."
                   />
                   <input
                     className="rounded-md bg-[#D9D9D9] h-10 w-52 pl-5 text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25"
                     type="text"
                     name="instagram"
-                    value={item.instagram}
-                    onChange={() => handleChange()}
+                    value={user[item._id]?.instagram || ""}
+                    onChange={(event) => handleChange(event, item._id)}
                     placeholder="Ingrese el instagram..."
                   />
                   <input
                     className="rounded-md bg-[#D9D9D9] h-10 w-48 pl-5 text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25"
                     type="text"
                     name="email"
-                    value={item.email}
-                    onChange={() => handleChange()}
+                    value={user[item._id]?.email || ""}
+                    onChange={(event) => handleChange(event, item._id)}
                     placeholder="Ingrese el email..."
                   />
                   <input
                     className="rounded-md bg-[#D9D9D9] h-10 w-44 pl-5 text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25"
                     type="text"
                     name="password"
-                    value={item.password}
-                    onChange={() => handleChange()}
+                    value={user[item._id]?.password || ""}
+                    onChange={(event) => handleChange(event, item._id)}
                     placeholder="Ingrese el password..."
                   />
                 </div>
@@ -193,7 +245,7 @@ export default function ListAdmin() {
                   <div className=" flex gap-5 items-center justify-center">
                     <BsCheckSquare
                       className="w-10 h-10"
-                      onClick={() => toggleEdit(item._id)}
+                      onClick={() => handleSubmitUser(item._id)}
                     />
                   </div>
                 </div>
