@@ -9,7 +9,7 @@ import { PiFlagPennantFill } from "react-icons/pi";
 import pages from "../../utils/progressPages";
 import { useDispatch, useSelector } from "react-redux";
 
-export default function ProgressBar({ progress, setProgress, setLoader }) {
+export default function ProgressBar({ progress, setProgress, loaderFuncion }) {
   const [openBar, setOpenBar] = useState(false);
 
   const setOpenBarHandler = () => {
@@ -17,10 +17,10 @@ export default function ProgressBar({ progress, setProgress, setLoader }) {
   };
 
   const pressProgressHandler = (number) => {
+    loaderFuncion(true);
     setTimeout(() => {
-      setLoader(false);
+      loaderFuncion(false);
     }, 3000);
-    setLoader(true);
     setProgress(number);
   };
 
