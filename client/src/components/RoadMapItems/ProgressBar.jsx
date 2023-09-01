@@ -17,9 +17,10 @@ export default function ProgressBar({ progress, setProgress, setLoader }) {
   };
 
   const pressProgressHandler = (number) => {
-    setInterval(() => {
+    setTimeout(() => {
       setLoader(false)
     }, 3000);
+
 setLoader(true)
     setProgress(number)
 
