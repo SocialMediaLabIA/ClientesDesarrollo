@@ -122,7 +122,7 @@ export default function RoadMap() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2.5 }}
-        className="flex justify-around items-center rounded-xl w-[300px] bg-[#3b393b67] mt-10 md:mt-5 md:w-[800px]"
+        className="flex justify-around items-center rounded-xl w-[300px] bg-[#3b393b67] mt-10 md:mt-5 md:w-[800px] xl:w-[1000px]"
       >
         <motion.img
           src={logo}
