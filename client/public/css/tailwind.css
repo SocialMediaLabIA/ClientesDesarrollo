@@ -1690,4 +1690,8 @@ video {
   .xl\:w-\[600px\] {
     width: 600px;
   }
+
+  .xl\:w-\[1000px\] {
+    width: 1000px;
+  }
 }
