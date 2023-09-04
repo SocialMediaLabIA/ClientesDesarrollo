@@ -182,7 +182,7 @@ console.log(progress)
         transition={{ duration: 2 }}
         className="flex justify-center md:w-full md:gap-64  items-center gap-56  mb-20 "
       >
-        {progress !== 0 && progress !== 38 && (
+        {progress !== 1 && progress !== 38 && (
           <>
             <motion.div
               initial={{ x: -50 }}
@@ -210,7 +210,7 @@ console.log(progress)
             </motion.div>
           </>
         )}
-        {progress === 0 && (
+        {progress === 1 && (
           <>
             <button
               onClick={() => directionProgress("next")}
