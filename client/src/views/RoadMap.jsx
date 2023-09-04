@@ -39,11 +39,15 @@ console.log(progressNumber)
       loaderFuncion(false);
     });
   }, [dispatch]);
-
+console.log(progress)
   const directionProgress = async (direction) => {
     if (direction === "next" && progress < 38) {
+      if(pages[progress + 1].section === true){
+        setProgress(progress + 2)
+      }else{
+        setProgress(++progress);
+      }
       loaderFuncion(true);
-      setProgress(++progress);
       dispatch(setProgressUser(idParams, "next"))
         .then(() => {
           dispatch(getProgressUser(idParams));
@@ -55,8 +59,15 @@ console.log(progressNumber)
       loaderFuncion(true);
     }
     if (direction === "prev" && progress > 0) {
+      if(progress === 1){
+        return
+      }
       loaderFuncion(true);
-      setProgress(--progress);
+      if(pages[progress - 1].section === true){
+        setProgress(progress - 2)
+      }else{
+        setProgress(--progress);
+      }
       dispatch(setProgressUser(idParams, "prev"))
         .then(() => {
           dispatch(getProgressUser(idParams));
@@ -114,7 +125,12 @@ console.log(progressNumber)
           />
         )}
         {progress === 0 && (
-          <div className="w-full flex justify-center items-center text-white mt-20"></div>
+          // <div className="w-full flex justify-center items-center text-white mt-20"></div>
+          <ProgressBar
+          progress={progress}
+          setProgress={setProgress}
+          loaderFuncion={loaderFuncion}
+        />
         )}
       </motion.div>
 
