@@ -8,10 +8,23 @@ import celebration from "../assets/celebration.png";
 
 let pages = [
   //Seccion inicial
+
   {
     number: 0,
     section: true,
-    title: "Social Media Lab",
+    title: "Bienvenida",
+    video: true,
+    meet: false,
+    resume: false,
+    document: false,
+    videoSource: "https://www.youtube.com/embed/DGm127uh4Bs",
+    meetName: "Belén",
+    documentArray: "",
+  },
+  {
+    number: 1,
+    section: false,
+    title: "Introducción al Roadmap",
     video: true,
     meet: false,
     resume: false,
@@ -21,9 +34,24 @@ let pages = [
     documentArray: "",
   },
 
-  //Seccion 1/////////////////////////////////////////////////////////////
+
+
+  //Seccion 1 Cimientos de marca
   {
-    number: 1,
+    number: 2,
+    section: true,
+    title: "Cimientos de Marca",
+    video: false,
+    meet: false,
+    resume: false,
+    document: false,
+    videoSource: "https://www.youtube.com/embed/DGm127uh4Bs",
+    meetName: "Belén",
+    documentArray: "",
+  },
+
+  {
+    number: 3,
     section: false,
     title: "Agendar llamada 1 a Belén",
     video: false,
@@ -52,28 +80,11 @@ let pages = [
     ],
   },
   //----------------- 4 videos
-  //video2
+  //video 2
   {
-    number: 2,
+    number: 4,
     section: false,
-    title: "Video Fase 1. Cimientos de marca",
-    video: true,
-    meet: false,
-    resume: false,
-    document: false,
-    videoSource: "https://www.youtube.com/embed/XSqOdcoaqns",
-    resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
-    meetImage: meetBelen,
-    meetImageLarge: meetBelenLarge,
-    meetName: "Belén",
-    documentArray: "",
-  },
-  //video3
-  {
-    number: 3,
-    section: false,
-    title: "Video Doc 1. Referentes",
+    title: "Cimientos de la marca personal",
     video: true,
     meet: false,
     resume: false,
@@ -86,7 +97,7 @@ let pages = [
     meetName: "Belén",
     documentArray: "",
   },
-  //video4
+  //video3
   {
     number: 4,
     section: false,
@@ -103,11 +114,11 @@ let pages = [
     meetName: "Belén",
     documentArray: "",
   },
-  //video5
+  //video4
   {
     number: 5,
     section: false,
-    title: "Video Doc 3. Cimientos de la marca",
+    title: "Video: Mi marca personal",
     video: true,
     meet: false,
     resume: false,
@@ -120,11 +131,12 @@ let pages = [
     meetName: "Belén",
     documentArray: "",
   },
-  //video6
+
+  //video5
   {
     number: 6,
     section: false,
-    title: "Doc 1. Referentes y fuentes de contenido",
+    title: "Video: Cimientos de la marca",
     video: true,
     meet: false,
     resume: false,
@@ -137,44 +149,9 @@ let pages = [
     meetName: "Belén",
     documentArray: "",
   },
-  //video7
+  
   {
     number: 7,
-    section: false,
-    title: "Doc 2. Mi marca personal",
-    video: true,
-    meet: false,
-    resume: false,
-    document: false,
-    videoSource: "https://www.youtube.com/embed/DeYM3Ha99So",
-    resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
-    meetImage: meetBelen,
-    meetImageLarge: meetBelenLarge,
-    meetName: "Belén",
-    documentArray: "",
-  },
-  //video8
-  {
-    number: 8,
-    section: false,
-    title: "Doc 3. Cimientos de la marca",
-    video: true,
-    meet: false,
-    resume: false,
-    document: false,
-    videoSource: "https://www.youtube.com/embed/ds1xI7ZsPCc",
-    resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
-    meetImage: meetBelen,
-    meetImageLarge: meetBelenLarge,
-    meetName: "Belén",
-    documentArray: "",
-  },
-  //fin videos---------
-
-  {
-    number: 9,
     section: false,
     title: "Llamada 2 a Belén",
     video: false,
@@ -203,7 +180,7 @@ let pages = [
     ],
   },
   {
-    number: 10,
+    number: 8,
     section: false,
     title: "Llamada 2 a Belén",
     video: false,
