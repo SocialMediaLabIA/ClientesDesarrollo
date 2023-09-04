@@ -99,7 +99,7 @@ let pages = [
   },
   //video3
   {
-    number: 4,
+    number: 5,
     section: false,
     title: "Video Doc 2. Mi marca personal",
     video: true,
@@ -116,7 +116,7 @@ let pages = [
   },
   //video4
   {
-    number: 5,
+    number: 6,
     section: false,
     title: "Video: Mi marca personal",
     video: true,
@@ -134,7 +134,7 @@ let pages = [
 
   //video5
   {
-    number: 6,
+    number: 7,
     section: false,
     title: "Video: Cimientos de la marca",
     video: true,
@@ -151,7 +151,7 @@ let pages = [
   },
   
   {
-    number: 7,
+    number: 8,
     section: false,
     title: "Llamada 2 a Belén",
     video: false,
@@ -180,7 +180,7 @@ let pages = [
     ],
   },
   {
-    number: 8,
+    number: 9,
     section: false,
     title: "Llamada 2 a Belén",
     video: false,
