@@ -22,7 +22,7 @@ export default function RoadMap() {
   const { search } = useLocation();
   const idParams = search.slice(4);
   const { progressNumber } = useSelector((state) => state);
-
+console.log(progressNumber)
   let [progress, setProgress] = useState(progressNumber);
 
   const [loader, setLoader] = useState(true);
