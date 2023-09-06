@@ -22,8 +22,9 @@ export default function RoadMap() {
   const { search } = useLocation();
   const idParams = search.slice(4);
   const { progressNumber } = useSelector((state) => state);
-
-  let [progress, setProgress] = useState(progressNumber);
+console.log(progressNumber)
+let [progress, setProgress] = useState(progressNumber || 1);
+console.log(progress)
 
   const [loader, setLoader] = useState(true);
   const loaderFuncion = (status) => {
@@ -35,29 +36,49 @@ export default function RoadMap() {
   useEffect(() => {
     loaderFuncion(true);
     dispatch(getProgressUser(idParams)).then(() => {
-      setProgress(progress);
+      console.log(progress)
+      setProgress(progressNumber);
       loaderFuncion(false);
     });
-  }, [dispatch]);
+  }, [dispatch, progressNumber]);
 
   const directionProgress = async (direction) => {
-    if (direction === "next" && progress < 38) {
-      loaderFuncion(true);
-      setProgress(++progress);
-      dispatch(setProgressUser(idParams, "next"))
-        .then(() => {
-          dispatch(getProgressUser(idParams));
-          loaderFuncion(true);
-        })
-        setTimeout(() => {
-          loaderFuncion(false);
-        }, 3000);
-      loaderFuncion(true);
+    if (direction === "next" && progress < 43) {
+      if(pages[progress + 1].section === true){
+        console.log("wwwwwwwwwwwwwwwwwwwww")
+        setProgress(progress + 2)
+        loaderFuncion(true);
+        dispatch(setProgressUser(idParams, 2))
+          .then(() => {
+            dispatch(getProgressUser(idParams));
+            loaderFuncion(true);
+          })
+          setTimeout(() => {
+            loaderFuncion(false);
+          }, 3000);
+        loaderFuncion(true);
+      }else{
+        setProgress(++progress);
+        loaderFuncion(true);
+        dispatch(setProgressUser(idParams, 1))
+          .then(() => {
+            dispatch(getProgressUser(idParams));
+            loaderFuncion(true);
+          })
+          setTimeout(() => {
+            loaderFuncion(false);
+          }, 3000);
+        loaderFuncion(true);
+      }
     }
     if (direction === "prev" && progress > 0) {
+      if(progress === 1){
+        return
+      }
       loaderFuncion(true);
-      setProgress(--progress);
-      dispatch(setProgressUser(idParams, "prev"))
+      if(pages[progress - 1].section === true){
+        setProgress(progress - 2)
+        dispatch(setProgressUser(idParams, -2))
         .then(() => {
           dispatch(getProgressUser(idParams));
           loaderFuncion(true);
@@ -66,6 +87,20 @@ export default function RoadMap() {
           loaderFuncion(false);
         }, 3000);
       loaderFuncion(true);
+
+      }else{
+        setProgress(--progress);
+        dispatch(setProgressUser(idParams, -1))
+        .then(() => {
+          dispatch(getProgressUser(idParams));
+          loaderFuncion(true);
+        })
+        setTimeout(() => {
+          loaderFuncion(false);
+        }, 3000);
+      loaderFuncion(true);
+      }
+
     }
   };
   // "text-[#00DFFD] " : "text-[#fafafa]"
@@ -114,7 +149,12 @@ export default function RoadMap() {
           />
         )}
         {progress === 0 && (
-          <div className="w-full flex justify-center items-center text-white mt-20"></div>
+          // <div className="w-full flex justify-center items-center text-white mt-20"></div>
+          <ProgressBar
+          progress={progress}
+          setProgress={setProgress}
+          loaderFuncion={loaderFuncion}
+        />
         )}
       </motion.div>
 
@@ -122,7 +162,7 @@ export default function RoadMap() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2.5 }}
-        className="flex justify-around items-center rounded-xl w-[300px] bg-[#3b393b67] mt-10 md:mt-5 md:w-[800px]"
+        className="flex justify-around items-center rounded-xl w-[300px] bg-[#3b393b67] mt-10 md:mt-5 md:w-[800px] xl:w-[1000px]"
       >
         <motion.img
           src={logo}
@@ -140,6 +180,14 @@ export default function RoadMap() {
         >
           {pages[progress] ? pages[progress].title : ""}
         </motion.h1>
+        {/* <motion.h1
+          className="text-base text-center text-white font-thin text-[18px] md:text-[20px]"
+          initial={{}}
+          animate={{}}
+          transition={{ duration: 1 }}
+        >
+          {pages[progress] ? pages[progress].number : ""}
+        </motion.h1> */}
         <motion.div
           initial={{ x: 50 }}
           animate={{ x: 0 }}
@@ -166,7 +214,7 @@ export default function RoadMap() {
         transition={{ duration: 2 }}
         className="flex justify-center md:w-full md:gap-64  items-center gap-56  mb-20 "
       >
-        {progress !== 0 && progress !== 38 && (
+        {progress !== 1 && progress !== 43 && (
           <>
             <motion.div
               initial={{ x: -50 }}
@@ -194,7 +242,7 @@ export default function RoadMap() {
             </motion.div>
           </>
         )}
-        {progress === 0 && (
+        {progress === 1 && (
           <>
             <button
               onClick={() => directionProgress("next")}
@@ -204,7 +252,7 @@ export default function RoadMap() {
             </button>
           </>
         )}
-        {progress === 38 && (
+        {progress === 43 && (
           <>
             <button
               onClick={() => directionProgress("prev")}
