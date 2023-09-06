@@ -41,7 +41,7 @@ console.log(progressNumber)
   }, [dispatch]);
 console.log(progress)
   const directionProgress = async (direction) => {
-    if (direction === "next" && progress < 38) {
+    if (direction === "next" && progress < 43) {
       if(pages[progress + 1].section === true){
         setProgress(progress + 2)
       }else{
@@ -190,7 +190,7 @@ console.log(progress)
         transition={{ duration: 2 }}
         className="flex justify-center md:w-full md:gap-64  items-center gap-56  mb-20 "
       >
-        {progress !== 1 && progress !== 38 && (
+        {progress !== 1 && progress !== 43 && (
           <>
             <motion.div
               initial={{ x: -50 }}
@@ -228,7 +228,7 @@ console.log(progress)
             </button>
           </>
         )}
-        {progress === 38 && (
+        {progress === 43 && (
           <>
             <button
               onClick={() => directionProgress("prev")}
