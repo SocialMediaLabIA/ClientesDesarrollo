@@ -86,7 +86,7 @@ export default function ProgressHeaders({ progress }) {
           </div>
         )}
       {/* ULTIMA SECCION */}
-      {pages[progress] && pages[progress].number === 38 && (
+      {pages[progress] && pages[progress].number === 43 && (
         <img
           src={pages[progress] && pages[progress].meetImage}
           alt="imagen meet"
