@@ -156,6 +156,14 @@ console.log(progress)
         >
           {pages[progress] ? pages[progress].title : ""}
         </motion.h1>
+        <motion.h1
+          className="text-base text-center text-white font-thin text-[18px] md:text-[20px]"
+          initial={{}}
+          animate={{}}
+          transition={{ duration: 1 }}
+        >
+          {pages[progress] ? pages[progress].number : ""}
+        </motion.h1>
         <motion.div
           initial={{ x: 50 }}
           animate={{ x: 0 }}
