@@ -4,6 +4,7 @@ import { getAllUser } from "../../../../redux/User/ActionUser/getAllUser";
 import { BsTrash, BsPencilSquare, BsCheckSquare } from "react-icons/bs";
 import { editUserById } from "../../../../redux/User/ActionUser/editUserById";
 import { motion } from "framer-motion";
+import PaginationOutlined from "../../../pagination/PaginationOutlined";
 
 export default function ListAdmin() {
   const dispatch = useDispatch();
@@ -16,29 +17,6 @@ export default function ListAdmin() {
     dispatch(getAllUser());
     dispatch(getAllUser());
   }, [dispatch]);
-
-  // useEffect(() => {
-  //   let usuarios = [];
-  //   let i = 0;
-
-  //   if (users && users.length > 0) {
-  //     for (let i = 0; i < users.length; i++) {
-  //       if (users[i] && users[i]._id) {
-  //         usuarios.push({
-  //           _id: users[i]._id,
-  //           role: users[i].role,
-  //           name: users[i].name,
-  //           lastname: users[i].lastname,
-  //           instagram: users[i].instagram,
-  //           email: users[i].email,
-  //           password: users[i].password,
-  //         });
-  //       }
-  //     }
-  //   }
-
-  //   setUser(usuarios);
-  // }, [users]);
 
   const deleteUser = (id) => {
     const body = {
@@ -106,6 +84,16 @@ export default function ListAdmin() {
     });
   };
 
+  const [pageStyle, setPageStyle] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [cardXPage, setCardXpage] = useState(8);
+  const indexLastCard = currentPage * cardXPage;
+  const indexFirstCard = indexLastCard - cardXPage;
+  const currentCard = filteredUsers.slice(indexFirstCard, indexLastCard);
+
+  const pages = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
   return (
     <div className="flex flex-col gap-2 items-center justify-start w-full h-full bg-[#282828] rounded-lg">
       <motion.div
@@ -147,8 +135,8 @@ export default function ListAdmin() {
         </div>
       </motion.div>
 
-      {filteredUsers &&
-        filteredUsers.map((item, index) => {
+      {currentCard &&
+        currentCard.map((item, index) => {
           return (
             <motion.div
               initial={{ opacity: 0 }}
@@ -241,7 +229,7 @@ export default function ListAdmin() {
               )}
 
               {editStates[item._id] ? (
-                <div className=" absolute right-1 w-[14rem] min-w-[80px]">
+                <div className=" absolute right-8 w-[14rem] min-w-[80px]">
                   <div className=" flex gap-5 items-center justify-center">
                     <BsCheckSquare
                       className="w-10 h-10"
@@ -250,7 +238,7 @@ export default function ListAdmin() {
                   </div>
                 </div>
               ) : (
-                <div className=" absolute right-1 w-[14rem] min-w-[80px]">
+                <div className=" absolute right-8 w-[14rem] min-w-[80px]">
                   <div className=" flex gap-5 items-center justify-center">
                     <BsTrash
                       className="w-10 h-10"
@@ -266,6 +254,16 @@ export default function ListAdmin() {
             </motion.div>
           );
         })}
+      <div className=" mb-6">
+        <PaginationOutlined
+          pageStyle={pageStyle}
+          setPageStyle={setPageStyle}
+          cardXPage={cardXPage}
+          data={filteredUsers}
+          pages={pages}
+          current={currentPage}
+        />
+      </div>
     </div>
   );
 }
