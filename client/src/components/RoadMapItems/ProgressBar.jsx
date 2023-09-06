@@ -23,30 +23,30 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion }) {
     <div
       className={
         openBar
-          ? " border-2 flex flex-col justify-start items-center w-[350px] text-white text-sm   bg-[#6b277c] rounded-r-lg md:h-screen max-h-[500px] md:max-h-[100%] transition-transform transform translate-x-0 duration-500 ease-in-out delay-150"
-          : "  flex flex-col justify-start items-center w-[45px] text-white text-sm   bg-[#6b277c] rounded-r-lg md:h-screen max-h-[500px] md:max-h-[100%] transition-transform transform translate-x-0 duration-500 ease-in-out delay-150"
+          ? " flex flex-col justify-start items-center w-[350px] text-white text-sm   bg-[#6b277c] rounded-r-lg h-[90%] max-h-[100%] md:h-screen  md:max-h-[100%] transition-transform transform translate-x-0 duration-500 ease-in-out delay-150"
+          : "  flex flex-col justify-start items-center w-[45px] text-white text-sm   bg-[#6b277c] rounded-r-lg h-[90%] max-h-[100%] md:h-screen  md:max-h-[100%]transition-transform transform translate-x-0 duration-500 ease-in-out delay-150"
       }
     >
       {/* <div className="w-full flex flex-col justify-start items-start h-screen max-h-[500px] md:max-h-[100%] transition-transform transform translate-x-0 duration-500 ease-in-out delay-150"> */}
       <div
         className={
           openBar
-            ? "bg-[#441769bd]  cursor-pointer  flex items-center justify-start h-[130px] md:h-[70px] w-full text-white hover:bg-[#4a2353bd] rounded-tr-lg"
-            : "bg-[#441769bd]  cursor-pointer  flex items-center justify-start h-[130px] md:h-[70px] w-full text-white hover:bg-[#4a2353bd] rounded-tr-lg"
+            ? "bg-[#441769bd]  cursor-pointer  flex items-center justify-start h-[80px] md:h-[70px] w-full text-white hover:bg-[#4a2353bd] rounded-tr-lg"
+            : "bg-[#441769bd]  cursor-pointer  flex items-center justify-start h-[80px] md:h-[70px] w-full text-white hover:bg-[#4a2353bd] rounded-tr-lg"
         }
         onClick={setOpenBarHandler}
       >
         {openBar ? (
           <>
-          <HiChevronLeft className="w-5 h-5  ml-3 rounded-full " />
-          <h1 className="ml-16">SOCIAL MEDIA LAB AI</h1>
-            </>
+            <HiChevronLeft className="w-5 h-5  ml-3 rounded-full " />
+            <h1 className="ml-16">SOCIAL MEDIA LAB AI</h1>
+          </>
         ) : (
           <HiChevronRight className="w-5 h-5 ml-3  rounded-full" />
         )}
       </div>
 
-      <div className=" my-1 w-full  flex flex-col justify-start items-start overflow-scroll no-scrollbar h-screen max-h-[500px] md:max-h-[100%] transition-transform transform translate-x-0 duration-500 ease-in-out delay-150">
+      <div className=" my-1 w-full  flex flex-col justify-start items-start overflow-scroll no-scrollbar h-screen  md:max-h-[100%] transition-transform transform translate-x-0 duration-500 ease-in-out delay-150">
         {/* Seccion 1 */}
 
         {pages.map((item, index) => {
@@ -108,7 +108,7 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion }) {
                   <div
                     className={
                       item.number === progress && openBar
-                        ? "ml-2 flex justify-start items-center w-fit  bg-[#ffffff42] hover:bg-[#b8b3b342]  rounded-md  cursor-pointer"
+                        ? "ml-2 pl-1 flex justify-start items-center w-fit  bg-[#ffffff42] hover:bg-[#b8b3b342]  rounded-md  cursor-pointer"
                         : "ml-2 flex justify-start items-center w-fit cursor-pointer "
                     }
                   >
@@ -136,8 +136,6 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion }) {
                         className="my-1 border-4 rounded-full w-6 h-6 flex justify-center items-center p-2 hover:scale-110"
                       ></p>
                     )}
-
-
 
                     {/* TITULOS */}
                     {item.number !== progress && (
@@ -178,8 +176,6 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion }) {
                         )}
                       </div>
                     )}
-
-                    
                   </div>
                 }
               </React.Fragment>
