@@ -584,12 +584,12 @@ video {
   right: 0.25rem;
 }
 
-.top-0 {
-  top: 0px;
-}
-
 .right-8 {
   right: 2rem;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .z-0 {
@@ -687,6 +687,10 @@ video {
   margin-top: 6rem;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -697,10 +701,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
 }
 
 .flex {
@@ -1385,10 +1385,6 @@ video {
 
 .hover\:mb-1:hover {
   margin-bottom: 0.25rem;
-}
-
-.hover\:mb-3:hover {
-  margin-bottom: 0.75rem;
 }
 
 .hover\:scale-110:hover {
