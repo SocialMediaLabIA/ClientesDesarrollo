@@ -48,7 +48,7 @@ const UsersSchema = new mongoose.Schema(
     progress: {
       type: Number,
       required: true,
-      default: 0,
+      default: 1,
     },
   },
   { timestamps: true }

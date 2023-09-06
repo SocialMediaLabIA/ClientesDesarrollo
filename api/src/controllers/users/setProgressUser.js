@@ -1,19 +1,20 @@
 const Users = require("../../models/Users");
 
 const setProgressUser = async (id, direction) => {
-let user = {}
-
-  if (direction === "next") {
+  let user = {}
+  
+  if (direction === 1 || direction === 2) {
+    console.log(direction)
     user = await Users.findOneAndUpdate(
       { _id: id },
-      { $inc: { progress: 1 } },
+      { $inc: { progress: direction } },
       { new: true }
     );
   }
-  if (direction === "prev") {
+  if (direction === -1 || direction === -2) {
     user = await Users.findOneAndUpdate(
       { _id: id },
-      { $inc: { progress: -1 } },
+      { $inc: { progress: direction } },
       { new: true }
     );
   }

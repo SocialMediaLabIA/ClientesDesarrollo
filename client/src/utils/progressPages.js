@@ -8,10 +8,23 @@ import celebration from "../assets/celebration.png";
 
 let pages = [
   //Seccion inicial
+
   {
     number: 0,
     section: true,
-    title: "Social Media Lab",
+    title: "Bienvenida",
+    video: true,
+    meet: false,
+    resume: false,
+    document: false,
+    videoSource: "https://www.youtube.com/embed/DGm127uh4Bs",
+    meetName: "Belén",
+    documentArray: "",
+  },
+  {
+    number: 1,
+    section: false,
+    title: "Introducción al Roadmap",
     video: true,
     meet: false,
     resume: false,
@@ -21,11 +34,26 @@ let pages = [
     documentArray: "",
   },
 
-  //Seccion 1/////////////////////////////////////////////////////////////
+
+
+  //Seccion 1 Cimientos de marca
   {
-    number: 1,
+    number: 2,
+    section: true,
+    title: "Cimientos de Marca",
+    video: false,
+    meet: false,
+    resume: false,
+    document: false,
+    videoSource: "https://www.youtube.com/embed/DGm127uh4Bs",
+    meetName: "Belén",
+    documentArray: "",
+  },
+
+  {
+    number: 3,
     section: false,
-    title: "Agendar llamada 1 a Belén",
+    title: "Llamada a Belén",
     video: false,
     meet: true,
     resume: false,
@@ -52,28 +80,11 @@ let pages = [
     ],
   },
   //----------------- 4 videos
-  //video2
+  //video 2
   {
-    number: 2,
+    number: 4,
     section: false,
-    title: "Video Fase 1. Cimientos de marca",
-    video: true,
-    meet: false,
-    resume: false,
-    document: false,
-    videoSource: "https://www.youtube.com/embed/XSqOdcoaqns",
-    resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
-    meetImage: meetBelen,
-    meetImageLarge: meetBelenLarge,
-    meetName: "Belén",
-    documentArray: "",
-  },
-  //video3
-  {
-    number: 3,
-    section: false,
-    title: "Video Doc 1. Referentes",
+    title: "Cimientos de la marca personal",
     video: true,
     meet: false,
     resume: false,
@@ -86,11 +97,11 @@ let pages = [
     meetName: "Belén",
     documentArray: "",
   },
-  //video4
+  //video3
   {
-    number: 4,
+    number: 5,
     section: false,
-    title: "Video Doc 2. Mi marca personal",
+    title: "Video: Referentes",
     video: true,
     meet: false,
     resume: false,
@@ -103,11 +114,11 @@ let pages = [
     meetName: "Belén",
     documentArray: "",
   },
-  //video5
+  //video4
   {
-    number: 5,
+    number: 6,
     section: false,
-    title: "Video Doc 3. Cimientos de la marca",
+    title: "Video: Mi marca personal",
     video: true,
     meet: false,
     resume: false,
@@ -120,11 +131,12 @@ let pages = [
     meetName: "Belén",
     documentArray: "",
   },
-  //video6
+
+  //video5
   {
-    number: 6,
+    number: 7,
     section: false,
-    title: "Doc 1. Referentes y fuentes de contenido",
+    title: "Video: Cimientos de la marca",
     video: true,
     meet: false,
     resume: false,
@@ -137,46 +149,11 @@ let pages = [
     meetName: "Belén",
     documentArray: "",
   },
-  //video7
-  {
-    number: 7,
-    section: false,
-    title: "Doc 2. Mi marca personal",
-    video: true,
-    meet: false,
-    resume: false,
-    document: false,
-    videoSource: "https://www.youtube.com/embed/DeYM3Ha99So",
-    resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
-    meetImage: meetBelen,
-    meetImageLarge: meetBelenLarge,
-    meetName: "Belén",
-    documentArray: "",
-  },
-  //video8
+  
   {
     number: 8,
     section: false,
-    title: "Doc 3. Cimientos de la marca",
-    video: true,
-    meet: false,
-    resume: false,
-    document: false,
-    videoSource: "https://www.youtube.com/embed/ds1xI7ZsPCc",
-    resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
-    meetImage: meetBelen,
-    meetImageLarge: meetBelenLarge,
-    meetName: "Belén",
-    documentArray: "",
-  },
-  //fin videos---------
-
-  {
-    number: 9,
-    section: false,
-    title: "Llamada 2 a Belén",
+    title: "Rellenar documentos",
     video: false,
     resume: true,
     meet: false,
@@ -203,9 +180,9 @@ let pages = [
     ],
   },
   {
-    number: 10,
+    number: 9,
     section: false,
-    title: "Llamada 2 a Belén",
+    title: "Llamada a Belén",
     video: false,
     resume: false,
     meet: true,
@@ -219,9 +196,11 @@ let pages = [
     documentArray: "",
   },
 
+
+
   //Seccion 2
   {
-    number: 11,
+    number: 10,
     section: true,
     title: "Guiones",
     video: true,
@@ -238,9 +217,26 @@ let pages = [
     documentArray: "",
   },
   {
+    number: 11,
+    section: false,
+    title: "Video: 100 ideas virales",
+    video: true,
+    resume: false,
+    meet: false,
+    document: false,
+    videoSource:
+      "https://drive.google.com/file/d/1czycg2HhCkG1M_A04adOea0eab506eJX/preview",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: meetNicole,
+    meetImageLarge: meetNicoleLarge,
+    meetName: "Nicole",
+    documentArray: "",
+  },
+  {
     number: 12,
     section: false,
-    title: "Guiones",
+    title: "Rellenar documento",
     video: false,
     resume: true,
     meet: false,
@@ -261,7 +257,7 @@ let pages = [
   {
     number: 13,
     section: false,
-    title: "Guiones",
+    title: "Llamada a Nicole",
     video: false,
     resume: false,
     meet: true,
@@ -277,7 +273,7 @@ let pages = [
   {
     number: 14,
     section: false,
-    title: "Guiones",
+    title: "Leer documentos",
     video: false,
     resume: true,
     meet: false,
@@ -301,27 +297,27 @@ let pages = [
   },
   //----------------- 4 videos
   //video9
+  // {
+  //   number: 15,
+  //   section: false,
+  //   title: "Guiones",
+  //   video: true,
+  //   resume: false,
+  //   meet: false,
+  //   document: false,
+  //   videoSource: "https://www.youtube.com/embed/LOiGQHwfWcQ",
+  //   resumeText:
+  //     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+  //   meetImage: meetNicole,
+  //   meetImageLarge: meetNicoleLarge,
+  //   meetName: "Nicole",
+  //   documentArray: "",
+  // },
+  //video10
   {
     number: 15,
     section: false,
-    title: "Guiones",
-    video: true,
-    resume: false,
-    meet: false,
-    document: false,
-    videoSource: "https://www.youtube.com/embed/LOiGQHwfWcQ",
-    resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
-    meetImage: meetNicole,
-    meetImageLarge: meetNicoleLarge,
-    meetName: "Nicole",
-    documentArray: "",
-  },
-  //video10
-  {
-    number: 16,
-    section: false,
-    title: "Guiones",
+    title: "Estrucuta de guiones virales",
     video: true,
     resume: false,
     meet: false,
@@ -336,9 +332,9 @@ let pages = [
   },
   //video11
   {
-    number: 17,
+    number: 16,
     section: false,
-    title: "Guiones",
+    title: "Chat GPT",
     video: true,
     resume: false,
     meet: false,
@@ -353,9 +349,9 @@ let pages = [
   },
   //video12
   {
-    number: 18,
+    number: 17,
     section: false,
-    title: "Guiones",
+    title: "Corrección de guiones de Chat GPT",
     video: true,
     resume: false,
     meet: false,
@@ -370,9 +366,9 @@ let pages = [
   },
   //----------------- fin
   {
-    number: 19,
+    number: 18,
     section: false,
-    title: "Guiones",
+    title: "Escribir de 7 a 15 guiones",
     video: false,
     resume: true,
     meet: false,
@@ -385,9 +381,9 @@ let pages = [
     documentArray: [],
   },
   {
-    number: 20,
+    number: 19,
     section: false,
-    title: "Guiones",
+    title: "Llamada Nicole",
     video: false,
     resume: false,
     meet: true,
@@ -401,11 +397,29 @@ let pages = [
     documentArray: "",
   },
 
+
   //Seccion 3
   {
-    number: 21,
+    number: 20,
     section: true,
     title: "Grabación de videos",
+    video: false,
+    resume: false,
+    meet: true,
+    document: false,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: meetNicolas,
+    meetImageLarge: meetNicolasLarge,
+    meetName: "Nicolás",
+    documentArray: "",
+  },
+
+  {
+    number: 21,
+    section: false,
+    title: "Llamar a Nicolás",
     video: false,
     resume: false,
     meet: true,
@@ -423,7 +437,7 @@ let pages = [
   {
     number: 22,
     section: false,
-    title: "Grabación de videos",
+    title: "Como configurar tu setup para filmar",
     video: true,
     resume: false,
     meet: false,
@@ -440,7 +454,7 @@ let pages = [
   {
     number: 23,
     section: false,
-    title: "Grabación de videos",
+    title: "Como hablar frente a la cámara",
     video: true,
     resume: false,
     meet: false,
@@ -457,7 +471,7 @@ let pages = [
   {
     number: 24,
     section: false,
-    title: "Grabación de videos",
+    title: "Tips de sonido",
     video: true,
     resume: false,
     meet: false,
@@ -474,7 +488,7 @@ let pages = [
   {
     number: 25,
     section: false,
-    title: "Grabación de videos",
+    title: "Grabar video de prueba",
     video: false,
     resume: true,
     meet: false,
@@ -489,7 +503,7 @@ let pages = [
   {
     number: 26,
     section: false,
-    title: "Grabación de videos",
+    title: "Llamada a Nicolás",
     video: false,
     resume: false,
     meet: true,
@@ -505,7 +519,7 @@ let pages = [
   {
     number: 27,
     section: false,
-    title: "Grabación de videos",
+    title: "Grabar de 7 a 15 videos",
     video: false,
     resume: true,
     meet: false,
@@ -534,10 +548,25 @@ let pages = [
     meetName: "Nicolás",
     documentArray: [],
   },
+  {
+    number: 29,
+    section: false,
+    title: "Edición de 7 a 15 videos",
+    video: false,
+    resume: true,
+    meet: false,
+    document: true,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText: "Edición de 7 a 15 videos",
+    meetImage: meetNicolas,
+    meetImageLarge: meetNicolasLarge,
+    meetName: "Nicolás",
+    documentArray: [],
+  },
 
   //Seccion 5
   {
-    number: 29,
+    number: 30,
     section: true,
     title: "Pre - Publicación",
     video: true,
@@ -554,9 +583,26 @@ let pages = [
     documentArray: "",
   },
   {
-    number: 30,
+    number: 31,
     section: false,
-    title: "Pre - Publicación",
+    title: "Hoja de arranque",
+    video: true,
+    resume: false,
+    meet: false,
+    document: false,
+    videoSource:
+      "https://drive.google.com/file/d/1vIn73ii822OV3qBrWdtM7QvcsMECXAKX/preview",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: meetNicolas,
+    meetImageLarge: meetNicolasLarge,
+    meetName: "Nicolás",
+    documentArray: "",
+  },
+  {
+    number: 32,
+    section: false,
+    title: "Rellenar Hoja de arranque",
     video: false,
     resume: true,
     meet: false,
@@ -574,9 +620,9 @@ let pages = [
     ],
   },
   {
-    number: 31,
+    number: 33,
     section: false,
-    title: "Pre - Publicación",
+    title: "Llamada a Nicole",
     video: false,
     resume: false,
     meet: true,
@@ -584,14 +630,15 @@ let pages = [
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
-    meetImage: meetNicole,
-    meetName: "Nicole",
+      meetImage: meetNicole,
+      meetImageLarge: meetNicoleLarge,
+      meetName: "Nicole",
     documentArray: "",
   },
   {
-    number: 32,
+    number: 34,
     section: false,
-    title: "Pre - Publicación",
+    title: "Rellenar calendario",
     video: false,
     resume: true,
     meet: false,
@@ -609,7 +656,7 @@ let pages = [
     ],
   },
   {
-    number: 33,
+    number: 35,
     section: false,
     title: "Pre - Publicación",
     video: false,
@@ -619,16 +666,32 @@ let pages = [
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
-    meetImage: meetBelen,
-    meetName: "Belén",
+      meetImage: meetBelen,
+      meetImageLarge: meetBelenLarge,
+      meetName: "Belén",
     documentArray: "",
   },
 
   //seccion 6
   {
-    number: 34,
+    number: 36,
     section: true,
     title: "Publicación",
+    video: false,
+    resume: true,
+    meet: false,
+    document: true,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText: "Publicar de 7 a 15 videos!",
+    meetImage: meetBelen,
+    meetImageLarge: meetBelenLarge,
+    meetName: "Belén",
+    documentArray: [],
+  },
+  {
+    number: 37,
+    section: false,
+    title: "Publicar de 7 a 15 videos",
     video: false,
     resume: true,
     meet: false,
@@ -644,7 +707,7 @@ let pages = [
   //Seccion 7
   //Video 16
   {
-    number: 35,
+    number: 38,
     section: true,
     title: "Análisis y optimización",
     video: true,
@@ -660,9 +723,25 @@ let pages = [
     documentArray: "",
   },
   {
-    number: 36,
+    number: 39,
     section: false,
-    title: "Análisis y optimización",
+    title: "Cómo leer las métricas!",
+    video: true,
+    resume: false,
+    meet: false,
+    document: false,
+    videoSource:
+      "https://drive.google.com/file/d/1hHMA-5frzgnP9sSnYdBbMJhUA5Ym-Baq/preview",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: meetBelen,
+    meetName: "Belén",
+    documentArray: "",
+  },
+  {
+    number: 40,
+    section: false,
+    title: "Rellenar documentos",
     video: false,
     resume: true,
     meet: false,
@@ -681,9 +760,9 @@ let pages = [
     ],
   },
   {
-    number: 37,
+    number: 41,
     section: false,
-    title: "Análisis y optimización",
+    title: "Llamada a Belén",
     video: false,
     resume: false,
     meet: true,
@@ -691,14 +770,30 @@ let pages = [
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
-    meetImage: meetBelen,
-    meetName: "Belén",
+      meetImage: meetBelen,
+      meetImageLarge: meetBelenLarge,
+      meetName: "Belén",
     documentArray: "",
   },
   //Seccion 8
   {
-    number: 38,
+    number: 42,
     section: true,
+    title: "¡Terminaste tu recorrido!",
+    video: false,
+    resume: false,
+    meet: false,
+    document: false,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: celebration,
+    meetName: "Belén",
+    documentArray: "",
+  },
+  {
+    number: 43,
+    section: false,
     title: "¡Terminaste tu recorrido!",
     video: false,
     resume: false,

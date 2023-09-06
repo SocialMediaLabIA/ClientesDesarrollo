@@ -44,7 +44,7 @@ export default function ProgressHeaders({ progress }) {
         />
       )}
       {/* MEETS */}
-      {pages[progress] && pages[progress].meet === true && (
+      {pages[progress] && pages[progress].meet === true && pages[progress].section === false && (
         <div className="flex justify-center items-center h-full w-full">
           <img
             src={selectedImage}
@@ -58,17 +58,14 @@ export default function ProgressHeaders({ progress }) {
       {pages[progress] &&
         pages[progress].document === true &&
         pages[progress].resume === true &&
-        pages[progress].number !== 38 && (
+        pages[progress].number !== 38 && pages[progress].section === false && (
           <div className="flex flex-col justify-center items-center h-full w-full max-w-[230px] md:max-w-[800px] mt-10">
             <p className=" w-5/6 text-justify items-center text-sm mb-5">
               {pages[progress] && pages[progress].resumeText}
             </p>
-            {console.log(pages[progress].documentArray)}
             <div className=" w-fit  max-w-[250px] flex flex-col justify-start items-start">
               {pages[progress].documentArray.map((item, index) => {
-                {
-                  console.log(item);
-                }
+
                 return (
                   <a
                     href={item.link}
@@ -86,7 +83,7 @@ export default function ProgressHeaders({ progress }) {
           </div>
         )}
       {/* ULTIMA SECCION */}
-      {pages[progress] && pages[progress].number === 38 && (
+      {pages[progress] && pages[progress].number === 43 && (
         <img
           src={pages[progress] && pages[progress].meetImage}
           alt="imagen meet"
