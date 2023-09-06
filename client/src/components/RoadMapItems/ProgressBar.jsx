@@ -58,25 +58,25 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion }) {
               >
                 {item.number < progress && (
                   <PiFlagPennantFill
-                    onClick={() => {
-                      pressProgressHandler(item.number);
-                    }}
+                    // onClick={() => {
+                    //   pressProgressHandler(item.number);
+                    // }}
                     className="ml-2 text-[#00DFFD]"
                   />
                 )}
                 {item.number > progress && (
                   <PiFlagPennantFill
-                    onClick={() => {
-                      pressProgressHandler(item.number);
-                    }}
+                    // onClick={() => {
+                    //   pressProgressHandler(item.number);
+                    // }}
                     className="ml-2 text-[#fafafa]"
                   />
                 )}
                 {item.number === progress && (
                   <PiFlagPennantFill
-                    onClick={() => {
-                      pressProgressHandler(item.number);
-                    }}
+                    // onClick={() => {
+                    //   pressProgressHandler(item.number);
+                    // }}
                     className="ml-2 text-[#00DFFD]"
                   />
                 )}
@@ -84,15 +84,15 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion }) {
                 <div
                   className={
                     openBar
-                      ? " ml-5 flex justify-start items-center border-b-2 border-[#beb8b827] hover:border-[#beb8b84f] w-[280px] h-5 cursor-pointer "
-                      : "h-5 ml-5 flex justify-start items-center w-fit border-b-2 hover:border-[#beb8ba4f] cursor-pointer"
+                      ? " ml-5 flex justify-start items-center border-b-2 border-[#beb8b827] hover:border-[#beb8b84f] w-[280px] h-5  "
+                      : "h-5 ml-5 flex justify-start items-center w-fit border-b-2 hover:border-[#beb8ba4f] "
                   }
-                  onClick={() => {
-                    pressProgressHandler(item.number);
-                  }}
+                  // onClick={() => {
+                  //   pressProgressHandler(item.number);
+                  // }}
                 >
                   {openBar ? (
-                    <h1 className="h-5 p-1 mb-2 hover:mb-3">
+                    <h1 className="h-5 p-1 mb-2 ">
                       {item.title.toUpperCase()}
                     </h1>
                   ) : (
