@@ -63,12 +63,9 @@ export default function ProgressHeaders({ progress }) {
             <p className=" w-5/6 text-justify items-center text-sm mb-5">
               {pages[progress] && pages[progress].resumeText}
             </p>
-            {console.log(pages[progress].documentArray)}
             <div className=" w-fit  max-w-[250px] flex flex-col justify-start items-start">
               {pages[progress].documentArray.map((item, index) => {
-                {
-                  console.log(item);
-                }
+
                 return (
                   <a
                     href={item.link}
