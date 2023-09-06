@@ -45,20 +45,31 @@ console.log(progress)
   const directionProgress = async (direction) => {
     if (direction === "next" && progress < 43) {
       if(pages[progress + 1].section === true){
+        console.log("wwwwwwwwwwwwwwwwwwwww")
         setProgress(progress + 2)
+        loaderFuncion(true);
+        dispatch(setProgressUser(idParams, 2))
+          .then(() => {
+            dispatch(getProgressUser(idParams));
+            loaderFuncion(true);
+          })
+          setTimeout(() => {
+            loaderFuncion(false);
+          }, 3000);
+        loaderFuncion(true);
       }else{
         setProgress(++progress);
+        loaderFuncion(true);
+        dispatch(setProgressUser(idParams, 1))
+          .then(() => {
+            dispatch(getProgressUser(idParams));
+            loaderFuncion(true);
+          })
+          setTimeout(() => {
+            loaderFuncion(false);
+          }, 3000);
+        loaderFuncion(true);
       }
-      loaderFuncion(true);
-      dispatch(setProgressUser(idParams, "next"))
-        .then(() => {
-          dispatch(getProgressUser(idParams));
-          loaderFuncion(true);
-        })
-        setTimeout(() => {
-          loaderFuncion(false);
-        }, 3000);
-      loaderFuncion(true);
     }
     if (direction === "prev" && progress > 0) {
       if(progress === 1){
@@ -67,10 +78,7 @@ console.log(progress)
       loaderFuncion(true);
       if(pages[progress - 1].section === true){
         setProgress(progress - 2)
-      }else{
-        setProgress(--progress);
-      }
-      dispatch(setProgressUser(idParams, "prev"))
+        dispatch(setProgressUser(idParams, -2))
         .then(() => {
           dispatch(getProgressUser(idParams));
           loaderFuncion(true);
@@ -79,6 +87,20 @@ console.log(progress)
           loaderFuncion(false);
         }, 3000);
       loaderFuncion(true);
+
+      }else{
+        setProgress(--progress);
+        dispatch(setProgressUser(idParams, -1))
+        .then(() => {
+          dispatch(getProgressUser(idParams));
+          loaderFuncion(true);
+        })
+        setTimeout(() => {
+          loaderFuncion(false);
+        }, 3000);
+      loaderFuncion(true);
+      }
+
     }
   };
   // "text-[#00DFFD] " : "text-[#fafafa]"
