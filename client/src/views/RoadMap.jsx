@@ -23,7 +23,8 @@ export default function RoadMap() {
   const idParams = search.slice(4);
   const { progressNumber } = useSelector((state) => state);
 console.log(progressNumber)
-  let [progress, setProgress] = useState(progressNumber);
+let [progress, setProgress] = useState(progressNumber || 1);
+console.log(progress)
 
   const [loader, setLoader] = useState(true);
   const loaderFuncion = (status) => {
@@ -35,11 +36,12 @@ console.log(progressNumber)
   useEffect(() => {
     loaderFuncion(true);
     dispatch(getProgressUser(idParams)).then(() => {
-      setProgress(progress);
+      console.log(progress)
+      setProgress(progressNumber);
       loaderFuncion(false);
     });
-  }, [dispatch]);
-console.log(progress)
+  }, [dispatch, progressNumber]);
+
   const directionProgress = async (direction) => {
     if (direction === "next" && progress < 43) {
       if(pages[progress + 1].section === true){
@@ -156,14 +158,14 @@ console.log(progress)
         >
           {pages[progress] ? pages[progress].title : ""}
         </motion.h1>
-        <motion.h1
+        {/* <motion.h1
           className="text-base text-center text-white font-thin text-[18px] md:text-[20px]"
           initial={{}}
           animate={{}}
           transition={{ duration: 1 }}
         >
           {pages[progress] ? pages[progress].number : ""}
-        </motion.h1>
+        </motion.h1> */}
         <motion.div
           initial={{ x: 50 }}
           animate={{ x: 0 }}
