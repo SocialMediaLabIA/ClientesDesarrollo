@@ -53,7 +53,7 @@ let pages = [
   {
     number: 3,
     section: false,
-    title: "Agendar llamada 1 a Belén",
+    title: "Llamada a Belén",
     video: false,
     meet: true,
     resume: false,
@@ -101,7 +101,7 @@ let pages = [
   {
     number: 5,
     section: false,
-    title: "Video Doc 2. Mi marca personal",
+    title: "Video: Referentes",
     video: true,
     meet: false,
     resume: false,
@@ -153,7 +153,7 @@ let pages = [
   {
     number: 8,
     section: false,
-    title: "Llamada 2 a Belén",
+    title: "Rellenar documentos",
     video: false,
     resume: true,
     meet: false,
@@ -182,7 +182,7 @@ let pages = [
   {
     number: 9,
     section: false,
-    title: "Llamada 2 a Belén",
+    title: "Llamada a Belén",
     video: false,
     resume: false,
     meet: true,
@@ -196,9 +196,11 @@ let pages = [
     documentArray: "",
   },
 
+
+
   //Seccion 2
   {
-    number: 11,
+    number: 10,
     section: true,
     title: "Guiones",
     video: true,
@@ -215,9 +217,26 @@ let pages = [
     documentArray: "",
   },
   {
+    number: 11,
+    section: false,
+    title: "Video: 100 ideas virales",
+    video: true,
+    resume: false,
+    meet: false,
+    document: false,
+    videoSource:
+      "https://drive.google.com/file/d/1czycg2HhCkG1M_A04adOea0eab506eJX/preview",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: meetNicole,
+    meetImageLarge: meetNicoleLarge,
+    meetName: "Nicole",
+    documentArray: "",
+  },
+  {
     number: 12,
     section: false,
-    title: "Guiones",
+    title: "Rellenar documento",
     video: false,
     resume: true,
     meet: false,
@@ -238,7 +257,7 @@ let pages = [
   {
     number: 13,
     section: false,
-    title: "Guiones",
+    title: "Llamada a Nicole",
     video: false,
     resume: false,
     meet: true,
@@ -254,7 +273,7 @@ let pages = [
   {
     number: 14,
     section: false,
-    title: "Guiones",
+    title: "Leer documentos",
     video: false,
     resume: true,
     meet: false,
@@ -278,27 +297,27 @@ let pages = [
   },
   //----------------- 4 videos
   //video9
+  // {
+  //   number: 15,
+  //   section: false,
+  //   title: "Guiones",
+  //   video: true,
+  //   resume: false,
+  //   meet: false,
+  //   document: false,
+  //   videoSource: "https://www.youtube.com/embed/LOiGQHwfWcQ",
+  //   resumeText:
+  //     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+  //   meetImage: meetNicole,
+  //   meetImageLarge: meetNicoleLarge,
+  //   meetName: "Nicole",
+  //   documentArray: "",
+  // },
+  //video10
   {
     number: 15,
     section: false,
-    title: "Guiones",
-    video: true,
-    resume: false,
-    meet: false,
-    document: false,
-    videoSource: "https://www.youtube.com/embed/LOiGQHwfWcQ",
-    resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
-    meetImage: meetNicole,
-    meetImageLarge: meetNicoleLarge,
-    meetName: "Nicole",
-    documentArray: "",
-  },
-  //video10
-  {
-    number: 16,
-    section: false,
-    title: "Guiones",
+    title: "Estrucuta de guiones virales",
     video: true,
     resume: false,
     meet: false,
@@ -313,9 +332,9 @@ let pages = [
   },
   //video11
   {
-    number: 17,
+    number: 16,
     section: false,
-    title: "Guiones",
+    title: "Chat GPT",
     video: true,
     resume: false,
     meet: false,
@@ -330,9 +349,9 @@ let pages = [
   },
   //video12
   {
-    number: 18,
+    number: 17,
     section: false,
-    title: "Guiones",
+    title: "Corrección de guiones de Chat GPT",
     video: true,
     resume: false,
     meet: false,
@@ -347,9 +366,9 @@ let pages = [
   },
   //----------------- fin
   {
-    number: 19,
+    number: 18,
     section: false,
-    title: "Guiones",
+    title: "Escribir de 7 a 15 guiones",
     video: false,
     resume: true,
     meet: false,
@@ -362,9 +381,9 @@ let pages = [
     documentArray: [],
   },
   {
-    number: 20,
+    number: 19,
     section: false,
-    title: "Guiones",
+    title: "Llamada Nicole",
     video: false,
     resume: false,
     meet: true,
@@ -378,11 +397,29 @@ let pages = [
     documentArray: "",
   },
 
+
   //Seccion 3
   {
-    number: 21,
+    number: 20,
     section: true,
     title: "Grabación de videos",
+    video: false,
+    resume: false,
+    meet: true,
+    document: false,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: meetNicolas,
+    meetImageLarge: meetNicolasLarge,
+    meetName: "Nicolás",
+    documentArray: "",
+  },
+
+  {
+    number: 21,
+    section: false,
+    title: "Llamar a Nicolás",
     video: false,
     resume: false,
     meet: true,
@@ -400,7 +437,7 @@ let pages = [
   {
     number: 22,
     section: false,
-    title: "Grabación de videos",
+    title: "Como configurar tu setup para filmar",
     video: true,
     resume: false,
     meet: false,
@@ -417,7 +454,7 @@ let pages = [
   {
     number: 23,
     section: false,
-    title: "Grabación de videos",
+    title: "Como hablar frente a la cámara",
     video: true,
     resume: false,
     meet: false,
@@ -434,7 +471,7 @@ let pages = [
   {
     number: 24,
     section: false,
-    title: "Grabación de videos",
+    title: "Tips de sonido",
     video: true,
     resume: false,
     meet: false,
@@ -451,7 +488,7 @@ let pages = [
   {
     number: 25,
     section: false,
-    title: "Grabación de videos",
+    title: "Grabar video de prueba",
     video: false,
     resume: true,
     meet: false,
