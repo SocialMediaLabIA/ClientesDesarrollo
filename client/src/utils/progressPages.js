@@ -707,7 +707,7 @@ let pages = [
   //Seccion 7
   //Video 16
   {
-    number: 35,
+    number: 38,
     section: true,
     title: "Análisis y optimización",
     video: true,
@@ -723,9 +723,25 @@ let pages = [
     documentArray: "",
   },
   {
-    number: 36,
+    number: 39,
     section: false,
-    title: "Análisis y optimización",
+    title: "Cómo leer las métricas!",
+    video: true,
+    resume: false,
+    meet: false,
+    document: false,
+    videoSource:
+      "https://drive.google.com/file/d/1hHMA-5frzgnP9sSnYdBbMJhUA5Ym-Baq/preview",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: meetBelen,
+    meetName: "Belén",
+    documentArray: "",
+  },
+  {
+    number: 40,
+    section: false,
+    title: "Rellenar documentos",
     video: false,
     resume: true,
     meet: false,
@@ -744,9 +760,9 @@ let pages = [
     ],
   },
   {
-    number: 37,
+    number: 41,
     section: false,
-    title: "Análisis y optimización",
+    title: "Llamada a Belén",
     video: false,
     resume: false,
     meet: true,
@@ -754,14 +770,30 @@ let pages = [
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
-    meetImage: meetBelen,
-    meetName: "Belén",
+      meetImage: meetBelen,
+      meetImageLarge: meetBelenLarge,
+      meetName: "Belén",
     documentArray: "",
   },
   //Seccion 8
   {
-    number: 38,
+    number: 42,
     section: true,
+    title: "¡Terminaste tu recorrido!",
+    video: false,
+    resume: false,
+    meet: false,
+    document: false,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: celebration,
+    meetName: "Belén",
+    documentArray: "",
+  },
+  {
+    number: 43,
+    section: false,
     title: "¡Terminaste tu recorrido!",
     video: false,
     resume: false,
