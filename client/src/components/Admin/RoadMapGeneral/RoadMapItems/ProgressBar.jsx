@@ -120,7 +120,7 @@ export default function ProgressBar({
                         transition={{ duration: 0.5, delay: 0.1 }}
                         className="h-5 p-1 mb-2 "
                       >
-                        {item.title.toUpperCase()}
+                        {item.number} {item.title.toUpperCase()}
                       </motion.h1>
                     ) : (
                       <h1 className="h-5"></h1>
@@ -187,7 +187,7 @@ export default function ProgressBar({
                               transition={{ duration: 0.5, delay: 0.1 }}
                               className="h-5 w-[300px] hover:text-gray-300"
                             >
-                              {item.title}
+                              {item.number} {item.title}
                             </motion.h1>
                           ) : (
                             <h1 className="h-5"></h1>
@@ -213,7 +213,7 @@ export default function ProgressBar({
                               transition={{ duration: 0.5, delay: 0.1 }}
                               className="h-5 w-[300px]"
                             >
-                              {item.title}
+                              {item.number} {item.title}
                             </motion.h1>
                           ) : (
                             <h1 className="h-5"></h1>
