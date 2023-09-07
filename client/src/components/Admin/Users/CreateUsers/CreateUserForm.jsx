@@ -74,7 +74,17 @@ export default function CreateUserForm() {
     ) {
       return;
     }
-
+    const body = {
+      role: user.role,
+      name: user.name,
+      lastname: user.lastname,
+      instagram: user.instagram,
+      email: user.email,
+      password: "",
+      isActive: true,
+      access: false,
+      progress: 0,
+    };
     dispatch(createUser(user));
 
     setUser({
