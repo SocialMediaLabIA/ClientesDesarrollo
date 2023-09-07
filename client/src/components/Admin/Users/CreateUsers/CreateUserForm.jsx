@@ -101,6 +101,15 @@ export default function CreateUserForm() {
     });
   };
 
+  function extractInstagramUsername(instagramLink) {
+    const trimmedLink = instagramLink.endsWith("/")
+      ? instagramLink.slice(0, -1)
+      : instagramLink;
+    const parts = trimmedLink.split("/");
+    const username = parts.pop();
+    return username;
+  }
+
   return (
     <div className="flex items-center justify-center w flex-col gap-5">
       <div className="flex flex-col items-start justify-center gap-1">
