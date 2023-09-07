@@ -64,6 +64,15 @@ function SideBar({ handleSidebar, userById, idParams }) {
                 </div>
                 <div>Crear Usuarios</div>
               </li>
+              <li
+                className="flex gap-2 px-3 text-[18px] cursor-pointer  w-full h-10 rounded-lg items-center justify-center bg-[#383838] hover:bg-[#484848]"
+                onClick={() => handleSidebar("roadmap")}
+              >
+                <div className="text-lg">
+                  <IoPeople className="text-[#e0dddd]" />
+                </div>
+                <div>Road Map</div>
+              </li>
             </ul>
           </div>
         </div>
