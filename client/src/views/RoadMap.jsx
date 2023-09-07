@@ -197,7 +197,7 @@ export default function RoadMap() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2.5 }}
-        className=" mt-20 bg-gray-200 rounded-full dark:bg-gray-700 w-[60%] xl:w-[30%] ml-8 md:ml-0 relative h-5"
+        className=" mt-10 bg-gray-200 rounded-full dark:bg-gray-700 w-[60%] xl:w-[30%] ml-8 md:ml-0 relative h-5"
       >
         <div
           className=" bg-[#c905faad] text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full h-5"
@@ -222,7 +222,7 @@ export default function RoadMap() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2 }}
-        className="absolute bottom-20 flex justify-center md:w-full md:gap-64  items-center gap-52   ml-8 md:ml-0 z-0"
+        className="absolute bottom-20 flex justify-center md:w-full  items-center gap-52 md:gap-[1000px]  ml-8 md:ml-0 z-0 md:bottom-2/4 "
       >
         {progress !== 1 && progress !== 43 && (
           <>
@@ -234,7 +234,7 @@ export default function RoadMap() {
               <HiChevronLeft
                 onClick={() => directionProgress("prev")}
                 // className=" text-black font-bold text-xl w-8 h-8 bg-white rounded-full p-5"
-                className="text-white bg-[#c905faad] hover:bg-[#e505fac7] font-bold text-xl w-12 h-12 p-2 rounded-full  cursor-pointer"
+                className="text-white bg-[#c905faad] hover:bg-[#e505fac7] font-bold text-xl w-12 h-12 p-2 rounded-full cursor-pointer"
               />
             </motion.div>
             <motion.div
@@ -287,7 +287,7 @@ export default function RoadMap() {
                   target="_blank" // Abre el enlace en una nueva pestaña/tab
                   rel="noopener noreferrer" // Recomendado al abrir enlaces externos
                   onClick={() => directionProgress("")}
-                  className="w-fit bg-[#c905faad] hover:bg-[#e505fac7] text-white font-bold py-2 px-2 rounded-md cursor-pointer"
+                  className="w-fit bg-[#c905faad] hover:bg-[#e505fac7] text-white font-bold py-4 px-2 rounded-md cursor-pointer"
                 >
                   {`Agendar con ${
                     pages[progress] ? pages[progress].meetName : ""
@@ -300,7 +300,7 @@ export default function RoadMap() {
                   target="_blank" // Abre el enlace en una nueva pestaña/tab
                   rel="noopener noreferrer" // Recomendado al abrir enlaces externos
                   onClick={() => directionProgress("")}
-                  className="w-fit bg-[#c905faad] hover:bg-[#e505fac7] text-white font-bold py-2 px-2 rounded-md cursor-pointer"
+                  className="w-fit bg-[#c905faad] hover:bg-[#e505fac7] text-white font-bold py-2 px-4 rounded-md cursor-pointer"
                 >
                   {`Agendar con ${
                     pages[progress] ? pages[progress].meetName : ""
@@ -313,7 +313,7 @@ export default function RoadMap() {
                   target="_blank" // Abre el enlace en una nueva pestaña/tab
                   rel="noopener noreferrer" // Recomendado al abrir enlaces externos
                   onClick={() => directionProgress("")}
-                  className="w-fit bg-[#c905faad] hover:bg-[#e505fac7] text-white font-bold py-2 px-2 rounded-md cursor-pointer"
+                  className="w-fit bg-[#c905faad] hover:bg-[#e505fac7] text-white font-bold py-4 px-4 rounded-md cursor-pointer"
                 >
                   {`Agendar con ${
                     pages[progress] ? pages[progress].meetName : ""
