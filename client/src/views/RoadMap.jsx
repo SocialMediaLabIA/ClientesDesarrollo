@@ -22,9 +22,11 @@ export default function RoadMap() {
   const { search } = useLocation();
   const idParams = search.slice(4);
   const { progressNumber } = useSelector((state) => state);
-console.log(progressNumber)
-let [progress, setProgress] = useState(progressNumber || 1);
-console.log(progress)
+  console.log(progressNumber);
+  let [progress, setProgress] = useState(progressNumber || 1);
+  let [percentage, setPercentage] = useState("0%");
+  let [openBar, setOpenBar] = useState(false);
+  console.log(progress);
 
   const [loader, setLoader] = useState(true);
   const loaderFuncion = (status) => {
@@ -36,78 +38,78 @@ console.log(progress)
   useEffect(() => {
     loaderFuncion(true);
     dispatch(getProgressUser(idParams)).then(() => {
-      console.log(progress)
+      console.log(progress);
       setProgress(progressNumber);
       loaderFuncion(false);
     });
+    setPercentage(
+      `${(
+        (100 * (pages[progressNumber].number + 1)) /
+        pages.length
+      ).toFixed()}%`
+    );
   }, [dispatch, progressNumber]);
 
   const directionProgress = async (direction) => {
-    if (direction === "next" && progress < 43) {
-      if(pages[progress + 1].section === true){
-        console.log("wwwwwwwwwwwwwwwwwwwww")
-        setProgress(progress + 2)
+    if (direction === "next" && progress < 43 && progressNumber < 43) {
+      if (pages[progress + 1].section === true) {
+        console.log("wwwwwwwwwwwwwwwwwwwww");
+        setProgress(progress + 2);
         loaderFuncion(true);
-        dispatch(setProgressUser(idParams, 2))
-          .then(() => {
-            dispatch(getProgressUser(idParams));
-            loaderFuncion(true);
-          })
-          setTimeout(() => {
-            loaderFuncion(false);
-          }, 3000);
+        dispatch(setProgressUser(idParams, 2)).then(() => {
+          dispatch(getProgressUser(idParams));
+          loaderFuncion(true);
+        });
+        setTimeout(() => {
+          loaderFuncion(false);
+        }, 3000);
         loaderFuncion(true);
-      }else{
+      } else {
         setProgress(++progress);
         loaderFuncion(true);
-        dispatch(setProgressUser(idParams, 1))
-          .then(() => {
-            dispatch(getProgressUser(idParams));
-            loaderFuncion(true);
-          })
-          setTimeout(() => {
-            loaderFuncion(false);
-          }, 3000);
+        dispatch(setProgressUser(idParams, 1)).then(() => {
+          dispatch(getProgressUser(idParams));
+          loaderFuncion(true);
+        });
+        setTimeout(() => {
+          loaderFuncion(false);
+        }, 3000);
         loaderFuncion(true);
       }
     }
-    if (direction === "prev" && progress > 0) {
-      if(progress === 1){
-        return
+    if (direction === "prev" && progress > 0 && progressNumber > 0) {
+      if (progress === 1) {
+        return;
       }
       loaderFuncion(true);
-      if(pages[progress - 1].section === true){
-        setProgress(progress - 2)
-        dispatch(setProgressUser(idParams, -2))
-        .then(() => {
+      if (pages[progress - 1].section === true) {
+        setProgress(progress - 2);
+        dispatch(setProgressUser(idParams, -2)).then(() => {
           dispatch(getProgressUser(idParams));
           loaderFuncion(true);
-        })
+        });
         setTimeout(() => {
           loaderFuncion(false);
         }, 3000);
-      loaderFuncion(true);
-
-      }else{
+        loaderFuncion(true);
+      } else {
         setProgress(--progress);
-        dispatch(setProgressUser(idParams, -1))
-        .then(() => {
+        dispatch(setProgressUser(idParams, -1)).then(() => {
           dispatch(getProgressUser(idParams));
           loaderFuncion(true);
-        })
+        });
         setTimeout(() => {
           loaderFuncion(false);
         }, 3000);
-      loaderFuncion(true);
+        loaderFuncion(true);
       }
-
     }
   };
   // "text-[#00DFFD] " : "text-[#fafafa]"
   return (
     <div className=" font-poppins flex flex-col justify-between items-center h-screen w-full bg-black relative">
       {loader ? (
-        <div className="absolute  h-screen w-screen bg-black opacity-95 pb-10 flex justify-center items-center  z-50">
+        <div className="absolute  h-screen w-screen bg-black opacity-80 pb-10 flex justify-center items-center  z-10">
           <div className="flex flex-col gap-5 items-center justify-center w-[30rem] p-5 h-fit rounded-xl ">
             {/* <h2 className="text-white text-[2rem]">Enviando Leads!</h2> */}
 
@@ -146,15 +148,17 @@ console.log(progress)
             progress={progress}
             setProgress={setProgress}
             loaderFuncion={loaderFuncion}
+            openBar={openBar}
+            setOpenBar={setOpenBar}
           />
         )}
         {progress === 0 && (
           // <div className="w-full flex justify-center items-center text-white mt-20"></div>
           <ProgressBar
-          progress={progress}
-          setProgress={setProgress}
-          loaderFuncion={loaderFuncion}
-        />
+            progress={progress}
+            setProgress={setProgress}
+            loaderFuncion={loaderFuncion}
+          />
         )}
       </motion.div>
 
@@ -162,7 +166,7 @@ console.log(progress)
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2.5 }}
-        className="flex justify-around items-center rounded-xl w-[300px] bg-[#3b393b67] mt-10 md:mt-5 md:w-[800px] xl:w-[1000px]"
+        className="flex justify-around items-center rounded-xl w-[300px] bg-[#3b393b67] mt-10 md:mt-5 md:w-[800px] xl:w-[1000px] ml-8 md:ml-0"
       >
         <motion.img
           src={logo}
@@ -173,7 +177,7 @@ console.log(progress)
           transition={{ duration: 0.5 }}
         />
         <motion.h1
-          className="text-base text-center text-white font-thin text-[18px] md:text-[20px]"
+          className="text-base text-center text-white font-bold text-[18px] md:text-[20px]"
           initial={{}}
           animate={{}}
           transition={{ duration: 1 }}
@@ -188,20 +192,33 @@ console.log(progress)
         >
           {pages[progress] ? pages[progress].number : ""}
         </motion.h1> */}
-        <motion.div
+        {/* <motion.div
           initial={{ x: 50 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5 }}
         >
           <HiOutlineUserCircle className="w-12 h-12 p-1 font-thin text-white md:w-16 md:h-16" />
-        </motion.div>
+        </motion.div> */}
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2.5 }}
+        className=" bg-gray-200 rounded-full dark:bg-gray-700 w-[40%] xl:w-[30%] ml-8 md:ml-0"
+      >
+        <div
+          className="bg-[#c905faad] text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+          style={{ width: percentage }}
+        >
+          {percentage}
+        </div>
       </motion.div>
 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2.5 }}
-        className={progress === 0 ? "" : "ml-10 md:ml-0"}
+        className={progress === 0 ? "" : "ml-8 md:ml-0"}
       >
         <ProgressHeaders progress={progress} />
       </motion.div>
@@ -212,12 +229,12 @@ console.log(progress)
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2 }}
-        className="flex justify-center md:w-full md:gap-64  items-center gap-56  mb-20 "
+        className="flex justify-center md:w-full md:gap-64  items-center gap-52  mb-20 z-0 ml-8 md:ml-0"
       >
         {progress !== 1 && progress !== 43 && (
           <>
             <motion.div
-              initial={{ x: -50 }}
+              initial={{ x: -20 }}
               animate={{ x: 0 }}
               transition={{ duration: 2 }}
             >
@@ -229,7 +246,7 @@ console.log(progress)
             </motion.div>
             <motion.div
               initial={{ x: 20 }}
-              animate={{ x: 0 }}
+              animate={{ x: 0  }}
               transition={{ duration: 2 }}
             >
               <HiChevronRight
@@ -270,7 +287,7 @@ console.log(progress)
                 target="_blank" // Abre el enlace en una nueva pestaña/tab
                 rel="noopener noreferrer" // Recomendado al abrir enlaces externos
                 onClick={() => directionProgress("")}
-                className="bg-[#c905faad] hover:bg-[#e505fac7] text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
+                className="bg-[#c905faad] hover:bg-[#e505fac7] text-white font-semibold  py-2 px-2 text-sm rounded-md absolute cursor-pointer "
               >
                 {`Agendar con ${
                   pages[progress] ? pages[progress].meetName : ""
@@ -283,7 +300,7 @@ console.log(progress)
                 target="_blank" // Abre el enlace en una nueva pestaña/tab
                 rel="noopener noreferrer" // Recomendado al abrir enlaces externos
                 onClick={() => directionProgress("")}
-                className="bg-[#c905faad] text-white font-semibold  py-2 px-4   rounded-xl absolute cursor-pointer"
+                className="bg-[#c905faad] text-white font-semibold  py-2 px-2 text-sm rounded-md absolute cursor-pointer"
               >
                 {`Agendar con ${
                   pages[progress] ? pages[progress].meetName : ""
@@ -296,7 +313,7 @@ console.log(progress)
                 target="_blank" // Abre el enlace en una nueva pestaña/tab
                 rel="noopener noreferrer" // Recomendado al abrir enlaces externos
                 onClick={() => directionProgress("")}
-                className="bg-[#c905faad] text-white font-semibold  py-2 px-4 rounded-xl absolute cursor-pointer"
+                className="bg-[#c905faad] text-white font-semibold  py-2 px-2 text-sm rounded-md absolute cursor-pointer"
               >
                 {`Agendar con ${
                   pages[progress] ? pages[progress].meetName : ""
