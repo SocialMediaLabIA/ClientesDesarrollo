@@ -51,9 +51,9 @@ const UsersSchema = new mongoose.Schema(
       default: 1,
     },
     social: {
-      type: Array,
+      type: Object,
       required: true,
-      default: [],
+      default: {},
     },
   },
   { timestamps: true }
