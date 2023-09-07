@@ -8,7 +8,7 @@ import {
   validateName,
   validatePassword,
   validateRole,
-} from "../../RoadMapGeneral/CreatePage/validate";
+} from "./validate";
 
 export default function CreateUserForm() {
   const dispatch = useDispatch();
