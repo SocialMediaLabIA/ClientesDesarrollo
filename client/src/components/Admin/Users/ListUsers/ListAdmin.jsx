@@ -86,7 +86,7 @@ export default function ListAdmin() {
 
   const [pageStyle, setPageStyle] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
-  const [cardXPage, setCardXpage] = useState(8);
+  const [cardXPage, setCardXpage] = useState(10);
   const indexLastCard = currentPage * cardXPage;
   const indexFirstCard = indexLastCard - cardXPage;
   const currentCard = filteredUsers.slice(indexFirstCard, indexLastCard);

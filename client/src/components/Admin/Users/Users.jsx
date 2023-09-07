@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUserById } from "../../../redux/User/ActionUser/getUserById";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import RoadMapAdm from "../RoadMapGeneral/RoadMapAdm";
 
 export default function Users() {
   const [sidebar, setSidebar] = useState("admin");
@@ -31,25 +32,27 @@ export default function Users() {
     <>
       {role === "admin" && access === true && isActive === true ? (
         <div className="flex w-full h-full font-poppins">
-          <SideBar
-            handleSidebar={handleSidebar}
-            idParams={idParams}
-            userById={userById}
-          />
-          <div className="flex w-full h-full  flex-col gap-5 p-10">
-            <div className=" text-[1.5rem] font-semibold bg-[#282828] p-5 rounded-lg">
-              <p>Panel de administrador</p>
-            </div>
+          {sidebar !== "roadmap" && (
+            <SideBar
+              handleSidebar={handleSidebar}
+              idParams={idParams}
+              userById={userById}
+            />
+          )}
+          <div className="flex w-full h-full  flex-col gap-5">
             {sidebar === "admin" && <Panel userById={userById} />}
             {sidebar === "usuario" && <ListAdmin />}
             {sidebar === "usuarioBanned" && <ListAdminBanned />}
             {sidebar === "crearUsuario" && <CreateUsers />}
+            {sidebar === "roadmap" && (
+              <RoadMapAdm handleSidebar={handleSidebar} />
+            )}
           </div>
         </div>
       ) : (
         <div className="flex w-full h-full font-poppins">
           <div className="flex w-full h-full  flex-col gap-5 p-10">
-            <div className="flex flex-col gap-2 items-center justify-center w-full h-full bg-[#282828] rounded-lg">
+            <div className="flex flex-col gap-2 items-center justify-center w-full h-full bg-[#282828] ">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
