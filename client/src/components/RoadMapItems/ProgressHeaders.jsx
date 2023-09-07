@@ -40,7 +40,7 @@ export default function ProgressHeaders({ progress }) {
           src={pages[progress] && pages[progress].videoSource} // Cambia esta URL por la URL correcta del video embebido
           frameBorder="0" // Cambiado a frameBorder
           allowFullScreen // Cambiado a allowFullScreen
-          className="mt-5 w-[270px] md:w-[600px] xl:w-[600px]"
+          className="mt-20 w-[270px] md:w-[600px] xl:w-[600px]"
         />
       )}
       {/* MEETS */}
@@ -50,7 +50,7 @@ export default function ProgressHeaders({ progress }) {
             src={selectedImage}
             // src={pages[progress] && pages[progress].meetImage}
             alt="imagen meet"
-            className="mt-5 w-[270px] h-[270px]  md:w-[200px] xl:w-[300px]  md:h-[200px] xl:h-[300px] rounded-lg"
+            className="mt-20 w-[270px] h-[270px]  md:w-[200px] xl:w-[300px]  md:h-[200px] xl:h-[300px] rounded-lg"
           />
         </div>
       )}
