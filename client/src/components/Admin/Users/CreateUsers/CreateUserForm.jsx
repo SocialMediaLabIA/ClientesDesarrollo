@@ -174,7 +174,7 @@ export default function CreateUserForm() {
         <label className="font-bold ml-2 text-white">Contraseña:</label>
         <input
           className="rounded-md bg-[#D9D9D9] h-10 w-80 pl-5 text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25"
-          type="password"
+          type="text"
           name="password"
           value={user.password}
           onChange={handleChange}

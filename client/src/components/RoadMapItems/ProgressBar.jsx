@@ -23,16 +23,16 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion }) {
     <div
       className={
         openBar
-          ? " flex flex-col justify-start items-center w-[350px] text-white text-sm   bg-[#6b277c] rounded-r-lg h-[90%] max-h-[100%] md:h-screen  md:max-h-[100%] transition-transform transform translate-x-0 duration-500 ease-in-out delay-150"
-          : "  flex flex-col justify-start items-center w-[45px] text-white text-sm   bg-[#6b277c] rounded-r-lg h-[90%] max-h-[100%] md:h-screen  md:max-h-[100%]transition-transform transform translate-x-0 duration-500 ease-in-out delay-150"
+          ? " flex flex-col justify-start items-center w-[350px] text-white text-sm   bg-[#6b277c]  h-[90%] max-h-[100%] md:h-screen  md:max-h-[100%] transition-transform transform translate-x-0 duration-500 ease-in-out delay-150"
+          : "  flex flex-col justify-start items-center w-[45px] text-white text-sm   bg-[#6b277c]  h-[90%] max-h-[100%] md:h-screen  md:max-h-[100%]transition-transform transform translate-x-0 duration-500 ease-in-out delay-150"
       }
     >
       {/* <div className="w-full flex flex-col justify-start items-start h-screen max-h-[500px] md:max-h-[100%] transition-transform transform translate-x-0 duration-500 ease-in-out delay-150"> */}
       <div
         className={
           openBar
-            ? "bg-[#441769bd]  cursor-pointer  flex items-center justify-start h-[80px] md:h-[70px] w-full text-white hover:bg-[#4a2353bd] rounded-tr-lg"
-            : "bg-[#441769bd]  cursor-pointer  flex items-center justify-start h-[80px] md:h-[70px] w-full text-white hover:bg-[#4a2353bd] rounded-tr-lg"
+            ? "bg-[#441769bd]  cursor-pointer  flex items-center justify-start h-[80px] md:h-[70px] w-full text-white hover:bg-[#4a2353bd]"
+            : "bg-[#441769bd]  cursor-pointer  flex items-center justify-start h-[80px] md:h-[70px] w-full text-white hover:bg-[#4a2353bd] "
         }
         onClick={setOpenBarHandler}
       >
