@@ -177,16 +177,15 @@ export default function RoadMap() {
           transition={{ duration: 0.5 }}
         />
         <div className="w-full flex justify-start items-center">
-
-        <motion.h1
-          className="text-base text-center text-white font-bold text-[18px] md:text-[20px] ml-5 pr-4"
-          initial={{}}
-          animate={{}}
-          transition={{ duration: 1 }}
+          <motion.h1
+            className="text-base text-center text-white font-bold text-[18px] md:text-[20px] ml-5 pr-4"
+            initial={{}}
+            animate={{}}
+            transition={{ duration: 1 }}
           >
-          {pages[progress] ? pages[progress].title : ""}
-        </motion.h1>
-          </div>
+            {pages[progress] ? pages[progress].title : ""}
+          </motion.h1>
+        </div>
         {/* <motion.h1
           className="text-base text-center text-white font-thin text-[18px] md:text-[20px]"
           initial={{}}
@@ -249,7 +248,7 @@ export default function RoadMap() {
             </motion.div>
             <motion.div
               initial={{ x: 20 }}
-              animate={{ x: -10  }}
+              animate={{ x: -10 }}
               transition={{ duration: 2 }}
             >
               <HiChevronRight
