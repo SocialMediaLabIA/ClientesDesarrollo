@@ -83,7 +83,8 @@ export default function CreateUserForm() {
       password: user.password,
       isActive: user.isActive,
       access: user.access,
-      progress: 0,
+      progress: user.progress,
+      social: [{ instagram: { link: user.instagram } }],
     };
     dispatch(createUser(user));
 
