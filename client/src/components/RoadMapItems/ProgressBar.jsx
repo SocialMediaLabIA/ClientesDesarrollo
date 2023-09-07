@@ -5,7 +5,7 @@ import pages from "../../utils/progressPages";
 import { useDispatch, useSelector } from "react-redux";
 import { motion } from "framer-motion";
 
-export default function ProgressBar({ progress, setProgress, loaderFuncion, openBar, setOpenBar}) {
+export default function ProgressBar({ progress, setProgress, loaderFuncion, openBar, setOpenBar, progressNumber}) {
 
 
 
@@ -24,7 +24,7 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
   return (
     <div
       className={
-        openBar ? "h-screen w-screen  flex justify-start items-center" : ""
+        openBar ? "z-50 h-screen w-screen  flex justify-start items-center" : ""
       }
     >
       <div
@@ -75,7 +75,7 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
                   key={index}
                   className="my-2 p-1 flex justify-center items-center"
                 >
-                  {item.number < progress && (
+                  {item.number < progressNumber && (
                     <PiFlagPennantFill
                       // onClick={() => {
                       //   pressProgressHandler(item.number);
@@ -83,7 +83,7 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
                       className="ml-2 text-[#00DFFD]"
                     />
                   )}
-                  {item.number > progress && (
+                  {item.number > progressNumber && (
                     <PiFlagPennantFill
                       // onClick={() => {
                       //   pressProgressHandler(item.number);
@@ -91,7 +91,7 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
                       className="ml-2 text-[#fafafa]"
                     />
                   )}
-                  {item.number === progress && (
+                  {item.number === progressNumber && (
                     <PiFlagPennantFill
                       // onClick={() => {
                       //   pressProgressHandler(item.number);
@@ -136,7 +136,7 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
                           : "py-1 ml-2 flex justify-start items-center w-fit cursor-pointer "
                       }
                     >
-                      {item.number === progress && (
+                      {item.number === progressNumber && (
                         <p
                           onClick={() => {
                             pressProgressHandler(item.number);
@@ -144,15 +144,15 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
                           className=" my-1 border-4 border-[#4de75a] bg-[#1bff1352] rounded-full w-6 h-6 p-2  flex justify-center items-center hover:scale-110 cursor-pointer"
                         ></p>
                       )}
-                      {item.number < progress && (
+                      {item.number < progressNumber && (
                         <p
                           onClick={() => {
                             pressProgressHandler(item.number);
                           }}
-                          className="my-1 border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-6 h-6 p-2  flex justify-center items-center hover:scale-110"
+                          className="my-1 border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-6 h-6 p-2  flex justify-center items-center hover:scale-110 "
                         ></p>
                       )}
-                      {item.number > progress && (
+                      {item.number > progressNumber && (
                         <p
                           onClick={() => {
                             pressProgressHandler(item.number);
