@@ -50,8 +50,8 @@ let pages = [
 
   {
     number: 3,
-    section: false,
     title: "Llamada a Belén",
+    section: false,
     video: false,
     meet: true,
     resume: false,
