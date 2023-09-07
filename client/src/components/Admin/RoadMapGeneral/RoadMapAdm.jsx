@@ -2,10 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { HiOutlineUserCircle } from "react-icons/hi";
-import logo from "../assets/smllogo.webp";
-import ProgressBar from "../components/RoadMapItems/ProgressBar";
-import ProgressHeaders from "../components/RoadMapItems/ProgressHeaders";
-import pages from "../utils/progressPages";
+import { IoLogOutOutline, IoAddOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 // import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import {
@@ -14,10 +11,14 @@ import {
   HiChevronDoubleLeft,
   HiChevronDoubleRight,
 } from "react-icons/hi2";
-import { setProgressUser } from "../redux/User/ActionUser/setProgressUser";
-import { getProgressUser } from "../redux/User/ActionUser/getProgressUser";
+import pages from "../../../utils/progressPages";
+import ProgressBar from "./RoadMapItems/ProgressBar";
+import ProgressHeaders from "./RoadMapItems/ProgressHeaders";
+import { setProgressUser } from "../../../redux/User/ActionUser/setProgressUser";
+import { getProgressUser } from "../../../redux/User/ActionUser/getProgressUser";
+import logo from "../../../assets/smllogo.webp";
 
-export default function RoadMap() {
+export default function RoadMapAdm({ handleSidebar }) {
   const dispatch = useDispatch();
   const { search } = useLocation();
   const idParams = search.slice(4);
@@ -106,6 +107,10 @@ export default function RoadMap() {
     }
   };
   // "text-[#00DFFD] " : "text-[#fafafa]"
+
+  const handleReloadClick = () => {
+    window.location.reload();
+  };
   return (
     <div className=" font-poppins flex flex-col justify-between items-center h-screen w-full bg-black relative">
       {loader ? (
@@ -185,6 +190,17 @@ export default function RoadMap() {
           >
             {pages[progress] ? pages[progress].title : ""}
           </motion.h1>
+        </div>
+
+        <div className="flex gap-2 items-center justify-center">
+          <IoAddOutline
+            onClick={() => handleSidebar("admin")}
+            className="w-12 h-12 cursor-pointer rounded-full p-2 hover:bg-[#484848]"
+          />
+          <IoLogOutOutline
+            onClick={() => handleSidebar("admin")}
+            className="w-12 h-12 cursor-pointer rounded-full pt-2 pb-2 pl-3 pr-1  hover:bg-[#484848]"
+          />
         </div>
         {/* <motion.h1
           className="text-base text-center text-white font-thin text-[18px] md:text-[20px]"

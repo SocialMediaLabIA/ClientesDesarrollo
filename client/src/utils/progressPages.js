@@ -8,48 +8,90 @@ import celebration from "../assets/celebration.png";
 
 let pages = [
   //Seccion inicial
+
   {
     number: 0,
-    title: "Social Media Lab",
+    section: true,
+    title: "Bienvenida",
     video: true,
     meet: false,
     resume: false,
     document: false,
-    videoSource:
-      "https://drive.google.com/file/d/1ZsMNYKzOjWENfHiz5dgRMfmqLKFtJ6kc/preview",
+    videoSource: "https://www.youtube.com/embed/DGm127uh4Bs",
+    meetName: "Belén",
+    documentArray: "",
+  },
+  {
+    number: 1,
+    section: false,
+    title: "Introducción al Roadmap",
+    video: true,
+    meet: false,
+    resume: false,
+    document: false,
+    videoSource: "https://www.youtube.com/embed/DGm127uh4Bs",
     meetName: "Belén",
     documentArray: "",
   },
 
-  //Seccion 1/////////////////////////////////////////////////////////////
+
+
+  //Seccion 1 Cimientos de marca
   {
-    number: 1,
-    title: "Cimientos de marca",
+    number: 2,
+    section: true,
+    title: "Cimientos de Marca",
+    video: false,
+    meet: false,
+    resume: false,
+    document: false,
+    videoSource: "https://www.youtube.com/embed/DGm127uh4Bs",
+    meetName: "Belén",
+    documentArray: "",
+  },
+
+  {
+    number: 3,
+    section: false,
+    title: "Llamada a Belén",
     video: false,
     meet: true,
     resume: false,
     document: false,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetBelen,
     meetImageLarge: meetBelenLarge,
     meetName: "Belén",
-    documentArray: [{name: "REFERENTES Y FUENTES DE CONTENIDO", link: "https://docs.google.com/document/d/1o2ENdGWN6YsiZUQg3KquCYe9qgL9PlftQadAoFc6sso/edit"}, {name: "CONSTRUCCIÓN DE LA MARCA PERSONAL", link: "https://docs.google.com/document/d/1W41U0RWkuHdqFlHU7tyxSNVu8tbJdXqJFUbG7gKcd1I/edit"}, {name: "CIMIENTOS MARCA PERSONAL ", link: "https://docs.google.com/document/d/1KDm8xLpfCvyNrCqVdvnxByLXpg1iTlR0SXRCVB-VMz4/edit"}],
+    documentArray: [
+      {
+        name: "REFERENTES Y FUENTES DE CONTENIDO",
+        link: "https://docs.google.com/document/d/1o2ENdGWN6YsiZUQg3KquCYe9qgL9PlftQadAoFc6sso/edit",
+      },
+      {
+        name: "CONSTRUCCIÓN DE LA MARCA PERSONAL",
+        link: "https://docs.google.com/document/d/1W41U0RWkuHdqFlHU7tyxSNVu8tbJdXqJFUbG7gKcd1I/edit",
+      },
+      {
+        name: "CIMIENTOS MARCA PERSONAL ",
+        link: "https://docs.google.com/document/d/1KDm8xLpfCvyNrCqVdvnxByLXpg1iTlR0SXRCVB-VMz4/edit",
+      },
+    ],
   },
   //----------------- 4 videos
-  //video2
+  //video 2
   {
-    number: 2,
-    title: "Cimientos de marca",
+    number: 4,
+    section: false,
+    title: "Cimientos de la marca personal",
     video: true,
     meet: false,
     resume: false,
     document: false,
-    videoSource:
-      "https://drive.google.com/file/d/1Q74ksr2nsby53BU6nR-P-6tHM0YteWQ2/preview",
+    videoSource: "https://www.youtube.com/embed/XY2ciaq438M",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetBelen,
     meetImageLarge: meetBelenLarge,
     meetName: "Belén",
@@ -57,16 +99,16 @@ let pages = [
   },
   //video3
   {
-    number: 3,
-    title: "Referentes",
+    number: 5,
+    section: false,
+    title: "Video: Referentes",
     video: true,
     meet: false,
     resume: false,
     document: false,
-    videoSource:
-      "https://drive.google.com/file/d/14FytcgOc9mqQM-qCXftYjAQlKFyCSoYZ/preview",
+    videoSource: "https://www.youtube.com/embed/nscboaFvK8Q",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetBelen,
     meetImageLarge: meetBelenLarge,
     meetName: "Belén",
@@ -74,187 +116,92 @@ let pages = [
   },
   //video4
   {
-    number: 4,
-    title: "Mi marca personal",
+    number: 6,
+    section: false,
+    title: "Video: Mi marca personal",
     video: true,
     meet: false,
     resume: false,
     document: false,
-    videoSource:
-      "https://drive.google.com/file/d/18ciQfSi8oqdUSRcgPDk51c8i2mkjQXEU/preview",
+    videoSource: "https://www.youtube.com/embed/ThHCZv5bRj8",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetBelen,
     meetImageLarge: meetBelenLarge,
     meetName: "Belén",
     documentArray: "",
   },
+
   //video5
   {
-    number: 5,
-    title: "Cimientos de marca",
-    video: true,
-    meet: false,
-    resume: false,
-    document: false,
-    videoSource:
-      "https://drive.google.com/file/d/1voKfCgfCyCkNdT_Zv9XnKCdscIdFGXzh/preview",
-    resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
-    meetImage: meetBelen,
-    meetImageLarge: meetBelenLarge,
-    meetName: "Belén",
-    documentArray: "",
-  },
-  //video6
-  {
-    number: 6,
-    title: "Cimientos de marca",
-    video: true,
-    meet: false,
-    resume: false,
-    document: false,
-    videoSource:
-      "https://drive.google.com/file/d/1Uye_Mjq-csh7CPrku4E8-atAFNcsX1su/preview",
-    resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
-    meetImage: meetBelen,
-    meetImageLarge: meetBelenLarge,
-    meetName: "Belén",
-    documentArray: "",
-  },
-  //video7
-  {
     number: 7,
-    title: "Cimientos de marca",
+    section: false,
+    title: "Video: Cimientos de la marca",
     video: true,
     meet: false,
     resume: false,
     document: false,
-    videoSource:
-      "https://drive.google.com/file/d/1vIn73ii822OV3qBrWdtM7QvcsMECXAKX/preview",
+    videoSource: "https://www.youtube.com/embed/_P_8Eeh-CQE",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetBelen,
     meetImageLarge: meetBelenLarge,
     meetName: "Belén",
     documentArray: "",
   },
-  //video8
+  
   {
     number: 8,
-    title: "Cimientos de marca",
-    video: true,
-    meet: false,
-    resume: false,
-    document: false,
-    videoSource:
-      "https://drive.google.com/file/d/123RPHQyB440kXP47mWKE-wAcehmr3r1X/preview",
-    resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
-    meetImage: meetBelen,
-    meetImageLarge: meetBelenLarge,
-    meetName: "Belén",
-    documentArray: "",
-  },
-  //fin videos---------
-
-  {
-    number: 9,
-    title: "Cimientos de marca",
+    section: false,
+    title: "Rellenar documentos",
     video: false,
     resume: true,
     meet: false,
     document: true,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetBelen,
     meetImageLarge: meetBelenLarge,
     meetName: "Belén",
-    documentArray: [{name: "REFERENTES Y FUENTES DE CONTENIDO", link: "https://docs.google.com/document/d/1o2ENdGWN6YsiZUQg3KquCYe9qgL9PlftQadAoFc6sso/edit"}, {name: "CONSTRUCCIÓN DE LA MARCA PERSONAL", link: "https://docs.google.com/document/d/1W41U0RWkuHdqFlHU7tyxSNVu8tbJdXqJFUbG7gKcd1I/edit"}, {name: "CIMIENTOS MARCA PERSONAL ", link: "https://docs.google.com/document/d/1KDm8xLpfCvyNrCqVdvnxByLXpg1iTlR0SXRCVB-VMz4/edit"}],
+    documentArray: [
+      {
+        name: "REFERENTES Y FUENTES DE CONTENIDO",
+        link: "https://docs.google.com/document/d/1o2ENdGWN6YsiZUQg3KquCYe9qgL9PlftQadAoFc6sso/edit",
+      },
+      {
+        name: "CONSTRUCCIÓN DE LA MARCA PERSONAL",
+        link: "https://docs.google.com/document/d/1W41U0RWkuHdqFlHU7tyxSNVu8tbJdXqJFUbG7gKcd1I/edit",
+      },
+      {
+        name: "CIMIENTOS MARCA PERSONAL ",
+        link: "https://docs.google.com/document/d/1KDm8xLpfCvyNrCqVdvnxByLXpg1iTlR0SXRCVB-VMz4/edit",
+      },
+    ],
   },
   {
-    number: 10,
-    title: "Cimientos de marca",
+    number: 9,
+    section: false,
+    title: "Llamada a Belén",
     video: false,
     resume: false,
     meet: true,
     document: false,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetBelen,
     meetImageLarge: meetBelenLarge,
     meetName: "Belén",
     documentArray: "",
   },
+
+
 
   //Seccion 2
   {
-    number: 11,
-    title: "Guiones",
-    video: true,
-    resume: false,
-    meet: false,
-    document: false,
-    videoSource: "https://drive.google.com/file/d/1czycg2HhCkG1M_A04adOea0eab506eJX/preview",
-    resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
-    meetImage: meetNicole,
-    meetImageLarge: meetNicoleLarge,
-    meetName: "Nicole",
-    documentArray: "",
-  },
-  {
-    number: 12,
-    title: "Guiones",
-    video: false,
-    resume: true,
-    meet: false,
-    document: true,
-    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
-    resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
-    meetImage: meetNicole,
-    meetImageLarge: meetNicoleLarge,
-    meetName: "Nicole",
-    documentArray: [{name: "100 ideas virales", link: "https://docs.google.com/document/d/1yTcWNdRNe6_HXU03y-dpjX7sXq3dEV53PciK-V-RXE4/edit"}],
-  },
-  {
-    number: 13,
-    title: "Guiones",
-    video: false,
-    resume: false,
-    meet: true,
-    document: false,
-    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
-    resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
-    meetImage: meetNicole,
-    meetImageLarge: meetNicoleLarge,
-    meetName: "Nicole",
-    documentArray: "",
-  },
-  {
-    number: 14,
-    title: "Guiones",
-    video: false,
-    resume: true,
-    meet: false,
-    document: true,
-    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
-    resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
-    meetImage: meetNicole,
-    meetImageLarge: meetNicoleLarge,
-    meetName: "Nicole",
-    documentArray: [{name: "100 guiones virales", link: "https://docs.google.com/document/d/1uq_aXhObQyW2xGmHtfoHvmG0NhQSTeJyRla5b6RyIvo/edit"}, {name: "Estructura de guión viral", link: "https://docs.google.com/document/d/1L5U3l7U-KOiRefmDKDRnbgmUsu8nKW3Jcu25gup3krk/edit"}],
-  },
-  //----------------- 4 videos
-  //video9
-  {
-    number: 15,
+    number: 10,
+    section: true,
     title: "Guiones",
     video: true,
     resume: false,
@@ -263,24 +210,121 @@ let pages = [
     videoSource:
       "https://drive.google.com/file/d/1czycg2HhCkG1M_A04adOea0eab506eJX/preview",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetNicole,
     meetImageLarge: meetNicoleLarge,
     meetName: "Nicole",
     documentArray: "",
   },
-  //video10
   {
-    number: 16,
-    title: "Guiones",
+    number: 11,
+    section: false,
+    title: "Video: 100 ideas virales",
     video: true,
     resume: false,
     meet: false,
     document: false,
     videoSource:
-      "https://drive.google.com/file/d/1XMW-Tf1mb8mQIV1LhINe-WQxhVjXwvkv/preview",
+      "https://drive.google.com/file/d/1czycg2HhCkG1M_A04adOea0eab506eJX/preview",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: meetNicole,
+    meetImageLarge: meetNicoleLarge,
+    meetName: "Nicole",
+    documentArray: "",
+  },
+  {
+    number: 12,
+    section: false,
+    title: "Rellenar documento",
+    video: false,
+    resume: true,
+    meet: false,
+    document: true,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: meetNicole,
+    meetImageLarge: meetNicoleLarge,
+    meetName: "Nicole",
+    documentArray: [
+      {
+        name: "100 ideas virales",
+        link: "https://docs.google.com/document/d/1yTcWNdRNe6_HXU03y-dpjX7sXq3dEV53PciK-V-RXE4/edit",
+      },
+    ],
+  },
+  {
+    number: 13,
+    section: false,
+    title: "Llamada a Nicole",
+    video: false,
+    resume: false,
+    meet: true,
+    document: false,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: meetNicole,
+    meetImageLarge: meetNicoleLarge,
+    meetName: "Nicole",
+    documentArray: "",
+  },
+  {
+    number: 14,
+    section: false,
+    title: "Leer documentos",
+    video: false,
+    resume: true,
+    meet: false,
+    document: true,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: meetNicole,
+    meetImageLarge: meetNicoleLarge,
+    meetName: "Nicole",
+    documentArray: [
+      {
+        name: "100 guiones virales",
+        link: "https://docs.google.com/document/d/1uq_aXhObQyW2xGmHtfoHvmG0NhQSTeJyRla5b6RyIvo/edit",
+      },
+      {
+        name: "Estructura de guión viral",
+        link: "https://docs.google.com/document/d/1L5U3l7U-KOiRefmDKDRnbgmUsu8nKW3Jcu25gup3krk/edit",
+      },
+    ],
+  },
+  //----------------- 4 videos
+  //video9
+  // {
+  //   number: 15,
+  //   section: false,
+  //   title: "Guiones",
+  //   video: true,
+  //   resume: false,
+  //   meet: false,
+  //   document: false,
+  //   videoSource: "https://www.youtube.com/embed/LOiGQHwfWcQ",
+  //   resumeText:
+  //     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+  //   meetImage: meetNicole,
+  //   meetImageLarge: meetNicoleLarge,
+  //   meetName: "Nicole",
+  //   documentArray: "",
+  // },
+  //video10
+  {
+    number: 15,
+    section: false,
+    title: "Estrucuta de guiones virales",
+    video: true,
+    resume: false,
+    meet: false,
+    document: false,
+    videoSource: "https://www.youtube.com/embed/6s-u_AspypE",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetNicole,
     meetImageLarge: meetNicoleLarge,
     meetName: "Nicole",
@@ -288,16 +332,16 @@ let pages = [
   },
   //video11
   {
-    number: 17,
-    title: "Guiones",
+    number: 16,
+    section: false,
+    title: "Chat GPT",
     video: true,
     resume: false,
     meet: false,
     document: false,
-    videoSource:
-      "https://drive.google.com/file/d/1IKwBTy1l2seVYv6mBbDvYvkyxb_kiY0p/preview",
+    videoSource: "https://www.youtube.com/embed/x2HTAJQrhUU",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetNicole,
     meetImageLarge: meetNicoleLarge,
     meetName: "Nicole",
@@ -305,16 +349,16 @@ let pages = [
   },
   //video12
   {
-    number: 18,
-    title: "Guiones",
+    number: 17,
+    section: false,
+    title: "Corrección de guiones de Chat GPT",
     video: true,
     resume: false,
     meet: false,
     document: false,
-    videoSource:
-      "https://drive.google.com/file/d/19-wIR3FGW82SmGP8_4-b_DvhH2z9RzMZ/preview",
+    videoSource: "https://www.youtube.com/embed/Mo2I3q8mjq4",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetNicole,
     meetImageLarge: meetNicoleLarge,
     meetName: "Nicole",
@@ -322,39 +366,42 @@ let pages = [
   },
   //----------------- fin
   {
-    number: 19,
-    title: "Guiones",
+    number: 18,
+    section: false,
+    title: "Escribir de 7 a 15 guiones",
     video: false,
     resume: true,
     meet: false,
     document: true,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
-    resumeText:
-      "Escribir de 7 a 15 guiones",
+    resumeText: "Escribir de 7 a 15 guiones",
     meetImage: meetNicole,
     meetImageLarge: meetNicoleLarge,
     meetName: "Nicole",
     documentArray: [],
   },
   {
-    number: 20,
-    title: "Guiones",
+    number: 19,
+    section: false,
+    title: "Llamada Nicole",
     video: false,
     resume: false,
     meet: true,
     document: false,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetNicole,
     meetImageLarge: meetNicoleLarge,
     meetName: "Nicole",
     documentArray: "",
   },
 
+
   //Seccion 3
   {
-    number: 21,
+    number: 20,
+    section: true,
     title: "Grabación de videos",
     video: false,
     resume: false,
@@ -362,7 +409,24 @@ let pages = [
     document: false,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: meetNicolas,
+    meetImageLarge: meetNicolasLarge,
+    meetName: "Nicolás",
+    documentArray: "",
+  },
+
+  {
+    number: 21,
+    section: false,
+    title: "Llamar a Nicolás",
+    video: false,
+    resume: false,
+    meet: true,
+    document: false,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetNicolas,
     meetImageLarge: meetNicolasLarge,
     meetName: "Nicolás",
@@ -372,15 +436,15 @@ let pages = [
   //video13
   {
     number: 22,
-    title: "Grabación de videos",
+    section: false,
+    title: "Como configurar tu setup para filmar",
     video: true,
     resume: false,
     meet: false,
     document: false,
-    videoSource:
-      "https://drive.google.com/file/d/1ksI9Pninqdbqp-UCX1aU419bNJ45p3Lj/preview",
+    videoSource: "https://www.youtube.com/embed/Q6Hwku9lRRI",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetNicolas,
     meetImageLarge: meetNicolasLarge,
     meetName: "Nicolás",
@@ -389,15 +453,15 @@ let pages = [
   //video14
   {
     number: 23,
-    title: "Grabación de videos",
+    section: false,
+    title: "Como hablar frente a la cámara",
     video: true,
     resume: false,
     meet: false,
     document: false,
-    videoSource:
-      "https://drive.google.com/file/d/1UDNJ-A1Ja2L1cSl_lhhjrFDruzGzoeW3/preview",
+    videoSource: "https://www.youtube.com/embed/8LXmcQhwmys",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetNicolas,
     meetImageLarge: meetNicolasLarge,
     meetName: "Nicolás",
@@ -406,15 +470,15 @@ let pages = [
   //video15
   {
     number: 24,
-    title: "Grabación de videos",
+    section: false,
+    title: "Tips de sonido",
     video: true,
     resume: false,
     meet: false,
     document: false,
-    videoSource:
-      "https://drive.google.com/file/d/1FPCmFaef7Q8xvjPMIZ12XS5t5nJ6qepq/preview",
+    videoSource: "https://www.youtube.com/embed/pQCL2oB4-cQ",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetNicolas,
     meetImageLarge: meetNicolasLarge,
     meetName: "Nicolás",
@@ -423,14 +487,14 @@ let pages = [
   //----------------- fin
   {
     number: 25,
-    title: "Grabación de videos",
+    section: false,
+    title: "Grabar video de prueba",
     video: false,
     resume: true,
     meet: false,
     document: true,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
-    resumeText:
-      "Grabar video de prueba!",
+    resumeText: "Grabar video de prueba!",
     meetImage: meetNicolas,
     meetImageLarge: meetNicolasLarge,
     meetName: "Nicolás",
@@ -438,14 +502,15 @@ let pages = [
   },
   {
     number: 26,
-    title: "Grabación de videos",
+    section: false,
+    title: "Llamada a Nicolás",
     video: false,
     resume: false,
     meet: true,
     document: false,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetNicolas,
     meetImageLarge: meetNicolasLarge,
     meetName: "Nicolás",
@@ -453,14 +518,14 @@ let pages = [
   },
   {
     number: 27,
-    title: "Grabación de videos",
+    section: false,
+    title: "Grabar de 7 a 15 videos",
     video: false,
     resume: true,
     meet: false,
     document: true,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
-    resumeText:
-      "Grabar de 7 a 15 videos!",
+    resumeText: "Grabar de 7 a 15 videos!",
     meetImage: meetNicolas,
     meetImageLarge: meetNicolasLarge,
     meetName: "Nicolás",
@@ -470,14 +535,29 @@ let pages = [
   //Seccion 4
   {
     number: 28,
+    section: true,
     title: "Edición",
     video: false,
     resume: true,
     meet: false,
     document: true,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
-    resumeText:
-      "Edición de 7 a 15 videos",
+    resumeText: "Edición de 7 a 15 videos",
+    meetImage: meetNicolas,
+    meetImageLarge: meetNicolasLarge,
+    meetName: "Nicolás",
+    documentArray: [],
+  },
+  {
+    number: 29,
+    section: false,
+    title: "Edición de 7 a 15 videos",
+    video: false,
+    resume: true,
+    meet: false,
+    document: true,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText: "Edición de 7 a 15 videos",
     meetImage: meetNicolas,
     meetImageLarge: meetNicolasLarge,
     meetName: "Nicolás",
@@ -486,64 +566,98 @@ let pages = [
 
   //Seccion 5
   {
-    number: 29,
+    number: 30,
+    section: true,
     title: "Pre - Publicación",
     video: true,
     resume: false,
     meet: false,
     document: false,
-    videoSource: "https://drive.google.com/file/d/1vIn73ii822OV3qBrWdtM7QvcsMECXAKX/preview",
+    videoSource:
+      "https://drive.google.com/file/d/1vIn73ii822OV3qBrWdtM7QvcsMECXAKX/preview",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetNicolas,
     meetImageLarge: meetNicolasLarge,
     meetName: "Nicolás",
     documentArray: "",
   },
   {
-    number: 30,
-    title: "Pre - Publicación",
-    video: false,
-    resume: true,
-    meet: false,
-    document: true,
-    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
-    resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
-    meetImage: meetNicolas,
-    meetName: "Nicolás",
-    documentArray: [{name: "HOJA DE ARRANQUE", link: "https://docs.google.com/document/d/1p7aPGGuJJ1rBdZoXS6mRlqW_M9m9rpFwKZcFhky8W6I/edit"}],
-  },
-  {
     number: 31,
-    title: "Pre - Publicación",
-    video: false,
+    section: false,
+    title: "Hoja de arranque",
+    video: true,
     resume: false,
-    meet: true,
+    meet: false,
     document: false,
-    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    videoSource:
+      "https://drive.google.com/file/d/1vIn73ii822OV3qBrWdtM7QvcsMECXAKX/preview",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
-    meetImage: meetNicole,
-    meetName: "Nicole",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: meetNicolas,
+    meetImageLarge: meetNicolasLarge,
+    meetName: "Nicolás",
     documentArray: "",
   },
   {
     number: 32,
-    title: "Pre - Publicación",
+    section: false,
+    title: "Rellenar Hoja de arranque",
     video: false,
     resume: true,
     meet: false,
     document: true,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetNicolas,
     meetName: "Nicolás",
-    documentArray: [{name: " CALENDARIO de Contenidos", link: "https://docs.google.com/spreadsheets/d/1MqY1PnkDwTRa7G6sOnzy4U1JxRX5XByMfq01jbXVkp4/edit#gid=0"}],
+    documentArray: [
+      {
+        name: "HOJA DE ARRANQUE",
+        link: "https://docs.google.com/document/d/1p7aPGGuJJ1rBdZoXS6mRlqW_M9m9rpFwKZcFhky8W6I/edit",
+      },
+    ],
   },
   {
     number: 33,
+    section: false,
+    title: "Llamada a Nicole",
+    video: false,
+    resume: false,
+    meet: true,
+    document: false,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+      meetImage: meetNicole,
+      meetImageLarge: meetNicoleLarge,
+      meetName: "Nicole",
+    documentArray: "",
+  },
+  {
+    number: 34,
+    section: false,
+    title: "Rellenar calendario",
+    video: false,
+    resume: true,
+    meet: false,
+    document: true,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: meetNicolas,
+    meetName: "Nicolás",
+    documentArray: [
+      {
+        name: " CALENDARIO de Contenidos",
+        link: "https://docs.google.com/spreadsheets/d/1MqY1PnkDwTRa7G6sOnzy4U1JxRX5XByMfq01jbXVkp4/edit#gid=0",
+      },
+    ],
+  },
+  {
+    number: 35,
+    section: false,
     title: "Pre - Publicación",
     video: false,
     resume: false,
@@ -551,23 +665,39 @@ let pages = [
     document: false,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
-    meetImage: meetBelen,
-    meetName: "Belén",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+      meetImage: meetBelen,
+      meetImageLarge: meetBelenLarge,
+      meetName: "Belén",
     documentArray: "",
   },
 
   //seccion 6
   {
-    number: 34,
+    number: 36,
+    section: true,
     title: "Publicación",
     video: false,
     resume: true,
     meet: false,
     document: true,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
-    resumeText:
-      "Publicar de 7 a 15 videos!",
+    resumeText: "Publicar de 7 a 15 videos!",
+    meetImage: meetBelen,
+    meetImageLarge: meetBelenLarge,
+    meetName: "Belén",
+    documentArray: [],
+  },
+  {
+    number: 37,
+    section: false,
+    title: "Publicar de 7 a 15 videos",
+    video: false,
+    resume: true,
+    meet: false,
+    document: true,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText: "Publicar de 7 a 15 videos!",
     meetImage: meetBelen,
     meetImageLarge: meetBelenLarge,
     meetName: "Belén",
@@ -575,52 +705,80 @@ let pages = [
   },
 
   //Seccion 7
+  //Video 16
   {
-    number: 35,
+    number: 38,
+    section: true,
     title: "Análisis y optimización",
     video: true,
     resume: false,
     meet: false,
     document: false,
-    videoSource: "https://drive.google.com/file/d/1hHMA-5frzgnP9sSnYdBbMJhUA5Ym-Baq/preview",
+    videoSource:
+      "https://drive.google.com/file/d/1hHMA-5frzgnP9sSnYdBbMJhUA5Ym-Baq/preview",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetBelen,
     meetName: "Belén",
     documentArray: "",
   },
   {
-    number: 36,
-    title: "Análisis y optimización",
+    number: 39,
+    section: false,
+    title: "Cómo leer las métricas!",
+    video: true,
+    resume: false,
+    meet: false,
+    document: false,
+    videoSource:
+      "https://drive.google.com/file/d/1hHMA-5frzgnP9sSnYdBbMJhUA5Ym-Baq/preview",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: meetBelen,
+    meetName: "Belén",
+    documentArray: "",
+  },
+  {
+    number: 40,
+    section: false,
+    title: "Rellenar documentos",
     video: false,
     resume: true,
     meet: false,
     document: true,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: meetBelen,
     meetImageLarge: meetBelenLarge,
     meetName: "Belén",
-    documentArray: [{name: "Métricas", link: "https://docs.google.com/spreadsheets/d/1wLlOSaxHmfdVZXKw9iCZfC78n-AIBCUf/edit#gid=1560284217"}],
+    documentArray: [
+      {
+        name: "Métricas",
+        link: "https://docs.google.com/spreadsheets/d/1wLlOSaxHmfdVZXKw9iCZfC78n-AIBCUf/edit#gid=1560284217",
+      },
+    ],
   },
   {
-    number: 37,
-    title: "Análisis y optimización",
+    number: 41,
+    section: false,
+    title: "Llamada a Belén",
     video: false,
     resume: false,
     meet: true,
     document: false,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
-    meetImage: meetBelen,
-    meetName: "Belén",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+      meetImage: meetBelen,
+      meetImageLarge: meetBelenLarge,
+      meetName: "Belén",
     documentArray: "",
   },
   //Seccion 8
   {
-    number: 38,
+    number: 42,
+    section: true,
     title: "¡Terminaste tu recorrido!",
     video: false,
     resume: false,
@@ -628,7 +786,22 @@ let pages = [
     document: false,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis, amet suscipit commodi, pariatur dolor! Debitis molestias dolor laboriosam itaque dolore ea autem perferendis voluptatibus libero at!",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
+    meetImage: celebration,
+    meetName: "Belén",
+    documentArray: "",
+  },
+  {
+    number: 43,
+    section: false,
+    title: "¡Terminaste tu recorrido!",
+    video: false,
+    resume: false,
+    meet: false,
+    document: false,
+    videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
+    resumeText:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
     meetImage: celebration,
     meetName: "Belén",
     documentArray: "",

@@ -19,6 +19,11 @@ const UsersSchema = new mongoose.Schema(
       required: true,
       default: "",
     },
+    instagram: {
+      type: String,
+      required: true,
+      default: "",
+    },
     email: {
       type: String,
       required: true,
@@ -43,7 +48,12 @@ const UsersSchema = new mongoose.Schema(
     progress: {
       type: Number,
       required: true,
-      default: 0,
+      default: 1,
+    },
+    social: {
+      type: Array,
+      required: true,
+      default: [],
     },
   },
   { timestamps: true }

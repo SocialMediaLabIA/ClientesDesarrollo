@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { PiFlagPennantFill } from "react-icons/pi";
-import pages from "../../utils/progressPages";
 import { useDispatch, useSelector } from "react-redux";
 import { motion } from "framer-motion";
+import pages from "../../../../utils/progressPages";
 
-export default function ProgressBar({ progress, setProgress, loaderFuncion, openBar, setOpenBar}) {
-
-
-
+export default function ProgressBar({
+  progress,
+  setProgress,
+  loaderFuncion,
+  openBar,
+  setOpenBar,
+}) {
   const setOpenBarHandler = () => {
     setOpenBar(!openBar);
   };
@@ -100,7 +103,7 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
                     />
                   )}
                   {/* TITULOS BANDERAS */}
-<div
+                  <div
                     className={
                       openBar
                         ? " ml-5 flex justify-start items-center  w-[280px] h-5  "
@@ -111,12 +114,12 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
                     // }}
                   >
                     {openBar ? (
-           
-                      <motion.h1 
-                      initial={{ x: -30, opacity: 0 }}
-                      animate={{ x: 10, opacity: 1 }}
-                      transition={{ duration: 0.5, delay: 0.1 }}
-                      className="h-5 p-1 mb-2 ">
+                      <motion.h1
+                        initial={{ x: -30, opacity: 0 }}
+                        animate={{ x: 10, opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        className="h-5 p-1 mb-2 "
+                      >
                         {item.title.toUpperCase()}
                       </motion.h1>
                     ) : (
@@ -164,9 +167,9 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
                       {/* TITULOS */}
                       {item.number !== progress && (
                         <div
-                        initial={{ x: -50, opacity: 0 }}
-                        animate={{ x: 10, opacity: 1 }}
-                        transition={{ duration: 0.4, delay: 0.3 }}
+                          initial={{ x: -50, opacity: 0 }}
+                          animate={{ x: 10, opacity: 1 }}
+                          transition={{ duration: 0.4, delay: 0.3 }}
                           className={
                             openBar
                               ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b80c] w-[280px] h-8  cursor-pointer"
@@ -178,11 +181,12 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
                         >
                           {" "}
                           {openBar ? (
-                            <motion.h1 
-                            initial={{ x: -50, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 0.5, delay: 0.1 }}
-                            className="h-5 w-[300px] hover:text-gray-300">
+                            <motion.h1
+                              initial={{ x: -50, opacity: 0 }}
+                              animate={{ x: 0, opacity: 1 }}
+                              transition={{ duration: 0.5, delay: 0.1 }}
+                              className="h-5 w-[300px] hover:text-gray-300"
+                            >
                               {item.title}
                             </motion.h1>
                           ) : (
@@ -203,10 +207,14 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
                         >
                           {" "}
                           {openBar ? (
-                                          <motion.h1 
-                                          initial={{ x: -50, opacity: 0 }}
-                                          animate={{ x: 0, opacity: 1 }}
-                                          transition={{ duration: 0.5, delay: 0.1 }} className="h-5 w-[300px]">{item.title}</motion.h1>
+                            <motion.h1
+                              initial={{ x: -50, opacity: 0 }}
+                              animate={{ x: 0, opacity: 1 }}
+                              transition={{ duration: 0.5, delay: 0.1 }}
+                              className="h-5 w-[300px]"
+                            >
+                              {item.title}
+                            </motion.h1>
                           ) : (
                             <h1 className="h-5"></h1>
                           )}
@@ -224,9 +232,7 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
       </div>
       <div
         className={openBar ? " bg-black opacity-80 w-screen h-screen z-10" : ""}
-      >
-
-      </div>
+      ></div>
     </div>
   );
 }
