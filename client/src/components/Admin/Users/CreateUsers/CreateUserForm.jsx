@@ -82,7 +82,7 @@ export default function CreateUserForm() {
       email: user.email,
       password: user.password,
       isActive: user.isActive,
-      access: false,
+      access: user.access,
       progress: 0,
     };
     dispatch(createUser(user));
