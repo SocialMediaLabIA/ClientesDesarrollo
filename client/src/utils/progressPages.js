@@ -34,8 +34,6 @@ let pages = [
     documentArray: "",
   },
 
-
-
   //Seccion 1 Cimientos de marca
   {
     number: 2,
@@ -149,7 +147,7 @@ let pages = [
     meetName: "Belén",
     documentArray: "",
   },
-  
+
   {
     number: 8,
     section: false,
@@ -195,8 +193,6 @@ let pages = [
     meetName: "Belén",
     documentArray: "",
   },
-
-
 
   //Seccion 2
   {
@@ -397,15 +393,14 @@ let pages = [
     documentArray: "",
   },
 
-
   //Seccion 3
   {
     number: 20,
-    section: true,
     title: "Grabación de videos",
+    section: true,
     video: false,
-    resume: false,
     meet: true,
+    resume: false,
     document: false,
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
@@ -630,9 +625,9 @@ let pages = [
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
-      meetImage: meetNicole,
-      meetImageLarge: meetNicoleLarge,
-      meetName: "Nicole",
+    meetImage: meetNicole,
+    meetImageLarge: meetNicoleLarge,
+    meetName: "Nicole",
     documentArray: "",
   },
   {
@@ -666,9 +661,9 @@ let pages = [
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
-      meetImage: meetBelen,
-      meetImageLarge: meetBelenLarge,
-      meetName: "Belén",
+    meetImage: meetBelen,
+    meetImageLarge: meetBelenLarge,
+    meetName: "Belén",
     documentArray: "",
   },
 
@@ -770,9 +765,9 @@ let pages = [
     videoSource: "https://www.youtube.com/embed/GUf81ofAZV0",
     resumeText:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum tempora dolorum dignissimos quasi explicabo error asperiores eum nesciunt ducimus quo molestiae totam sunt illum, accusantium quibusdam incidunt temporibus aperiam recusandae illo voluptatibus. Modi, soluta ullam molestias non cumque odio molestiae quia dignissimos fugit magnam eaque officiis",
-      meetImage: meetBelen,
-      meetImageLarge: meetBelenLarge,
-      meetName: "Belén",
+    meetImage: meetBelen,
+    meetImageLarge: meetBelenLarge,
+    meetName: "Belén",
     documentArray: "",
   },
   //Seccion 8
