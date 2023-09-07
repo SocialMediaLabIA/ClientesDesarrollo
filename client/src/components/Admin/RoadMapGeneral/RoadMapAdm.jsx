@@ -17,17 +17,17 @@ import ProgressHeaders from "./RoadMapItems/ProgressHeaders";
 import { setProgressUser } from "../../../redux/User/ActionUser/setProgressUser";
 import { getProgressUser } from "../../../redux/User/ActionUser/getProgressUser";
 import logo from "../../../assets/smllogo.webp";
+import CreatePages from "./CreatePage/CreatePages";
 
 export default function RoadMapAdm({ handleSidebar }) {
   const dispatch = useDispatch();
   const { search } = useLocation();
   const idParams = search.slice(4);
   const { progressNumber } = useSelector((state) => state);
-  console.log(progressNumber);
   let [progress, setProgress] = useState(progressNumber || 1);
   let [percentage, setPercentage] = useState("0%");
   let [openBar, setOpenBar] = useState(false);
-  console.log(progress);
+  let [createPage, setCreatePage] = useState(false);
 
   const [loader, setLoader] = useState(true);
   const loaderFuncion = (status) => {
@@ -39,7 +39,6 @@ export default function RoadMapAdm({ handleSidebar }) {
   useEffect(() => {
     loaderFuncion(true);
     dispatch(getProgressUser(idParams)).then(() => {
-      console.log(progress);
       setProgress(progressNumber);
       loaderFuncion(false);
     });
@@ -54,7 +53,6 @@ export default function RoadMapAdm({ handleSidebar }) {
   const directionProgress = async (direction) => {
     if (direction === "next" && progress < 43 && progressNumber < 43) {
       if (pages[progress + 1].section === true) {
-        console.log("wwwwwwwwwwwwwwwwwwwww");
         setProgress(progress + 2);
         loaderFuncion(true);
         dispatch(setProgressUser(idParams, 2)).then(() => {
@@ -108,8 +106,8 @@ export default function RoadMapAdm({ handleSidebar }) {
   };
   // "text-[#00DFFD] " : "text-[#fafafa]"
 
-  const handleReloadClick = () => {
-    window.location.reload();
+  const handleCreatePages = () => {
+    setCreatePage(!createPage);
   };
   return (
     <div className=" font-poppins flex flex-col justify-between items-center h-screen w-full bg-black relative">
@@ -141,6 +139,14 @@ export default function RoadMapAdm({ handleSidebar }) {
           </div>
         </div>
       ) : null}
+
+      {createPage && (
+        <div className="absolute flex justify-center items-center w-full h-screen z-50 top-0 right-0">
+          <div className="flex flex-col w-[30rem] h-fit p-10 bg-[#383838]">
+            <CreatePages setCreatePage={setCreatePage} />
+          </div>
+        </div>
+      )}
 
       <motion.div
         initial={{ x: -100, opacity: 0 }}
@@ -194,7 +200,7 @@ export default function RoadMapAdm({ handleSidebar }) {
 
         <div className="flex gap-2 items-center justify-center">
           <IoAddOutline
-            onClick={() => handleSidebar("admin")}
+            onClick={() => handleCreatePages()}
             className="w-12 h-12 cursor-pointer rounded-full p-2 hover:bg-[#484848]"
           />
           <IoLogOutOutline
