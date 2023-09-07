@@ -73,7 +73,7 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
               return (
                 <div
                   key={index}
-                  className="my-2  flex justify-center items-center"
+                  className="my-2 p-1 flex justify-center items-center"
                 >
                   {item.number < progress && (
                     <PiFlagPennantFill
@@ -132,8 +132,8 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
                     <div
                       className={
                         item.number === progress && openBar
-                          ? "ml-2 pl-1 flex justify-start items-center w-fit  bg-[#ffffff28] hover:bg-[#b8b3b33f]  rounded-md  cursor-pointer"
-                          : "ml-2 flex justify-start items-center w-fit cursor-pointer "
+                          ? "py-1 ml-2 pl-1 flex justify-start items-center w-fit  bg-[#ffffff28] hover:bg-[#b8b3b33f]  rounded-md  cursor-pointer"
+                          : "py-1 ml-2 flex justify-start items-center w-fit cursor-pointer "
                       }
                     >
                       {item.number === progress && (
