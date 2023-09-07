@@ -202,7 +202,7 @@ export default function ListAdmin() {
                   </div>
                   <div className=" text-center w-[14rem] min-w-[80px]">
                     <p className="flex text-center items-center justify-center">
-                      {extractInstagramUsername(item.instagram)}
+                      {extractInstagramUsername(item.social.instagram.user)}
                     </p>
                   </div>
                   <div className="w-[14rem] min-w-[224px]">
