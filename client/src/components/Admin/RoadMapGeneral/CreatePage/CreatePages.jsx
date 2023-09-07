@@ -1,47 +1,38 @@
 import { useState } from "react";
+import { IoAddOutline } from "react-icons/io5";
 
 export default function CreatePages({ setCreatePage }) {
   const [page, setPage] = useState({
     number: "",
+    title: "",
     section: false,
     video: false,
     meet: false,
     resume: false,
     document: false,
-    title: false,
     videoSource: "",
     resumeText: "",
     meetImage: "",
     meetName: "",
-    documentArray: { name: "", link: "" },
+    documentArray: [{}],
   });
+
+  const [newDocument, setNewDocument] = useState([]);
 
   const handleChangeNumber = (e) => {
     const { value } = e.target;
-    setPage({
+    setPage((prevPage) => ({
+      ...prevPage,
       number: value,
-    });
+    }));
   };
 
   const handleChangeTitle = (e) => {
     const { value } = e.target;
-    setPage({
+    setPage((prevPage) => ({
+      ...prevPage,
       title: value,
-    });
-  };
-
-  const handleChangeVideo = (e) => {
-    const { value } = e.target;
-    setPage({
-      title: value,
-    });
-  };
-
-  const handleChangeImage = (e) => {
-    const { value } = e.target;
-    setPage({
-      title: value,
-    });
+    }));
   };
 
   const handleCheckboxChange = (e) => {
@@ -52,25 +43,69 @@ export default function CreatePages({ setCreatePage }) {
     }));
   };
 
+  const handleChangeVideoSource = (e) => {
+    const { value } = e.target;
+    setPage((prevPage) => ({
+      ...prevPage,
+      videoSource: value,
+    }));
+  };
+
+  const handleChangeResumeText = (e) => {
+    const { value } = e.target;
+    setPage((prevPage) => ({
+      ...prevPage,
+      resumeText: value,
+    }));
+  };
+
+  const handleChangeMeetImage = (e) => {
+    const { value } = e.target;
+    setPage((prevPage) => ({
+      ...prevPage,
+      meetImage: value,
+    }));
+  };
+
+  const handleChangeMeetName = (e) => {
+    const { value } = e.target;
+    setPage((prevPage) => ({
+      ...prevPage,
+      meetName: value,
+    }));
+  };
+
+  const handleAddDocument = () => {
+    setPage((prevPage) => ({
+      ...prevPage,
+      documentArray: [...prevPage.documentArray, newDocument],
+    }));
+    setNewDocument({ name: "", link: "" });
+  };
+
+  const handleChangeDocumentArray = () => {};
+
   const handleSubmit = () => {
-    setPage({
-      role: "",
-      name: "",
-      lastname: "",
-      instagram: "",
-      email: "",
-      password: "",
-      isActive: true,
-      access: false,
-      progress: 0,
-    });
+    console.log(page);
+    // setPage({
+    //   number: "",
+    //   title: false,
+    //   section: false,
+    //   video: false,
+    //   meet: false,
+    //   resume: false,
+    //   document: false,
+    //   videoSource: "",
+    //   resumeText: "",
+    //   meetImage: "",
+    //   meetName: "",
+    //   documentArray: [{}],
+    // });
     setCreatePage(false);
   };
   const handleClose = () => {
     setCreatePage(false);
   };
-
-  console.log(page);
 
   return (
     <div className="flex items-center justify-center w flex-col gap-5">
@@ -149,11 +184,112 @@ export default function CreatePages({ setCreatePage }) {
           className="rounded-md bg-[#D9D9D9] h-10 w-80 pl-5 text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25"
           type="text"
           name="name"
-          value={page.name}
+          value={page.title}
           onChange={handleChangeTitle}
           placeholder="Ingrese el Titulo..."
         />
       </div>
+
+      {page.video && (
+        <div className="flex flex-col items-start justify-center gap-1">
+          <label className="font-bold ml-2 text-white">Video:</label>
+          <input
+            className="rounded-md bg-[#D9D9D9] h-10 w-80 pl-5 text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25"
+            type="text"
+            name="name"
+            value={page.videoSource}
+            onChange={handleChangeVideoSource}
+            placeholder="Ingrese el link del Video..."
+          />
+        </div>
+      )}
+      {page.resume && (
+        <div className="flex flex-col items-start justify-center gap-1">
+          <label className="font-bold ml-2 text-white">Resumen:</label>
+          <textarea
+            className="rounded-md bg-[#D9D9D9] w-80 h-40 p-2 text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25"
+            name="name"
+            value={page.resumeText}
+            onChange={handleChangeResumeText}
+            placeholder="Ingrese el Título..."
+          />
+        </div>
+      )}
+
+      {page.meet && (
+        <div className="flex flex-col items-start justify-center gap-1">
+          <label className="font-bold ml-2 text-white">Foto Empleado:</label>
+          <input
+            className="rounded-md bg-[#D9D9D9] h-10 w-80 pl-5 text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25"
+            type="text"
+            name="name"
+            value={page.meetImage}
+            onChange={handleChangeMeetImage}
+            placeholder="Ingrese el link de el empleado..."
+          />
+        </div>
+      )}
+      {page.meet && (
+        <div className="flex flex-col items-start justify-center gap-1">
+          <label className="font-bold ml-2 text-white">Nombre empleado:</label>
+          <input
+            className="rounded-md bg-[#D9D9D9] h-10 w-80 pl-5 text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25"
+            type="text"
+            name="name"
+            value={page.meetName}
+            onChange={handleChangeMeetName}
+            placeholder="Ingrese el nombre del empleado..."
+          />
+        </div>
+      )}
+
+      {page.document && (
+        <div className="flex flex-col items-start justify-center gap-1">
+          <label className="font-bold ml-2 text-white">Documentos:</label>
+          <div className="flex gap-2 items-center justify-center">
+            <input
+              className="rounded-md bg-[#D9D9D9] h-10 w-36 pl-5 text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25"
+              type="text"
+              name="name"
+              value={newDocument.name}
+              onChange={(e) =>
+                setNewDocument({ ...newDocument, name: e.target.value })
+              }
+              placeholder="Name..."
+            />
+            <input
+              className="rounded-md bg-[#D9D9D9] h-10 w-36 pl-5 text-white text-opacity-100 placeholder:text-white placeholder:text-opacity-75 bg-opacity-25"
+              type="text"
+              name="link"
+              value={newDocument.link}
+              onChange={(e) =>
+                setNewDocument({ ...newDocument, link: e.target.value })
+              }
+              placeholder="Link..."
+            />
+            <IoAddOutline
+              className="w-6 h-6 cursor-pointer rounded-full hover:bg-[#484848]"
+              onClick={handleAddDocument}
+            />
+          </div>
+          <div className="w-full h-fit">
+            <div className="flex justify-around">
+              <p className="w-40">Nombre</p>
+              <p className="w-40">Link</p>
+            </div>
+            {page.documentArray &&
+              page.documentArray.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex gap-2 items-center justify-around"
+                >
+                  <p className="w-40">{item.name}</p>
+                  <p className="w-40">{item.link}</p>
+                </div>
+              ))}
+          </div>
+        </div>
+      )}
 
       <div className="flex gap-2">
         <button
