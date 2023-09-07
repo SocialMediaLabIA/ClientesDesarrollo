@@ -50,6 +50,11 @@ const UsersSchema = new mongoose.Schema(
       required: true,
       default: 1,
     },
+    social: {
+      type: Array,
+      required: true,
+      default: [],
+    },
   },
   { timestamps: true }
 );
