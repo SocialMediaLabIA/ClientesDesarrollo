@@ -74,8 +74,24 @@ export default function CreateUserForm() {
     ) {
       return;
     }
-
-    dispatch(createUser(user));
+    const body = {
+      role: user.role,
+      name: user.name,
+      lastname: user.lastname,
+      instagram: user.instagram,
+      email: user.email,
+      password: user.password,
+      isActive: user.isActive,
+      access: user.access,
+      progress: user.progress,
+      social: {
+        instagram: {
+          link: user.instagram,
+          user: extractInstagramUsername(user.instagram),
+        },
+      },
+    };
+    dispatch(createUser(body));
 
     setUser({
       role: "",
@@ -89,6 +105,15 @@ export default function CreateUserForm() {
       progress: 0,
     });
   };
+
+  function extractInstagramUsername(instagramLink) {
+    const trimmedLink = instagramLink.endsWith("/")
+      ? instagramLink.slice(0, -1)
+      : instagramLink;
+    const parts = trimmedLink.split("/");
+    const username = parts.pop();
+    return username;
+  }
 
   return (
     <div className="flex items-center justify-center w flex-col gap-5">
