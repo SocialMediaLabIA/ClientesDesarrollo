@@ -84,14 +84,12 @@ export default function CreateUserForm() {
       isActive: user.isActive,
       access: user.access,
       progress: user.progress,
-      social: [
-        {
-          instagram: {
-            link: user.instagram,
-            user: extractInstagramUsername(user.instagram),
-          },
+      social: {
+        instagram: {
+          link: user.instagram,
+          user: extractInstagramUsername(user.instagram),
         },
-      ],
+      },
     };
     dispatch(createUser(body));
 
