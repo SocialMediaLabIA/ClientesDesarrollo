@@ -88,12 +88,12 @@ export default function CreateUserForm() {
         {
           instagram: {
             link: user.instagram,
-            user: extractInstagramUsername(item.instagram),
+            user: extractInstagramUsername(user.instagram),
           },
         },
       ],
     };
-    dispatch(createUser(user));
+    dispatch(createUser(body));
 
     setUser({
       role: "",
