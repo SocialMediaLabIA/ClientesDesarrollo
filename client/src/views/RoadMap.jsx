@@ -166,7 +166,7 @@ export default function RoadMap() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2.5 }}
-        className="flex justify-around items-center rounded-xl w-[300px] bg-[#3b393b67] mt-10 md:mt-5 md:w-[800px] xl:w-[1000px] ml-8 md:ml-0"
+        className="flex justify-around items-center rounded-xl w-fit px-3 bg-[#3b393b67] mt-10 md:mt-5 md:w-[800px] xl:w-[1000px] ml-8 md:ml-0"
       >
         <motion.img
           src={logo}
@@ -176,14 +176,17 @@ export default function RoadMap() {
           animate={{ x: 0 }}
           transition={{ duration: 0.5 }}
         />
+        <div className="w-full flex justify-start items-center">
+
         <motion.h1
-          className="text-base text-center text-white font-bold text-[18px] md:text-[20px]"
+          className="text-base text-center text-white font-bold text-[18px] md:text-[20px] ml-5 pr-4"
           initial={{}}
           animate={{}}
           transition={{ duration: 1 }}
-        >
+          >
           {pages[progress] ? pages[progress].title : ""}
         </motion.h1>
+          </div>
         {/* <motion.h1
           className="text-base text-center text-white font-thin text-[18px] md:text-[20px]"
           initial={{}}
@@ -204,13 +207,13 @@ export default function RoadMap() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2.5 }}
-        className=" bg-gray-200 rounded-full dark:bg-gray-700 w-[40%] xl:w-[30%] ml-8 md:ml-0"
+        className=" bg-gray-200 rounded-full dark:bg-gray-700 w-[60%] xl:w-[30%] ml-8 md:ml-0 relative h-5"
       >
         <div
-          className="bg-[#c905faad] text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+          className="bg-[#c905faad] text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full h-5"
           style={{ width: percentage }}
         >
-          {percentage}
+          <p className="absolute top-1 left-[50%]">{percentage}</p>
         </div>
       </motion.div>
 
@@ -235,18 +238,18 @@ export default function RoadMap() {
           <>
             <motion.div
               initial={{ x: -20 }}
-              animate={{ x: 0 }}
+              animate={{ x: 10 }}
               transition={{ duration: 2 }}
             >
               <HiChevronLeft
                 onClick={() => directionProgress("prev")}
                 // className=" text-black font-bold text-xl w-8 h-8 bg-white rounded-full p-5"
-                className="text-white bg-[#c905faad] hover:bg-[#e505fac7] font-bold text-xl w-10 h-10 p-2 rounded-full  cursor-pointer"
+                className="text-white bg-[#c905faad] hover:bg-[#e505fac7] font-bold text-xl w-12 h-12 p-2 rounded-full  cursor-pointer"
               />
             </motion.div>
             <motion.div
               initial={{ x: 20 }}
-              animate={{ x: 0  }}
+              animate={{ x: -10  }}
               transition={{ duration: 2 }}
             >
               <HiChevronRight
@@ -254,7 +257,7 @@ export default function RoadMap() {
                 animate={{ x: 0 }}
                 transition={{ duration: 2 }}
                 onClick={() => directionProgress("next")}
-                className=" text-white bg-[#c905faad] hover:bg-[#e505fac7] font-bold text-xl w-10 h-10 p-2 rounded-full  cursor-pointer"
+                className=" text-white bg-[#c905faad] hover:bg-[#e505fac7] font-bold text-xl w-12 h-12 p-2 rounded-full  cursor-pointer"
               />
             </motion.div>
           </>
