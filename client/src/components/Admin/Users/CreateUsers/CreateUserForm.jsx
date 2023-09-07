@@ -80,7 +80,7 @@ export default function CreateUserForm() {
       lastname: user.lastname,
       instagram: user.instagram,
       email: user.email,
-      password: "",
+      password: user.password,
       isActive: true,
       access: false,
       progress: 0,
