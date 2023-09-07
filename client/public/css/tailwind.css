@@ -1038,6 +1038,10 @@ video {
   gap: 13rem;
 }
 
+.gap-\[1000px\] {
+  gap: 1000px;
+}
+
 .gap-y-4 {
   row-gap: 1rem;
 }
@@ -1249,6 +1253,11 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-10 {
@@ -1531,6 +1540,22 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:absolute {
+    position: absolute;
+  }
+
+  .md\:bottom-auto {
+    bottom: auto;
+  }
+
+  .md\:bottom-2\/4 {
+    bottom: 50%;
+  }
+
+  .md\:left-0 {
+    left: 0px;
+  }
+
   .md\:ml-0 {
     margin-left: 0px;
   }
@@ -1625,6 +1650,14 @@ video {
 
   .md\:gap-64 {
     gap: 16rem;
+  }
+
+  .md\:gap-96 {
+    gap: 24rem;
+  }
+
+  .md\:gap-\[1000px\] {
+    gap: 1000px;
   }
 
   .md\:px-20 {
