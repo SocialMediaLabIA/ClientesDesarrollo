@@ -29,7 +29,7 @@ export default function ProgressHeaders({ progress }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex justify-center items-center w-full h-[450px] text-white z-0"
+      className="flex justify-center items-center w-full  text-white z-0"
     >
       {/* VIDEOS */}
       {pages[progress] && pages[progress].video === true && (
@@ -59,7 +59,7 @@ export default function ProgressHeaders({ progress }) {
         pages[progress].document === true &&
         pages[progress].resume === true &&
         pages[progress].number !== 38 && pages[progress].section === false && (
-          <div className="flex flex-col justify-center items-center h-full w-full max-w-[230px] md:max-w-[800px] mt-10">
+          <div className=" mt-20 flex flex-col justify-center items-center h-fit w-full max-w-[300px] md:max-w-[800px] ">
             <p className=" w-5/6 text-justify items-center text-sm mb-5">
               {pages[progress] && pages[progress].resumeText}
             </p>
