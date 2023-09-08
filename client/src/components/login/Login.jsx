@@ -134,13 +134,13 @@ export default function Login() {
             </span>
           </motion.div>
           <motion.div
-            className="flex flex-col items-center gap-y-4 mt-4"
+            className="flex flex-col items-center gap-y-4 mt-10"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
           >
             <button
-              className="bg-[#c905faad] rounded-2xl py-2 px-5 text-white font-bold"
+              className="bg-[#c905faad] rounded-md py-2 px-10 text-white font-bold"
               type="submit"
             >
               Ingresar

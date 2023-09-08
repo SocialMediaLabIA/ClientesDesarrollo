@@ -29,53 +29,66 @@ export default function ProgressHeaders({ progress }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex justify-center items-center w-full h-[450px] text-white z-0"
+      className="flex justify-center items-center w-full  text-white z-0 "
     >
       {/* VIDEOS */}
       {pages[progress] && pages[progress].video === true && (
-        <iframe
+        <motion.iframe
+          initial={{ y: 0 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.5 }}
           title="YouTube Video"
           width="580"
           height="330"
           src={pages[progress] && pages[progress].videoSource} // Cambia esta URL por la URL correcta del video embebido
           frameBorder="0" // Cambiado a frameBorder
           allowFullScreen // Cambiado a allowFullScreen
-          className="mt-5 w-[270px] md:w-[600px] xl:w-[600px]"
+          className=" w-[270px] md:w-[500px] md:h-[300px] xl:w-[500px] xl:h-[300px]"
         />
       )}
       {/* MEETS */}
-      {pages[progress] && pages[progress].meet === true && pages[progress].section === false && (
-        <div className="flex justify-center items-center h-full w-full">
-          <img
-            src={selectedImage}
-            // src={pages[progress] && pages[progress].meetImage}
-            alt="imagen meet"
-            className="mt-5 w-[270px] h-[270px]  md:w-[200px] xl:w-[300px]  md:h-[200px] xl:h-[300px] rounded-lg"
-          />
-        </div>
-      )}
+      {pages[progress] &&
+        pages[progress].meet === true &&
+        pages[progress].section === false && (
+          <motion.div
+            initial={{ x: 0 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center items-center h-full w-fit"
+          >
+            <img
+              src={selectedImage}
+              // src={pages[progress] && pages[progress].meetImage}
+              alt="imagen meet"
+              className=" w-[250px] md:w-[200px]  xl:w-[200px]  rounded-lg"
+            />
+          </motion.div>
+        )}
       {/* DOCUMENTS */}
       {pages[progress] &&
         pages[progress].document === true &&
         pages[progress].resume === true &&
-        pages[progress].number !== 38 && pages[progress].section === false && (
-          <div className="flex flex-col justify-center items-center h-full w-full max-w-[230px] md:max-w-[800px] mt-10">
-            <p className=" w-5/6 text-justify items-center text-sm mb-5">
+        pages[progress].number !== 38 &&
+        pages[progress].section === false && (
+          <div
+
+            className="translate-y-10 sm:translate-y-10 md:translate-y-10 flex flex-col justify-start items-center h-fit w-full max-w-[400px] md:max-w-[600px]  "
+          >
+            <p className=" w-5/6 text-justify items-center text-sm md:text-sm mb-5 ">
               {pages[progress] && pages[progress].resumeText}
             </p>
             <div className=" w-fit  max-w-[250px] flex flex-col justify-start items-start">
               {pages[progress].documentArray.map((item, index) => {
-
                 return (
                   <a
                     href={item.link}
                     key={index}
                     // target="_blank" // Abre el enlace en una nueva pestaña/tab
                     rel="noopener noreferrer" // Recomendado al abrir enlaces externos
-                    className="flex px-3 justify-start items-center h-12 w-full mt-5 border-2 rounded-sm cursor-pointer"
+                    className=" flex px-3 justify-start items-center h-12 w-full mt-5 border-2 rounded-sm cursor-pointer"
                   >
-                    <AiOutlineFileText className="h-6 w-6 mr-2" />
-                    <p className="text-[10px]">{item.name}</p>
+                    <AiOutlineFileText className="h-6 w-6 mr-2 md:mr-5" />
+                    <p className="text-[10px] md:text-[12px]">{item.name}</p>
                   </a>
                 );
               })}
@@ -87,7 +100,7 @@ export default function ProgressHeaders({ progress }) {
         <img
           src={pages[progress] && pages[progress].meetImage}
           alt="imagen meet"
-          className="w-[380px] mt-16"
+          className="w-[380px] "
         />
       )}
     </motion.div>
