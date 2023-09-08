@@ -182,7 +182,7 @@ export default function RoadMap() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2.5 }}
-        className=" mt-14 md:mt-20 bg-gray-200 rounded-full dark:bg-gray-700 w-[50%] md:w-[40%]  ml-8 md:ml-0 relative h-5"
+        className=" mt-8 md:mt-5 bg-gray-200 rounded-full dark:bg-gray-700 w-[50%] md:w-[40%]  ml-8 md:ml-0 relative h-5"
       >
         <div
           className=" bg-[#c905faad] text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full h-5"
@@ -204,10 +204,10 @@ export default function RoadMap() {
       {/* </div> */}
 
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, y:0 }}
+        animate={{ opacity: 1, y:0}}
         transition={{ duration: 2 }}
-        className="absolute bottom-20 md:bottom-2/4 flex justify-center md:w-full  items-center gap-52 md:gap-[70%]  ml-8 md:ml-0 z-0  "
+        className="absolute bottom-20 md:bottom-1/2 md:mt-10 flex justify-center md:w-full  items-center gap-52 md:gap-[70%]  ml-8 md:ml-0 z-0  "
       >
         {progress !== 1 && progress !== 43 && (
           <>
