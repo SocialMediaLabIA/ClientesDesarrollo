@@ -107,7 +107,7 @@ export default function RoadMap() {
   };
   // "text-[#00DFFD] " : "text-[#fafafa]"
   return (
-    <div className=" font-poppins flex flex-col justify-start items-center h-screen w-full bg-black relative">
+    <div className=" font-poppins flex flex-col justify-start items-center h-screen w-full bg-[#141416] relative">
       {loader ? (
         <div className="absolute  h-screen w-screen bg-black opacity-80 pb-10 flex justify-center items-center  z-10">
           <div className="flex flex-col gap-5 items-center justify-center w-[30rem] p-5 h-fit rounded-xl ">
