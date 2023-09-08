@@ -1,13 +1,21 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 // import { GrDocumentText } from "react-icons/gr";
 import { AiOutlineFileText } from "react-icons/ai";
 import { motion } from "framer-motion";
-import pages from "../../../../utils/progressPages";
+import { getAllPage } from "../../../../redux/Pages/ActionPage/getAllPage";
+// import pages from "../../../../utils/progressPages";
 
 export default function ProgressHeaders({ progress }) {
+  const dispatch = useDispatch();
+
+  const { pages } = useSelector((state) => state);
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
+    dispatch(getAllPage());
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
@@ -17,12 +25,12 @@ export default function ProgressHeaders({ progress }) {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [dispatch]);
 
   const selectedImage =
     windowWidth >= 768
-      ? pages[progress] && pages[progress].meetImageLarge
-      : pages[progress] && pages[progress].meetImage;
+      ? pages && pages[progress] && pages[progress].meetImageLarge
+      : pages && pages[progress] && pages[progress].meetImage;
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -31,7 +39,7 @@ export default function ProgressHeaders({ progress }) {
       className="flex justify-center items-center w-full h-[450px] text-white z-0"
     >
       {/* VIDEOS */}
-      {pages[progress] && pages[progress].video === true && (
+      {pages && pages[progress] && pages[progress].video === true && (
         <iframe
           title="YouTube Video"
           width="580"
@@ -43,7 +51,8 @@ export default function ProgressHeaders({ progress }) {
         />
       )}
       {/* MEETS */}
-      {pages[progress] &&
+      {pages &&
+        pages[progress] &&
         pages[progress].meet === true &&
         pages[progress].section === false && (
           <div className="flex justify-center items-center h-full w-full">
@@ -56,37 +65,39 @@ export default function ProgressHeaders({ progress }) {
           </div>
         )}
       {/* DOCUMENTS */}
-      {pages[progress] &&
+      {pages &&
+        pages[progress] &&
         pages[progress].document === true &&
         pages[progress].resume === true &&
         pages[progress].number !== 38 &&
         pages[progress].section === false && (
           <div className="flex flex-col justify-center items-center h-full w-full max-w-[230px] md:max-w-[800px] mt-10">
             <p className=" w-5/6 text-justify items-center text-sm mb-5">
-              {pages[progress] && pages[progress].resumeText}
+              {pages && pages[progress] && pages[progress].resumeText}
             </p>
             <div className=" w-fit  max-w-[250px] flex flex-col justify-start items-start">
-              {pages[progress].documentArray.map((item, index) => {
-                return (
-                  <a
-                    href={item.link}
-                    key={index}
-                    // target="_blank" // Abre el enlace en una nueva pestaña/tab
-                    rel="noopener noreferrer" // Recomendado al abrir enlaces externos
-                    className="flex px-3 justify-start items-center h-12 w-full mt-5 border-2 rounded-sm cursor-pointer"
-                  >
-                    <AiOutlineFileText className="h-6 w-6 mr-2" />
-                    <p className="text-[10px]">{item.name}</p>
-                  </a>
-                );
-              })}
+              {pages &&
+                pages[progress].documentArray.map((item, index) => {
+                  return (
+                    <a
+                      href={item.link}
+                      key={index}
+                      // target="_blank" // Abre el enlace en una nueva pestaña/tab
+                      rel="noopener noreferrer" // Recomendado al abrir enlaces externos
+                      className="flex px-3 justify-start items-center h-12 w-full mt-5 border-2 rounded-sm cursor-pointer"
+                    >
+                      <AiOutlineFileText className="h-6 w-6 mr-2" />
+                      <p className="text-[10px]">{item.name}</p>
+                    </a>
+                  );
+                })}
             </div>
           </div>
         )}
       {/* ULTIMA SECCION */}
-      {pages[progress] && pages[progress].number === 43 && (
+      {pages && pages[progress] && pages[progress].number === 43 && (
         <img
-          src={pages[progress] && pages[progress].meetImage}
+          src={pages && pages[progress] && pages[progress].meetImage}
           alt="imagen meet"
           className="w-[380px] mt-16"
         />
