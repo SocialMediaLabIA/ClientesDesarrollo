@@ -182,7 +182,7 @@ export default function RoadMap() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2.5 }}
-        className=" mt-8 md:mt-5 bg-gray-200 rounded-full dark:bg-gray-700 w-[50%] md:w-[40%]  ml-8 md:ml-0 relative h-5"
+        className=" mt-8 md:mt-5 lg:mt-16 bg-gray-200 rounded-full dark:bg-gray-700 w-[50%] md:w-[40%]  ml-8 md:ml-0 relative h-5"
       >
         <div
           className=" bg-[#c905faad] text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full h-5"
@@ -196,7 +196,7 @@ export default function RoadMap() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2.5 }}
-        className={progress === 0 ? "" : " md:w-[50%] flex justify-center items-center ml-8 md:ml-0 absolute bottom-1/3 md:top-1/3"}
+        className={progress === 0 ? "" : " md:w-[50%] flex justify-center items-center ml-8 md:ml-0 absolute bottom-1/3 md:top-1/4 lg:top-52 2xl:top-96"}
       >
         <ProgressHeaders progress={progress} />
       </motion.div>
