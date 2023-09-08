@@ -40,17 +40,17 @@ export default function ProgressHeaders({ progress }) {
           src={pages[progress] && pages[progress].videoSource} // Cambia esta URL por la URL correcta del video embebido
           frameBorder="0" // Cambiado a frameBorder
           allowFullScreen // Cambiado a allowFullScreen
-          className="mt-20 w-[270px] md:w-[600px] xl:w-[600px]"
+          className=" w-[270px] md:w-[700px] md:h-[400px] xl:w-[1000px] xl:h-[500px]"
         />
       )}
       {/* MEETS */}
       {pages[progress] && pages[progress].meet === true && pages[progress].section === false && (
-        <div className="flex justify-center items-center h-full w-full">
+        <div className="flex justify-center items-center h-full w-fit">
           <img
             src={selectedImage}
             // src={pages[progress] && pages[progress].meetImage}
             alt="imagen meet"
-            className="mt-20 w-[270px] h-[270px]  md:w-[200px] xl:w-[300px]  md:h-[200px] xl:h-[300px] rounded-lg"
+            className=" w-[30%] md:w-[300px]  xl:w-[400px]  rounded-lg"
           />
         </div>
       )}
@@ -59,7 +59,7 @@ export default function ProgressHeaders({ progress }) {
         pages[progress].document === true &&
         pages[progress].resume === true &&
         pages[progress].number !== 38 && pages[progress].section === false && (
-          <div className=" mt-20 flex flex-col justify-center items-center h-fit w-full max-w-[300px] md:max-w-[800px] ">
+          <div className="  flex flex-col justify-start items-center h-fit w-full max-w-[300px] md:max-w-[600px] ">
             <p className=" w-5/6 text-justify items-center text-sm mb-5">
               {pages[progress] && pages[progress].resumeText}
             </p>
@@ -87,7 +87,7 @@ export default function ProgressHeaders({ progress }) {
         <img
           src={pages[progress] && pages[progress].meetImage}
           alt="imagen meet"
-          className="w-[380px] mt-16"
+          className="w-[380px] "
         />
       )}
     </motion.div>
