@@ -70,11 +70,9 @@ export default function ProgressHeaders({ progress }) {
         pages[progress].resume === true &&
         pages[progress].number !== 38 &&
         pages[progress].section === false && (
-          <motion.div
-            initial={{ y: 0 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="   flex flex-col justify-start items-center h-fit w-full max-w-[400px] md:max-w-[600px]  "
+          <div
+
+            className="translate-y-10 sm:translate-y-10 md:translate-y-10 flex flex-col justify-start items-center h-fit w-full max-w-[400px] md:max-w-[600px]  "
           >
             <p className=" w-5/6 text-justify items-center text-sm md:text-base mb-5 ">
               {pages[progress] && pages[progress].resumeText}
@@ -87,7 +85,7 @@ export default function ProgressHeaders({ progress }) {
                     key={index}
                     // target="_blank" // Abre el enlace en una nueva pestaña/tab
                     rel="noopener noreferrer" // Recomendado al abrir enlaces externos
-                    className="flex px-3 justify-start items-center h-12 w-full mt-5 border-2 rounded-sm cursor-pointer"
+                    className=" flex px-3 justify-start items-center h-12 w-full mt-5 border-2 rounded-sm cursor-pointer"
                   >
                     <AiOutlineFileText className="h-6 w-6 mr-2 md:mr-5" />
                     <p className="text-[10px] md:text-[14px]">{item.name}</p>
@@ -95,7 +93,7 @@ export default function ProgressHeaders({ progress }) {
                 );
               })}
             </div>
-          </motion.div>
+          </div>
         )}
       {/* ULTIMA SECCION */}
       {pages[progress] && pages[progress].number === 43 && (
