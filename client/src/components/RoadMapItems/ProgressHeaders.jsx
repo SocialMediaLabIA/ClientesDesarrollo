@@ -60,7 +60,7 @@ export default function ProgressHeaders({ progress }) {
         pages[progress].resume === true &&
         pages[progress].number !== 38 && pages[progress].section === false && (
           <div className="  flex flex-col justify-start items-center h-fit w-full max-w-[300px] md:max-w-[600px] ">
-            <p className=" w-5/6 text-justify items-center text-sm mb-5">
+            <p className=" w-5/6 text-justify items-center text-sm md:text-base mb-5">
               {pages[progress] && pages[progress].resumeText}
             </p>
             <div className=" w-fit  max-w-[250px] flex flex-col justify-start items-start">
@@ -74,8 +74,8 @@ export default function ProgressHeaders({ progress }) {
                     rel="noopener noreferrer" // Recomendado al abrir enlaces externos
                     className="flex px-3 justify-start items-center h-12 w-full mt-5 border-2 rounded-sm cursor-pointer"
                   >
-                    <AiOutlineFileText className="h-6 w-6 mr-2" />
-                    <p className="text-[10px]">{item.name}</p>
+                    <AiOutlineFileText className="h-6 w-6 mr-2 md:mr-5" />
+                    <p className="text-[10px] md:text-[14px]">{item.name}</p>
                   </a>
                 );
               })}
