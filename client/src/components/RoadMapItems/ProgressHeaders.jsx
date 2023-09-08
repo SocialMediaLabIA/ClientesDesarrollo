@@ -74,9 +74,9 @@ export default function ProgressHeaders({ progress }) {
             initial={{ y: 0 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
-            className=" border-2  flex flex-col justify-start items-center h-fit w-full max-w-[300px] md:max-w-[600px] "
+            className="   flex flex-col justify-start items-center h-fit w-full max-w-[400px] md:max-w-[600px]  "
           >
-            <p className=" w-5/6 text-justify items-center text-sm md:text-base mb-5">
+            <p className=" w-5/6 text-justify items-center text-sm md:text-base mb-5 ">
               {pages[progress] && pages[progress].resumeText}
             </p>
             <div className=" w-fit  max-w-[250px] flex flex-col justify-start items-start">
