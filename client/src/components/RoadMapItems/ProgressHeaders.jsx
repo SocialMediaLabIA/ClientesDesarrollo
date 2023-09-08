@@ -60,7 +60,7 @@ export default function ProgressHeaders({ progress }) {
               src={selectedImage}
               // src={pages[progress] && pages[progress].meetImage}
               alt="imagen meet"
-              className=" w-[250px] md:w-[300px]  xl:w-[400px]  rounded-lg"
+              className=" w-[250px] md:w-[200px]  xl:w-[300px]  rounded-lg"
             />
           </motion.div>
         )}
