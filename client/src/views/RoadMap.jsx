@@ -169,7 +169,7 @@ export default function RoadMap() {
         />
         <div className="w-full flex justify-start md:justify-center items-center">
           <motion.h1
-            className="text-base text-center   text-white font-bold text-[18px] md:text-[20px] ml-5 pr-4"
+            className="text-base text-center   text-white font-bold text-[18px] md:text-[24px] ml-5 pr-4"
             initial={{}}
             animate={{}}
             transition={{ duration: 1 }}
