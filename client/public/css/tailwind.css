@@ -784,10 +784,6 @@ video {
   height: 100vh;
 }
 
-.h-32 {
-  height: 8rem;
-}
-
 .max-h-\[100\%\] {
   max-height: 100%;
 }
@@ -810,6 +806,10 @@ video {
 
 .w-16 {
   width: 4rem;
+}
+
+.w-36 {
+  width: 9rem;
 }
 
 .w-4\/6 {
@@ -915,18 +915,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-3 {
-  width: 0.75rem;
-}
-
-.w-36 {
-  width: 9rem;
-}
-
-.w-4 {
-  width: 1rem;
 }
 
 .min-w-\[224px\] {
