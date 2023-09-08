@@ -43,7 +43,7 @@ export default function ProgressHeaders({ progress }) {
           src={pages[progress] && pages[progress].videoSource} // Cambia esta URL por la URL correcta del video embebido
           frameBorder="0" // Cambiado a frameBorder
           allowFullScreen // Cambiado a allowFullScreen
-          className=" w-[270px] md:w-[600px] md:h-[300px] xl:w-[800px] xl:h-[400px]"
+          className=" w-[270px] md:w-[500px] md:h-[300px] xl:w-[500px] xl:h-[300px]"
         />
       )}
       {/* MEETS */}
@@ -60,7 +60,7 @@ export default function ProgressHeaders({ progress }) {
               src={selectedImage}
               // src={pages[progress] && pages[progress].meetImage}
               alt="imagen meet"
-              className=" w-[250px] md:w-[200px]  xl:w-[300px]  rounded-lg"
+              className=" w-[250px] md:w-[200px]  xl:w-[200px]  rounded-lg"
             />
           </motion.div>
         )}
@@ -74,7 +74,7 @@ export default function ProgressHeaders({ progress }) {
 
             className="translate-y-10 sm:translate-y-10 md:translate-y-10 flex flex-col justify-start items-center h-fit w-full max-w-[400px] md:max-w-[600px]  "
           >
-            <p className=" w-5/6 text-justify items-center text-sm md:text-base mb-5 ">
+            <p className=" w-5/6 text-justify items-center text-sm md:text-sm mb-5 ">
               {pages[progress] && pages[progress].resumeText}
             </p>
             <div className=" w-fit  max-w-[250px] flex flex-col justify-start items-start">
@@ -88,7 +88,7 @@ export default function ProgressHeaders({ progress }) {
                     className=" flex px-3 justify-start items-center h-12 w-full mt-5 border-2 rounded-sm cursor-pointer"
                   >
                     <AiOutlineFileText className="h-6 w-6 mr-2 md:mr-5" />
-                    <p className="text-[10px] md:text-[14px]">{item.name}</p>
+                    <p className="text-[10px] md:text-[12px]">{item.name}</p>
                   </a>
                 );
               })}

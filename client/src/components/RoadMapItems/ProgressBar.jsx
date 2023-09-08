@@ -64,7 +64,7 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 10, opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.3 }}
-          className=" my-1 w-full  flex flex-col justify-start items-start overflow-scroll no-scrollbar h-screen  md:max-h-[100%]transition-transform transform translate-x-0 duration-500 ease-in-out delay-150"
+          className=" my-0 w-full  flex flex-col justify-start items-start overflow-scroll no-scrollbar h-screen  md:max-h-[100%]transition-transform transform translate-x-0 duration-500 ease-in-out delay-150"
         >
           {/* Seccion 1 */}
 
@@ -73,7 +73,7 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
               return (
                 <div
                   key={index}
-                  className="my-2 p-1 flex justify-center items-center"
+                  className="my-1 p-1 flex justify-center items-center"
                 >
                   {item.number < progressNumber && (
                     <PiFlagPennantFill
@@ -116,7 +116,7 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
                       initial={{ x: -30, opacity: 0 }}
                       animate={{ x: 10, opacity: 1 }}
                       transition={{ duration: 0.5, delay: 0.1 }}
-                      className="h-5 p-1 mb-2 ">
+                      className="h-5 p-1 mb-2 text-sm">
                         {item.title.toUpperCase()}
                       </motion.h1>
                     ) : (
@@ -132,8 +132,8 @@ export default function ProgressBar({ progress, setProgress, loaderFuncion, open
                     <div
                       className={
                         item.number === progress && openBar
-                          ? "py-1 ml-2 pl-1 flex justify-start items-center w-fit  bg-[#ffffff28] hover:bg-[#b8b3b33f]  rounded-md  cursor-pointer"
-                          : "py-1 ml-2 flex justify-start items-center w-fit cursor-pointer "
+                          ? "py-0 ml-2 pl-1 flex justify-start items-center w-fit  bg-[#ffffff28] hover:bg-[#b8b3b33f]  rounded-md  cursor-pointer"
+                          : "py-0 ml-2 flex justify-start items-center w-fit cursor-pointer "
                       }
                     >
                       {item.number === progressNumber && (
