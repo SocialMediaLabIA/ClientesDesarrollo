@@ -11,19 +11,21 @@ import {
   HiChevronDoubleLeft,
   HiChevronDoubleRight,
 } from "react-icons/hi2";
-import pages from "../../../utils/progressPages";
+// import pages from "../../../utils/progressPages";
 import ProgressBar from "./RoadMapItems/ProgressBar";
 import ProgressHeaders from "./RoadMapItems/ProgressHeaders";
 import { setProgressUser } from "../../../redux/User/ActionUser/setProgressUser";
 import { getProgressUser } from "../../../redux/User/ActionUser/getProgressUser";
 import logo from "../../../assets/smllogo.webp";
 import CreatePages from "./CreatePage/CreatePages";
+import { getAllPage } from "../../../redux/Pages/ActionPage/getAllPage";
 
 export default function RoadMapAdm({ handleSidebar }) {
   const dispatch = useDispatch();
   const { search } = useLocation();
   const idParams = search.slice(4);
   const { progressNumber } = useSelector((state) => state);
+  const { pages } = useSelector((state) => state);
   let [progress, setProgress] = useState(progressNumber || 1);
   let [percentage, setPercentage] = useState("0%");
   let [openBar, setOpenBar] = useState(false);
@@ -34,20 +36,23 @@ export default function RoadMapAdm({ handleSidebar }) {
     setLoader(status);
   };
 
-  // loaderFuncion(true)
+  console.log(pages);
 
   useEffect(() => {
     loaderFuncion(true);
+    dispatch(getAllPage());
     dispatch(getProgressUser(idParams)).then(() => {
       setProgress(progressNumber);
       loaderFuncion(false);
     });
-    setPercentage(
-      `${(
-        (100 * (pages[progressNumber].number + 1)) /
-        pages.length
-      ).toFixed()}%`
-    );
+    if (pages && pages[progressNumber]) {
+      setPercentage(
+        `${(
+          (100 * (pages[progressNumber].number + 1)) /
+          pages.length
+        ).toFixed()}%`
+      );
+    }
   }, [dispatch, progressNumber]);
 
   const directionProgress = async (direction) => {
@@ -109,6 +114,8 @@ export default function RoadMapAdm({ handleSidebar }) {
   const handleCreatePages = () => {
     setCreatePage(!createPage);
   };
+
+  console.log(createPage);
   return (
     <div className=" font-poppins flex flex-col justify-between items-center h-screen w-full bg-black relative">
       {loader ? (
@@ -194,7 +201,7 @@ export default function RoadMapAdm({ handleSidebar }) {
             animate={{}}
             transition={{ duration: 1 }}
           >
-            {pages[progress] ? pages[progress].title : ""}
+            {pages && pages[progress] ? pages[progress].title : ""}
           </motion.h1>
         </div>
 
@@ -214,7 +221,7 @@ export default function RoadMapAdm({ handleSidebar }) {
           animate={{}}
           transition={{ duration: 1 }}
         >
-          {pages[progress] ? pages[progress].number : ""}
+          {pages && pages[progress] ? pages[progress].number : ""}
         </motion.h1> */}
         {/* <motion.div
           initial={{ x: 50 }}
@@ -303,9 +310,9 @@ export default function RoadMapAdm({ handleSidebar }) {
             </button>
           </>
         )}
-        {progress !== 0 && pages[progress] && pages[progress].meet && (
+        {progress !== 0 && pages && pages[progress] && pages[progress].meet && (
           <>
-            {pages[progress].meetName === "Belén" && (
+            {pages && pages[progress].meetName === "Belén" && (
               <a
                 href="https://calendly.com/belengiorda/meetings"
                 target="_blank" // Abre el enlace en una nueva pestaña/tab
@@ -314,7 +321,7 @@ export default function RoadMapAdm({ handleSidebar }) {
                 className="bg-[#c905faad] hover:bg-[#e505fac7] text-white font-semibold  py-2 px-2 text-sm rounded-md absolute cursor-pointer "
               >
                 {`Agendar con ${
-                  pages[progress] ? pages[progress].meetName : ""
+                  pages && pages[progress] ? pages[progress].meetName : ""
                 }`}
               </a>
             )}
@@ -331,7 +338,7 @@ export default function RoadMapAdm({ handleSidebar }) {
                 }`}
               </a>
             )}
-            {pages[progress].meetName === "Nicolás" && (
+            {pages && pages[progress].meetName === "Nicolás" && (
               <a
                 href="http://calendly.com/nicolas-sml"
                 target="_blank" // Abre el enlace en una nueva pestaña/tab
@@ -340,7 +347,7 @@ export default function RoadMapAdm({ handleSidebar }) {
                 className="bg-[#c905faad] text-white font-semibold  py-2 px-2 text-sm rounded-md absolute cursor-pointer"
               >
                 {`Agendar con ${
-                  pages[progress] ? pages[progress].meetName : ""
+                  pages && pages[progress] ? pages[progress].meetName : ""
                 }`}
               </a>
             )}
