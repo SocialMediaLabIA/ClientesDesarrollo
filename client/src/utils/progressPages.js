@@ -166,15 +166,15 @@ let pages = [
     meetName: "Belén",
     documentArray: [
       {
-        name: "REFERENTES Y FUENTES DE CONTENIDO",
+        name: "Referentes y fuentes de contenido",
         link: "https://docs.google.com/document/d/1o2ENdGWN6YsiZUQg3KquCYe9qgL9PlftQadAoFc6sso/edit",
       },
       {
-        name: "CONSTRUCCIÓN DE LA MARCA PERSONAL",
+        name: "Construcción de la marca personal",
         link: "https://docs.google.com/document/d/1W41U0RWkuHdqFlHU7tyxSNVu8tbJdXqJFUbG7gKcd1I/edit",
       },
       {
-        name: "CIMIENTOS MARCA PERSONAL ",
+        name: "Cimientos de la Marca Personal",
         link: "https://docs.google.com/document/d/1KDm8xLpfCvyNrCqVdvnxByLXpg1iTlR0SXRCVB-VMz4/edit",
       },
     ],
@@ -614,7 +614,7 @@ let pages = [
     meetName: "Nicolás",
     documentArray: [
       {
-        name: "HOJA DE ARRANQUE",
+        name: "Hoja de arranque",
         link: "https://docs.google.com/document/d/1p7aPGGuJJ1rBdZoXS6mRlqW_M9m9rpFwKZcFhky8W6I/edit",
       },
     ],
