@@ -1,7 +1,11 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { IoAddOutline } from "react-icons/io5";
+import { postPage } from "../../../../redux/Pages/ActionPage/postPage";
+import { getAllPage } from "../../../../redux/Pages/ActionPage/getAllPage";
 
 export default function CreatePages({ setCreatePage }) {
+  const dispatch = useDispatch();
   const [page, setPage] = useState({
     number: "",
     title: "",
@@ -83,25 +87,26 @@ export default function CreatePages({ setCreatePage }) {
     setNewDocument({ name: "", link: "" });
   };
 
-  const handleChangeDocumentArray = () => {};
-
   const handleSubmit = () => {
-    console.log(page);
-    // setPage({
-    //   number: "",
-    //   title: false,
-    //   section: false,
-    //   video: false,
-    //   meet: false,
-    //   resume: false,
-    //   document: false,
-    //   videoSource: "",
-    //   resumeText: "",
-    //   meetImage: "",
-    //   meetName: "",
-    //   documentArray: [{}],
-    // });
-    setCreatePage(false);
+    dispatch(postPage(page)).then(() => {
+      setPage({
+        number: "",
+        title: false,
+        section: false,
+        video: false,
+        meet: false,
+        resume: false,
+        document: false,
+        videoSource: "",
+        resumeText: "",
+        meetImage: "",
+        meetName: "",
+        documentArray: [{}],
+      });
+    });
+    dispatch(getAllPage()).then(() => {
+      setCreatePage(false);
+    });
   };
   const handleClose = () => {
     setCreatePage(false);
