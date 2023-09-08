@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { PiFlagPennantFill } from "react-icons/pi";
-import { useDispatch, useSelector } from "react-redux";
 import { motion } from "framer-motion";
-import pages from "../../../../utils/progressPages";
+import { getAllPage } from "../../../../redux/Pages/ActionPage/getAllPage";
+// import pages from "../../../../utils/progressPages";
 
 export default function ProgressBar({
   progress,
@@ -12,6 +13,14 @@ export default function ProgressBar({
   openBar,
   setOpenBar,
 }) {
+  const dispatch = useDispatch();
+
+  const { pages } = useSelector((state) => state);
+
+  useEffect(() => {
+    dispatch(getAllPage());
+  }, []);
+
   const setOpenBarHandler = () => {
     setOpenBar(!openBar);
   };
@@ -71,161 +80,162 @@ export default function ProgressBar({
         >
           {/* Seccion 1 */}
 
-          {pages.map((item, index) => {
-            if (item.section === true) {
-              return (
-                <div
-                  key={index}
-                  className="my-2 p-1 flex justify-center items-center"
-                >
-                  {item.number < progress && (
-                    <PiFlagPennantFill
-                      // onClick={() => {
-                      //   pressProgressHandler(item.number);
-                      // }}
-                      className="ml-2 text-[#00DFFD]"
-                    />
-                  )}
-                  {item.number > progress && (
-                    <PiFlagPennantFill
-                      // onClick={() => {
-                      //   pressProgressHandler(item.number);
-                      // }}
-                      className="ml-2 text-[#fafafa]"
-                    />
-                  )}
-                  {item.number === progress && (
-                    <PiFlagPennantFill
-                      // onClick={() => {
-                      //   pressProgressHandler(item.number);
-                      // }}
-                      className="ml-2 text-[#00DFFD]"
-                    />
-                  )}
-                  {/* TITULOS BANDERAS */}
+          {pages &&
+            pages.map((item, index) => {
+              if (item.section === true) {
+                return (
                   <div
-                    className={
-                      openBar
-                        ? " ml-5 flex justify-start items-center  w-[280px] h-5  "
-                        : "h-5 ml-5 flex justify-start items-center w-fit border-b-2 hover:border-[#beb8ba4f] "
-                    }
-                    // onClick={() => {
-                    //   pressProgressHandler(item.number);
-                    // }}
+                    key={index}
+                    className="my-2 p-1 flex justify-center items-center"
                   >
-                    {openBar ? (
-                      <motion.h1
-                        initial={{ x: -30, opacity: 0 }}
-                        animate={{ x: 10, opacity: 1 }}
-                        transition={{ duration: 0.5, delay: 0.1 }}
-                        className="h-5 p-1 mb-2 "
-                      >
-                        {item.number} {item.title.toUpperCase()}
-                      </motion.h1>
-                    ) : (
-                      <h1 className="h-5"></h1>
+                    {item.number < progress && (
+                      <PiFlagPennantFill
+                        // onClick={() => {
+                        //   pressProgressHandler(item.number);
+                        // }}
+                        className="ml-2 text-[#00DFFD]"
+                      />
                     )}
-                  </div>
-                </div>
-              );
-            } else {
-              return (
-                <React.Fragment key={`fragment-${index}`}>
-                  {
+                    {item.number > progress && (
+                      <PiFlagPennantFill
+                        // onClick={() => {
+                        //   pressProgressHandler(item.number);
+                        // }}
+                        className="ml-2 text-[#fafafa]"
+                      />
+                    )}
+                    {item.number === progress && (
+                      <PiFlagPennantFill
+                        // onClick={() => {
+                        //   pressProgressHandler(item.number);
+                        // }}
+                        className="ml-2 text-[#00DFFD]"
+                      />
+                    )}
+                    {/* TITULOS BANDERAS */}
                     <div
                       className={
-                        item.number === progress && openBar
-                          ? "py-1 ml-2 pl-1 flex justify-start items-center w-fit  bg-[#ffffff28] hover:bg-[#b8b3b33f]  rounded-md  cursor-pointer"
-                          : "py-1 ml-2 flex justify-start items-center w-fit cursor-pointer "
+                        openBar
+                          ? " ml-5 flex justify-start items-center  w-[280px] h-5  "
+                          : "h-5 ml-5 flex justify-start items-center w-fit border-b-2 hover:border-[#beb8ba4f] "
                       }
+                      // onClick={() => {
+                      //   pressProgressHandler(item.number);
+                      // }}
                     >
-                      {item.number === progress && (
-                        <p
-                          onClick={() => {
-                            pressProgressHandler(item.number);
-                          }}
-                          className=" my-1 border-4 border-[#4de75a] bg-[#1bff1352] rounded-full w-6 h-6 p-2  flex justify-center items-center hover:scale-110 cursor-pointer"
-                        ></p>
-                      )}
-                      {item.number < progress && (
-                        <p
-                          onClick={() => {
-                            pressProgressHandler(item.number);
-                          }}
-                          className="my-1 border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-6 h-6 p-2  flex justify-center items-center hover:scale-110"
-                        ></p>
-                      )}
-                      {item.number > progress && (
-                        <p
-                          onClick={() => {
-                            pressProgressHandler(item.number);
-                          }}
-                          className="my-1 border-4 rounded-full w-6 h-6 flex justify-center items-center p-2 hover:scale-110"
-                        ></p>
-                      )}
-
-                      {/* TITULOS */}
-                      {item.number !== progress && (
-                        <div
-                          initial={{ x: -50, opacity: 0 }}
+                      {openBar ? (
+                        <motion.h1
+                          initial={{ x: -30, opacity: 0 }}
                           animate={{ x: 10, opacity: 1 }}
-                          transition={{ duration: 0.4, delay: 0.3 }}
-                          className={
-                            openBar
-                              ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b80c] w-[280px] h-8  cursor-pointer"
-                              : "h-5 ml-5 flex justify-start items-center   cursor-pointer "
-                          }
-                          onClick={() => {
-                            pressProgressHandler(item.number);
-                          }}
+                          transition={{ duration: 0.5, delay: 0.1 }}
+                          className="h-5 p-1 mb-2 "
                         >
-                          {" "}
-                          {openBar ? (
-                            <motion.h1
-                              initial={{ x: -50, opacity: 0 }}
-                              animate={{ x: 0, opacity: 1 }}
-                              transition={{ duration: 0.5, delay: 0.1 }}
-                              className="h-5 w-[300px] hover:text-gray-300"
-                            >
-                              {item.number} {item.title}
-                            </motion.h1>
-                          ) : (
-                            <h1 className="h-5"></h1>
-                          )}
-                        </div>
-                      )}
-                      {item.number === progress && (
-                        <div
-                          className={
-                            openBar
-                              ? "ml-5 flex justify-start items-center  w-[280px] h-5 hover:mb-1 cursor-pointer"
-                              : "h-5 ml-5 flex justify-start items-center   cursor-pointer "
-                          }
-                          onClick={() => {
-                            pressProgressHandler(item.number);
-                          }}
-                        >
-                          {" "}
-                          {openBar ? (
-                            <motion.h1
-                              initial={{ x: -50, opacity: 0 }}
-                              animate={{ x: 0, opacity: 1 }}
-                              transition={{ duration: 0.5, delay: 0.1 }}
-                              className="h-5 w-[300px]"
-                            >
-                              {item.number} {item.title}
-                            </motion.h1>
-                          ) : (
-                            <h1 className="h-5"></h1>
-                          )}
-                        </div>
+                          {item.number} {item.title.toUpperCase()}
+                        </motion.h1>
+                      ) : (
+                        <h1 className="h-5"></h1>
                       )}
                     </div>
-                  }
-                </React.Fragment>
-              );
-            }
-          })}
+                  </div>
+                );
+              } else {
+                return (
+                  <React.Fragment key={`fragment-${index}`}>
+                    {
+                      <div
+                        className={
+                          item.number === progress && openBar
+                            ? "py-1 ml-2 pl-1 flex justify-start items-center w-fit  bg-[#ffffff28] hover:bg-[#b8b3b33f]  rounded-md  cursor-pointer"
+                            : "py-1 ml-2 flex justify-start items-center w-fit cursor-pointer "
+                        }
+                      >
+                        {item.number === progress && (
+                          <p
+                            onClick={() => {
+                              pressProgressHandler(item.number);
+                            }}
+                            className=" my-1 border-4 border-[#4de75a] bg-[#1bff1352] rounded-full w-6 h-6 p-2  flex justify-center items-center hover:scale-110 cursor-pointer"
+                          ></p>
+                        )}
+                        {item.number < progress && (
+                          <p
+                            onClick={() => {
+                              pressProgressHandler(item.number);
+                            }}
+                            className="my-1 border-4 border-[#00DFFD] bg-[#00dffd5d] rounded-full w-6 h-6 p-2  flex justify-center items-center hover:scale-110"
+                          ></p>
+                        )}
+                        {item.number > progress && (
+                          <p
+                            onClick={() => {
+                              pressProgressHandler(item.number);
+                            }}
+                            className="my-1 border-4 rounded-full w-6 h-6 flex justify-center items-center p-2 hover:scale-110"
+                          ></p>
+                        )}
+
+                        {/* TITULOS */}
+                        {item.number !== progress && (
+                          <div
+                            initial={{ x: -50, opacity: 0 }}
+                            animate={{ x: 10, opacity: 1 }}
+                            transition={{ duration: 0.4, delay: 0.3 }}
+                            className={
+                              openBar
+                                ? "ml-5 flex justify-start items-center border-b-2 border-[#beb8b80c] w-[280px] h-8  cursor-pointer"
+                                : "h-5 ml-5 flex justify-start items-center   cursor-pointer "
+                            }
+                            onClick={() => {
+                              pressProgressHandler(item.number);
+                            }}
+                          >
+                            {" "}
+                            {openBar ? (
+                              <motion.h1
+                                initial={{ x: -50, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ duration: 0.5, delay: 0.1 }}
+                                className="h-5 w-[300px] hover:text-gray-300"
+                              >
+                                {item.number} {item.title}
+                              </motion.h1>
+                            ) : (
+                              <h1 className="h-5"></h1>
+                            )}
+                          </div>
+                        )}
+                        {item.number === progress && (
+                          <div
+                            className={
+                              openBar
+                                ? "ml-5 flex justify-start items-center  w-[280px] h-5 hover:mb-1 cursor-pointer"
+                                : "h-5 ml-5 flex justify-start items-center   cursor-pointer "
+                            }
+                            onClick={() => {
+                              pressProgressHandler(item.number);
+                            }}
+                          >
+                            {" "}
+                            {openBar ? (
+                              <motion.h1
+                                initial={{ x: -50, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ duration: 0.5, delay: 0.1 }}
+                                className="h-5 w-[300px]"
+                              >
+                                {item.number} {item.title}
+                              </motion.h1>
+                            ) : (
+                              <h1 className="h-5"></h1>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    }
+                  </React.Fragment>
+                );
+              }
+            })}
         </div>
         {/* </div> */}
         {/* BARRA APERTURA */}
